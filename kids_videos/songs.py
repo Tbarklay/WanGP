@@ -28,7 +28,7 @@ FARMER = (
     "muddy blue denim overalls and brown work boots"
 )
 DOG = (
-    "Old MacDonald's fluffy shaggy black and tan dog with a white chest patch, floppy ears "
+    "Obi, Old MacDonald's fluffy shaggy black and tan puppy with a white chest patch, floppy ears "
     "and a happy pink tongue"
 )
 
