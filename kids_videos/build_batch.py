@@ -42,7 +42,7 @@ def song_tasks(song):
 def clip_tasks(song, fmt):
     tasks = []
     for no, shot in enumerate(song["shots"], 1):
-        prompt = f"{STYLE}. " + shot.format(character=song["character"])
+        prompt = f"{STYLE}. " + shot.format(character=song["character"], dog=song.get("dog", ""))
         if fmt == "short":
             prompt += ", centered vertical framing"
         tasks.append({

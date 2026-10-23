@@ -11,7 +11,7 @@ Renders a sung nursery rhyme plus a 16:9 YouTube video and a 9:16 Short from one
 
 ## Before bed
 
-1. Save your character image as `kids_videos/refs/old_macdonald.png`.
+1. The reference images are already in `kids_videos/refs` (`farmer_and_dog.jpg`, `dog.jpg`).
 2. Double-click `kids_videos/render_overnight.bat`
    (or from the WanGP folder: `kids_videos\render_overnight.bat old_macdonald`).
 
