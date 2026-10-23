@@ -9,6 +9,11 @@ Renders a sung nursery rhyme plus a 16:9 YouTube video and a 9:16 Short from one
 | Short clips | Same prompts, 480x832 | `<song>_short_01..NN.mp4` |
 | Final videos | `merge.py` (ffmpeg) | `final/<song>_long.mp4`, `final/<song>_short.mp4` |
 
+## Test first (about 5-10 minutes, plus the first model download)
+
+Double-click `kids_videos/test_clip.bat`. It renders the first Old MacDonald clip with the farmer and dog reference
+and opens the folder so you can check that both characters look right.
+
 ## Before bed
 
 1. The reference images are already in `kids_videos/refs` (`farmer_and_dog.jpg`, `dog.jpg`).

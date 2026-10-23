@@ -4,6 +4,9 @@ Usage (from the WanGP folder):
     python kids_videos/build_batch.py old_macdonald
     python kids_videos/build_batch.py all
 
+Add --test to build only the first clip (about 5 minutes) to check the characters:
+    python kids_videos/build_batch.py old_macdonald --test
+
 Writes kids_videos/batches/<name>.json, then render it with:
     python wgp.py --process kids_videos/batches/<name>.json --output-dir kids_videos/output
 """
@@ -75,12 +78,17 @@ def build(slugs):
 
 
 def main():
-    if len(sys.argv) != 2 or (sys.argv[1] != "all" and sys.argv[1] not in SONGS):
-        print(f"Usage: python kids_videos/build_batch.py <{'|'.join(SONGS)}|all>")
+    test = "--test" in sys.argv[2:]
+    if len(sys.argv) not in (2, 3) or (sys.argv[1] != "all" and sys.argv[1] not in SONGS):
+        print(f"Usage: python kids_videos/build_batch.py <{'|'.join(SONGS)}|all> [--test]")
         sys.exit(1)
     name = sys.argv[1]
     slugs = list(SONGS) if name == "all" else [name]
-    tasks = build(slugs)
+    if test:
+        tasks = clip_tasks(SONGS[slugs[0]], "long")[:1]
+        name += "_test"
+    else:
+        tasks = build(slugs)
     os.makedirs("kids_videos/batches", exist_ok=True)
     path = f"kids_videos/batches/{name}.json"
     with open(path, "w", encoding="utf-8") as f:
