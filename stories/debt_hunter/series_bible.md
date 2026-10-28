@@ -41,7 +41,9 @@ Negative prompt for every image:
 ## Characters (image descriptions stay identical in every prompt)
 Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale}`, `{auditor}`, `{pike}`, `{lise}`, `{bram}`, `{warden}`.
 
-- **Cass Arden (19, hero):** lean young man, short messy dark brown hair, tired gray eyes, faded olive porter
+- **Narration rule:** the narrator calls the hero "our MC", "the MC" or "the main character", never by name.
+  Other characters can still say his name in dialogue.
+- **Cass Arden (19, hero, reference: `refs/cass.jpg`):** lean young man, short messy dark brown hair, tired gray eyes, faded olive porter
   jacket with reflective orange straps, fingerless black gloves, bandage on left forearm, huge cargo backpack.
   Quiet, observant, keeps a pocket notebook on every hunter he works with. No Crest.
 - **The Ledger:** floating black leather book with brass corners and a brass clasp, glowing crimson ink and
