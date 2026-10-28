@@ -3,8 +3,11 @@
 Usage (from the WanGP folder):
     python recap_tools/panelize.py <screenshots folder> [--out <folder>]
 
+The folder can hold normal screenshots, long scroll captures, or PDFs such as
+an iPhone Safari "Full Page" screenshot (needs: pip install pypdfium2).
+
 Steps:
-  1. Loads the screenshots in file name order (phone names are already in time order).
+  1. Loads the files in file name order (phone names are already in time order).
   2. Removes the phone status bar and app menus: rows that look identical in every
      screenshot are interface, not comic.
   3. Stitches the screenshots into one long strip, removing the parts that overlap.
@@ -21,13 +24,31 @@ import numpy as np
 from PIL import Image
 
 IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp")
+PDF_WIDTH = 1440        # pixel width PDF pages are rendered at
+MAX_OVERLAP = 4000      # rows searched for an overlap, keeps long captures fast
+
+
+def load_pdf(path):
+    """All pages of a PDF rendered and joined top to bottom into one tall image."""
+    try:
+        import pypdfium2
+    except ImportError:
+        sys.exit("Reading PDFs needs pypdfium2: run  pip install pypdfium2")
+    pdf = pypdfium2.PdfDocument(path)
+    pages = []
+    for page in pdf:
+        scale = PDF_WIDTH / page.get_width()
+        pages.append(np.asarray(page.render(scale=scale).to_pil().convert("RGB")))
+    width = min(p.shape[1] for p in pages)
+    return np.vstack([p[:, :width] for p in pages])
 
 
 def load_screenshots(folder):
-    names = sorted(f for f in os.listdir(folder) if f.lower().endswith(IMAGE_EXTS))
+    names = sorted(f for f in os.listdir(folder) if f.lower().endswith(IMAGE_EXTS + (".pdf",)))
     if not names:
-        sys.exit(f"No screenshots found in {folder}")
-    images = [np.asarray(Image.open(os.path.join(folder, n)).convert("RGB")) for n in names]
+        sys.exit(f"No screenshots or PDFs found in {folder}")
+    images = [load_pdf(os.path.join(folder, n)) if n.lower().endswith(".pdf")
+              else np.asarray(Image.open(os.path.join(folder, n)).convert("RGB")) for n in names]
     width = images[0].shape[1]
     # Screenshots from the same phone share a width; rescale any odd one out.
     for i, img in enumerate(images):
@@ -40,7 +61,8 @@ def load_screenshots(folder):
 
 def interface_rows(images, tolerance=6.0):
     """Number of rows at the top and bottom that never change between screenshots."""
-    if len(images) < 3:
+    # Only same-size screenshots line up; long captures and PDFs are left as they are.
+    if len(images) < 3 or len({img.shape[0] for img in images}) > 1:
         return 0, 0
     height = min(img.shape[0] for img in images)
     stack = np.stack([img[:height].astype(np.float32).mean(axis=2) for img in images])
@@ -78,8 +100,9 @@ def stitch(images, top, bottom):
     pieces = [img[top:img.shape[0] - bottom] for img in images]
     strip = pieces[0]
     for no, piece in enumerate(pieces[1:], 2):
-        tail = strip[-piece.shape[0]:]
-        start = find_overlap(tail, piece)
+        window = min(piece.shape[0], MAX_OVERLAP)
+        tail = strip[-window:]
+        start = find_overlap(tail, piece[:window])
         if start is None:
             print(f"  screenshot {no}: no overlap found, appended as is (a few rows may be missing)")
             strip = np.vstack([strip, piece])

@@ -2,8 +2,12 @@
 
 ## panelize.py: screenshots to clean panels
 
-1. Scroll through the episode and take screenshots, overlapping each one with the previous by about a quarter of the screen.
-2. Put them in one folder, in order. Phone screenshot names are already in time order.
+It accepts any of these, in one folder:
+- **Normal screenshots**, each overlapping the previous by about a quarter of the screen.
+- **Long scroll captures** (Samsung "Capture more", Pixel "Capture more"). Overlap them a little if you take several.
+- **PDFs**, such as an iPhone Safari "Full Page" screenshot. Needs a one-time `pip install pypdfium2`.
+
+1. Put the files in one folder, in reading order. Phone names are already in time order.
 3. From the WanGP folder run:
 
        python recap_tools/panelize.py path\to\screenshots
@@ -16,4 +20,7 @@ Options:
 - `--out <folder>`: choose the output folder
 - `--top N` / `--bottom N`: cut exactly N pixels from the top or bottom of each screenshot,
   if the automatic interface removal leaves a menu bar or cuts into the comic
-  (it needs at least 3 screenshots to detect the bars by itself)
+  (it needs at least 3 same-size screenshots to detect the bars by itself; long captures and PDFs are kept whole)
+
+A website PDF also contains the page around the comic (site header, buttons, comments). Those come out as extra
+panels at the start and end: delete them.
