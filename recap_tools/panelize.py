@@ -37,6 +37,9 @@ def load_pdf(path):
     pdf = pypdfium2.PdfDocument(path)
     pages = []
     for page in pdf:
+        if page.get_height() >= 14399:
+            print(f"WARNING: {os.path.basename(path)} hits the PDF maximum page height, so the comic is probably "
+                  "cut off at the end. Screenshot the rest, starting a little before where it stops.")
         scale = PDF_WIDTH / page.get_width()
         pages.append(np.asarray(page.render(scale=scale).to_pil().convert("RGB")))
     width = min(p.shape[1] for p in pages)
