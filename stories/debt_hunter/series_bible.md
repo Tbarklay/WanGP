@@ -46,8 +46,9 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
 - **Cass Arden (19, hero, reference: `refs/cass.jpg`):** lean young man, short messy dark brown hair, tired gray eyes, faded olive porter
   jacket with reflective orange straps, fingerless black gloves, bandage on left forearm, huge cargo backpack.
   Quiet, observant, keeps a pocket notebook on every hunter he works with. No Crest.
-- **The Ledger:** floating black leather book with brass corners and a brass clasp, glowing crimson ink and
-  crimson light from its pages.
+- **The Ledger (reference: `refs/ledger_closed.png`, `refs/ledger_open.png`):** thick black leather book with ornate brass
+  corner guards and a brass clasp lock. Open, its cream parchment pages are covered in glowing crimson handwriting and
+  red magic circles, with crimson smoke, sparks and light rising from them.
 - **Mara Quill (20, rival, from episode 4):** tall young woman, sharp amber eyes, long silver-white hair in a high
   ponytail, white and gold armored coat, golden Crest. Proud, precise, from a famous guild family.
 - **Director Silas Hale (50s, antagonist):** slicked-back gray hair, neat beard, charcoal three-piece suit, cane
