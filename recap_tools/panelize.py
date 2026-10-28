@@ -115,23 +115,46 @@ def stitch(images, top, bottom):
     return strip
 
 
-def split_panels(strip, min_gap=20, min_panel=120, tolerance=10.0):
-    """Cuts at runs of rows that are a single flat color (the gutter between panels)."""
-    gray = strip.astype(np.float32).mean(axis=2)
-    flat = gray.std(axis=1) < tolerance
-    panels, start, run = [], None, 0
-    for y, is_flat in enumerate(np.append(flat, True)):
-        if not is_flat:
-            if start is None:
-                start = y
-            run = 0
+def split_panels(strip, min_gap=20, min_panel=120, sliver=400, tolerance=10.0, max_color=8.0):
+    """Cuts at the gutters between panels: runs of plain rows.
+
+    Neutral gutters (white, black, gray fades) always cut. A plain run in a real color can
+    also be a dark or misty stretch inside one panel, so it only cuts when both sides are
+    full size panels rather than slivers.
+    """
+    pixels = strip.astype(np.float32)
+    flat = pixels.mean(axis=2).std(axis=1) < tolerance
+    color = (pixels.max(axis=2) - pixels.min(axis=2)).mean(axis=1)
+    gutters, y = [], 0
+    while y < len(flat):
+        if not flat[y]:
+            y += 1
             continue
-        run += 1
-        if start is not None and (run >= min_gap or y == len(flat)):
-            end = y - run + 1
-            if end - start >= min_panel:
-                panels.append((start, end))
-            start = None
+        end = y
+        while end < len(flat) and flat[end]:
+            end += 1
+        if end - y >= min_gap:
+            gutters.append([y, end, color[y:end].mean() < max_color])
+        y = end
+
+    def pieces():
+        bounds = [(0, 0)] + [(g0, g1) for g0, g1, _ in gutters] + [(len(flat), len(flat))]
+        return [bounds[i + 1][0] - bounds[i][1] for i in range(len(bounds) - 1)]
+
+    # Drop colored gutters next to slivers, one at a time, until none is left.
+    while True:
+        sizes = pieces()
+        weak = [i for i, (_, _, neutral) in enumerate(gutters)
+                if not neutral and min(sizes[i], sizes[i + 1]) < sliver]
+        if not weak:
+            break
+        gutters.pop(min(weak, key=lambda i: min(sizes[i], sizes[i + 1])))
+
+    panels, start = [], 0
+    for g0, g1, _ in gutters + [[len(flat), len(flat), True]]:
+        if g0 - start >= min_panel:
+            panels.append((start, g0))
+        start = g1
     return panels
 
 
