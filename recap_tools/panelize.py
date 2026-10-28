@@ -1,0 +1,140 @@
+"""Turns scrolling screenshots of a vertical comic into clean, numbered panels.
+
+Usage (from the WanGP folder):
+    python recap_tools/panelize.py <screenshots folder> [--out <folder>]
+
+Steps:
+  1. Loads the screenshots in file name order (phone names are already in time order).
+  2. Removes the phone status bar and app menus: rows that look identical in every
+     screenshot are interface, not comic.
+  3. Stitches the screenshots into one long strip, removing the parts that overlap.
+  4. Splits the strip into panels at the empty gaps between them.
+
+Writes <out>/strip.png (the whole episode) and <out>/panel_001.png, panel_002.png, ...
+Take the screenshots with some overlap (a quarter of the screen or more) so no panel is lost.
+"""
+import argparse
+import os
+import sys
+
+import numpy as np
+from PIL import Image
+
+IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp")
+
+
+def load_screenshots(folder):
+    names = sorted(f for f in os.listdir(folder) if f.lower().endswith(IMAGE_EXTS))
+    if not names:
+        sys.exit(f"No screenshots found in {folder}")
+    images = [np.asarray(Image.open(os.path.join(folder, n)).convert("RGB")) for n in names]
+    width = images[0].shape[1]
+    # Screenshots from the same phone share a width; rescale any odd one out.
+    for i, img in enumerate(images):
+        if img.shape[1] != width:
+            h = round(img.shape[0] * width / img.shape[1])
+            images[i] = np.asarray(Image.fromarray(img).resize((width, h), Image.LANCZOS))
+    print(f"Loaded {len(images)} screenshots ({width}px wide)")
+    return images
+
+
+def interface_rows(images, tolerance=6.0):
+    """Number of rows at the top and bottom that never change between screenshots."""
+    if len(images) < 3:
+        return 0, 0
+    height = min(img.shape[0] for img in images)
+    stack = np.stack([img[:height].astype(np.float32).mean(axis=2) for img in images])
+    changing = stack.std(axis=0).mean(axis=1) > tolerance
+    rows = np.flatnonzero(changing)
+    if len(rows) == 0:
+        return 0, 0
+    return int(rows[0]), int(height - 1 - rows[-1])
+
+
+def row_signatures(img, columns=64):
+    """Each row shrunk to a few averaged columns, for fast and noise tolerant matching."""
+    gray = img.astype(np.float32).mean(axis=2)
+    usable = gray.shape[1] - gray.shape[1] % columns
+    return gray[:, :usable].reshape(gray.shape[0], columns, -1).mean(axis=2)
+
+
+def find_overlap(prev, nxt, min_overlap=60, max_error=8.0, min_detail=3.0):
+    """Row in prev where nxt starts, or None when the two screenshots do not overlap.
+
+    Compares the whole overlapping area for every possible scroll position, ignoring
+    positions where that area is plain background, since those would match anywhere.
+    """
+    a, b = row_signatures(prev), row_signatures(nxt)
+    best, best_error = None, max_error
+    for start in range(1, len(a) - min_overlap):
+        rows = min(len(a) - start, len(b))
+        error = np.abs(a[start:start + rows] - b[:rows]).mean()
+        if error < best_error and b[:rows].std() >= min_detail:
+            best, best_error = start, error
+    return best
+
+
+def stitch(images, top, bottom):
+    pieces = [img[top:img.shape[0] - bottom] for img in images]
+    strip = pieces[0]
+    for no, piece in enumerate(pieces[1:], 2):
+        tail = strip[-piece.shape[0]:]
+        start = find_overlap(tail, piece)
+        if start is None:
+            print(f"  screenshot {no}: no overlap found, appended as is (a few rows may be missing)")
+            strip = np.vstack([strip, piece])
+        else:
+            strip = np.vstack([strip, piece[len(tail) - start:]])
+    print(f"Stitched strip: {strip.shape[1]}x{strip.shape[0]}")
+    return strip
+
+
+def split_panels(strip, min_gap=20, min_panel=120, tolerance=10.0):
+    """Cuts at runs of rows that are a single flat color (the gutter between panels)."""
+    gray = strip.astype(np.float32).mean(axis=2)
+    flat = gray.std(axis=1) < tolerance
+    panels, start, run = [], None, 0
+    for y, is_flat in enumerate(np.append(flat, True)):
+        if not is_flat:
+            if start is None:
+                start = y
+            run = 0
+            continue
+        run += 1
+        if start is not None and (run >= min_gap or y == len(flat)):
+            end = y - run + 1
+            if end - start >= min_panel:
+                panels.append((start, end))
+            start = None
+    return panels
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("folder", help="folder with the screenshots, in order")
+    parser.add_argument("--out", help="output folder (default: <folder>_panels)")
+    parser.add_argument("--top", type=int, help="rows to cut from the top of each screenshot (default: auto)")
+    parser.add_argument("--bottom", type=int, help="rows to cut from the bottom of each screenshot (default: auto)")
+    parser.add_argument("--margin", type=int, default=8, help="empty margin kept around each panel")
+    args = parser.parse_args()
+
+    images = load_screenshots(args.folder)
+    top, bottom = interface_rows(images)
+    top = args.top if args.top is not None else top
+    bottom = args.bottom if args.bottom is not None else bottom
+    print(f"Removing {top}px at the top and {bottom}px at the bottom of each screenshot")
+
+    strip = stitch(images, top, bottom)
+    out = args.out or args.folder.rstrip("/\\") + "_panels"
+    os.makedirs(out, exist_ok=True)
+    Image.fromarray(strip).save(os.path.join(out, "strip.png"))
+
+    panels = split_panels(strip)
+    for no, (y0, y1) in enumerate(panels, 1):
+        y0, y1 = max(0, y0 - args.margin), min(len(strip), y1 + args.margin)
+        Image.fromarray(strip[y0:y1]).save(os.path.join(out, f"panel_{no:03d}.png"))
+    print(f"Saved {len(panels)} panels to {out}")
+
+
+if __name__ == "__main__":
+    main()
