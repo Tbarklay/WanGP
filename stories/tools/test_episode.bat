@@ -78,6 +78,9 @@ python wgp.py --process "!SERIES!batches\!EP!.json" --output-dir "!SERIES!output
 
 set "MUSIC="
 if exist "!SERIES!music.mp3" set MUSIC=--music "!SERIES!music.mp3"
+echo [*] Removing whispers and other sounds that are not in the script...
+python stories\tools\clean_voices.py "!SCRIPT!" --test
+
 echo [*] Assembling the video...
 python stories\tools\assemble_episode.py "!SCRIPT!" --test !MUSIC!
 

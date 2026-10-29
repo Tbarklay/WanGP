@@ -47,8 +47,17 @@ def duration(path):
 
 
 def newest(folder, stem):
-    files = [f for f in glob.glob(os.path.join(folder, stem + "*")) if not f.endswith(".json")]
+    files = [f for f in glob.glob(os.path.join(folder, stem + "*")) if not f.endswith((".json", "_clean.wav"))]
     return max(files, key=os.path.getmtime) if files else None
+
+
+def voice_clip(folder, stem):
+    """The newest narration clip, or its cleaned version from clean_voices.py when that is up to date."""
+    raw = newest(folder, stem)
+    if raw is None:
+        return None
+    clean = os.path.splitext(raw)[0] + "_clean.wav"
+    return clean if os.path.isfile(clean) and os.path.getmtime(clean) >= os.path.getmtime(raw) else raw
 
 
 def motion(move, frames):
@@ -101,7 +110,7 @@ def main():
     segments, captions, clock, missing = [], [], 0.0, []
     for i, (no, _, narration) in enumerate(beats):
         image = newest(rendered, f"{ep}_img_{no:02d}")
-        voice = newest(rendered, f"{ep}_vo_{no:02d}")
+        voice = voice_clip(rendered, f"{ep}_vo_{no:02d}")
         if image is None or voice is None:
             missing.append(no)
             continue

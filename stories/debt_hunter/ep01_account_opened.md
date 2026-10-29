@@ -18,7 +18,7 @@ Now he's the only one still in it. Bleeding, out of time, and about to make a de
 **03** `[image: {ledger} floating open in front of {cass} in the dark cave, crimson light spilling from its pages]`
 A book that shouldn't exist has just opened in front of him. And it's asking him a question.
 
-**04** `[image: black screen with a single thin crimson crack of light down the middle]`
+**04** `[image: pure black background with a single thin glowing crimson vertical crack of light down the center, abstract and minimal, no people]`
 But to understand how he got here, we have to go back to this morning.
 
 ## The world
@@ -98,7 +98,7 @@ Lise, the healer, is the only one who looks at him like he's a person. She hands
 **27** `[image: {cass} writing in his notebook while watching the team, glowing rift behind them]`
 Our MC writes down everything. Pike: fire-coated sword strikes, three-second wind-up. Bram: arrows that split in two. Lise: a healing light that closes small cuts. Old habits.
 
-**28** `[image: the team stepping through the glowing rift gate, {cass} last, bent under his huge pack]`
+**28** `[image: seen from behind, {pike}, {lise} and a bulky bald archer in leather armor stepping through a glowing blue rift gate in a fenced construction site at night, {cass} last in line, bent under a huge overstuffed cargo backpack]`
 Then they step through.
 
 ## Inside the rift
@@ -138,10 +138,10 @@ It's covered in layered stone plates, with fire glowing between the cracks. Our 
 **39** `[image: {pike} slashing at {warden}, his flaming sword shattering against its stone armor]`
 Pike swings anyway. His sword hits the Warden's shoulder and shatters like a toy.
 
-**40** `[image: {bram}'s split arrows bouncing harmlessly off {warden}'s armor]`
+**40** `[image: inside a dark crystal cave, {bram} firing glowing split arrows at {warden}, the arrows snapping and bouncing harmlessly off its stone armor plates]`
 Bram's arrows bounce off. Lise's light doesn't even reach it. In three seconds, the confident team leader is gone and a terrified kid is in his place.
 
-**41** `[image: {pike} screaming "run" and sprinting toward the glowing exit gate, the team following]`
+**41** `[image: {pike} sprinting in panic toward a glowing exit gate in a collapsing red-lit cave, mouth open screaming, a red-haired healer and a bald archer running behind him, only one knight in the scene]`
 "Run!" Pike screams. And they run.
 
 **42** `[image: {cass} struggling under his massive pack, falling behind the running team on a crumbling rock bridge]`
@@ -155,10 +155,10 @@ He gets close. The exit gate is right there. Pike is standing in it, looking bac
 **44** `[image: {pike}'s cold face in the gate light, his hand on the gate controls]`
 For one second, the MC thinks he's going to wait.
 
-**45** `[image: {pike} shoving {cass} backward off the bridge edge, {lise} screaming in the background]`
+**45** `[image: on a crumbling rock bridge in a red-lit cave, {pike}, standing in a glowing exit gate, shoves {cass} hard in the chest with both hands, the porter falling backward toward the darkness, the knight's face cold and selfish, dynamic side view]`
 Instead, Pike shoves him. Hard. Back toward the monster. "Slow it down, pack mule. That's what we pay you for."
 
-**46** `[image: {lise} reaching out toward {cass} as {bram} drags her through the gate]`
+**46** `[image: seen from inside a dark cave, {lise} crying and reaching back desperately as {bram} grabs her arm and drags her through a glowing exit gate, no other people]`
 Lise screams his name. Bram drags her through the gate.
 
 **47** `[image: the exit gate flickering and shrinking into a tiny point of light, {cass} alone in the darkness]`
@@ -169,7 +169,7 @@ And then the gate shrinks to a point of light, and it's gone.
 **48** `[image: {cass} lying among rubble, his backpack torn open, crystals scattered around him]`
 The MC lands hard in the rubble. His pack splits open. Something in his leg makes a sound he really doesn't like.
 
-**49** `[image: {warden}'s massive stone foot slamming down right next to {cass}'s head]`
+**49** `[image: low angle from the ground: the enormous stone claw of {warden} slamming down into the rubble right beside {cass}, who lies on his back terrified, dust and sparks exploding]`
 The Gravel Warden doesn't hurry. It doesn't need to. Every step shakes the whole cavern.
 
 **50** `[image: {cass} crawling backward against a wall, notebook falling out of his jacket, monster looming]`
@@ -178,7 +178,7 @@ He crawls backward until there's a wall behind him. His notebook falls out of hi
 **51** `[image: close-up of the open notebook, a page titled GRAVEL WARDEN with sketches of its stone plates]`
 It's open to a page he wrote two years ago. Gravel Warden. Weak point: none recorded. Recommended response: do not engage.
 
-**52** `[image: {cass} laughing weakly, blood on his lip, the monster's glowing eyes above him]`
+**52** `[image: {cass} slumped against a cave wall, blood on his lip, laughing weakly in despair, dim red cave light, the glowing orange eyes of a huge beast in the darkness above him]`
 He actually laughs. Three years of notes, and the best advice he ever wrote down is "don't."
 
 **53** `[image: {cass}'s face in close-up, eyes closed, a faded memory image of his smiling father behind him]`
@@ -189,7 +189,7 @@ He thinks about his father. About the debt. About how Director Hale will probabl
 **54** `[image: the notebook's pages flipping wildly on their own, crimson light leaking from between them]`
 And then the notebook starts to move.
 
-**55** `[image: the notebook transforming into {ledger}, black leather and brass corners growing over it, floating up]`
+**55** `[image: close-up of a small worn spiral notebook floating in midair in a dark cave, transforming into {ledger}, black leather and ornate brass corners spreading over its cover like frost, crimson light bursting from the pages, no people]`
 Its pages flip on their own. The cheap cover turns to black leather. Brass corners grow over it like frost. And it rises into the air in front of him.
 
 **56** `[image: {ledger} open in midair, glowing crimson handwriting appearing on a blank page]`
@@ -201,13 +201,13 @@ Words write themselves across the page in glowing red ink.
 **58** `[image: {cass} staring at {ledger} in disbelief, its crimson light on his face]`
 Our MC stares at it. A floating book, in a collapsing rift, giving him a bank statement.
 
-**59** `[image: {ledger}'s page showing a glowing sketch of {warden}, armor plates outlined in crimson]`
+**59** `[image: close-up of an open page of {ledger}, a glowing crimson ink sketch of a horned four-legged stone beast drawn on the parchment, red magic circles around it, dark background, no people]`
 The page turns. There's a drawing of the Gravel Warden, his drawing from two years ago, but now it glows. Underneath, a new line: "Ability recorded: Stoneplate Body."
 
 **60** `[image: {ledger} glowing brighter, a crimson question mark of light hovering above the page]`
 And then the question. "Would you like to borrow?"
 
-**61** `[image: {warden} raising both front legs high above {cass}, about to slam down]`
+**61** `[image: dramatic low angle: {warden} rearing up on its hind legs with its front claws raised high above {cass}, who kneels on the cave floor looking up in terror, red light, falling rocks]`
 The Warden rears up above him. The MC doesn't have time to read the fine print.
 
 **62** `[image: {cass} slamming his hand onto the glowing page of {ledger}, crimson light exploding outward]`
@@ -215,28 +215,28 @@ He slams his hand on the page. "Yes."
 
 ## The fight
 
-**63** `[image: stone plates with glowing orange cracks forming over {cass}'s arms and shoulders like armor]`
+**63** `[image: close-up of {cass} kneeling in a dark cave as thick gray stone armor plates with glowing molten orange cracks spread up from his hands over his arms, shoulders and chest like living volcanic rock, {ledger} glowing beside him]`
 Stone plates burst across his skin, layer over layer, orange fire glowing in the cracks. The same armor the monster has. Every bit of it.
 
-**64** `[image: {warden}'s huge feet slamming down onto {cass}, who catches them on his armored arms, shockwave of dust]`
+**64** `[image: {cass}, {stonearmor}, braced with both armored arms raised, catching the gigantic stone claws of {warden} as they slam down on him, the ground cracking beneath his feet, shockwave of dust, dynamic action shot]`
 The Warden's legs come down, and the MC catches them. Both of them. The ground cracks beneath him, but he doesn't move an inch.
 
 **65** `[image: a glowing crimson countdown floating at the edge of the frame, the number ten in elegant script]`
 In the corner of his vision, a number glows red. Ten. Nine.
 
-**66** `[image: {cass} shoving {warden} backward, the monster stumbling, shocked]`
+**66** `[image: {cass}, {stonearmor}, shoving {warden} with both armored hands, the huge beast stumbling backward off balance, debris flying, side view action shot]`
 He shoves. A Silver-rank monster stumbles backward like it's been hit by a truck.
 
-**67** `[image: {cass} charging forward, fist glowing with orange cracks, low dramatic angle]`
+**67** `[image: {cass}, {stonearmor}, charging forward across a cracked cave floor, armored fist pulled back and glowing orange, low dramatic angle, motion lines]`
 Eight. Seven. The MC doesn't have a weapon. He doesn't need one.
 
-**68** `[image: {cass}'s armored fist smashing into {warden}'s chest plate, cracks spreading through the stone]`
+**68** `[image: close action shot: the stone-armored fist of {cass}, {stonearmor}, smashing into the chest plate of {warden}, deep cracks spreading through the beast's rock armor, bright impact flash]`
 He punches it in the chest. Stone hits stone, and the monster's armor cracks first.
 
-**69** `[image: {cass} hitting again and again, fragments of stone flying, crimson countdown at three]`
+**69** `[image: {cass}, {stonearmor}, throwing a furious flurry of punches, stone fragments and orange sparks flying everywhere, a glowing crimson number 3 floating in the corner]`
 Six. Five. Four. Again. Again. Every hit is borrowed strength, and he spends it all.
 
-**70** `[image: {warden} shattering into pieces, glowing orange fragments exploding outward, {cass} standing in the light]`
+**70** `[image: a huge horned stone beast exploding into countless glowing rock fragments and molten orange sparks in a dark cave, {cass}, {stonearmor}, standing in the blast of light]`
 Three. Two. On the last hit, the Gravel Warden breaks apart into a storm of glowing stone.
 
 **71** `[image: the stone armor crumbling off {cass} as he drops to his knees, exhausted, crystals falling around him]`
@@ -253,13 +253,13 @@ The red light fades. The rift goes still. And behind him, a new exit gate opens.
 **74** `[image: {cass} limping out of the rift gate into floodlights, police and guild workers turning in shock]`
 Our MC limps out of a collapsed rift, alone, carrying a Silver-rank crystal. As far as anyone knows, no porter has ever done that.
 
-**75** `[image: {pike} and {bram} staring at {cass} in shock and fear from across the construction site]`
+**75** `[image: across a floodlit construction site at night, {pike} and {bram} standing by a guild truck, staring in shock and fear, seen from a distance, no other people]`
 Pike and Bram are standing by the guild truck. They look at him like they've seen a ghost. Which, from their point of view, they kind of have.
 
 **76** `[image: {lise} running toward {cass} with tears in her eyes]`
 Lise is the only one who runs toward him.
 
-**77** `[image: {ledger} floating unseen beside {cass}, crimson light, nobody else noticing it]`
+**77** `[image: {cass} standing alone in a floodlit construction site at night with {ledger} floating at his shoulder glowing crimson, police and workers in the background not noticing it, he is the only young man in an olive jacket]`
 Nobody else can see the book floating at his shoulder. He realizes that a second later, when nobody screams.
 
 **78** `[image: {ledger} open to a page where crimson ink spreads into a long ledger entry with a glowing seal]`
@@ -268,7 +268,7 @@ The Ledger opens one last time tonight. New line. "Loan: Stoneplate Body, ten se
 **79** `[image: close-up of glowing crimson script and a small glowing hourglass on the page]`
 "Due in seventy-two hours. Interest applies."
 
-**80** `[image: {cass} looking down at the huge crystal in his arms, then at the book, realizing]`
+**80** `[image: close-up of {cass} holding a huge glowing blue crystal in his arms and looking up at {ledger} floating in front of him, realization on his face, only one person in the image]`
 The MC looks at the crystal in his arms. Worth maybe four hundred. Then at the book. One thousand. Seventy-two hours.
 
 **81** `[image: night rooftop far away, {auditor} standing in silhouette watching the construction site, pocket watch open]`

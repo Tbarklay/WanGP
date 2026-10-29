@@ -3,17 +3,48 @@
   "negative": "text, letters, words, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, ID badge text, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
   "narrator": {
     "speaker": "ryan",
-    "instruction": "engaging storytelling narrator for an anime recap channel, clear, confident, lively pacing, natural dramatic pauses"
+    "instruction": "clear, confident storytelling narrator for an anime recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs"
   },
   "characters": {
-    "cass": {"ref": "refs/front/cass.png", "desc": "the young porter with short messy dark brown hair, tired gray eyes, an olive green jacket with orange straps, gray hoodie, fingerless black gloves and a bandaged left forearm"},
-    "ledger": {"ref": "refs/front/ledger.png", "desc": "the black leather book with ornate brass corners and a brass clasp, its parchment pages glowing with crimson handwriting and red magic circles"},
-    "warden": {"ref": "refs/front/warden.png", "desc": "the huge four-legged stone beast covered in gray rock plates with glowing molten orange cracks, curled ram horns, glowing orange eyes and a spiked stone tail"},
-    "hale": {"ref": "refs/front/hale.png", "desc": "the older man with slicked-back gray hair, a short gray beard, pale blue eyes, a charcoal three-piece suit, red tie, black gloves and a cane with a glowing blue crystal handle"},
-    "auditor": {"ref": "refs/front/auditor.png", "desc": "the tall faceless figure in a long black coat and wide-brimmed black hat, wearing a smooth white mask with one vertical red line, holding a brass pocket watch"},
-    "pike": {"ref": "refs/front/pike.png", "desc": "the blond young knight with an undercut, blue eyes, polished silver plate armor and a long royal blue cape"},
-    "lise": {"ref": "refs/front/lise.png", "desc": "the young healer with short messy red hair, green eyes, a hooded green robe with white trim and a wooden staff with a glowing green crystal"},
-    "bram": {"ref": "refs/front/bram.png", "desc": "the bulky archer with a shaved head, a scar across his nose, brown leather armor and a recurve bow"},
-    "mara": {"ref": "refs/front/mara.png", "desc": "the tall young woman with a long silver-white ponytail, amber eyes, a white and gold armored long coat and a silver rapier"}
+    "cass": {
+      "ref": "refs/front/cass.png",
+      "desc": "the young porter with short messy dark brown hair, tired gray eyes, an olive green jacket with orange straps, gray hoodie, fingerless black gloves and a bandaged left forearm"
+    },
+    "ledger": {
+      "ref": "refs/front/ledger.png",
+      "desc": "the black leather book with ornate brass corners and a brass clasp, its parchment pages glowing with crimson handwriting and red magic circles"
+    },
+    "warden": {
+      "ref": "refs/front/warden.png",
+      "desc": "the huge four-legged stone beast covered in gray rock plates with glowing molten orange cracks, curled ram horns, glowing orange eyes and a spiked stone tail"
+    },
+    "hale": {
+      "ref": "refs/front/hale.png",
+      "desc": "the older man with slicked-back gray hair, a short gray beard, pale blue eyes, a charcoal three-piece suit, red tie, black gloves and a cane with a glowing blue crystal handle"
+    },
+    "auditor": {
+      "ref": "refs/front/auditor.png",
+      "desc": "the tall faceless figure in a long black coat and wide-brimmed black hat, wearing a smooth white mask with one vertical red line, holding a brass pocket watch"
+    },
+    "pike": {
+      "ref": "refs/front/pike.png",
+      "desc": "the blond young knight with an undercut, blue eyes, polished silver plate armor and a long royal blue cape"
+    },
+    "lise": {
+      "ref": "refs/front/lise.png",
+      "desc": "the young healer with short messy red hair, green eyes, a hooded green robe with white trim and a wooden staff with a glowing green crystal"
+    },
+    "bram": {
+      "ref": "refs/front/bram.png",
+      "desc": "the bulky archer with a shaved head, a scar across his nose, brown leather armor and a recurve bow"
+    },
+    "mara": {
+      "ref": "refs/front/mara.png",
+      "desc": "the tall young woman with a long silver-white ponytail, amber eyes, a white and gold armored long coat and a silver rapier"
+    },
+    "stonearmor": {
+      "ref": null,
+      "desc": "his arms, shoulders and chest encased in thick gray stone armor plates with glowing molten orange cracks between them, like living volcanic rock"
+    }
   }
 }
