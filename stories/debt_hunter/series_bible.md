@@ -51,7 +51,7 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   red magic circles, with crimson smoke, sparks and light rising from them.
 - **Mara Quill (20, rival, from episode 4):** tall young woman, sharp amber eyes, long silver-white hair in a high
   ponytail, white and gold armored coat, golden Crest. Proud, precise, from a famous guild family.
-- **Director Silas Hale (50s, antagonist):** slicked-back gray hair, neat beard, charcoal three-piece suit, cane
+- **Director Silas Hale (50s, antagonist, reference: `refs/hale.jpg`):** slicked-back gray hair, neat beard, charcoal three-piece suit, cane
   with a silver rift-crystal handle. Head of the Ironvale Guild; holds Cass's father's debt.
 - **The Auditor (mystery):** tall faceless figure in a long black coat and hat, face a smooth blank mask with
   one vertical red line, carries a brass pocket watch.
