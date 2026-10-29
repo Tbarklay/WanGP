@@ -55,7 +55,8 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   with a silver rift-crystal handle. Head of the Ironvale Guild; holds Cass's father's debt.
 - **The Auditor (mystery, reference: `refs/auditor.jpg`):** tall faceless figure in a long black coat and hat, face a smooth blank mask with
   one vertical red line, carries a brass pocket watch.
-- **Dorian Pike (episode 1):** smug Bronze-rank team leader, blond undercut, polished silver armor, blue cape.
+- **Dorian Pike (episode 1, reference: `refs/pike.jpg`):** smug Bronze-rank team leader, blond undercut, blue eyes,
+  arrogant smirk, polished silver plate armor with blue trim, long royal blue cape, longsword, glowing orange Crest on his hand.
 - **Lise Arno (episode 1):** nervous Iron-rank healer, short red hair, green robe, kind eyes.
 - **Bram Tull (episode 1):** bulky Bronze-rank archer, shaved head, scar across nose, leather armor.
 - **The Gravel Warden (episode 1 monster, reference: `refs/warden.jpg`):** hulking four-legged armored beast,
