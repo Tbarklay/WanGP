@@ -59,7 +59,8 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   arrogant smirk, polished silver plate armor with blue trim, long royal blue cape, longsword, glowing orange Crest on his hand.
 - **Lise Arno (episode 1, reference: `refs/lise.jpg`):** nervous Iron-rank healer, short messy red hair, kind green eyes,
   hooded green robe with white trim, brown leather satchel, gnarled wooden staff with a glowing green crystal, gray Crest on her hand.
-- **Bram Tull (episode 1):** bulky Bronze-rank archer, shaved head, scar across nose, leather armor.
+- **Bram Tull (episode 1, reference: `refs/bram.jpg`):** bulky muscular Bronze-rank archer, shaved head, scar across his nose,
+  sneering grin, dark brown leather armor with crossed straps and bracers, recurve bow, quiver on his back, orange Crest on his hand.
 - **The Gravel Warden (episode 1 monster, reference: `refs/warden.jpg`):** hulking four-legged armored beast,
   about the size of a truck, built from layered gray stone plates with jagged stone spines along its back, glowing
   molten orange cracks between the plates, two curled ram-like horns, glowing molten orange eyes, a fanged jaw with
