@@ -53,7 +53,7 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   ponytail, white and gold armored coat, golden Crest. Proud, precise, from a famous guild family.
 - **Director Silas Hale (50s, antagonist, reference: `refs/hale.jpg`):** slicked-back gray hair, neat beard, charcoal three-piece suit, cane
   with a silver rift-crystal handle. Head of the Ironvale Guild; holds Cass's father's debt.
-- **The Auditor (mystery):** tall faceless figure in a long black coat and hat, face a smooth blank mask with
+- **The Auditor (mystery, reference: `refs/auditor.jpg`):** tall faceless figure in a long black coat and hat, face a smooth blank mask with
   one vertical red line, carries a brass pocket watch.
 - **Dorian Pike (episode 1):** smug Bronze-rank team leader, blond undercut, polished silver armor, blue cape.
 - **Lise Arno (episode 1):** nervous Iron-rank healer, short red hair, green robe, kind eyes.
