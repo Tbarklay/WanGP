@@ -58,8 +58,10 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
 - **Dorian Pike (episode 1):** smug Bronze-rank team leader, blond undercut, polished silver armor, blue cape.
 - **Lise Arno (episode 1):** nervous Iron-rank healer, short red hair, green robe, kind eyes.
 - **Bram Tull (episode 1):** bulky Bronze-rank archer, shaved head, scar across nose, leather armor.
-- **The Gravel Warden (episode 1 monster):** hulking four-legged armored beast of layered stone plates, glowing
-  orange cracks between plates, two curved horns, molten eyes.
+- **The Gravel Warden (episode 1 monster, reference: `refs/warden.jpg`):** hulking four-legged armored beast,
+  about the size of a truck, built from layered gray stone plates with jagged stone spines along its back, glowing
+  molten orange cracks between the plates, two curled ram-like horns, glowing molten orange eyes, a fanged jaw with
+  fire glowing inside, massive stone claws, and a long spiked stone tail.
 
 ## Season 1 outline
 1. **Account Opened:** a rift collapses mid-raid; the team abandons Cass; the Ledger appears; his first loan saves him.
