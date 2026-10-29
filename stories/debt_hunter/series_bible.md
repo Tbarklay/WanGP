@@ -57,7 +57,8 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   one vertical red line, carries a brass pocket watch.
 - **Dorian Pike (episode 1, reference: `refs/pike.jpg`):** smug Bronze-rank team leader, blond undercut, blue eyes,
   arrogant smirk, polished silver plate armor with blue trim, long royal blue cape, longsword, glowing orange Crest on his hand.
-- **Lise Arno (episode 1):** nervous Iron-rank healer, short red hair, green robe, kind eyes.
+- **Lise Arno (episode 1, reference: `refs/lise.jpg`):** nervous Iron-rank healer, short messy red hair, kind green eyes,
+  hooded green robe with white trim, brown leather satchel, gnarled wooden staff with a glowing green crystal, gray Crest on her hand.
 - **Bram Tull (episode 1):** bulky Bronze-rank archer, shaved head, scar across nose, leather armor.
 - **The Gravel Warden (episode 1 monster, reference: `refs/warden.jpg`):** hulking four-legged armored beast,
   about the size of a truck, built from layered gray stone plates with jagged stone spines along its back, glowing
