@@ -49,7 +49,7 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
 - **The Ledger (reference: `refs/ledger_closed.png`, `refs/ledger_open.png`):** thick black leather book with ornate brass
   corner guards and a brass clasp lock. Open, its cream parchment pages are covered in glowing crimson handwriting and
   red magic circles, with crimson smoke, sparks and light rising from them.
-- **Mara Quill (20, rival, from episode 4):** tall young woman, sharp amber eyes, long silver-white hair in a high
+- **Mara Quill (20, rival, from episode 4, reference: `refs/mara.jpg`):** tall young woman, sharp amber eyes, long silver-white hair in a high
   ponytail, white and gold armored coat, golden Crest. Proud, precise, from a famous guild family.
 - **Director Silas Hale (50s, antagonist, reference: `refs/hale.jpg`):** slicked-back gray hair, neat beard, charcoal three-piece suit, cane
   with a silver rift-crystal handle. Head of the Ironvale Guild; holds Cass's father's debt.
