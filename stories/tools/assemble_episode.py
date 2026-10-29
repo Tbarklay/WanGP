@@ -20,6 +20,7 @@ from build_episode import parse_beats
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
 PAUSE = 0.35            # silence after each narration line
 MUSIC_VOLUME = 0.10     # background music level under the narrator
+LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"   # YouTube's playback loudness, so the narrator is not quiet
 MOVES = ["zoom_in", "pan_right", "zoom_out", "pan_left"]
 
 
@@ -141,10 +142,11 @@ def main():
     if args.music:
         run([tool("ffmpeg"), "-y", "-i", joined, "-stream_loop", "-1", "-i", args.music,
              "-filter_complex", f"[1:a]volume={MUSIC_VOLUME},afade=t=out:st={max(clock - 3, 0):.2f}:d=3[m];"
-                                "[0:a][m]amix=inputs=2:duration=first:normalize=0[a]",
+                                f"[0:a][m]amix=inputs=2:duration=first:normalize=0,{LOUDNESS}[a]",
              "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", out])
     else:
-        shutil.copyfile(joined, out)
+        run([tool("ffmpeg"), "-y", "-i", joined, "-af", LOUDNESS, "-c:v", "copy",
+             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", out])
 
     with open(os.path.join(final_dir, f"{ep}.srt"), "w", encoding="utf-8") as f:
         for n, (start, end, text) in enumerate(captions, 1):

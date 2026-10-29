@@ -59,7 +59,8 @@ def image_task(cast, ep, no, image):
     task.update(
         model_type=EDIT_MODEL,
         prompt=f"{cast['style']}. {scene}. Draw a brand new scene: keep each referenced character's face, hair, "
-               "outfit and colors exactly as in their picture, show each of them only once, and do not copy "
+               "outfit and colors exactly as in their picture. Each character appears exactly once, in a natural "
+               "pose that fits the action and the camera angle, not standing stiffly facing the viewer. Do not copy "
                "the plain backgrounds or poses of the reference pictures.",
         video_prompt_type="I",
         image_refs=[os.path.join(series, cast["characters"][k]["ref"]).replace("\\", "/") for k in pictured],

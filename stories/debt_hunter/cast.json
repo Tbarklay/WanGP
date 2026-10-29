@@ -1,6 +1,6 @@
 {
   "style": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
-  "negative": "text, letters, words, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
+  "negative": "text, letters, words, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, ID badge text, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
   "narrator": {
     "speaker": "ryan",
     "instruction": "engaging storytelling narrator for an anime recap channel, clear, confident, lively pacing, natural dramatic pauses"
