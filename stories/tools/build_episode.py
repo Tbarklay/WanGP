@@ -83,6 +83,9 @@ def voice_task(cast, ep, no, narration, seed_offset=0):
         # A tight cap: with spare time the voice model fills it with whispers and laughter.
         "duration_seconds": max(4, round(words * 0.5 + 1.5)),
         "seed": SEED + seed_offset,
+        # Less sampling randomness: custom voices always run with language "auto", and at the default 0.9
+        # the model sometimes drifts into babble or another language.
+        "temperature": 0.7,
         "output_filename": f"{ep}_vo_{no:02d}",
     }
 
