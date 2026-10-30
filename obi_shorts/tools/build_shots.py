@@ -4,6 +4,7 @@ Usage (from the WanGP folder):
     python obi_shorts/tools/build_shots.py refs                              # 3D versions of Obi and the farmer
     python obi_shorts/tools/build_shots.py keyframes obi_shorts/test_shots.md
     python obi_shorts/tools/build_shots.py animate obi_shorts/test_shots.md   # after the keyframes are rendered
+    python obi_shorts/tools/build_shots.py song obi_shorts/obi_farm_parade.md # 3 takes of the song, if the list has lyrics
 Add --shots 2,3 to keyframes or animate to redo only some shots with new seeds.
 
 Each mode writes a batch to obi_shorts/batches and prints the command that renders it; keyframes and clips
@@ -53,6 +54,22 @@ def parse_shots(path):
     if not shots:
         sys.exit(f"No shots found in {path}")
     return shots
+
+
+def song_tasks(path, name, seconds):
+    text = open(path, encoding="utf-8").read()
+    music = re.search(r"^## Music\n(.+?)(?=\n## )", text, re.M | re.S)
+    lyrics = re.search(r"^## Lyrics\n(.+?)(?=\n## )", text, re.M | re.S)
+    if not (music and lyrics):
+        sys.exit(f"{path} has no '## Music' and '## Lyrics' sections")
+    return [{
+        "model_type": "ace_step_v1_5_turbo_lm_1_7b",
+        "prompt": lyrics.group(1).strip(),
+        "alt_prompt": " ".join(music.group(1).split()),
+        "duration_seconds": seconds,
+        "seed": SEED + take,
+        "output_filename": f"{name}_song_{'abc'[take]}",
+    } for take in range(3)]
 
 
 def ref_tasks(cast):
@@ -105,7 +122,7 @@ def write(name, tasks, folder=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("mode", choices=["refs", "keyframes", "animate"])
+    parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song"])
     parser.add_argument("script", nargs="?", help="shot list (.md), for keyframes and animate")
     parser.add_argument("--shots", help="only these shots, for example 2,3 (rendered with new seeds)")
     args = parser.parse_args()
@@ -125,6 +142,11 @@ def main():
     if args.shots:
         wanted = parse_beat_list(args.shots)
         shots, seed_offset = [s for s in shots if s[0] in wanted], 1000
+
+    if args.mode == "song":
+        # Long enough to cover every clip; the assembler fits the clips to the song it picks.
+        write(name + "_song", song_tasks(args.script, name, round(len(shots) * CLIP_FRAMES / 16) + 5), name)
+        return
 
     if args.mode == "keyframes":
         for key in {k for _, frame, _ in shots for k in re.findall(r"\{(\w+)\}", frame)}:

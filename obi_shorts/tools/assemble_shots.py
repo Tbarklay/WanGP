@@ -3,6 +3,10 @@
 Usage (from the WanGP folder, after the clips are rendered):
     python obi_shorts/tools/assemble_shots.py obi_shorts/test_shots.md
     python obi_shorts/tools/assemble_shots.py obi_shorts/test_shots.md --music path/to/music.mp3
+    python obi_shorts/tools/assemble_shots.py obi_shorts/obi_farm_parade.md --song b   # use song take b
+
+With a song (rendered by build_shots.py song), the clips are sped up or slowed down slightly so the
+video ends with the song; plain --music is faded out at the end of the clips instead.
 
 Writes obi_shorts/final/<shot list name>.mp4 (16:9) and <name>_short.mp4 (9:16, center crop for Shorts).
 """
@@ -36,6 +40,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", help="shot list (.md)")
     parser.add_argument("--music", help="music file, faded out at the end")
+    parser.add_argument("--song", help="song take (a, b or c) rendered by build_shots.py song; the clips follow its length")
     args = parser.parse_args()
 
     name = os.path.splitext(os.path.basename(args.script))[0]
@@ -52,6 +57,19 @@ def main():
     if not clips:
         sys.exit(f"No clips in {folder}")
 
+    durations = [float(subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration",
+                                       "-of", "csv=p=0", c], capture_output=True, text=True).stdout) for c in clips]
+    total, speed = sum(durations), 1.0
+    if args.song:
+        found = glob.glob(os.path.join(folder, f"{name}_song_{args.song}*"))
+        if not found:
+            sys.exit(f"Song take {args.song} not found in {folder}")
+        args.music = max(found, key=os.path.getmtime)
+        song_len = float(subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration",
+                                         "-of", "csv=p=0", args.music], capture_output=True, text=True).stdout)
+        speed = min(max(total / song_len, 0.85), 1.15)   # beyond 15% the motion looks wrong; hold the last frame
+        total = song_len
+
     final = os.path.join(ROOT, "final")
     os.makedirs(final, exist_ok=True)
     inputs, chains = [], []
@@ -59,11 +77,11 @@ def main():
         inputs += ["-i", clip]
         chains.append(f"[{i}:v]scale=1920:1080:force_original_aspect_ratio=increase:flags=lanczos,"
                       f"crop=1920:1080,fps=30,setsar=1[v{i}]")
-    chains.append("".join(f"[v{i}]" for i in range(len(clips))) + f"concat=n={len(clips)}:v=1:a=0[v]")
+    chains.append("".join(f"[v{i}]" for i in range(len(clips))) + f"concat=n={len(clips)}:v=1:a=0[cat]")
+    chains.append(f"[cat]setpts=PTS/{speed:.4f},fps=30,tpad=stop_mode=clone:stop_duration={total:.2f},"
+                  f"trim=0:{total:.2f}[v]")
     cmd = [tool("ffmpeg"), "-y", *inputs]
     if args.music:
-        total = sum(float(subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration",
-                                          "-of", "csv=p=0", c], capture_output=True, text=True).stdout) for c in clips)
         cmd += ["-stream_loop", "-1", "-i", args.music]
         chains.append(f"[{len(clips)}:a]volume={MUSIC_VOLUME},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
                       f"atrim=0:{total:.2f},{LOUDNESS}[a]")

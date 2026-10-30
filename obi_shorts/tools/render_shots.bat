@@ -60,6 +60,14 @@ set "SCRIPT=%~1"
 if "!SCRIPT!"=="" set "SCRIPT=obi_shorts\test_shots.md"
 for %%F in ("!SCRIPT!") do set "NAME=%%~nF"
 
+echo [*] Making the song, if the shot list has lyrics (3 takes)...
+set "SONG="
+python obi_shorts\tools\build_shots.py song "!SCRIPT!" >nul 2>nul
+if !errorlevel! equ 0 (
+    python wgp.py --process obi_shorts\batches\!NAME!_song.json --output-dir obi_shorts\output\!NAME!
+    set "SONG=--song a"
+)
+
 echo [*] Drawing the keyframes...
 python obi_shorts\tools\build_shots.py keyframes "!SCRIPT!"
 if !errorlevel! neq 0 (
@@ -79,7 +87,11 @@ python wgp.py --process obi_shorts\batches\!NAME!_clips.json --output-dir obi_sh
 set "MUSIC="
 if exist "obi_shorts\music.mp3" set MUSIC=--music "obi_shorts\music.mp3"
 echo [*] Joining the clips...
-python obi_shorts\tools\assemble_shots.py "!SCRIPT!" !MUSIC!
+if defined SONG (
+    python obi_shorts\tools\assemble_shots.py "!SCRIPT!" !SONG!
+) else (
+    python obi_shorts\tools\assemble_shots.py "!SCRIPT!" !MUSIC!
+)
 
 echo.
 echo [*] Done. The video and its vertical Short are in obi_shorts\final
