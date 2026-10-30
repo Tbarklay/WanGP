@@ -42,9 +42,9 @@
       "ref": "refs/front/mara.png",
       "desc": "the tall young woman with a long silver-white ponytail, amber eyes, a white and gold armored long coat and a silver rapier"
     },
-    "stonearmor": {
-      "ref": null,
-      "desc": "his arms, shoulders and chest encased in thick gray stone armor plates with glowing molten orange cracks between them, like living volcanic rock"
+    "cass_armored": {
+      "ref": "refs/front/cass_armored.png",
+      "desc": "the young man with short messy dark brown hair and tired gray eyes, his whole body covered in dark brown-black stone armor plates with glowing molten orange cracks between them, spiked stone shoulders and back, clawed stone gauntlets and boots"
     }
   }
 }

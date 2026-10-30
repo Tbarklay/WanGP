@@ -215,28 +215,28 @@ He slams his hand on the page. "Yes."
 
 ## The fight
 
-**63** `[image: close-up of {cass} kneeling in a dark cave as thick gray stone armor plates with glowing molten orange cracks spread up from his hands over his arms, shoulders and chest like living volcanic rock, {ledger} glowing beside him]`
+**63** `[image: close-up of {cass} kneeling in a dark cave as thick dark brown-black stone armor plates with glowing molten orange cracks spread up from his hands over his arms, shoulders and chest like living volcanic rock, {ledger} glowing beside him]`
 Stone plates burst across his skin, layer over layer, orange fire glowing in the cracks. The same armor the monster has. Every bit of it.
 
-**64** `[image: {cass}, {stonearmor}, braced with both armored arms raised, catching the gigantic stone claws of {warden} as they slam down on him, the ground cracking beneath his feet, shockwave of dust, dynamic action shot]`
+**64** `[image: {cass_armored}, braced with both armored arms raised, catching the gigantic stone claws of {warden} as they slam down on him, the ground cracking beneath his feet, shockwave of dust, dynamic action shot]`
 The Warden's legs come down, and the MC catches them. Both of them. The ground cracks beneath him, but he doesn't move an inch.
 
 **65** `[image: a glowing crimson countdown floating at the edge of the frame, the number ten in elegant script]`
 In the corner of his vision, a number glows red. Ten. Nine.
 
-**66** `[image: {cass}, {stonearmor}, shoving {warden} with both armored hands, the huge beast stumbling backward off balance, debris flying, side view action shot]`
+**66** `[image: {cass_armored}, shoving {warden} with both armored hands, the huge beast stumbling backward off balance, debris flying, side view action shot]`
 He shoves. A Silver-rank monster stumbles backward like it's been hit by a truck.
 
-**67** `[image: {cass}, {stonearmor}, charging forward across a cracked cave floor, armored fist pulled back and glowing orange, low dramatic angle, motion lines]`
+**67** `[image: {cass_armored}, charging forward across a cracked cave floor, armored fist pulled back and glowing orange, low dramatic angle, motion lines]`
 Eight. Seven. The MC doesn't have a weapon. He doesn't need one.
 
-**68** `[image: close action shot: the stone-armored fist of {cass}, {stonearmor}, smashing into the chest plate of {warden}, deep cracks spreading through the beast's rock armor, bright impact flash]`
+**68** `[image: close action shot: the stone-armored fist of {cass_armored} smashing into the chest plate of {warden}, deep cracks spreading through the beast's rock armor, bright impact flash]`
 He punches it in the chest. Stone hits stone, and the monster's armor cracks first.
 
-**69** `[image: {cass}, {stonearmor}, throwing a furious flurry of punches, stone fragments and orange sparks flying everywhere, a glowing crimson number 3 floating in the corner]`
+**69** `[image: {cass_armored}, throwing a furious flurry of punches, stone fragments and orange sparks flying everywhere, a glowing crimson number 3 floating in the corner]`
 Six. Five. Four. Again. Again. Every hit is borrowed strength, and he spends it all.
 
-**70** `[image: a huge horned stone beast exploding into countless glowing rock fragments and molten orange sparks in a dark cave, {cass}, {stonearmor}, standing in the blast of light]`
+**70** `[image: a huge horned stone beast exploding into countless glowing rock fragments and molten orange sparks in a dark cave, {cass_armored}, standing in the blast of light]`
 Three. Two. On the last hit, the Gravel Warden breaks apart into a storm of glowing stone.
 
 **71** `[image: the stone armor crumbling off {cass} as he drops to his knees, exhausted, crystals falling around him]`
