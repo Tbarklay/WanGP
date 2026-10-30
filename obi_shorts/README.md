@@ -20,6 +20,10 @@ Double-click `obi_shorts\tools\make_refs.bat`. It makes 4 takes each of Obi and 
 Redo a bad shot with new seeds: `python obi_shorts\tools\build_shots.py keyframes obi_shorts\test_shots.md --shots 2`
 (or `animate ... --shots 2`), render the printed batch, and assemble again.
 
+## Several videos in a row
+`obi_shorts\tools\render_queue.bat` renders the rainy, sunny and morning videos back to back (edit the list in the
+file to change the queue). Each 3-minute video takes about 4.5-7.5 hours, so three fit in a day.
+
 ## Timing on an RTX 4070
 About 2 minutes per keyframe and 5-10 minutes per 5 second clip: the 3-shot test is about 30 minutes, the
 36-shot `obi_farm_parade.md` about 4-6 hours, so start it at night.

@@ -95,5 +95,7 @@ if defined SONG (
 
 echo.
 echo [*] Done. The video and its vertical Short are in obi_shorts\final
-start "" "obi_shorts\final"
-pause
+if /i not "%~2"=="nopause" (
+    start "" "obi_shorts\final"
+    pause
+)
