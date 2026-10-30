@@ -73,6 +73,12 @@ def image_task(cast, ep, no, image, seed_offset=0):
     return task
 
 
+def duration_cap(words):
+    """Narration length limit: room for the slowest delivery (about 0.55 s per word), but not so much
+    that the voice model fills the spare time with whispers and laughter (clean_voices.py cuts the rest)."""
+    return max(5, round(words * 0.7 + 3))
+
+
 def voice_task(cast, ep, no, narration, seed_offset=0):
     words = len(narration.split())
     return {
@@ -80,8 +86,7 @@ def voice_task(cast, ep, no, narration, seed_offset=0):
         "prompt": narration,
         "alt_prompt": cast["narrator"]["instruction"],
         "model_mode": cast["narrator"]["speaker"],
-        # A tight cap: with spare time the voice model fills it with whispers and laughter.
-        "duration_seconds": max(4, round(words * 0.5 + 1.5)),
+        "duration_seconds": duration_cap(words),
         "seed": SEED + seed_offset,
         # Less sampling randomness: custom voices always run with language "auto", and at the default 0.9
         # the model sometimes drifts into babble or another language.

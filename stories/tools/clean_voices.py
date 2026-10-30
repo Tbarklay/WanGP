@@ -20,39 +20,86 @@ import wave
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_episode import parse_beats
+from build_episode import duration_cap, parse_beats
 
 RATE = 48000
-LEAD_IN, TAIL = 0.12, 0.30    # seconds kept before the first and after the last script word
-MAX_GAP = 0.8                 # a longer gap between two script words is shortened to BRIDGE
-BRIDGE = 0.30
+LEAD_IN, TAIL = 0.15, 0.45    # kept before the first and after the last spoken word (Whisper's word ends run early)
+JOIN_GAP = 1.0                # pauses up to this long between kept words stay as they are
+BRIDGE = 0.35                 # longer gaps (where junk was cut) are shortened to this
+JUNK_MIN = 0.6                # extra words lasting at least this long in a row are treated as junk and cut
 MIN_MATCH = 0.75              # below this share of script words recognized, the clip is re-recorded
+UNITS = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen " \
+        "seventeen eighteen nineteen".split()
+TENS = "twenty thirty forty fifty sixty seventy eighty ninety".split()
+NUMBERS = {str(n): UNITS[n] if n < 20 else TENS[n // 10 - 2] + (UNITS[n % 10] if n % 10 else "") for n in range(100)}
 
 
 def norm(word):
-    return re.sub(r"[^a-z0-9']", "", word.lower())
+    word = re.sub(r"[^a-z0-9']", "", word.lower())
+    return NUMBERS.get(word, word)
+
+
+def similar(a, b):
+    return a == b or difflib.SequenceMatcher(a=a, b=b).ratio() >= 0.6
 
 
 def keep_intervals(script_text, words, duration):
     """Spans of the clip to keep, and the share of script words recognized.
 
-    words: (start, end, text) from speech recognition, in time order.
+    words: (start, end, text) from speech recognition, in time order. Words Whisper heard slightly
+    differently from the script (a name, "M.C.") are kept. Only runs of extra words that last a while,
+    like laughter or whispering, plus everything before the first and after the last script word, are cut.
     """
     expected = [w for w in (norm(x) for x in script_text.split()) if w]
     heard = [norm(w[2]) for w in words]
-    matcher = difflib.SequenceMatcher(a=expected, b=heard, autojunk=False)
-    matched = sorted(j for _, b, n in matcher.get_matching_blocks() for j in range(b, b + n))
-    if not matched:
+    if not expected or not heard:
         return [], 0.0
-    spans = [[max(0.0, words[matched[0]][0] - LEAD_IN), words[matched[0]][1]]]
-    for prev, cur in zip(matched, matched[1:]):
-        gap = words[cur][0] - words[prev][1]
-        if cur == prev + 1 and gap <= MAX_GAP:
-            spans[-1][1] = words[cur][1]
+    script_like = [False] * len(words)
+    recognized = 0
+    matcher = difflib.SequenceMatcher(a=expected, b=heard, autojunk=False)
+    for tag, a0, a1, b0, b1 in matcher.get_opcodes():
+        if tag == "equal":
+            recognized += a1 - a0
+            script_like[b0:b1] = [True] * (b1 - b0)
+        elif tag == "replace":
+            for b in range(b0, b1):
+                if any(similar(heard[b], expected[a]) for a in range(a0, a1)):
+                    script_like[b] = True
+                    recognized += 1
+    recognized = min(recognized, len(expected))
+    script_words = [i for i, k in enumerate(script_like) if k]
+    if not script_words:
+        return [], 0.0
+    first, last = script_words[0], script_words[-1]
+    # Between the first and last script word, a run of other words is kept when it is short
+    # (a mishearing) and cut when it lasts (laughter, whispering, babble).
+    keep = script_like[:]
+    b = first
+    while b <= last:
+        if keep[b]:
+            b += 1
+            continue
+        end = b
+        while end <= last and not keep[end]:
+            end += 1
+        if words[end - 1][1] - words[b][0] < JUNK_MIN:
+            keep[b:end] = [True] * (end - b)
+        b = end
+    kept = [w for w, k in zip(words, keep) if k]
+    spans = [[max(0.0, kept[0][0] - LEAD_IN), kept[0][1]]]
+    prev_index = None
+    for idx, (start, end, _) in enumerate(words):
+        if not keep[idx] or idx == first:
+            prev_index = idx if keep[idx] else prev_index
+            continue
+        adjacent = prev_index is not None and all(keep[prev_index:idx + 1])
+        if adjacent and start - spans[-1][1] <= JOIN_GAP:
+            spans[-1][1] = end
         else:
-            spans.append([words[cur][0] - 0.05, words[cur][1]])
+            spans.append([start - 0.1, end])
+        prev_index = idx
     spans[-1][1] = min(duration, spans[-1][1] + TAIL)
-    return [tuple(s) for s in spans], len(matched) / len(expected)
+    return [tuple(s) for s in spans], recognized / len(expected)
 
 
 def load(path):
@@ -118,6 +165,10 @@ def main():
         if score < MIN_MATCH:
             redo.append(no)
             print(f"  beat {no:02d}: only {score:.0%} of the script recognized, needs re-recording")
+            continue
+        if duration >= duration_cap(len(narration.split())) - 0.3:
+            redo.append(no)
+            print(f"  beat {no:02d}: the clip ran into its length limit, so its last words may be cut off")
             continue
         cleaned = splice(samples, spans)
         save(os.path.splitext(clip)[0] + "_clean.wav", cleaned)
