@@ -116,13 +116,16 @@ def main():
             continue
         length = duration(voice) + PAUSE
         frames = max(1, round(length * FPS))
-        segment = os.path.join(work, f"seg_{no:02d}.mp4")
+        length = frames / FPS   # whole frames, so sound and picture stay in step across all segments
+        # Uncompressed audio in the segments: AAC adds a little padding to every segment, which builds
+        # up over an episode and puts the narration behind the pictures. It is compressed once at the end.
+        segment = os.path.join(work, f"seg_{no:02d}.mkv")
         run([tool("ffmpeg"), "-y", "-loop", "1", "-i", image, "-i", voice,
              "-filter_complex", f"[0:v]{motion(MOVES[i % len(MOVES)], frames)}[v];"
                                 f"[1:a]aresample=48000,apad=whole_dur={length:.3f}[a]",
              "-map", "[v]", "-map", "[a]", "-frames:v", str(frames), "-t", f"{length:.3f}",
              "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
-             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", segment])
+             "-c:a", "pcm_s16le", "-ar", "48000", "-ac", "2", segment])
         segments.append(segment)
 
         chunks = caption_chunks(narration)
@@ -144,7 +147,7 @@ def main():
     listing = os.path.join(work, "segments.txt")
     with open(listing, "w", encoding="utf-8") as f:
         f.writelines(f"file '{os.path.abspath(s)}'\n" for s in segments)
-    joined = os.path.join(work, "joined.mp4")
+    joined = os.path.join(work, "joined.mkv")
     run([tool("ffmpeg"), "-y", "-f", "concat", "-safe", "0", "-i", listing, "-c", "copy", joined])
 
     out = os.path.join(final_dir, f"{ep}.mp4")
