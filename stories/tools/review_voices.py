@@ -3,6 +3,9 @@
 Usage (from the WanGP folder, in the WanGP Python environment, after rendering the voices):
     python stories/tools/review_voices.py stories/debt_hunter/ep01_account_opened.md
     python stories/tools/review_voices.py stories/debt_hunter/ep01_account_opened.md --rounds 3 --takes 4
+    python stories/tools/review_voices.py stories/debt_hunter/ep01_account_opened.md --beats 4,21,63
+    python stories/tools/review_voices.py stories/debt_hunter/ep01_account_opened.md --test   # the 3-beat test render
+Needs ffmpeg on PATH (WanGP's ffmpeg_bins folder). It runs wgp.py itself to re-record bad takes.
 
 Every narration take of every beat in output/<ep> is checked:
   * an AudioSet sound classifier (AST) listens for laughter, snickering, gasps and whispering,
@@ -204,15 +207,16 @@ def main():
     parser.add_argument("--rounds", type=int, default=3, help="re-recording rounds for beats without a clean take")
     parser.add_argument("--takes", type=int, default=4, help="new takes per beat in each round")
     parser.add_argument("--beats", help="only these beats, comma separated")
+    parser.add_argument("--test", action="store_true", help="review the --test render (first 3 beats)")
     args = parser.parse_args()
 
     series = os.path.dirname(args.script)
-    ep = os.path.basename(args.script).split("_")[0]
+    ep = os.path.basename(args.script).split("_")[0] + ("_test" if args.test else "")
     folder = os.path.join(series, "output", ep)
     work = os.path.join(series, "output", ep + "_review")
     os.makedirs(work, exist_ok=True)
     cast = json.load(open(os.path.join(series, "cast.json"), encoding="utf-8"))
-    beats = parse_beats(args.script)
+    beats = parse_beats(args.script)[:3] if args.test else parse_beats(args.script)
     if args.beats:
         wanted = {int(b) for b in args.beats.split(",")}
         beats = [b for b in beats if b[0] in wanted]

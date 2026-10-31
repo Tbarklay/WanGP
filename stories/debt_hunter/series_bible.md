@@ -47,7 +47,7 @@ Placeholder keys used in episode scripts: `{cass}`, `{ledger}`, `{mara}`, `{hale
   jacket with reflective orange straps, fingerless black gloves, bandage on left forearm, huge cargo backpack.
   Quiet, observant, keeps a pocket notebook on every hunter he works with. No Crest.
 - **The MC in borrowed Stoneplate Body (reference: `refs/cass_armored.jpg`):** same face and hair, his whole body covered
-  in dark brown-black stone armor plates with glowing molten orange cracks, spiked stone shoulders and back, clawed
+  in dark charcoal-brown stone armor plates (no jacket) with glowing molten orange cracks, spiked stone shoulders and back, clawed
   stone gauntlets and boots. Used whenever he borrows the Gravel Warden's ability.
 - **The Ledger (reference: `refs/ledger_closed.png`, `refs/ledger_open.png`):** thick black leather book with ornate brass
   corner guards and a brass clasp lock. Open, its cream parchment pages are covered in glowing crimson handwriting and

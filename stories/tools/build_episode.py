@@ -75,7 +75,7 @@ def image_task(cast, ep, no, image, seed_offset=0):
 
 def duration_cap(words):
     """Narration length limit: room for the slowest delivery (about 0.55 s per word), but not so much
-    that the voice model fills the spare time with whispers and laughter (clean_voices.py cuts the rest)."""
+    that the voice model fills the spare time with whispers and laughter (review_voices.py rejects and re-records those takes)."""
     return max(5, round(words * 0.7 + 3))
 
 

@@ -1,12 +1,10 @@
-"""Removes whispers, laughter and other sounds the voice model adds around the narration.
+"""REPLACED by review_voices.py: do not use this script.
 
-Usage (from the WanGP folder, in the WanGP Python environment, after rendering the voices):
-    python stories/tools/clean_voices.py stories/debt_hunter/ep01_account_opened.md
+It left laughter at the start of clips (Whisper base.en word times are loose), cut pieces out of the middle of
+speech, and cut real words that Whisper wrote as digits. review_voices.py checks every take with a sound
+classifier and Whisper medium.en, trims only the silence around the speech, and re-records bad takes.
 
-Every narration clip is transcribed with Whisper (installed with WanGP). Only the stretches where the
-script's own words are spoken are kept; everything before, after and between them that is not in the
-script is cut. Each clip is saved next to the original as <name>_clean.wav, which the assembler then
-uses. Clips where too little of the script was recognized are listed, with the command to re-record them.
+Only RATE, load() and save() are still used, by review_voices.py.
 """
 import argparse
 import difflib
@@ -137,6 +135,7 @@ def raw_clips(folder, stem):
 
 
 def main():
+    sys.exit("clean_voices.py is replaced: run python stories\\tools\\review_voices.py <episode script> instead")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", help="episode script (.md)")
     parser.add_argument("--test", action="store_true", help="clean the --test render")

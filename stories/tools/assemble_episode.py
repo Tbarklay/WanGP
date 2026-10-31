@@ -52,7 +52,8 @@ def newest(folder, stem):
 
 
 def voice_clip(folder, stem):
-    """The newest narration clip, or its cleaned version from clean_voices.py when that is up to date."""
+    """The newest narration clip, or its trimmed version when that is up to date: after review_voices.py the
+    newest clip is the chosen <ep>_vo_NN_pick.wav, so its <ep>_vo_NN_pick_clean.wav is used."""
     raw = newest(folder, stem)
     if raw is None:
         return None

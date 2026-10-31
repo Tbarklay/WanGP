@@ -215,7 +215,7 @@ He slams his hand on the page. "Yes."
 
 ## The fight
 
-**63** `[image: close-up of {cass} kneeling in a dark cave as thick dark brown-black stone armor plates with glowing molten orange cracks spread up from his hands over his arms, shoulders and chest like living volcanic rock, {ledger} glowing beside him]`
+**63** `[image: close-up of {cass} kneeling in a dark cave as thick dark charcoal-brown stone armor plates with glowing molten orange cracks spread up from his hands over his arms, shoulders and chest like living volcanic rock, {ledger} glowing beside him]`
 Stone plates burst across his skin, layer over layer, orange fire glowing in the cracks. The same armor the monster has. Every bit of it.
 
 **64** `[image: {cass_armored}, braced with both armored arms raised, catching the gigantic stone claws of {warden} as they slam down on him, the ground cracking beneath his feet, shockwave of dust, dynamic action shot]`
