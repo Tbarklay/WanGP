@@ -27,7 +27,7 @@ But to understand how a porter ended up here, we have to go back three days.
 **05** `[image: {cass} asleep face down on a small bed in a tiny cramped apartment, still wearing his jacket, morning light through a cracked window, {ledger} floating above the bed]`
 The morning after the rift, our MC wakes up in his tiny apartment, still in yesterday's clothes. For one perfect second, he thinks it was all a dream.
 
-**06** `[image: close-up of {ledger} floating in midair above the bed, crimson light glowing between its pages]`
+**06** `[image: close-up of {ledger} floating alone in midair above an empty bed in a small dark bedroom, crimson light glowing between its pages, no people]`
 Then he sees the book. Floating over his bed. Glowing. Very much not a dream.
 
 **07** `[image: close-up of {ledger}'s open page with a glowing crimson hourglass and rows of glowing red figures like a bank statement, no readable text]`
@@ -59,13 +59,13 @@ And of course, Director Hale is waiting at the top of the stairs.
 **15** `[image: {hale} sitting behind a huge dark wooden desk in a luxurious office with a view over the city, {cass} standing across from him]`
 In his office, Hale congratulates him for surviving. Then he slides a piece of paper across the desk.
 
-**16** `[image: close-up of a glossy paper bill on a dark desk, a red stamped seal, a gloved hand resting next to it, no readable text]`
+**16** `[image: close-up of a printed paper invoice document with a red stamped seal lying on a dark wooden desk, a black-gloved hand resting next to it, no money, no banknotes, no readable text]`
 It's a bill. For forty kilos of lost guild equipment. Added straight onto his father's debt.
 
 **17** `[image: close-up of {hale}'s cold pale blue eyes, the glowing blue crystal of his cane reflected in them]`
 Then Hale asks, very casually, where exactly the Silver-rank crystal went. The guild found the empty spot where the Warden died.
 
-**18** `[image: {cass} forcing a nervous smile in front of {hale}'s desk, a bead of sweat on his temple]`
+**18** `[image: {cass} standing on the other side of {hale}'s big desk, forcing a nervous awkward smile, a bead of sweat on his temple, Hale seated and watching him coldly]`
 Our MC says he dropped it while running. Hale smiles. It is very clear that he doesn't believe a single word.
 
 **19** `[image: {cass} walking down a guild hallway, a glowing red notice on a tablet in his hand, shoulders slumped]`
@@ -133,16 +133,16 @@ The swarm charges. Our MC has maybe two seconds to decide how much he wants to o
 **37** `[image: {cass} with one hand on the glowing page of {ledger}, a small glowing sketch of a flaming sword lighting up]`
 He picks the cheapest weapon he's got. Pike's flaming sword strike. One hundred and fifty rift energy.
 
-**38** `[image: the rusty iron pipe in {cass}'s hands bursting into bright orange flames, his face lit up in surprise]`
+**38** `[image: the long rusty iron bar held in both of {cass}'s hands bursting into bright orange flames along its whole length, his face lit up in surprise, dark subway tunnel]`
 The rusty pipe bursts into flame. Apparently the Ledger doesn't care whether you have a real sword.
 
 **39** `[image: {cass} swinging the flaming iron pipe in a wide arc, a wave of fire sweeping through the charging glass rats]`
 He swings, and a wave of fire sweeps through the tunnel. The glass rats scatter, squealing.
 
-**40** `[image: close-up of {cass} grinning in the firelight, holding the burning pipe, sparks floating around him]`
+**40** `[image: close-up of {cass} grinning in the firelight, holding a long flaming rusty iron bar like a sword, sparks floating around him, dark subway tunnel]`
 For a second, he feels like a real hunter. Then he remembers that Pike uses this exact move. Which is a little bit insulting.
 
-**41** `[image: the flames on the iron pipe fading out into smoke, a few glass rats still circling in the shadows]`
+**41** `[image: a long rusty iron bar lying on a wet tunnel floor as its flames fade into smoke, a few glass rats with crystal spikes circling in the shadows]`
 Ten seconds later, the fire fades. The Ledger adds a new line. Debt: seven hundred and thirty-eight. He's going the wrong way.
 
 ## Thinking instead of borrowing
@@ -167,13 +167,13 @@ He tiptoes past an entire monster swarm, and it costs him exactly zero rift ener
 **47** `[image: a huge underground cavern beneath the subway, a giant glowing purple crystal core floating in the middle, thick silk webs on the walls]`
 At the end of the tunnel is the rift's heart. A cavern with a giant floating crystal core, the thing that keeps the whole rift open.
 
-**48** `[image: a giant moth monster with glowing purple lantern-like wings and long feathery antennae hanging upside down above the crystal core]`
+**48** `[image: {moth} hanging upside down from the ceiling of a dark underground cavern above a giant floating purple crystal]`
 And guarding it, hanging from the ceiling, is a moth the size of a car. Its wings glow like paper lanterns.
 
 **49** `[image: close-up of {cass}'s notebook page with a sketch of a giant moth with lantern wings and a small circle drawn on its belly]`
 He knows this one. A Lantern Moth. His notes say its wings throw sleeping dust, and the only soft spot is the glowing sac under its body.
 
-**50** `[image: the giant lantern moth spreading its glowing wings, a cloud of sparkling purple dust spilling into the air]`
+**50** `[image: {moth} spreading its wings wide in a dark cavern, a cloud of sparkling purple dust spilling from its wings into the air]`
 The moth wakes up. It spreads its wings, and a cloud of glittering dust starts drifting toward him.
 
 **51** `[image: {cass} pulling his hoodie up over his nose and mouth, stumbling sleepily, eyes half closed, purple dust swirling around him]`
@@ -188,10 +188,10 @@ A soft green glow washes over him. The dust melts away, and his head clears all 
 **54** `[image: {cass} grabbing a long rusty metal rail from the tunnel floor and aiming it like a spear at the moth above]`
 Now he has ten clear seconds. He picks up a broken metal rail and aims for the glowing spot his notes told him about.
 
-**55** `[image: {cass} hurling the metal rail upward, the rail piercing the glowing sac under the giant moth's body, a burst of purple light]`
+**55** `[image: {cass} hurling a long metal rail upward like a spear, the rail piercing the glowing sac under the body of {moth}, a burst of purple light]`
 He throws it with everything he's got. Bullseye.
 
-**56** `[image: the giant lantern moth bursting into thousands of tiny glowing purple sparks drifting through the cavern like snow]`
+**56** `[image: {moth} bursting into thousands of tiny glowing purple sparks drifting down through a dark cavern like snow]`
 The Lantern Moth bursts into a thousand glowing sparks that drift down through the cavern like snow.
 
 ## Paying the bill
@@ -254,5 +254,5 @@ He paid this debt on time. Next time, he might not be so lucky.
 **74** `[image: {ledger} closing by itself with a soft glow, floating above the bed in the quiet apartment]`
 The Ledger closes on its own, glowing softly, like it's very patient. Like it knows he'll be back.
 
-**75** `[image: title card style image of {ledger} glowing in the dark with crimson light, a faint picture frame shape reflected in its brass corners]`
+**75** `[image: title card style image of {ledger} floating alone in darkness with crimson light, a faint picture frame shape reflected in its brass corners, no people]`
 Next time on The Debt Hunter: Collateral.

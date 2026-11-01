@@ -45,6 +45,10 @@
     "cass_armored": {
       "ref": "refs/front/cass_armored.png",
       "desc": "the young man with short messy dark brown hair and tired gray eyes, wearing no jacket, his whole body covered in dark charcoal-brown stone armor plates with glowing molten orange cracks between them, spiked stone shoulders and back, clawed stone gauntlets and stone boots"
+    },
+    "moth": {
+      "ref": null,
+      "desc": "the giant car-sized Lantern Moth with glowing purple paper-lantern wings, a fuzzy dark purple body, long feathery antennae and a glowing sac under its belly"
     }
   }
 }
