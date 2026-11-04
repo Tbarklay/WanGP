@@ -245,7 +245,7 @@ Under it, there's a small sketch. A smiling man in a picture frame. The same pho
 **71** `[image: {cass} staring at the page in shock, the crimson light on his face, his hand frozen above the page]`
 And next to the sketch, one line of red ink. "If a debt is not paid, the Ledger collects what you hold most dear."
 
-**72** `[image: {cass} slowly turning his head to look at the framed photo of a smiling man on his desk, morning light falling across it]`
+**72** `[image: {cass} slowly turning his head to look at a framed photo on his desk of a smiling middle-aged man with short dark hair, a mustache and a mechanic's work shirt, morning light falling across it]`
 Our MC looks at the photo on his desk. Then back at the book.
 
 **73** `[image: close-up of {cass}'s face, tired but determined, crimson light reflecting in his gray eyes]`

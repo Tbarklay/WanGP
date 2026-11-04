@@ -144,15 +144,15 @@ Bram's arrows bounce off. Lise's light doesn't even reach it. In three seconds, 
 **41** `[image: {pike} sprinting in panic toward a glowing exit gate in a collapsing red-lit cave, mouth open screaming, a red-haired healer and a bald archer running behind him, only one knight in the scene]`
 "Run!" Pike screams. And they run.
 
-**42** `[image: {cass} struggling under his massive pack, falling behind the running team on a crumbling rock bridge]`
+**42** `[image: {cass} struggling under a huge overstuffed cargo backpack, falling behind on a narrow crumbling rock bridge over a glowing abyss, inside a dark collapsing underground cave lit by red light from cracks in the rock walls, no sky, no daylight, rocks falling around him]`
 The MC runs too. But he's carrying forty kilos of their gear, and the rock bridge is falling apart under his feet.
 
 ## The betrayal
 
-**43** `[image: {cass} reaching for the exit gate, {pike} turning back toward him]`
+**43** `[image: {cass} reaching desperately toward a glowing blue exit gate at the end of the rock bridge, {pike} standing in the gate and turning back toward him, inside a dark collapsing underground cave lit by red light from cracks in the rock walls, no sky, no daylight]`
 He gets close. The exit gate is right there. Pike is standing in it, looking back at him.
 
-**44** `[image: {pike}'s cold face in the gate light, his hand on the gate controls]`
+**44** `[image: close-up of {pike}'s cold selfish face lit blue by the exit gate behind him, his hand on the glowing gate frame, inside a dark collapsing underground cave lit by red light from cracks in the rock walls, no sky, no daylight]`
 For one second, the MC thinks he's going to wait.
 
 **45** `[image: on a crumbling rock bridge in a red-lit cave, {pike}, standing in a glowing exit gate, shoves {cass} hard in the chest with both hands, the porter falling backward toward the darkness, the knight's face cold and selfish, dynamic side view]`
@@ -161,7 +161,7 @@ Instead, Pike shoves him. Hard. Back toward the monster. "Slow it down, pack mul
 **46** `[image: seen from inside a dark cave, {lise} crying and reaching back desperately as {bram} grabs her arm and drags her through a glowing exit gate, no other people]`
 Lise screams his name. Bram drags her through the gate.
 
-**47** `[image: the exit gate flickering and shrinking into a tiny point of light, {cass} alone in the darkness]`
+**47** `[image: the glowing blue exit gate shrinking into a tiny point of light in the darkness, {cass} seen from behind, alone on the broken rock bridge, inside a dark collapsing underground cave lit by red light from cracks in the rock walls, no sky, no daylight]`
 And then the gate shrinks to a point of light, and it's gone.
 
 ## Alone
