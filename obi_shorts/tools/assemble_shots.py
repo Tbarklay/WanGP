@@ -23,6 +23,8 @@ from build_shots import parse_extras, parse_shots
 
 LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"
 SFX_VOLUME = 1.6        # sound effects sit clearly above the song
+VOICE_VOLUME = 2.2      # spoken lines sit well above the song
+DUCK = 0.3              # the song drops to this volume while a spoken line plays
 COUNT_SIZE = 420        # height of the on-screen counting numbers, in pixels at 1080p
 
 
@@ -133,11 +135,12 @@ def main():
                     overlays.append((number_png(work, n), start + k * step + 0.15, start + (k + 1) * step - 0.05))
             else:
                 effect, _, offset = value.partition("@")
+                is_voice = kind == "voice"
                 found = glob.glob(os.path.join(folder, f"{name}_sfx_{effect.strip()}_*"))
                 if not found:
                     print(f"WARNING: sound effect '{effect.strip()}' not rendered yet (build_shots.py sfx), skipped")
                     continue
-                effects.append((sorted(found)[0], start + float(offset or 0)))
+                effects.append((sorted(found)[0], start + float(offset or 0), is_voice))
 
     cmd = [tool("ffmpeg"), "-y", *inputs]
     next_input = len(clips)
@@ -154,13 +157,20 @@ def main():
     if args.music:
         cmd += ["-stream_loop", "-1", "-i", args.music]
         music_input, next_input = next_input, next_input + 1
-        chains.append(f"[{music_input}:a]volume={MUSIC_VOLUME},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
+        ducks = ""
+        for path, at, is_voice in effects:
+            if is_voice:
+                length = float(subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration",
+                                               "-of", "csv=p=0", path], capture_output=True, text=True).stdout)
+                ducks += f",volume={DUCK}:enable='between(t,{at - 0.15:.2f},{at + length + 0.15:.2f})'"
+        chains.append(f"[{music_input}:a]volume={MUSIC_VOLUME}{ducks},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
                       f"atrim=0:{total:.2f}[song]")
         mix = ["[song]"]
-        for k, (path, at) in enumerate(effects):
+        for k, (path, at, is_voice) in enumerate(effects):
             cmd += ["-i", path]
             ms = int(at * 1000)
-            chains.append(f"[{next_input}:a]volume={SFX_VOLUME},adelay={ms}|{ms},apad,atrim=0:{total:.2f}[fx{k}]")
+            vol = VOICE_VOLUME if is_voice else SFX_VOLUME
+            chains.append(f"[{next_input}:a]volume={vol},adelay={ms}|{ms},apad,atrim=0:{total:.2f}[fx{k}]")
             mix.append(f"[fx{k}]")
             next_input += 1
         chains.append("".join(mix) + f"amix=inputs={len(mix)}:duration=first:normalize=0,{LOUDNESS}[a]")

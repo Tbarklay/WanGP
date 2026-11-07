@@ -11,7 +11,10 @@ Optional per shot, on lines after its [motion: ...] line:
     `[count: 3]`    a big number 3 pops up on screen during the shot
     `[count: 1-4]`  1, 2, 3, 4 pop up one after another, spread over the shot (counting animals arriving)
     `[sfx: quack]`  plays the sound effect "quack" at the start of the shot; `[sfx: quack @2.5]` 2.5 s into it
+    `[voice: doctor @0.4]` plays the spoken line "doctor" there, with the song turned down under it
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
+Spoken lines go in a '## Voices' section as: doctor: aiden | warm playful delivery | No more bouncing, little piggies!
+(name: Qwen3 preset speaker | how to say it | the words). They render with the sound effects (mode sfx).
 Add --shots 2,3 to keyframes or animate to redo only some shots with new seeds.
 
 Each mode writes a batch to obi_shorts/batches and prints the command that renders it; keyframes and clips
@@ -63,7 +66,7 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice):\s*(.*?)\]`")
 
 
 def parse_extras(path):
@@ -88,8 +91,32 @@ def parse_sfx(path):
     return {m.group(1): m.group(2).strip() for m in re.finditer(r"^\s*[-*]?\s*(\w+):\s*(.+)$", section.group(1), re.M)}
 
 
+def parse_voices(path):
+    """Spoken line name -> (speaker, delivery, words), from the '## Voices' section."""
+    text = open(path, encoding="utf-8").read()
+    section = re.search(r"^## Voices\n(.+?)(?=\n## |\Z)", text, re.M | re.S)
+    voices = {}
+    for m in re.finditer(r"^\s*[-*]?\s*(\w+):\s*(.+)$", section.group(1) if section else "", re.M):
+        parts = [p.strip() for p in m.group(2).split("|")]
+        if len(parts) == 3:
+            voices[m.group(1)] = tuple(parts)
+    return voices
+
+
 def sfx_tasks(path, name):
     tasks = []
+    for line, (speaker, delivery, words) in parse_voices(path).items():
+        for take in range(3):
+            tasks.append({
+                "model_type": "qwen3_tts_customvoice",
+                "prompt": words,
+                "alt_prompt": delivery + ", speaks only the given words, no laughing, no whispering",
+                "model_mode": speaker,
+                "duration_seconds": max(4, round(len(words.split()) * 0.7 + 3)),
+                "temperature": 0.7,
+                "seed": SEED + 70 + take,
+                "output_filename": f"{name}_sfx_{line}_{'abc'[take]}",
+            })
     for effect, description in parse_sfx(path).items():
         for take in range(3):
             tasks.append({
@@ -101,7 +128,7 @@ def sfx_tasks(path, name):
                 "output_filename": f"{name}_sfx_{effect}_{'abc'[take]}",
             })
     if not tasks:
-        sys.exit(f"{path} has no '## Sound effects' section")
+        sys.exit(f"{path} has no '## Sound effects' or '## Voices' section")
     return tasks
 
 

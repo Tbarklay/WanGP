@@ -1,12 +1,11 @@
-# Five Little Ducks with Obi (about 2:45)
+# Five Little Ducks (about 2:30)
 
-Sunny version, a counting song. Five ducklings waddle off over the hill to play, and each time only some come back.
-Mother Duck calls with a real duck quack sound effect, and every time the ducklings return they are counted out loud
-in the song and with big numbers popping up on screen. Obi helps Mother Duck look for them, and at the end all five
-come running home.
+The classic counting song in the new 3D style, with no Obi. Five ducklings waddle off over the hill, and each time
+fewer come back. Every time Mother Duck calls, a real duck quack sound effect plays, and every time the ducklings
+come back they are counted out loud in the song and with big numbers popping up on screen.
 
-Lyrics follow the traditional public-domain counting rhyme, with our own added verses where Obi helps and the ducks are counted.
-Title idea: Five Little Ducks 🦆 Count with Obi! | Counting Song for Kids
+Lyrics are the traditional public-domain rhyme, with an added counting line after each return.
+Title idea: Five Little Ducks 🦆 Counting Song for Kids | Sing with Obi
 
 ## Music
 Gentle cheerful children's counting song, warm friendly female vocal with a children's choir on the counting,
@@ -17,128 +16,131 @@ quack: a real mother duck quacking loudly three times outdoors, natural clear re
 
 ## Lyrics
 [Verse 1]
-Five little ducks went out one day, over the hill to splash and play
-Mother Duck called, quack quack quack
+Five little ducks went out one day
+Over the hill and far away
+Mother Duck said quack, quack, quack, quack
 But only four little ducks came back
 One, two, three, four!
 
 [Verse 2]
-Four little ducks went out one day, over the hill to splash and play
-Mother Duck called, quack quack quack
+Four little ducks went out one day
+Over the hill and far away
+Mother Duck said quack, quack, quack, quack
 But only three little ducks came back
 One, two, three!
 
 [Verse 3]
-Three little ducks went out one day, over the hill to splash and play
-Mother Duck called, quack quack quack
+Three little ducks went out one day
+Over the hill and far away
+Mother Duck said quack, quack, quack, quack
 But only two little ducks came back
 One, two!
 
 [Verse 4]
-Two little ducks went out one day, over the hill to splash and play
-Mother Duck called, quack quack quack
+Two little ducks went out one day
+Over the hill and far away
+Mother Duck said quack, quack, quack, quack
 But only one little duck came back
 Just one!
 
 [Verse 5]
-One little duck went out one day, over the hill to splash and play
-Mother Duck called, quack quack quack
-And Obi ran to help her look
-Up the hill and down the brook
+One little duck went out one day
+Over the hill and far away
+Mother Duck said quack, quack, quack, quack
+But none of the five little ducks came back
 
 [Verse 6]
-Mother Duck and Obi called, quack quack quack
-And all five little ducks came back!
+Sad Mother Duck went out one day
+Over the hill and far away
+Mother Duck said QUACK, QUACK, QUACK, QUACK
+And all of the five little ducks came back!
 One, two, three, four, five!
-Hooray, hooray, they're all back home!
 
 ## Shots
 
-**01** `[keyframe: wide shot of a sparkling blue farm pond on a sunny morning, a mother duck and five fluffy yellow ducklings swimming in a row, green hills and a red barn behind]`
+**01** `[keyframe: wide shot of a sparkling blue farm pond on a sunny morning, a white mother duck with an orange beak and five fluffy yellow ducklings swimming in a row, green hills and a red barn behind]`
 `[motion: the ducks paddle across the pond in a neat line, little ripples spreading, slow camera push in]`
 
-**02** `[keyframe: five fluffy yellow ducklings waddling in a line up a green grassy hill away from the pond, {obi} watching from the bank]`
-`[motion: the ducklings waddle up the hill one after another, the puppy tilts his head]`
+**02** `[keyframe: five fluffy yellow ducklings waddling in a line up a green grassy hill away from the pond, sunny sky]`
+`[motion: the ducklings waddle up the hill one after another and over the top]`
 
-**03** `[keyframe: five fluffy yellow ducklings splashing and playing in a little stream on the other side of the hill, wildflowers around]`
-`[motion: the ducklings splash and flap happily in the stream]`
-
-**04** `[keyframe: close-up of a white mother duck with an orange beak standing at the top of the hill, beak wide open calling]`
+**03** `[keyframe: close-up of the white mother duck with an orange beak at the edge of the pond, beak wide open calling]`
 `[motion: the mother duck flaps her wings and calls loudly with her beak wide open]`
 `[sfx: quack @0.3]`
 
-**05** `[keyframe: four fluffy yellow ducklings waddling back down the green hill toward the pond in a line]`
+**04** `[keyframe: four fluffy yellow ducklings waddling back down the green hill toward the pond in a line]`
 `[motion: four ducklings waddle down the hill one after another toward the camera]`
 `[count: 1-4]`
 
-**06** `[keyframe: {obi} sitting beside the white mother duck at the pond, both looking up the hill with curious faces]`
-`[motion: the puppy and the mother duck look up the hill, the puppy tilts his head]`
-
-**07** `[keyframe: four fluffy yellow ducklings waddling in a line up a green grassy hill away from the pond, sunny sky]`
+**05** `[keyframe: four fluffy yellow ducklings waddling in a line up the green hill away from the pond]`
 `[motion: the ducklings waddle up the hill and over the top]`
 
-**08** `[keyframe: close-up of the white mother duck at the top of the hill, beak wide open calling]`
+**06** `[keyframe: close-up of the white mother duck at the edge of the pond, beak wide open calling]`
 `[motion: the mother duck flaps her wings and calls loudly]`
 `[sfx: quack @0.3]`
 
-**09** `[keyframe: three fluffy yellow ducklings waddling back down the green hill toward the pond in a line]`
+**07** `[keyframe: three fluffy yellow ducklings waddling back down the green hill toward the pond in a line]`
 `[motion: three ducklings waddle down the hill one after another toward the camera]`
 `[count: 1-3]`
 
-**10** `[keyframe: {obi} sniffing the grass on the hillside with his nose down, three ducklings following behind him]`
-`[motion: the puppy sniffs along the grass, the ducklings copy him and peck the grass]`
-
-**11** `[keyframe: three fluffy yellow ducklings waddling in a line up the green hill away from the pond]`
+**08** `[keyframe: three fluffy yellow ducklings waddling in a line up the green hill away from the pond]`
 `[motion: the ducklings waddle up the hill and over the top]`
 
-**12** `[keyframe: close-up of the white mother duck at the top of the hill, beak wide open calling]`
+**09** `[keyframe: close-up of the white mother duck at the edge of the pond, beak wide open calling]`
 `[motion: the mother duck flaps her wings and calls loudly]`
 `[sfx: quack @0.3]`
 
-**13** `[keyframe: two fluffy yellow ducklings waddling back down the green hill toward the pond side by side]`
+**10** `[keyframe: two fluffy yellow ducklings waddling back down the green hill toward the pond side by side]`
 `[motion: two ducklings waddle down the hill toward the camera]`
 `[count: 1-2]`
 
-**14** `[keyframe: the white mother duck looking a little worried by the pond, {obi} nuzzling her gently]`
-`[motion: the puppy nuzzles the mother duck, she gives him a small hopeful smile]`
-
-**15** `[keyframe: two fluffy yellow ducklings waddling up the green hill away from the pond]`
+**11** `[keyframe: two fluffy yellow ducklings waddling up the green hill away from the pond]`
 `[motion: the two ducklings waddle up the hill and over the top]`
 
-**16** `[keyframe: close-up of the white mother duck at the top of the hill, beak wide open calling]`
+**12** `[keyframe: close-up of the white mother duck at the edge of the pond, beak wide open calling]`
 `[motion: the mother duck flaps her wings and calls loudly]`
 `[sfx: quack @0.3]`
 
-**17** `[keyframe: one fluffy yellow duckling waddling back down the green hill toward the pond all alone]`
+**13** `[keyframe: one fluffy yellow duckling waddling back down the green hill toward the pond all alone]`
 `[motion: the single duckling waddles down the hill toward the camera]`
 `[count: 1]`
 
-**18** `[keyframe: one fluffy yellow duckling waddling up the green hill away from the pond, the sun high in the sky]`
+**14** `[keyframe: one fluffy yellow duckling waddling up the green hill away from the pond, the sun high in the sky]`
 `[motion: the duckling waddles up the hill and over the top]`
 
-**19** `[keyframe: close-up of the white mother duck at the top of the hill, beak wide open calling]`
+**15** `[keyframe: close-up of the white mother duck at the edge of the pond, beak wide open calling]`
 `[motion: the mother duck flaps her wings and calls loudly]`
 `[sfx: quack @0.3]`
 
-**20** `[keyframe: close-up of {obi} with his ears perked up and a determined brave face, the pond behind him]`
-`[motion: the puppy's ears perk up and he springs into action]`
+**16** `[keyframe: the white mother duck alone at the edge of the empty pond, looking up at the empty hill with a sad face, a single feather floating on the water]`
+`[motion: the mother duck looks up at the hill and lowers her head sadly, the feather drifts on the water]`
 
-**21** `[keyframe: {obi} running happily up the green grassy hill with the white mother duck waddling quickly beside him]`
-`[motion: the puppy bounds up the hill, the mother duck hurries beside him flapping her wings, camera tracking]`
+**17** `[keyframe: the white mother duck waddling up the green grassy hill on her own, determined face, sunny sky]`
+`[motion: the mother duck waddles up the hill with determined steps, camera tracking alongside]`
 
-**22** `[keyframe: {obi} looking over the top of the hill and finding five fluffy yellow ducklings playing among tall wildflowers by a little stream]`
-`[motion: the puppy's tail wags fast as he spots the ducklings, they look up and flap happily]`
-
-**23** `[keyframe: the white mother duck and {obi} side by side at the top of the hill, mother duck calling with her beak wide open]`
-`[motion: the mother duck calls loudly, the puppy barks with her]`
+**18** `[keyframe: the white mother duck at the top of the hill, wings spread wide, beak wide open calling very loudly]`
+`[motion: the mother duck spreads her wings and calls as loudly as she can]`
 `[sfx: quack @0.3]`
 
-**24** `[keyframe: five fluffy yellow ducklings waddling down the green hill toward the pond in a long line, {obi} and the mother duck leading the way]`
-`[motion: all five ducklings waddle down the hill one after another behind the puppy]`
+**19** `[keyframe: five fluffy yellow ducklings popping up happily from tall wildflowers by a little stream on the other side of the hill]`
+`[motion: the ducklings pop up from the flowers one after another and flap happily]`
+
+**20** `[keyframe: five fluffy yellow ducklings waddling down the green hill toward the pond in a long line behind the white mother duck]`
+`[motion: all five ducklings waddle down the hill one after another behind their mother]`
 `[count: 1-5]`
 
-**25** `[keyframe: the white mother duck and five fluffy yellow ducklings swimming happily in the sunny pond, {obi} splashing at the edge]`
-`[motion: the ducks paddle in a happy circle, the puppy splashes playfully at the edge]`
+**21** `[keyframe: the white mother duck and five fluffy yellow ducklings swimming happily together in the sunny pond]`
+`[motion: the ducks paddle in a happy circle, splashing playfully]`
 
-**26** `[keyframe: the white mother duck, five yellow ducklings and {obi} together at the edge of the pond on a sunny day, looking at the camera]`
-`[motion: the ducklings flap their wings, the puppy wags his tail and barks, slow camera pull back]`
+**22** `[keyframe: five fluffy yellow ducklings splashing in a little stream among wildflowers on the other side of the hill]`
+`[motion: the ducklings splash and flap happily in the stream]`
+
+**23** `[keyframe: the white mother duck and five fluffy yellow ducklings walking in a line along the edge of the pond]`
+`[motion: the ducks waddle in a happy line along the water]`
+
+**24** `[keyframe: close-up of five fluffy yellow ducklings in a row looking up with big shiny eyes and open beaks]`
+`[motion: the ducklings flap their tiny wings and bob their heads]`
+`[count: 1-5]`
+
+**25** `[keyframe: the white mother duck and five fluffy yellow ducklings together at the edge of the pond on a sunny day, looking at the camera]`
+`[motion: the ducklings flap their little wings happily, slow camera pull back]`
