@@ -19,9 +19,41 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_shots import parse_shots
+from build_shots import parse_extras, parse_shots
 
 LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"
+SFX_VOLUME = 1.6        # sound effects sit clearly above the song
+COUNT_SIZE = 420        # height of the on-screen counting numbers, in pixels at 1080p
+
+
+def number_png(folder, n):
+    """A big friendly number with a thick dark outline, as a transparent PNG."""
+    from PIL import Image, ImageDraw, ImageFont
+    path = os.path.join(folder, f"count_{n}.png")
+    if os.path.isfile(path):
+        return path
+    font = None
+    for name in ("arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
+        try:
+            font = ImageFont.truetype(name, COUNT_SIZE)
+            break
+        except OSError:
+            continue
+    font = font or ImageFont.load_default()
+    img = Image.new("RGBA", (COUNT_SIZE * 2, COUNT_SIZE + 120), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    text = str(n)
+    w = draw.textlength(text, font=font)
+    draw.text(((img.width - w) / 2, 20), text, font=font, fill=(255, 214, 10),
+              stroke_width=COUNT_SIZE // 14, stroke_fill=(40, 30, 80))
+    img.save(path)
+    return path
+
+
+def count_values(value):
+    """'3' -> [3]; '1-4' -> [1, 2, 3, 4]."""
+    first, _, last = value.partition("-")
+    return list(range(int(first), int(last or first) + 1))
 MUSIC_VOLUME = 0.6
 
 
@@ -80,11 +112,58 @@ def main():
     chains.append("".join(f"[v{i}]" for i in range(len(clips))) + f"concat=n={len(clips)}:v=1:a=0[cat]")
     chains.append(f"[cat]setpts=PTS/{speed:.4f},fps=30,tpad=stop_mode=clone:stop_duration={total:.2f},"
                   f"trim=0:{total:.2f}[v]")
+    # Where each shot starts in the finished video, for its counting numbers and sound effects.
+    extras = parse_extras(args.script)
+    starts, t = {}, 0.0
+    for (no, _, _), dur in zip([s for s in parse_shots(args.script) if s[0] not in missing], durations):
+        starts[no] = (t / speed, dur / speed)
+        t += dur
+    overlays, effects = [], []
+    work = os.path.join(folder, "_assemble")
+    os.makedirs(work, exist_ok=True)
+    for no, items in extras.items():
+        if no not in starts:
+            continue
+        start, length = starts[no]
+        for kind, value in items:
+            if kind == "count":
+                numbers = count_values(value)
+                step = length / len(numbers)
+                for k, n in enumerate(numbers):
+                    overlays.append((number_png(work, n), start + k * step + 0.15, start + (k + 1) * step - 0.05))
+            else:
+                effect, _, offset = value.partition("@")
+                found = glob.glob(os.path.join(folder, f"{name}_sfx_{effect.strip()}_*"))
+                if not found:
+                    print(f"WARNING: sound effect '{effect.strip()}' not rendered yet (build_shots.py sfx), skipped")
+                    continue
+                effects.append((sorted(found)[0], start + float(offset or 0)))
+
     cmd = [tool("ffmpeg"), "-y", *inputs]
+    next_input = len(clips)
+    if overlays:
+        chains[-1] = chains[-1].replace("[v]", "[base0]")
+        for k, (png, a, b) in enumerate(overlays):
+            cmd += ["-i", png]
+            fade = f"fade=t=in:st={a:.2f}:d=0.15:alpha=1,fade=t=out:st={b - 0.15:.2f}:d=0.15:alpha=1"
+            chains.append(f"[{next_input}:v]loop=-1:1:0,setpts=N/30/TB,format=rgba,{fade}[n{k}]")
+            out_label = "[v]" if k == len(overlays) - 1 else f"[base{k + 1}]"
+            chains.append(f"[base{k}][n{k}]overlay=x=(W-w)/2:y=60:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
+                          f"{out_label}")
+            next_input += 1
     if args.music:
         cmd += ["-stream_loop", "-1", "-i", args.music]
-        chains.append(f"[{len(clips)}:a]volume={MUSIC_VOLUME},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
-                      f"atrim=0:{total:.2f},{LOUDNESS}[a]")
+        music_input, next_input = next_input, next_input + 1
+        chains.append(f"[{music_input}:a]volume={MUSIC_VOLUME},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
+                      f"atrim=0:{total:.2f}[song]")
+        mix = ["[song]"]
+        for k, (path, at) in enumerate(effects):
+            cmd += ["-i", path]
+            ms = int(at * 1000)
+            chains.append(f"[{next_input}:a]volume={SFX_VOLUME},adelay={ms}|{ms},apad,atrim=0:{total:.2f}[fx{k}]")
+            mix.append(f"[fx{k}]")
+            next_input += 1
+        chains.append("".join(mix) + f"amix=inputs={len(mix)}:duration=first:normalize=0,{LOUDNESS}[a]")
     out = os.path.join(final, f"{name}.mp4")
     cmd += ["-filter_complex", ";".join(chains), "-map", "[v]"]
     cmd += ["-map", "[a]", "-c:a", "aac", "-b:a", "192k"] if args.music else ["-an"]

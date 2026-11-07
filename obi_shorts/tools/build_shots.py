@@ -5,6 +5,13 @@ Usage (from the WanGP folder):
     python obi_shorts/tools/build_shots.py keyframes obi_shorts/test_shots.md
     python obi_shorts/tools/build_shots.py animate obi_shorts/test_shots.md   # after the keyframes are rendered
     python obi_shorts/tools/build_shots.py song obi_shorts/obi_farm_parade.md # 3 takes of the song, if the list has lyrics
+    python obi_shorts/tools/build_shots.py sfx obi_shorts/obi_five_ducks.md   # 3 takes of each sound effect, if any
+
+Optional per shot, on lines after its [motion: ...] line:
+    `[count: 3]`    a big number 3 pops up on screen during the shot
+    `[count: 1-4]`  1, 2, 3, 4 pop up one after another, spread over the shot (counting animals arriving)
+    `[sfx: quack]`  plays the sound effect "quack" at the start of the shot; `[sfx: quack @2.5]` 2.5 s into it
+Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
 Add --shots 2,3 to keyframes or animate to redo only some shots with new seeds.
 
 Each mode writes a batch to obi_shorts/batches and prints the command that renders it; keyframes and clips
@@ -54,6 +61,48 @@ def parse_shots(path):
     if not shots:
         sys.exit(f"No shots found in {path}")
     return shots
+
+
+EXTRA = re.compile(r"`\[(count|sfx):\s*(.*?)\]`")
+
+
+def parse_extras(path):
+    """Shot number -> list of (kind, value) for the optional [count: ...] and [sfx: ...] lines."""
+    text = open(path, encoding="utf-8").read()
+    starts = [(int(m.group(1)), m.start()) for m in re.finditer(r"^\*\*(\d+)\*\*", text, re.M)]
+    extras = {}
+    for i, (no, start) in enumerate(starts):
+        end = starts[i + 1][1] if i + 1 < len(starts) else len(text)
+        found = EXTRA.findall(text[start:end])
+        if found:
+            extras[no] = [(kind, value.strip()) for kind, value in found]
+    return extras
+
+
+def parse_sfx(path):
+    """Sound effect name -> description, from the '## Sound effects' section."""
+    text = open(path, encoding="utf-8").read()
+    section = re.search(r"^## Sound effects\n(.+?)(?=\n## |\Z)", text, re.M | re.S)
+    if not section:
+        return {}
+    return {m.group(1): m.group(2).strip() for m in re.finditer(r"^\s*[-*]?\s*(\w+):\s*(.+)$", section.group(1), re.M)}
+
+
+def sfx_tasks(path, name):
+    tasks = []
+    for effect, description in parse_sfx(path).items():
+        for take in range(3):
+            tasks.append({
+                "model_type": "stable_audio3_small_sfx",
+                "prompt": description,
+                "negative_prompt": "music, singing, speech, voice, poor quality, distorted, noisy",
+                "duration_seconds": 3,
+                "seed": SEED + 50 + take,
+                "output_filename": f"{name}_sfx_{effect}_{'abc'[take]}",
+            })
+    if not tasks:
+        sys.exit(f"{path} has no '## Sound effects' section")
+    return tasks
 
 
 def song_tasks(path, name, seconds):
@@ -122,7 +171,7 @@ def write(name, tasks, folder=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song"])
+    parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song", "sfx"])
     parser.add_argument("script", nargs="?", help="shot list (.md), for keyframes and animate")
     parser.add_argument("--shots", help="only these shots, for example 2,3 (rendered with new seeds)")
     args = parser.parse_args()
@@ -146,6 +195,10 @@ def main():
     if args.mode == "song":
         # Long enough to cover every clip; the assembler fits the clips to the song it picks.
         write(name + "_song", song_tasks(args.script, name, round(len(shots) * CLIP_FRAMES / 16) + 5), name)
+        return
+
+    if args.mode == "sfx":
+        write(name + "_sfx", sfx_tasks(args.script, name), name)
         return
 
     if args.mode == "keyframes":

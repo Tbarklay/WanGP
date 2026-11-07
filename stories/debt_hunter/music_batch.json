@@ -1,0 +1,34 @@
+[
+  {
+    "model_type": "ace_step_v1_5_turbo_lm_1_7b",
+    "prompt": "[Instrumental]",
+    "alt_prompt": "Dark cinematic instrumental underscore for an anime recap channel, tense and mysterious, low pulsing synth bass, soft taiko drums, sparse piano notes, swelling strings, steady mid-tempo groove that stays in the background under narration, no vocals, no lead melody, 90 BPM, minor key",
+    "duration_seconds": 180,
+    "seed": 7700,
+    "output_filename": "debt_hunter_music_a"
+  },
+  {
+    "model_type": "ace_step_v1_5_turbo_lm_1_7b",
+    "prompt": "[Instrumental]",
+    "alt_prompt": "Dark cinematic instrumental underscore for an anime recap channel, tense and mysterious, low pulsing synth bass, soft taiko drums, sparse piano notes, swelling strings, steady mid-tempo groove that stays in the background under narration, no vocals, no lead melody, 90 BPM, minor key",
+    "duration_seconds": 180,
+    "seed": 7701,
+    "output_filename": "debt_hunter_music_b"
+  },
+  {
+    "model_type": "ace_step_v1_5_turbo_lm_1_7b",
+    "prompt": "[Instrumental]",
+    "alt_prompt": "Dark cinematic instrumental underscore for an anime recap channel, tense and mysterious, low pulsing synth bass, soft taiko drums, sparse piano notes, swelling strings, steady mid-tempo groove that stays in the background under narration, no vocals, no lead melody, 90 BPM, minor key",
+    "duration_seconds": 180,
+    "seed": 7702,
+    "output_filename": "debt_hunter_music_c"
+  },
+  {
+    "model_type": "ace_step_v1_5_turbo_lm_1_7b",
+    "prompt": "[Instrumental]",
+    "alt_prompt": "Dark cinematic instrumental underscore for an anime recap channel, tense and mysterious, low pulsing synth bass, soft taiko drums, sparse piano notes, swelling strings, steady mid-tempo groove that stays in the background under narration, no vocals, no lead melody, 90 BPM, minor key",
+    "duration_seconds": 180,
+    "seed": 7703,
+    "output_filename": "debt_hunter_music_d"
+  }
+]
