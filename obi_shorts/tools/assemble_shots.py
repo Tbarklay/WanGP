@@ -25,7 +25,8 @@ LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"
 SFX_VOLUME = 1.6        # sound effects sit clearly above the song
 VOICE_VOLUME = 2.2      # spoken lines sit well above the song
 DUCK = 0.3              # the song drops to this volume while a spoken line plays
-COUNT_SIZE = 420        # height of the on-screen counting numbers, in pixels at 1080p
+COUNT_SIZE = 260        # height of the on-screen counting numbers, in pixels at 1080p
+COUNT_X, COUNT_Y = 60, 40  # top-left corner, clear of the characters' faces
 
 
 def number_png(folder, n):
@@ -129,10 +130,12 @@ def main():
         start, length = starts[no]
         for kind, value in items:
             if kind == "count":
-                numbers = count_values(value)
-                step = length / len(numbers)
+                spec, _, window = value.partition("@")
+                numbers = count_values(spec.strip())
+                a, b = (float(x) for x in window.split("-")) if window else (0.0, length)
+                step = (b - a) / len(numbers)
                 for k, n in enumerate(numbers):
-                    overlays.append((number_png(work, n), start + k * step + 0.15, start + (k + 1) * step - 0.05))
+                    overlays.append((number_png(work, n), start + a + k * step + 0.05, start + a + (k + 1) * step))
             else:
                 effect, _, offset = value.partition("@")
                 is_voice = kind == "voice"
@@ -151,7 +154,7 @@ def main():
             fade = f"fade=t=in:st={a:.2f}:d=0.15:alpha=1,fade=t=out:st={b - 0.15:.2f}:d=0.15:alpha=1"
             chains.append(f"[{next_input}:v]loop=-1:1:0,setpts=N/30/TB,format=rgba,{fade}[n{k}]")
             out_label = "[v]" if k == len(overlays) - 1 else f"[base{k + 1}]"
-            chains.append(f"[base{k}][n{k}]overlay=x=(W-w)/2:y=60:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
+            chains.append(f"[base{k}][n{k}]overlay=x={COUNT_X}:y={COUNT_Y}:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
                           f"{out_label}")
             next_input += 1
     if args.music:

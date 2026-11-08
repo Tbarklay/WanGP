@@ -12,6 +12,8 @@ Optional per shot, on lines after its [motion: ...] line:
     `[count: 1-4]`  1, 2, 3, 4 pop up one after another, spread over the shot (counting animals arriving)
     `[sfx: quack]`  plays the sound effect "quack" at the start of the shot; `[sfx: quack @2.5]` 2.5 s into it
     `[voice: doctor @0.4]` plays the spoken line "doctor" there, with the song turned down under it
+    `[lipsync: doctor]`  animates this shot with InfiniteTalk so the character's mouth moves to that spoken line
+    `[count: 1-4 @2.0-4.4]`  shows the numbers only between 2.0 and 4.4 s into the shot (set from the sung counts)
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
 Spoken lines go in a '## Voices' section as: doctor: aiden | warm playful delivery | No more bouncing, little piggies!
 (name: Qwen3 preset speaker | how to say it | the words). They render with the sound effects (mode sfx).
@@ -66,7 +68,8 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx|voice):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync):\s*(.*?)\]`")
+LIPSYNC_MODEL = "infinitetalk"                    # Wan 2.1 InfiniteTalk: mouth moves to an audio clip
 
 
 def parse_extras(path):
@@ -238,13 +241,25 @@ def main():
         return
 
     folder = os.path.join(ROOT, "output", name)
+    extras = parse_extras(args.script)
     tasks, missing = [], []
     for no, _, motion in shots:
         keyframe = newest(folder, f"{name}_img_{no:02d}")
         if keyframe is None:
             missing.append(no)
-        else:
-            tasks.append(clip_task(cast, name, no, motion, os.path.relpath(keyframe), seed_offset))
+            continue
+        task = clip_task(cast, name, no, motion, os.path.relpath(keyframe), seed_offset)
+        line = next((v for k, v in extras.get(no, []) if k == "lipsync"), None)
+        if line:
+            voice = newest(folder, f"{name}_sfx_{line}_pick") or newest(folder, f"{name}_sfx_{line}_a")
+            if voice is None:
+                sys.exit(f"Shot {no} lip-syncs to '{line}', which is not rendered yet: run the sfx step first")
+            task.update(model_type=LIPSYNC_MODEL, audio_guide=os.path.relpath(voice).replace("\\", "/"),
+                        audio_prompt_type="A", image_prompt_type="S",
+                        prompt=f"{motion}, the character talks with clear mouth movements matching the speech. "
+                               f"{cast['style']}")
+            task.pop("video_length", None)   # InfiniteTalk follows the length of the audio
+        tasks.append(task)
     if missing:
         sys.exit(f"No keyframe yet for shots {missing} in {folder}: render the keyframes batch first")
     write(name + "_clips" + ("_redo" if args.shots else ""), tasks, name)

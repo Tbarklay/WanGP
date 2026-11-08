@@ -2,8 +2,25 @@
   "style": "Glossy 3D animated family movie style, soft cinematic lighting, rich saturated colors, expressive cartoon faces with big shiny eyes, detailed farm environment with wet mud and green hills, 16:9 widescreen composition",
   "negative": "2D, flat illustration, sketch, text, letters, words, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, clone, scary, dark, creepy, blurry, low quality, deformed, extra legs, extra limbs, distorted face",
   "characters": {
-    "obi": {"ref": "refs/obi_3d.png", "desc": "Obi, a fluffy shaggy black and tan puppy with a white chest patch, floppy ears, big brown eyes and a happy pink tongue"},
-    "farmer": {"ref": "refs/farmer_3d.png", "desc": "the friendly elderly farmer with a short white beard, gray hair, a dark gray cap, a red and brown plaid flannel shirt, muddy blue denim overalls and brown work boots"},
-    "truck": {"ref": null, "desc": "an old red farm pickup truck with wooden side rails"}
+    "obi": {
+      "ref": "refs/obi_3d.png",
+      "desc": "Obi, a fluffy shaggy black and tan puppy with a white chest patch, floppy ears, big brown eyes and a happy pink tongue"
+    },
+    "farmer": {
+      "ref": "refs/farmer_3d.png",
+      "desc": "the friendly elderly farmer with a short white beard, gray hair, a dark gray cap, a red and brown plaid flannel shirt, muddy blue denim overalls and brown work boots"
+    },
+    "truck": {
+      "ref": null,
+      "desc": "an old red farm pickup truck with wooden side rails"
+    },
+    "mama_monkey": {
+      "ref": "refs/mama_monkey.png",
+      "desc": "Mama Monkey, a kind plump brown mother monkey with a light tan face, big gentle brown eyes, wearing a pink dress with little white flowers"
+    },
+    "monkey": {
+      "ref": "refs/little_monkey.png",
+      "desc": "a cute little brown monkey with a light tan face, big round ears and a long curly tail, wearing blue and white striped pajamas"
+    }
   }
 }
