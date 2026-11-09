@@ -19,7 +19,7 @@ from build_episode import parse_beats
 
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
 PAUSE = 0.35            # silence after each narration line
-MUSIC_VOLUME = 0.10     # background music level under the narrator
+MUSIC_VOLUME = 0.05     # background music level under the narrator (about 6 dB quieter than 0.10)
 LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"   # YouTube's playback loudness, so the narrator is not quiet
 MOVES = ["zoom_in", "pan_right", "zoom_out", "pan_left"]
 
