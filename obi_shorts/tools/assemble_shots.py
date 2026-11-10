@@ -24,7 +24,7 @@ from build_shots import parse_extras, parse_shots
 LOUDNESS = "loudnorm=I=-14:TP=-1.5:LRA=11"
 SFX_VOLUME = 1.6        # sound effects sit clearly above the song
 VOICE_VOLUME = 2.2      # spoken lines sit well above the song
-DUCK = 0.3              # the song drops to this volume while a spoken line plays
+DUCK = 0.75             # the song dips only a little under a spoken line, so it keeps its energy
 COUNT_SIZE = 260        # height of the on-screen counting numbers, in pixels at 1080p
 COUNT_X, COUNT_Y = 60, 40  # top-left corner, clear of the characters' faces
 

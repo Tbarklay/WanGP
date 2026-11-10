@@ -6,12 +6,12 @@ answers in a separate spoken male voice. Each verse counts the monkeys still bou
 on screen. Every tumble lands on a soft pile of pillows, so nobody gets hurt.
 
 The song is sung by a female voice; the doctor's lines are spoken by a male voice and mixed over the song, with the
-song turned down under them, and Obi's mouth is lip-synced to them with InfiniteTalk. Lyrics are the traditional
+song only dipped a little under them so it keeps going, and Obi's mouth is lip-synced to them with InfiniteTalk. Lyrics are the traditional
 public-domain rhyme.
 
 Version 3 structure: every verse is six shots, cut on the lyric line they belong to:
   1. N monkeys bouncing, big in the frame (a different camera angle each verse)
-  2. one monkey in mid-air tumbling off the bed into the pillows (the fall is now shown)
+  2. the fall: starts on the bed edge and is forced to end in the pillows with an [end:] picture
   3. close-up: he sits up rubbing his head and CRIES (pouty lip, tears)  ("one fell off and bumped his head")
   4. Mama Monkey phones the doctor     5. Doctor Obi speaks his line, mouth lip-synced, with a different paw gesture
   6. the monkeys still on the bed sit in a row, with empty wall top-left so the count numbers never cover a face
@@ -21,8 +21,9 @@ Title idea: Five Little Monkeys Jumping on the Bed! 🐒🛏️ Count with Docto
 
 ## Music
 Playful silly children's counting song, bouncy and fun, warm friendly female lead vocal with a giggling
-children's choir, ukulele, acoustic guitar, bouncy plucked bass, glockenspiel, hand claps, 112 BPM, major key,
-leave a short instrumental pause after each "and the doctor said" line, kids music
+children's choir, ukulele, acoustic guitar, bouncy plucked bass, glockenspiel, hand claps, 112 BPM, major key, the band keeps
+playing full and bouncy the whole time and never stops or goes quiet, a 3-second instrumental groove after each
+"and the doctor said" line with the bass and claps still playing, kids music
 
 ## Sound effects
 boing: a cartoon spring boing sound, playful and bouncy, clean, no music
@@ -78,8 +79,9 @@ Goodnight, little monkeys, rest your sleepy heads
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**03** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
-`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
+**03** `[keyframe: one cute little brown monkey like {monkey} jumping on the very edge of the patchwork bed and losing his balance, arms flailing, surprised wide-open mouth, a pile of big soft pillows on the floor right beside the bed, the whole bed and the pillows in the picture, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey wobbles on the edge of the bed, slips off and falls through the air, tumbling down onto the soft pillows on the floor, camera stays still]`
+`[end: the same patchwork bed and pile of big soft pillows on the floor beside it from the same camera angle, one cute little brown monkey like {monkey} lying on his back in the pillows with his legs in the air, dazed face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 
 **04** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
@@ -101,8 +103,9 @@ Goodnight, little monkeys, rest your sleepy heads
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**09** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
-`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
+**09** `[keyframe: one cute little brown monkey like {monkey} jumping on the very edge of the patchwork bed and losing his balance, arms flailing, surprised wide-open mouth, a pile of big soft pillows on the floor right beside the bed, the whole bed and the pillows in the picture, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey wobbles on the edge of the bed, slips off and falls through the air, tumbling down onto the soft pillows on the floor, camera stays still]`
+`[end: the same patchwork bed and pile of big soft pillows on the floor beside it from the same camera angle, one cute little brown monkey like {monkey} lying on his back in the pillows with his legs in the air, dazed face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 
 **10** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
@@ -124,8 +127,9 @@ Goodnight, little monkeys, rest your sleepy heads
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**15** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
-`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
+**15** `[keyframe: one cute little brown monkey like {monkey} jumping on the very edge of the patchwork bed and losing his balance, arms flailing, surprised wide-open mouth, a pile of big soft pillows on the floor right beside the bed, the whole bed and the pillows in the picture, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey wobbles on the edge of the bed, slips off and falls through the air, tumbling down onto the soft pillows on the floor, camera stays still]`
+`[end: the same patchwork bed and pile of big soft pillows on the floor beside it from the same camera angle, one cute little brown monkey like {monkey} lying on his back in the pillows with his legs in the air, dazed face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 
 **16** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
@@ -147,8 +151,9 @@ Goodnight, little monkeys, rest your sleepy heads
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**21** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
-`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
+**21** `[keyframe: one cute little brown monkey like {monkey} jumping on the very edge of the patchwork bed and losing his balance, arms flailing, surprised wide-open mouth, a pile of big soft pillows on the floor right beside the bed, the whole bed and the pillows in the picture, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey wobbles on the edge of the bed, slips off and falls through the air, tumbling down onto the soft pillows on the floor, camera stays still]`
+`[end: the same patchwork bed and pile of big soft pillows on the floor beside it from the same camera angle, one cute little brown monkey like {monkey} lying on his back in the pillows with his legs in the air, dazed face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 
 **22** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
@@ -170,8 +175,9 @@ Goodnight, little monkeys, rest your sleepy heads
 `[motion: the monkey bounces up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**27** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
-`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
+**27** `[keyframe: one cute little brown monkey like {monkey} jumping on the very edge of the patchwork bed and losing his balance, arms flailing, surprised wide-open mouth, a pile of big soft pillows on the floor right beside the bed, the whole bed and the pillows in the picture, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey wobbles on the edge of the bed, slips off and falls through the air, tumbling down onto the soft pillows on the floor, camera stays still]`
+`[end: the same patchwork bed and pile of big soft pillows on the floor beside it from the same camera angle, one cute little brown monkey like {monkey} lying on his back in the pillows with his legs in the air, dazed face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 
 **28** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`

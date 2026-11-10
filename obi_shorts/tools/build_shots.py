@@ -14,6 +14,8 @@ Optional per shot, on lines after its [motion: ...] line:
     `[voice: doctor @0.4]` plays the spoken line "doctor" there, with the song turned down under it
     `[lipsync: doctor]`  animates this shot with InfiniteTalk so the character's mouth moves to that spoken line
     `[count: 1-4 @2.0-4.4]`  shows the numbers only between 2.0 and 4.4 s into the shot (set from the sung counts)
+    `[end: the monkey lying on the pillows]`  also renders this end picture, and the clip must travel from the
+                    keyframe to it (Wan start + end image), so an action like a fall really happens on screen
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
 Spoken lines go in a '## Voices' section as: doctor: aiden | warm playful delivery | No more bouncing, little piggies!
 (name: Qwen3 preset speaker | how to say it | the words). They render with the sound effects (mode sfx).
@@ -68,7 +70,7 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end):\s*(.*?)\]`")
 LIPSYNC_MODEL = "infinitetalk"                    # Wan 2.1 InfiniteTalk: mouth moves to an audio clip
 
 
@@ -237,6 +239,13 @@ def main():
             if ref and not os.path.isfile(os.path.join(ROOT, ref)):
                 sys.exit(f"Missing 3D reference {os.path.join(ROOT, ref)}: run the refs step first and save the best one")
         tasks = [image_task(cast, name, no, frame, seed_offset) for no, frame, _ in shots]
+        extras = parse_extras(args.script)
+        for no, _, _ in shots:
+            end = next((v for k, v in extras.get(no, []) if k == "end"), None)
+            if end:   # same seed and references as the start picture, so the scene matches
+                task = image_task(cast, name, no, end, seed_offset)
+                task["output_filename"] = f"{name}_end_{no:02d}"
+                tasks.append(task)
         write(name + ("_redo" if args.shots else ""), tasks, name)
         return
 
@@ -249,6 +258,12 @@ def main():
             missing.append(no)
             continue
         task = clip_task(cast, name, no, motion, os.path.relpath(keyframe), seed_offset)
+        if any(k == "end" for k, _ in extras.get(no, [])):
+            end_frame = newest(folder, f"{name}_end_{no:02d}")
+            if end_frame is None:
+                missing.append(no)
+                continue
+            task.update(image_prompt_type="SE", image_end=[os.path.relpath(end_frame).replace("\\", "/")])
         line = next((v for k, v in extras.get(no, []) if k == "lipsync"), None)
         if line:
             voice = newest(folder, f"{name}_sfx_{line}_pick") or newest(folder, f"{name}_sfx_{line}_a")
