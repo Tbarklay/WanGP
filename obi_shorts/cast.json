@@ -19,8 +19,28 @@
       "desc": "Mama Monkey, a kind plump brown mother monkey with a light tan face, big gentle brown eyes, wearing a pink dress with little white flowers"
     },
     "monkey": {
-      "ref": "refs/little_monkey.png",
-      "desc": "a cute little brown monkey with a light tan face, big round ears and a long curly tail, wearing blue and white striped pajamas"
+      "ref": "refs/little_monkey_bare.png",
+      "desc": "a cute little brown monkey with a light tan face, big round ears and a long curly tail"
+    },
+    "m1": {
+      "ref": null,
+      "desc": "little monkey number 1 in bright red pajamas with a big white number 1 printed on the front of the pajama top"
+    },
+    "m2": {
+      "ref": null,
+      "desc": "little monkey number 2 in bright orange pajamas with a big white number 2 printed on the front of the pajama top"
+    },
+    "m3": {
+      "ref": null,
+      "desc": "little monkey number 3 in bright yellow pajamas with a big white number 3 printed on the front of the pajama top"
+    },
+    "m4": {
+      "ref": null,
+      "desc": "little monkey number 4 in bright green pajamas with a big white number 4 printed on the front of the pajama top"
+    },
+    "m5": {
+      "ref": null,
+      "desc": "little monkey number 5 in bright blue pajamas with a big white number 5 printed on the front of the pajama top"
     }
   }
 }

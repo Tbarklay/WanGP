@@ -19,6 +19,10 @@ Optional per shot, on lines after its [motion: ...] line:
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
 Spoken lines go in a '## Voices' section as: doctor: aiden | warm playful delivery | No more bouncing, little piggies!
 (name: Qwen3 preset speaker | how to say it | the words). They render with the sound effects (mode sfx).
+A '## Negative' section replaces the cast's negative prompt for this list (for example to allow numbers on
+clothes, which the default "text, letters" negative fights). A lip-synced line can also be a sung line cut from the
+chosen song and saved as <list>_sfx_<line>_pick.wav: InfiniteTalk separates the vocal from the music itself.
+Add --refs-only little_monkey_bare to refs to make just that reference.
 Add --shots 2,3 to keyframes or animate to redo only some shots with new seeds.
 
 Each mode writes a batch to obi_shorts/batches and prints the command that renders it; keyframes and clips
@@ -52,6 +56,10 @@ REF_SOURCES = {
                   "kind elderly face with a short white beard and gray hair, dark gray cap, red and brown plaid flannel "
                   "shirt, muddy blue denim overalls and brown work boots. Full body standing, front view, warm smile, "
                   "plain light gray background, soft studio light."),
+    "little_monkey_bare": ("obi_shorts/refs/little_monkey.png",
+                           "The same cute little brown monkey from picture 1 with the same face, big round ears and long "
+                           "curly tail, but wearing no clothes at all. Full body standing, front view, happy smile, plain "
+                           "light gray background, soft studio light."),
 }
 
 
@@ -205,12 +213,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song", "sfx"])
     parser.add_argument("script", nargs="?", help="shot list (.md), for keyframes and animate")
+    parser.add_argument("--refs-only", help="refs mode: only this reference, for example little_monkey_bare")
     parser.add_argument("--shots", help="only these shots, for example 2,3 (rendered with new seeds)")
     args = parser.parse_args()
     cast = load_cast()
 
     if args.mode == "refs":
-        write("refs", ref_tasks(cast))
+        tasks = ref_tasks(cast)
+        if args.refs_only:
+            tasks = [t for t in tasks if t["output_filename"].rsplit("_", 1)[0] == args.refs_only]
+        write("refs", tasks)
         print("Pick the best obi_3d_* and farmer_3d_* picture and save them as obi_shorts/refs/obi_3d.png "
               "and obi_shorts/refs/farmer_3d.png")
         return
@@ -219,6 +231,9 @@ def main():
 
     name = os.path.splitext(os.path.basename(args.script))[0]
     shots = parse_shots(args.script)
+    negative = re.search(r"^## Negative\s*\n(.*?)(?=^## |\Z)", open(args.script, encoding="utf-8").read(), re.M | re.S)
+    if negative:
+        cast["negative"] = " ".join(negative.group(1).split())
     seed_offset = 0
     if args.shots:
         wanted = parse_beat_list(args.shots)
@@ -270,10 +285,12 @@ def main():
             if voice is None:
                 sys.exit(f"Shot {no} lip-syncs to '{line}', which is not rendered yet: run the sfx step first")
             task.update(model_type=LIPSYNC_MODEL, audio_guide=os.path.relpath(voice).replace("\\", "/"),
-                        audio_prompt_type="A", image_prompt_type="S",
+                        audio_prompt_type="AV", image_prompt_type="S",
                         prompt=f"{motion}, the character talks with clear mouth movements matching the speech. "
                                f"{cast['style']}")
             task.pop("video_length", None)   # InfiniteTalk follows the length of the audio
+            # "V" in audio_prompt_type: InfiniteTalk lip-syncs to the separated vocal, so a sung line cut from the
+            # song (music and all) works as well as a clean spoken one
         tasks.append(task)
     if missing:
         sys.exit(f"No keyframe yet for shots {missing} in {folder}: render the keyframes batch first")
