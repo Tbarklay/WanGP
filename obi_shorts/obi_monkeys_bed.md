@@ -9,10 +9,13 @@ The song is sung by a female voice; the doctor's lines are spoken by a male voic
 song turned down under them, and Obi's mouth is lip-synced to them with InfiniteTalk. Lyrics are the traditional
 public-domain rhyme.
 
-Version 2 structure: every verse is five shots, one per lyric line, cut on the line it belongs to:
-  1. N monkeys bouncing (N on screen)  2. one falls on the pillows, then sits up rubbing his head, pouting and teary
-  3. Mama Monkey phones the doctor     4. Doctor Obi speaks his line, mouth lip-synced
-  5. the monkeys still on the bed sit in a row; the count numbers appear in the top-left corner on the sung numbers
+Version 3 structure: every verse is six shots, cut on the lyric line they belong to:
+  1. N monkeys bouncing, big in the frame (a different camera angle each verse)
+  2. one monkey in mid-air tumbling off the bed into the pillows (the fall is now shown)
+  3. close-up: he sits up rubbing his head and CRIES (pouty lip, tears)  ("one fell off and bumped his head")
+  4. Mama Monkey phones the doctor     5. Doctor Obi speaks his line, mouth lip-synced, with a different paw gesture
+  6. the monkeys still on the bed sit in a row, with empty wall top-left so the count numbers never cover a face
+Brighter, more colorful lighting than v2 (v2 was dim and orange).
 Mama Monkey and the little monkeys have their own reference pictures, so they look the same in every shot.
 Title idea: Five Little Monkeys Jumping on the Bed! 🐒🛏️ Count with Doctor Obi | Counting Song for Kids
 
@@ -68,111 +71,126 @@ Goodnight, little monkeys, rest your sleepy heads
 
 ## Shots
 
-**01** `[keyframe: a cozy treehouse bedroom in the evening with one big bed with a colorful patchwork quilt, a pile of big soft pillows on the floor beside it, warm lamp light, a round window showing a jungle sunset]`
+**01** `[keyframe: a cozy treehouse bedroom in the evening with one big bed with a colorful patchwork quilt, a pile of big soft pillows on the floor beside it, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors, a round window showing a jungle sunset]`
 `[motion: slow camera push toward the bed, the lamp light glows warmly]`
 
-**02** `[keyframe: five cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 5 monkeys in the scene, tails swinging, happy faces]`
+**02** `[keyframe: eye-level medium shot of five cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 5 monkeys in the scene, big in the frame filling most of the picture, tails swinging, happy faces, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**03** `[keyframe: one cute little brown monkey like {monkey} sitting on the pile of soft pillows beside the bed, rubbing his head with one hand, a sad pouty face, teary eyes, a small tear on his cheek]`
-`[motion: the monkey lands softly on the pillows, sits up, rubs his head and starts to cry with a pouty lip]`
-`[sfx: thud @0.2]`
+**03** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
 
-**04** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face]`
-`[motion: the mother monkey dials the red telephone and talks into it with a worried face]`
+**04** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
+`[sfx: thud @0.1]`
 
-**05** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, friendly gently scolding face, cozy treehouse room behind]`
-`[motion: the puppy talks to the camera, wagging one paw like saying no no, ears staying floppy]`
+**05** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the mother monkey quickly dials the red telephone and talks into it with a worried face, tapping her foot]`
+
+**06** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, soft floppy ears, cozy treehouse room behind, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the puppy talks to the camera, wagging one paw like saying no no and shaking his head, ears staying floppy]`
 `[voice: doctor1 @0.2]`
 `[lipsync: doctor1]`
 
-**06** `[keyframe: exactly 4 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below]`
+**07** `[keyframe: exactly 4 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below, the top-left quarter of the picture is plain wall with nothing in it, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys on the bed wave a little and wiggle their tails, sitting still in a row]`
 `[count: 1-4]`
 
-**07** `[keyframe: four cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 4 monkeys in the scene, tails swinging, happy faces]`
+**08** `[keyframe: low angle medium shot from beside the bed of four cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 4 monkeys in the scene, big in the frame filling most of the picture, tails swinging, happy faces, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**08** `[keyframe: one cute little brown monkey like {monkey} sitting on the pile of soft pillows beside the bed, rubbing his head with one hand, a sad pouty face, teary eyes, a small tear on his cheek]`
-`[motion: the monkey lands softly on the pillows, sits up, rubs his head and starts to cry with a pouty lip]`
-`[sfx: thud @0.2]`
+**09** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
 
-**09** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face]`
-`[motion: the mother monkey dials the red telephone and talks into it with a worried face]`
+**10** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
+`[sfx: thud @0.1]`
 
-**10** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, friendly gently scolding face, cozy treehouse room behind]`
-`[motion: the puppy talks to the camera, wagging one paw like saying no no, ears staying floppy]`
+**11** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the mother monkey quickly dials the red telephone and talks into it with a worried face, tapping her foot]`
+
+**12** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, soft floppy ears, cozy treehouse room behind, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the puppy talks to the camera, holding up one paw like a stop sign and nodding firmly, ears staying floppy]`
 `[voice: doctor2 @0.2]`
 `[lipsync: doctor2]`
 
-**11** `[keyframe: exactly 3 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below]`
+**13** `[keyframe: exactly 3 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below, the top-left quarter of the picture is plain wall with nothing in it, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys on the bed wave a little and wiggle their tails, sitting still in a row]`
 `[count: 1-3]`
 
-**12** `[keyframe: three cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 3 monkeys in the scene, tails swinging, happy faces]`
+**14** `[keyframe: medium shot from a little above of three cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 3 monkeys in the scene, big in the frame filling most of the picture, tails swinging, happy faces, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**13** `[keyframe: one cute little brown monkey like {monkey} sitting on the pile of soft pillows beside the bed, rubbing his head with one hand, a sad pouty face, teary eyes, a small tear on his cheek]`
-`[motion: the monkey lands softly on the pillows, sits up, rubs his head and starts to cry with a pouty lip]`
-`[sfx: thud @0.2]`
+**15** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
 
-**14** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face]`
-`[motion: the mother monkey dials the red telephone and talks into it with a worried face]`
+**16** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
+`[sfx: thud @0.1]`
 
-**15** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, friendly gently scolding face, cozy treehouse room behind]`
-`[motion: the puppy talks to the camera, wagging one paw like saying no no, ears staying floppy]`
+**17** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the mother monkey quickly dials the red telephone and talks into it with a worried face, tapping her foot]`
+
+**18** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, soft floppy ears, cozy treehouse room behind, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the puppy talks to the camera, crossing his paws and pretending to frown, then smiling, ears staying floppy]`
 `[voice: doctor3 @0.2]`
 `[lipsync: doctor3]`
 
-**16** `[keyframe: exactly 2 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below]`
+**19** `[keyframe: exactly 2 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below, the top-left quarter of the picture is plain wall with nothing in it, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys on the bed wave a little and wiggle their tails, sitting still in a row]`
 `[count: 1-2]`
 
-**17** `[keyframe: two cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 2 monkeys in the scene, tails swinging, happy faces]`
+**20** `[keyframe: eye-level medium shot from the other side of the bed of two cute little brown monkeys like {monkey} bouncing high on the patchwork bed, exactly 2 monkeys in the scene, big in the frame filling most of the picture, tails swinging, happy faces, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys bounce up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**18** `[keyframe: one cute little brown monkey like {monkey} sitting on the pile of soft pillows beside the bed, rubbing his head with one hand, a sad pouty face, teary eyes, a small tear on his cheek]`
-`[motion: the monkey lands softly on the pillows, sits up, rubs his head and starts to cry with a pouty lip]`
-`[sfx: thud @0.2]`
+**21** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
 
-**19** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face]`
-`[motion: the mother monkey dials the red telephone and talks into it with a worried face]`
+**22** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
+`[sfx: thud @0.1]`
 
-**20** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, friendly gently scolding face, cozy treehouse room behind]`
-`[motion: the puppy talks to the camera, wagging one paw like saying no no, ears staying floppy]`
+**23** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the mother monkey quickly dials the red telephone and talks into it with a worried face, tapping her foot]`
+
+**24** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, soft floppy ears, cozy treehouse room behind, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the puppy talks to the camera, putting one paw on his forehead and laughing, ears staying floppy]`
 `[voice: doctor4 @0.2]`
 `[lipsync: doctor4]`
 
-**21** `[keyframe: exactly one cute little brown monkey like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below]`
+**25** `[keyframe: exactly 1 cute little brown monkeys like {monkey} sitting in a neat row on the patchwork bed facing the camera, smiling, the hurt monkeys with small bandages on their heads sitting on the pillows below, the top-left quarter of the picture is plain wall with nothing in it, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkeys on the bed wave a little and wiggle their tails, sitting still in a row]`
-`[count: 1]`
+`[count: 1-1]`
 
-**22** `[keyframe: one cute little brown monkey like {monkey} bouncing high on the patchwork bed, exactly 1 monkey in the scene, tails swinging, happy faces]`
+**26** `[keyframe: low angle medium shot of one cute little brown monkey like {monkey} bouncing high on the patchwork bed, exactly 1 monkey in the scene, big in the frame filling most of the picture, tails swinging, happy faces, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the monkey bounces up and down on the bed, tails swinging]`
 `[sfx: boing @0.4]`
 
-**23** `[keyframe: one cute little brown monkey like {monkey} sitting on the pile of soft pillows beside the bed, rubbing his head with one hand, a sad pouty face, teary eyes, a small tear on his cheek]`
-`[motion: the monkey lands softly on the pillows, sits up, rubs his head and starts to cry with a pouty lip]`
-`[sfx: thud @0.2]`
+**27** `[keyframe: one cute little brown monkey like {monkey} in mid-air tumbling off the edge of the patchwork bed toward a pile of big soft pillows, arms flailing, surprised wide-open mouth, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey slips off the edge of the bed, tumbles through the air in slow motion and lands softly in the pillows with a poof]`
 
-**24** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face]`
-`[motion: the mother monkey dials the red telephone and talks into it with a worried face]`
+**28** `[keyframe: close-up of one cute little brown monkey like {monkey} sitting on the pile of soft pillows, rubbing his head with one hand, crying, sad pouty lower lip, big teary eyes, a tear rolling down his cheek, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the monkey rubs his head and cries with a pouty lip, tears rolling down, his shoulders shaking]`
+`[sfx: thud @0.1]`
 
-**25** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, friendly gently scolding face, cozy treehouse room behind]`
-`[motion: the puppy talks to the camera, wagging one paw like saying no no, ears staying floppy]`
+**29** `[keyframe: {mama_monkey} in a cozy treehouse kitchen holding an old-fashioned red telephone to her ear with a worried face, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the mother monkey quickly dials the red telephone and talks into it with a worried face, tapping her foot]`
+
+**30** `[keyframe: medium close-up of {obi} sitting and facing the camera, wearing a toy stethoscope and a little white doctor's cap, mouth open mid-word, soft floppy ears, cozy treehouse room behind, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
+`[motion: the puppy talks to the camera, yawning and waving goodnight with one paw, ears staying floppy]`
 `[voice: doctor5 @0.2]`
 `[lipsync: doctor5]`
 
-**26** `[keyframe: {mama_monkey} and {obi} in his doctor's cap tucking five little monkeys like {monkey} into the big patchwork bed, small bandages on their heads]`
+**31** `[keyframe: {mama_monkey} and {obi} in his doctor's cap tucking five little monkeys like {monkey} into the big patchwork bed, small bandages on their heads, bright cheerful evening light, warm lamp glow and colorful high-key lighting, vivid colors]`
 `[motion: the mother monkey pulls the quilt up, the puppy nudges a pillow into place, the monkeys yawn]`
 
-**27** `[keyframe: exactly five cute little brown monkeys like {monkey} asleep in a row in the big patchwork bed, eyes closed, {mama_monkey} kissing one on the head, warm lamp light]`
+**32** `[keyframe: exactly five cute little brown monkeys like {monkey} asleep in a row in the big patchwork bed, eyes closed, {mama_monkey} kissing one on the head, warm lamp light, the top-left quarter of the picture is plain wall with nothing in it]`
 `[motion: the monkeys breathe slowly in their sleep with eyes closed, the mother monkey smiles softly]`
 `[count: 1-5]`
 
-**28** `[keyframe: the cozy treehouse bedroom at night, moonlight through the round window onto five sleeping monkeys in the bed, {obi} curled up asleep on a rug at the foot of the bed with his doctor's cap over his eyes, no people]`
+**33** `[keyframe: the cozy treehouse bedroom at night, soft blue moonlight through the round window onto five sleeping monkeys in the bed, {obi} curled up asleep on a rug at the foot of the bed with his doctor's cap over his eyes, no people]`
 `[motion: slow camera pull back, stars twinkle outside the window, everyone stays asleep]`
