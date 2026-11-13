@@ -14,6 +14,7 @@ Optional per shot, on lines after its [motion: ...] line:
     `[voice: doctor @0.4]` plays the spoken line "doctor" there, with the song turned down under it
     `[lipsync: doctor]`  animates this shot with InfiniteTalk so the character's mouth moves to that spoken line
     `[count: 1-4 @2.0-4.4]`  shows the numbers only between 2.0 and 4.4 s into the shot (set from the sung counts)
+    `[title: Sing with Obi]`  the words in big colorful letters over the shot (used by the intro card)
     `[end: the monkey lying on the pillows]`  also renders this end picture, and the clip must travel from the
                     keyframe to it (Wan start + end image), so an action like a fall really happens on screen
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
@@ -78,7 +79,7 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end|title):\s*(.*?)\]`")
 LIPSYNC_MODEL = "infinitetalk"                    # Wan 2.1 InfiniteTalk: mouth moves to an audio clip
 
 
@@ -145,7 +146,7 @@ def sfx_tasks(path, name):
     return tasks
 
 
-def song_tasks(path, name, seconds):
+def song_tasks(path, name, seconds, takes=3, first=0):
     text = open(path, encoding="utf-8").read()
     music = re.search(r"^## Music\n(.+?)(?=\n## )", text, re.M | re.S)
     lyrics = re.search(r"^## Lyrics\n(.+?)(?=\n## )", text, re.M | re.S)
@@ -157,8 +158,8 @@ def song_tasks(path, name, seconds):
         "alt_prompt": " ".join(music.group(1).split()),
         "duration_seconds": seconds,
         "seed": SEED + take,
-        "output_filename": f"{name}_song_{'abc'[take]}",
-    } for take in range(3)]
+        "output_filename": f"{name}_song_{'abcdefghijklmnopqrstuvwxyz'[take]}",
+    } for take in range(first, first + takes)]
 
 
 def ref_tasks(cast):
@@ -213,6 +214,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song", "sfx"])
     parser.add_argument("script", nargs="?", help="shot list (.md), for keyframes and animate")
+    parser.add_argument("--takes", type=int, default=3, help="song mode: how many takes (default 3)")
+    parser.add_argument("--first-take", default="a", help="song mode: letter of the first new take, e.g. d to add d, e, f")
     parser.add_argument("--refs-only", help="refs mode: only this reference, for example little_monkey_bare")
     parser.add_argument("--shots", help="only these shots, for example 2,3 (rendered with new seeds)")
     args = parser.parse_args()
@@ -241,7 +244,8 @@ def main():
 
     if args.mode == "song":
         # Long enough to cover every clip; the assembler fits the clips to the song it picks.
-        write(name + "_song", song_tasks(args.script, name, round(len(shots) * CLIP_FRAMES / 16) + 5), name)
+        write(name + "_song", song_tasks(args.script, name, round(len(shots) * CLIP_FRAMES / 16) + 5,
+                                                   args.takes, ord(args.first_take) - ord("a")), name)
         return
 
     if args.mode == "sfx":

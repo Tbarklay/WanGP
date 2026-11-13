@@ -9,6 +9,12 @@ With a song (rendered by build_shots.py song), the clips are sped up or slowed d
 video ends with the song; plain --music is faded out at the end of the clips instead.
 
 Writes obi_shorts/final/<shot list name>.mp4 (16:9) and <name>_short.mp4 (9:16, center crop for Shorts).
+
+Intro and goodbye cards: once obi_shorts/final/obi_intro.mp4 and obi_outro.mp4 exist (assemble obi_intro.md and
+obi_outro.md), every video automatically opens with the "Sing, sing, sing with Obi!" jingle and ends with Obi's
+goodbye card, where YouTube's end screen (Subscribe button, next video) goes. The Short gets neither (viewers
+decide in the first second whether to swipe). Add --no-intro to leave them out.
+A `[title: Sing with Obi]` line under a shot shows those words as big colorful letters over that shot.
 """
 import argparse
 import glob
@@ -53,6 +59,41 @@ def number_png(folder, n):
     return path
 
 
+TITLE_COLORS = [(255, 82, 82), (255, 167, 38), (255, 214, 10), (102, 204, 68), (41, 182, 246), (171, 71, 188)]
+
+
+def title_png(folder, text):
+    """The words as big bubbly letters, each in its own bright color, with a thick dark outline (transparent PNG)."""
+    from PIL import Image, ImageDraw, ImageFont
+    path = os.path.join(folder, "title_" + "".join(c for c in text if c.isalnum()) + ".png")
+    if os.path.isfile(path):
+        return path
+    font = None
+    for name in ("arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
+        try:
+            font = ImageFont.truetype(name, 190)
+            break
+        except OSError:
+            continue
+    font = font or ImageFont.load_default()
+    probe = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    width = int(probe.textlength(text, font=font)) + 80
+    img = Image.new("RGBA", (width, 300), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    x, k = 40, 0
+    for ch in text:
+        if ch != " ":
+            # every other letter sits a little higher, for a playful bounce
+            draw.text((x, 40 if k % 2 else 60), ch, font=font, fill=TITLE_COLORS[k % len(TITLE_COLORS)],
+                      stroke_width=14, stroke_fill=(40, 30, 80))
+            k += 1
+        x += draw.textlength(ch, font=font)
+    if img.width > 1700:
+        img = img.resize((1700, round(300 * 1700 / img.width)))
+    img.save(path)
+    return path
+
+
 def count_values(value):
     """'3' -> [3]; '1-4' -> [1, 2, 3, 4]."""
     first, _, last = value.partition("-")
@@ -76,6 +117,8 @@ def main():
     parser.add_argument("script", help="shot list (.md)")
     parser.add_argument("--music", help="music file, faded out at the end")
     parser.add_argument("--song", help="song take (a, b or c) rendered by build_shots.py song; the clips follow its length")
+    parser.add_argument("--length", type=float, help="cut the video to this many seconds (for the short intro card)")
+    parser.add_argument("--no-intro", action="store_true", help="don't put the Obi intro card in front")
     args = parser.parse_args()
 
     name = os.path.splitext(os.path.basename(args.script))[0]
@@ -104,6 +147,8 @@ def main():
                                          "-of", "csv=p=0", args.music], capture_output=True, text=True).stdout)
         speed = min(max(total / song_len, 0.85), 1.15)   # beyond 15% the motion looks wrong; hold the last frame
         total = song_len
+    if args.length:
+        total = min(total, args.length)
 
     final = os.path.join(ROOT, "final")
     os.makedirs(final, exist_ok=True)
@@ -135,7 +180,10 @@ def main():
                 a, b = (float(x) for x in window.split("-")) if window else (0.0, length)
                 step = (b - a) / len(numbers)
                 for k, n in enumerate(numbers):
-                    overlays.append((number_png(work, n), start + a + k * step + 0.05, start + a + (k + 1) * step))
+                    overlays.append((number_png(work, n), start + a + k * step + 0.05, start + a + (k + 1) * step,
+                                     f"x={COUNT_X}:y={COUNT_Y}"))
+            elif kind == "title":
+                overlays.append((title_png(work, value), start + 0.3, min(start + length, total), "x=(W-w)/2:y=40"))
             else:
                 effect, _, offset = value.partition("@")
                 is_voice = kind == "voice"
@@ -149,12 +197,12 @@ def main():
     next_input = len(clips)
     if overlays:
         chains[-1] = chains[-1].replace("[v]", "[base0]")
-        for k, (png, a, b) in enumerate(overlays):
+        for k, (png, a, b, pos) in enumerate(overlays):
             cmd += ["-i", png]
             fade = f"fade=t=in:st={a:.2f}:d=0.15:alpha=1,fade=t=out:st={b - 0.15:.2f}:d=0.15:alpha=1"
             chains.append(f"[{next_input}:v]loop=-1:1:0,setpts=N/30/TB,format=rgba,{fade}[n{k}]")
             out_label = "[v]" if k == len(overlays) - 1 else f"[base{k + 1}]"
-            chains.append(f"[base{k}][n{k}]overlay=x={COUNT_X}:y={COUNT_Y}:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
+            chains.append(f"[base{k}][n{k}]overlay={pos}:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
                           f"{out_label}")
             next_input += 1
     if args.music:
@@ -166,7 +214,7 @@ def main():
                 length = float(subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration",
                                                "-of", "csv=p=0", path], capture_output=True, text=True).stdout)
                 ducks += f",volume={DUCK}:enable='between(t,{at - 0.15:.2f},{at + length + 0.15:.2f})'"
-        chains.append(f"[{music_input}:a]volume={MUSIC_VOLUME}{ducks},afade=t=out:st={max(total - 2, 0):.2f}:d=2,"
+        chains.append(f"[{music_input}:a]volume={MUSIC_VOLUME}{ducks},afade=t=out:st={total - min(2, total * 0.2):.2f}:d={min(2, total * 0.2):.2f},"
                       f"atrim=0:{total:.2f}[song]")
         mix = ["[song]"]
         for k, (path, at, is_voice) in enumerate(effects):
@@ -184,6 +232,21 @@ def main():
     short = os.path.join(final, f"{name}_short.mp4")
     run([tool("ffmpeg"), "-y", "-i", out, "-vf", "crop=ih*9/16:ih,scale=1080:1920:flags=lanczos",
          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-c:a", "copy", short])
+    cards = [os.path.join(final, f"obi_{part}.mp4") for part in ("intro", "outro")]
+    cards = [c if os.path.isfile(c) else None for c in cards]
+    if name not in ("obi_intro", "obi_outro") and not args.no_intro and args.music and any(cards):
+        body = os.path.join(work, f"{name}_body.mp4")
+        shutil.move(out, body)
+        parts = [p for p in (cards[0], body, cards[1]) if p]
+        cmd = [tool("ffmpeg"), "-y"]
+        for p in parts:
+            cmd += ["-i", p]
+        chain = "".join(f"[{i}:v]fps=30,setsar=1[v{i}];[{i}:a]aresample=48000[a{i}];" for i in range(len(parts)))
+        chain += "".join(f"[v{i}][a{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=1[v][a]"
+        run(cmd + ["-filter_complex", chain, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium",
+                   "-crf", "17", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", out])
+        print("Added the Obi " + " and ".join(k for k, c in zip(("intro", "goodbye card"), cards) if c)
+              + " (use --no-intro to leave them out)")
     print(f"Wrote {out} and {short} from {len(clips)} clips")
 
 
