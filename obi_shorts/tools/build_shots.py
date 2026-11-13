@@ -15,6 +15,8 @@ Optional per shot, on lines after its [motion: ...] line:
     `[lipsync: doctor]`  animates this shot with InfiniteTalk so the character's mouth moves to that spoken line
     `[count: 1-4 @2.0-4.4]`  shows the numbers only between 2.0 and 4.4 s into the shot (set from the sung counts)
     `[title: Sing with Obi]`  the words in big colorful letters over the shot (used by the intro card)
+    `[spell: BINGO drop=2 icon=stomp x3 @0.4-6.2]`  giant spelled letters across the top (see assemble_shots.py)
+    `[frames: 113]`  a longer clip than the usual 81 frames (about 7 s), for a shot that must cover a long line
     `[end: the monkey lying on the pillows]`  also renders this end picture, and the clip must travel from the
                     keyframe to it (Wan start + end image), so an action like a fall really happens on screen
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
@@ -79,7 +81,7 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end|title):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end|title|spell|frames):\s*(.*?)\]`")
 LIPSYNC_MODEL = "infinitetalk"                    # Wan 2.1 InfiniteTalk: mouth moves to an audio clip
 
 
@@ -277,6 +279,9 @@ def main():
             missing.append(no)
             continue
         task = clip_task(cast, name, no, motion, os.path.relpath(keyframe), seed_offset)
+        frames = next((v for k, v in extras.get(no, []) if k == "frames"), None)
+        if frames:
+            task["video_length"] = int(frames) // 4 * 4 + 1   # Wan needs 4n+1 frames
         if any(k == "end" for k, _ in extras.get(no, [])):
             end_frame = newest(folder, f"{name}_end_{no:02d}")
             if end_frame is None:

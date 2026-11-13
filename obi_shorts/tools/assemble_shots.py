@@ -15,6 +15,9 @@ obi_outro.md), every video automatically opens with the "Sing, sing, sing with O
 goodbye card, where YouTube's end screen (Subscribe button, next video) goes. The Short gets neither (viewers
 decide in the first second whether to swipe). Add --no-intro to leave them out.
 A `[title: Sing with Obi]` line under a shot shows those words as big colorful letters over that shot.
+A `[spell: BINGO drop=2 icon=stomp x3 @0.4-6.2]` line spells BINGO across the top in giant colored letters, 3 times
+between 0.4 and 6.2 s into the shot, the sung letter drawn bigger; the first 2 letters are shown as the action's
+picture (icons: clap, stomp, pat, jump, woof, wave, spin, or any emoji). Set the window from the sung words.
 """
 import argparse
 import glob
@@ -90,6 +93,74 @@ def title_png(folder, text):
         x += draw.textlength(ch, font=font)
     if img.width > 1700:
         img = img.resize((1700, round(300 * 1700 / img.width)))
+    img.save(path)
+    return path
+
+
+SPELL_ICONS = {"clap": "\U0001F44F", "stomp": "\U0001F462", "pat": "\u270B", "jump": "\U0001F438",
+               "woof": "\U0001F436", "wave": "\U0001F44B", "spin": "\U0001F4AB"}
+EMOJI_FONTS = ("seguiemj.ttf", "C:/Windows/Fonts/seguiemj.ttf", "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+               "/System/Library/Fonts/Apple Color Emoji.ttc")
+
+
+def icon_image(icon, size):
+    """A color emoji picture for an action (clap, stomp, ...), or the action word in a round badge without one."""
+    from PIL import Image, ImageDraw, ImageFont
+    glyph = SPELL_ICONS.get(icon, icon)
+    for name in EMOJI_FONTS:
+        for font_size in (size, 109):   # scalable emoji fonts take any size; bitmap ones (Noto) only 109
+            try:
+                font = ImageFont.truetype(name, font_size)
+                img = Image.new("RGBA", (font_size * 2, font_size * 2), (0, 0, 0, 0))
+                ImageDraw.Draw(img).text((font_size // 2, font_size // 2), glyph, font=font, embedded_color=True)
+                box = img.getbbox()
+                if box:
+                    img = img.crop(box)
+                    scale = size / max(img.size)
+                    return img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
+            except (OSError, ValueError):
+                continue
+    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    draw.ellipse((4, 4, size - 4, size - 4), fill=(255, 255, 255), outline=(40, 30, 80), width=10)
+    word = icon.upper()[:5]
+    font = ImageFont.truetype("DejaVuSans-Bold.ttf", size // 4) if os.name != "nt" else ImageFont.truetype("arialbd.ttf", size // 4)
+    w = draw.textlength(word, font=font)
+    draw.text(((size - w) / 2, size * 0.36), word, font=font, fill=(40, 30, 80))
+    return img
+
+
+def spell_png(folder, word, drop, icon, lit):
+    """The word across the screen in giant colored letters; the first `drop` letters are replaced by the action's
+    picture, and letter number `lit` (counting from 0) is drawn bigger, because it is the one being sung."""
+    from PIL import Image, ImageDraw, ImageFont
+    path = os.path.join(folder, f"spell_{word}_{drop}_{icon}_{lit}.png")
+    if os.path.isfile(path):
+        return path
+    size, slot = 250, 330
+    font = None
+    for name in ("arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
+        try:
+            font = ImageFont.truetype(name, size)
+            break
+        except OSError:
+            continue
+    img = Image.new("RGBA", (slot * len(word), 360), (0, 0, 0, 0))
+    for k, ch in enumerate(word):
+        cell = Image.new("RGBA", (slot, 360), (0, 0, 0, 0))
+        if k < drop:
+            pic = icon_image(icon, 230)
+            cell.alpha_composite(pic, ((slot - pic.width) // 2, (360 - pic.height) // 2))
+        else:
+            draw = ImageDraw.Draw(cell)
+            w = draw.textlength(ch, font=font)
+            draw.text(((slot - w) / 2, 30), ch, font=font, fill=TITLE_COLORS[k % len(TITLE_COLORS)],
+                      stroke_width=16, stroke_fill=(40, 30, 80))
+        grow = 1.2 if k == lit else 0.85
+        cell = cell.resize((round(slot * grow), round(360 * grow)), Image.LANCZOS)
+        if k != lit:   # the letters not being sung are a little faded, so the sung one stands out
+            cell.putalpha(cell.getchannel("A").point(lambda a: int(a * 0.75)))
+        img.alpha_composite(cell, (max(0, k * slot + (slot - cell.width) // 2), max(0, (360 - cell.height) // 2)))
     img.save(path)
     return path
 
@@ -184,7 +255,20 @@ def main():
                                      f"x={COUNT_X}:y={COUNT_Y}"))
             elif kind == "title":
                 overlays.append((title_png(work, value), start + 0.3, min(start + length, total), "x=(W-w)/2:y=40"))
-            else:
+            elif kind == "spell":
+                # BINGO drop=2 icon=stomp x3 @0.4-6.2: the word spelled 3 times across the window, one letter per step
+                spec, _, window = value.partition("@")
+                parts = spec.split()
+                word = parts[0]
+                opts = dict(p.split("=", 1) for p in parts[1:] if "=" in p)
+                times = next((int(p[1:]) for p in parts[1:] if p.startswith("x") and p[1:].isdigit()), 1)
+                a, b = (float(x) for x in window.split("-")) if window else (0.0, length)
+                steps = len(word) * times
+                step = (b - a) / steps
+                for k in range(steps):
+                    png = spell_png(work, word, int(opts.get("drop", 0)), opts.get("icon", "clap"), k % len(word))
+                    overlays.append((png, start + a + k * step, start + a + (k + 1) * step, "x=(W-w)/2:y=20", False))
+            elif kind in ("sfx", "voice"):   # [lipsync:], [end:] and [frames:] are for build_shots.py only
                 effect, _, offset = value.partition("@")
                 is_voice = kind == "voice"
                 found = glob.glob(os.path.join(folder, f"{name}_sfx_{effect.strip()}_*"))
@@ -197,10 +281,12 @@ def main():
     next_input = len(clips)
     if overlays:
         chains[-1] = chains[-1].replace("[v]", "[base0]")
-        for k, (png, a, b, pos) in enumerate(overlays):
+        for k, (png, a, b, pos, *fades) in enumerate(overlays):
             cmd += ["-i", png]
-            fade = f"fade=t=in:st={a:.2f}:d=0.15:alpha=1,fade=t=out:st={b - 0.15:.2f}:d=0.15:alpha=1"
-            chains.append(f"[{next_input}:v]loop=-1:1:0,setpts=N/30/TB,format=rgba,{fade}[n{k}]")
+            # spelling steps follow each other with no fades, so the letters don't flicker between steps
+            fade = (",fade=t=in:st={a:.2f}:d=0.15:alpha=1,fade=t=out:st={b - 0.15:.2f}:d=0.15:alpha=1".format(a=a, b=b)
+                    if (fades[0] if fades else True) else "")
+            chains.append(f"[{next_input}:v]loop=-1:1:0,setpts=N/30/TB,format=rgba{fade}[n{k}]")
             out_label = "[v]" if k == len(overlays) - 1 else f"[base{k + 1}]"
             chains.append(f"[base{k}][n{k}]overlay={pos}:enable='between(t,{a:.2f},{b:.2f})':shortest=1"
                           f"{out_label}")
