@@ -14,12 +14,16 @@ compilation (59%). Follow these rules when writing or rendering any Obi video.
    "here is the animal".
 4. **Something new every 2-3 seconds**: a new angle, a gag, a sound effect, an expression. Most shots are one
    clear action, and shots on the same line alternate wide and close-up.
-5. **Follow-along songs** (actions kids copy): while the action is sung, keep ONE steady shot of the characters
-   facing the camera doing it, with no cutaways, so kids always have someone to copy.
+5. **Follow-along songs** (actions kids copy): while the action is sung, keep the same characters facing the camera
+   doing it, with no cutaways to anything else, so kids always have someone to copy. But don't hold one framing for
+   more than about 4 seconds: alternate two framings of the same scene (full body, then a closer shot) so the
+   picture keeps changing while the action stays the same.
 6. **Counting songs**: numbers belong to characters (numbered, colored outfits), and the counted one acts on its
    number. Never put numbers over faces.
 7. Keep the look consistent: Obi's ears stay soft and floppy, every character uses its reference picture from
-   cast.json, and plain areas are left where overlays go (sky at the top for [spell:], a wall corner for [count:]).
+   cast.json, and so does any vehicle or prop that appears in many shots (a bus, a truck, a sleigh): make its
+   reference picture first, add it to cast.json with a "ref", and use {its_key} in every shot, so it doesn't
+   change shape from shot to shot, and plain areas are left where overlays go (sky at the top for [spell:], a wall corner for [count:]).
 8. Classic public-domain songs parents search for, or originals with the same pull. Titles: "Song Name! 🐶 hook |
    ... | Sing with Obi".
 
