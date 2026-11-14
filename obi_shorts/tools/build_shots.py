@@ -26,6 +26,8 @@ A '## Negative' section replaces the cast's negative prompt for this list (for e
 clothes, which the default "text, letters" negative fights). A lip-synced line can also be a sung line cut from the
 chosen song and saved as <list>_sfx_<line>_pick.wav: InfiniteTalk separates the vocal from the music itself.
 Add --refs-only little_monkey_bare to refs to make just that reference.
+Check a new shot list against the channel's retention rules (obi_shorts/CLAUDE.md):
+    python obi_shorts/tools/build_shots.py check obi_shorts/obi_bingo.md
 Add --shots 2,3 to keyframes or animate to redo only some shots with new seeds.
 
 Each mode writes a batch to obi_shorts/batches and prints the command that renders it; keyframes and clips
@@ -212,9 +214,48 @@ def write(name, tasks, folder=None):
           f"{os.path.relpath(os.path.join(ROOT, 'output', folder or name))}")
 
 
+def check_script(path):
+    """Warnings for retention mistakes that show in the text of a shot list (see obi_shorts/CLAUDE.md)."""
+    text = open(path, encoding="utf-8").read()
+    shots = parse_shots(path)
+    cast = load_cast()["characters"]
+    warnings = []
+    if shots and not re.search(r"\{(\w+)\}", shots[0][1]):
+        warnings.append(f"shot {shots[0][0]:02d} shows no character: open on a character doing something fun, not scenery")
+    first_motion = shots[0][2].lower() if shots else ""
+    if any(w in first_motion for w in ("slow camera", "slow push", "slow glide", "establishing")):
+        warnings.append(f"shot {shots[0][0]:02d} opens with a slow camera move: start with action instead")
+    if not any("{obi}" in frame for _, frame, _ in shots):
+        warnings.append("Obi is in no shot: give him at least a shot or two")
+    elif not any("{obi}" in frame for _, frame, _ in shots[:4]):
+        warnings.append("Obi first appears after shot 4: bring him in earlier")
+    intro = re.search(r"\[Intro[^\]]*?(\d+)\s*(?:s\b|sec)", text, re.I)
+    if intro and int(intro.group(1)) > 3:
+        warnings.append(f"the song has a {intro.group(1)} s instrumental intro: keep it to 3 s or less")
+    music = re.search(r"^## Music\n(.+?)(?=\n## )", text, re.M | re.S)
+    if music and re.search(r"(\d+)-second instrumental intro", music.group(1)):
+        n = int(re.search(r"(\d+)-second instrumental intro", music.group(1)).group(1))
+        if n > 3:
+            warnings.append(f"the Music prompt asks for a {n}-second intro: keep it to 3 s or less")
+    seen = {}
+    for no, frame, motion in shots:
+        if (frame, motion) in seen:
+            warnings.append(f"shot {no:02d} repeats shot {seen[(frame, motion)]:02d} exactly: vary the angle or the gag")
+        seen.setdefault((frame, motion), no)
+    for no, frame, _ in shots:
+        unknown = [k for k in re.findall(r"\{(\w+)\}", frame) if k not in cast]
+        if unknown:
+            warnings.append(f"shot {no:02d} uses {unknown}, which cast.json does not have")
+    for w in warnings:
+        print("WARNING:", w)
+    if not warnings:
+        print(f"{os.path.basename(path)}: no problems found")
+    return warnings
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song", "sfx"])
+    parser.add_argument("mode", choices=["refs", "keyframes", "animate", "song", "sfx", "check"])
     parser.add_argument("script", nargs="?", help="shot list (.md), for keyframes and animate")
     parser.add_argument("--takes", type=int, default=3, help="song mode: how many takes (default 3)")
     parser.add_argument("--first-take", default="a", help="song mode: letter of the first new take, e.g. d to add d, e, f")
@@ -233,6 +274,12 @@ def main():
         return
     if not args.script:
         sys.exit("Give the shot list, for example obi_shorts/test_shots.md")
+
+    if args.mode == "check":
+        check_script(args.script)
+        return
+    if args.mode == "keyframes" and not args.shots:
+        check_script(args.script)   # warnings only; rendering goes ahead
 
     name = os.path.splitext(os.path.basename(args.script))[0]
     shots = parse_shots(args.script)

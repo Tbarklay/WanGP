@@ -22,6 +22,7 @@ picture (icons: clap, stomp, pat, jump, woof, wave, spin, or any emoji). Set the
 import argparse
 import glob
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -334,6 +335,15 @@ def main():
         print("Added the Obi " + " and ".join(k for k, c in zip(("intro", "goodbye card"), cards) if c)
               + " (use --no-intro to leave them out)")
     print(f"Wrote {out} and {short} from {len(clips)} clips")
+    frozen = subprocess.run([tool("ffmpeg"), "-i", out, "-vf", "freezedetect=n=0.003:d=0.5", "-map", "0:v", "-f", "null", "-"],
+                            capture_output=True, text=True).stderr
+    starts = re.findall(r"freeze_start: ([\d.]+)", frozen)
+    lengths = re.findall(r"freeze_duration: ([\d.]+)", frozen)
+    if starts:
+        print("WARNING: frozen picture at " + ", ".join(f"{float(a):.1f}s ({float(b):.1f}s long)" for a, b in zip(starts, lengths))
+              + ". Fix these before uploading: cut to the next shot earlier or add a shot (see obi_shorts/CLAUDE.md).")
+    else:
+        print("Frozen-frame check: none found")
 
 
 if __name__ == "__main__":

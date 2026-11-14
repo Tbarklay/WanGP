@@ -112,8 +112,8 @@ And Bingo was his name-o
 `[frames: 113]`
 `[spell: BINGO drop=1 icon=clap x3]`
 
-**09** `[keyframe: close-up of {obi} with soft floppy ears and a big happy smile, sunny farm behind]`
-`[motion: the puppy wags his tail and bobs his head proudly, ears staying floppy]`
+**09** `[keyframe: close-up of {obi} with soft floppy ears clapping his two front paws together with a big proud grin, sunny farm behind]`
+`[motion: the puppy claps his front paws together twice and grins at the camera, ears staying floppy]`
 
 **10** `[keyframe: medium close-up of {farmer} facing the camera pointing down at his boots, playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
@@ -131,8 +131,8 @@ And Bingo was his name-o
 `[frames: 113]`
 `[spell: BINGO drop=2 icon=stomp x3]`
 
-**14** `[keyframe: close-up of {obi} with soft floppy ears and a big happy smile, sunny farm behind]`
-`[motion: the puppy wags his tail and bobs his head proudly, ears staying floppy]`
+**14** `[keyframe: low angle close-up of {obi} with soft floppy ears stomping one front paw on the ground, a tiny puff of dust, a big cheeky smile, blue sky behind]`
+`[motion: the puppy stomps his paw, a little puff of dust rises, and he looks proud of himself, ears staying floppy]`
 
 **15** `[keyframe: medium close-up of {farmer} facing the camera with one hand resting on top of his cap, silly playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
@@ -150,8 +150,8 @@ And Bingo was his name-o
 `[frames: 113]`
 `[spell: BINGO drop=3 icon=pat x3]`
 
-**19** `[keyframe: close-up of {obi} with soft floppy ears and a big happy smile, sunny farm behind]`
-`[motion: the puppy wags his tail and bobs his head proudly, ears staying floppy]`
+**19** `[keyframe: close-up of {obi} with soft floppy ears patting the top of his own head with one paw, a silly cross-eyed grin, sunny farm behind]`
+`[motion: the puppy pats his head with his paw, goes a little cross-eyed and giggles, ears staying floppy]`
 
 **20** `[keyframe: medium close-up of {farmer} facing the camera bending his knees ready to jump, very excited face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
@@ -169,8 +169,8 @@ And Bingo was his name-o
 `[frames: 113]`
 `[spell: BINGO drop=4 icon=jump x3]`
 
-**24** `[keyframe: close-up of {obi} with soft floppy ears and a big happy smile, sunny farm behind]`
-`[motion: the puppy wags his tail and bobs his head proudly, ears staying floppy]`
+**24** `[keyframe: close-up of {obi} with soft floppy ears springing up into the air with all four paws off the ground, a delighted open-mouth smile, blue sky behind]`
+`[motion: the puppy bounces up into the air with a happy yip and lands softly, ears flapping softly]`
 
 **25** `[keyframe: medium close-up of {farmer} facing the camera with his hands cupped by his mouth, laughing, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
@@ -188,8 +188,8 @@ And Bingo was his name-o
 `[frames: 113]`
 `[spell: BINGO drop=5 icon=woof x3]`
 
-**29** `[keyframe: close-up of {obi} with soft floppy ears and a big happy smile, sunny farm behind]`
-`[motion: the puppy wags his tail and bobs his head proudly, ears staying floppy]`
+**29** `[keyframe: close-up of {obi} with soft floppy ears throwing his head back in a happy howl, eyes closed, sunny farm behind]`
+`[motion: the puppy throws his head back and howls happily, then grins at the camera, ears staying floppy]`
 
 **30** `[keyframe: {farmer}, {obi} with soft floppy ears and a chubby black and white cow, a round pink pig, a friendly brown horse and three yellow ducklings together in front of the red barn on a sunny day, looking at the camera]`
 `[motion: everyone smiles and waves at the camera, the puppy wags his tail and barks, slow camera pull back]`
