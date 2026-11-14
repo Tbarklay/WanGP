@@ -340,7 +340,9 @@ def main():
     starts = re.findall(r"freeze_start: ([\d.]+)", frozen)
     lengths = re.findall(r"freeze_duration: ([\d.]+)", frozen)
     if starts:
-        print("WARNING: frozen picture at " + ", ".join(f"{float(a):.1f}s ({float(b):.1f}s long)" for a, b in zip(starts, lengths))
+        lengths += ["until the end"] * (len(starts) - len(lengths))   # a freeze running to the end has no length
+        print("WARNING: frozen picture at " + ", ".join(
+                  f"{float(a):.1f}s ({b if b == 'until the end' else f'{float(b):.1f}s long'})" for a, b in zip(starts, lengths))
               + ". Fix these before uploading: cut to the next shot earlier or add a shot (see obi_shorts/CLAUDE.md).")
     else:
         print("Frozen-frame check: none found")
