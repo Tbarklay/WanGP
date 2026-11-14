@@ -31,8 +31,8 @@ that can be spotted in the text.
   to the next shot early or add a shot. assemble_shots.py runs a frozen-frame check on every video it writes and
   prints the times to fix.
 - Lip-synced shots play at normal speed, starting exactly on their line.
-- The intro jingle (final/obi_intro.mp4) and the goodbye card (final/obi_outro.mp4) are added automatically to every
-  long video, never to Shorts.
+- The intro jingle (cards/obi_intro.mp4) and the goodbye card (cards/obi_outro.mp4) are added automatically to
+  every long video, never to Shorts. cards/obi_intro_alt_own_sound.mp4 is the same intro with the other jingle take.
 - Before uploading, make a per-second contact sheet and check every shot: no extra characters, no text in the
   picture, no strangers, ears floppy, nothing frozen.
 - Upload each video as a GitHub release on Tbarklay/kids-videos, with notes on what was fixed.

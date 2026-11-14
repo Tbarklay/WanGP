@@ -10,8 +10,8 @@ video ends with the song; plain --music is faded out at the end of the clips ins
 
 Writes obi_shorts/final/<shot list name>.mp4 (16:9) and <name>_short.mp4 (9:16, center crop for Shorts).
 
-Intro and goodbye cards: once obi_shorts/final/obi_intro.mp4 and obi_outro.mp4 exist (assemble obi_intro.md and
-obi_outro.md), every video automatically opens with the "Sing, sing, sing with Obi!" jingle and ends with Obi's
+Intro and goodbye cards: obi_shorts/cards/obi_intro.mp4 and obi_outro.mp4 (made in Flow, kept in the repo; a newer
+version saved in obi_shorts/final/ takes their place), every video automatically opens with the "Sing, sing, sing with Obi!" jingle and ends with Obi's
 goodbye card, where YouTube's end screen (Subscribe button, next video) goes. The Short gets neither (viewers
 decide in the first second whether to swipe). Add --no-intro to leave them out.
 A `[title: Sing with Obi]` line under a shot shows those words as big colorful letters over that shot.
@@ -319,8 +319,9 @@ def main():
     short = os.path.join(final, f"{name}_short.mp4")
     run([tool("ffmpeg"), "-y", "-i", out, "-vf", "crop=ih*9/16:ih,scale=1080:1920:flags=lanczos",
          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-c:a", "copy", short])
-    cards = [os.path.join(final, f"obi_{part}.mp4") for part in ("intro", "outro")]
-    cards = [c if os.path.isfile(c) else None for c in cards]
+    # the cards in final/ win (a new local version); otherwise the ones kept in the repo in obi_shorts/cards/
+    cards = [next((c for c in (os.path.join(final, f"obi_{part}.mp4"), os.path.join(ROOT, "cards", f"obi_{part}.mp4"))
+                   if os.path.isfile(c)), None) for part in ("intro", "outro")]
     if name not in ("obi_intro", "obi_outro") and not args.no_intro and args.music and any(cards):
         body = os.path.join(work, f"{name}_body.mp4")
         shutil.move(out, body)
