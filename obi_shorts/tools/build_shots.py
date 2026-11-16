@@ -17,6 +17,10 @@ Optional per shot, on lines after its [motion: ...] line:
     `[title: Sing with Obi]`  the words in big colorful letters over the shot (used by the intro card)
     `[spell: BINGO drop=2 icon=stomp x3 @0.4-6.2]`  giant spelled letters across the top (see assemble_shots.py)
     `[frames: 113]`  a longer clip than the usual 81 frames (about 7 s), for a shot that must cover a long line
+    `[end: same]`  the clip ends on its own start picture (a seamless loop, or one action that returns to its pose)
+    `[keyframe_of: 13]`  animate shot 13's picture instead of drawing a new one (same scene, another motion)
+    `[insert: action]`  a clip that is not placed in the video by itself: beat_cut.py cuts it into another shot
+                    where the dropped letters are sung (see obi_shorts/tools/beat_cut.py)
     `[end: the monkey lying on the pillows]`  also renders this end picture, and the clip must travel from the
                     keyframe to it (Wan start + end image), so an action like a fall really happens on screen
 Sound effects are described in a '## Sound effects' section as lines like: quack: a real mother duck quacking
@@ -83,7 +87,7 @@ def parse_shots(path):
     return shots
 
 
-EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end|title|spell|frames):\s*(.*?)\]`")
+EXTRA = re.compile(r"`\[(count|sfx|voice|lipsync|end|title|spell|frames|keyframe_of|insert):\s*(.*?)\]`")
 LIPSYNC_MODEL = "infinitetalk"                    # Wan 2.1 InfiniteTalk: mouth moves to an audio clip
 
 
@@ -238,7 +242,10 @@ def check_script(path):
         if n > 3:
             warnings.append(f"the Music prompt asks for a {n}-second intro: keep it to 3 s or less")
     seen = {}
+    extras = parse_extras(path)
     for no, frame, motion in shots:
+        if any(k == "keyframe_of" for k, _ in extras.get(no, [])):
+            continue   # reusing another shot's picture on purpose (a steady follow-along set, an action insert)
         if (frame, motion) in seen:
             warnings.append(f"shot {no:02d} repeats shot {seen[(frame, motion)]:02d} exactly: vary the angle or the gag")
         seen.setdefault((frame, motion), no)
@@ -306,11 +313,13 @@ def main():
             ref = cast["characters"].get(key, {}).get("ref")
             if ref and not os.path.isfile(os.path.join(ROOT, ref)):
                 sys.exit(f"Missing 3D reference {os.path.join(ROOT, ref)}: run the refs step first and save the best one")
-        tasks = [image_task(cast, name, no, frame, seed_offset) for no, frame, _ in shots]
         extras = parse_extras(args.script)
+        # a shot with [keyframe_of: N] reuses shot N's picture, so it gets no picture of its own
+        tasks = [image_task(cast, name, no, frame, seed_offset) for no, frame, _ in shots
+                 if not any(k == "keyframe_of" for k, _ in extras.get(no, []))]
         for no, _, _ in shots:
             end = next((v for k, v in extras.get(no, []) if k == "end"), None)
-            if end:   # same seed and references as the start picture, so the scene matches
+            if end and end.strip().lower() != "same":   # same seed and references as the start picture, so the scene matches
                 task = image_task(cast, name, no, end, seed_offset)
                 task["output_filename"] = f"{name}_end_{no:02d}"
                 tasks.append(task)
@@ -321,7 +330,8 @@ def main():
     extras = parse_extras(args.script)
     tasks, missing = [], []
     for no, _, motion in shots:
-        keyframe = newest(folder, f"{name}_img_{no:02d}")
+        source = next((int(v) for k, v in extras.get(no, []) if k == "keyframe_of"), no)
+        keyframe = newest(folder, f"{name}_img_{source:02d}")
         if keyframe is None:
             missing.append(no)
             continue
@@ -329,8 +339,10 @@ def main():
         frames = next((v for k, v in extras.get(no, []) if k == "frames"), None)
         if frames:
             task["video_length"] = int(frames) // 4 * 4 + 1   # Wan needs 4n+1 frames
-        if any(k == "end" for k, _ in extras.get(no, [])):
-            end_frame = newest(folder, f"{name}_end_{no:02d}")
+        end_value = next((v for k, v in extras.get(no, []) if k == "end"), None)
+        if end_value is not None:
+            # [end: same]: the clip ends on its own start picture, so it can loop or be cut into another clip
+            end_frame = keyframe if end_value.strip().lower() == "same" else newest(folder, f"{name}_end_{no:02d}")
             if end_frame is None:
                 missing.append(no)
                 continue

@@ -17,7 +17,9 @@ compilation (59%). Follow these rules when writing or rendering any Obi video.
 5. **Follow-along songs** (actions kids copy): while the action is sung, keep the same characters facing the camera
    doing it, with no cutaways to anything else, so kids always have someone to copy. But don't hold one framing for
    more than about 4 seconds: alternate two framings of the same scene (full body, then a closer shot) so the
-   picture keeps changing while the action stays the same.
+   picture keeps changing while the action stays the same. When an action must land on a sung word or a dropped letter
+   (BINGO-style songs), render an idle loop and a one-action clip from the same picture ([end: same],
+   [keyframe_of:], [insert:]) and cut the action in on each beat with tools/beat_cut.py.
 6. **Counting songs**: numbers belong to characters (numbered, colored outfits), and the counted one acts on its
    number. Never put numbers over faces.
 7. Keep the look consistent: Obi's ears stay soft and floppy, every character uses its reference picture from

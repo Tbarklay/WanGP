@@ -5,9 +5,10 @@ calls out what to do instead of the missing letters (round 2 clap, round 3 stomp
 jump, round 6 bark like Bingo), then shows it.
 
 Version 3 is a real follow-along:
-- While the letters are sung, the screen stays on ONE steady shot: the farmer and Obi side by side, full body,
-  facing the camera like a teacher, doing the action. No cutaways during the spelling, so kids always have someone
-  to copy.
+- While the letters are sung, the screen stays on the farmer and Obi side by side, big, facing the camera like a
+  teacher, and they do the action EXACTLY where each dropped letter is sung, like the big kids' channels: each
+  spelling shot is an idle loop (bobbing to the beat) plus a one-action clip (one clap, one stomp...) from the same
+  picture, and beat_cut.py cuts the action in on every dropped letter's beat. No cutaways during the spelling.
 - Giant colored letters B-I-N-G-O run across the top during the spelling (the [spell:] lines), the sung letter
   drawn bigger. Each round one more letter turns into the action's picture (clap hands, boot, hand, frog, puppy),
   so kids SEE which letters are gone. The top third of every spelling shot is plain sky to make room for them.
@@ -85,111 +86,173 @@ And Bingo was his name-o
 `[voice: hello @0.2]`
 `[lipsync: hello]`
 
+
 **02** `[keyframe: {farmer} kneeling in the green grass hugging {obi} with soft floppy ears, both laughing, sunny farmyard]`
 `[motion: the farmer ruffles the puppy's fur, the puppy licks his cheek and wags his tail]`
 
-**03** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, the farmer pointing up at the sky to the beat, the puppy bobbing his head, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer points up to the beat again and again and sings along, the puppy bobs his head and wags his tail, camera still]`
-`[frames: 113]`
+
+**03** `[keyframe: {farmer} standing and {obi} with soft floppy ears sitting up on a round hay bale beside him so his head is level with the farmer's chest, side by side facing the camera, medium-wide shot from the knees up, both big in the picture filling the lower three quarters, their heads a third of the way down, the farmer's hands held in front of his chest, big happy smiles, in front of the red barn on a bright sunny day, the top quarter of the picture is plain clear blue sky with nothing in it]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[end: same]`
 `[spell: BINGO drop=0 icon=clap x3]`
 
 **04** `[keyframe: close-up of {obi} with soft floppy ears and a big proud happy smile, sunny farm behind]`
 `[motion: the puppy wags his tail and does a happy little spin, ears staying floppy]`
+
 
 **05** `[keyframe: medium close-up of {farmer} facing the camera with his hands held up ready to clap, excited face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
 `[voice: call_clap @0.2]`
 `[lipsync: call_clap]`
 
+
 **06** `[keyframe: close-up of {farmer} facing the camera clapping his hands in front of his chest, big smile, red barn behind, {obi} with soft floppy ears beside him copying]`
 `[motion: the farmer claps his hands again and again facing the camera, big clear claps, smiling]`
+
 
 **07** `[keyframe: a chubby black and white cow and a round pink pig dancing together in the sunny farmyard, big smiles]`
 `[motion: the cow and the pig sway and bounce happily to the music]`
 
-**08** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, both clapping their hands and front paws in front of their chests, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer and the puppy clap together to the beat again and again, facing the camera, camera still]`
-`[frames: 113]`
+
+**08** `[keyframe: same picture as shot 03]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
 `[spell: BINGO drop=1 icon=clap x3]`
 
-**09** `[keyframe: close-up of {obi} with soft floppy ears clapping his two front paws together with a big proud grin, sunny farm behind]`
+**09** `[keyframe: same picture as the shot before]`
+`[motion: the farmer claps his hands together once, big and clear, and the puppy claps his front paws together once, then they both return to the same pose, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
+`[frames: 21]`
+`[insert: clap]`
+
+**10** `[keyframe: close-up of {obi} with soft floppy ears clapping his two front paws together with a big proud grin, sunny farm behind]`
 `[motion: the puppy claps his front paws together twice and grins at the camera, ears staying floppy]`
 
-**10** `[keyframe: medium close-up of {farmer} facing the camera pointing down at his boots, playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
+
+**11** `[keyframe: medium close-up of {farmer} facing the camera pointing down at his boots, playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
 `[voice: call_stomp @0.2]`
 `[lipsync: call_stomp]`
 
-**11** `[keyframe: full body shot of {farmer} facing the camera stomping one boot on the ground with his knee raised high, a small puff of dust, {obi} with soft floppy ears beside him copying]`
+
+**12** `[keyframe: full body shot of {farmer} facing the camera stomping one boot on the ground with his knee raised high, a small puff of dust, {obi} with soft floppy ears beside him copying]`
 `[motion: the farmer stomps his left boot then his right boot again and again, big clear stomps facing the camera]`
 
-**12** `[keyframe: a friendly brown horse with a golden mane trotting proudly along the wooden fence in the sunny farmyard]`
+
+**13** `[keyframe: a friendly brown horse with a golden mane trotting proudly along the wooden fence in the sunny farmyard]`
 `[motion: the horse trots along the fence and tosses its golden mane]`
 
-**13** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, both stomping their feet with one knee raised, little puffs of dust, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer and the puppy stomp their feet together to the beat again and again, facing the camera, camera still]`
-`[frames: 113]`
+
+**14** `[keyframe: same picture as shot 03]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
 `[spell: BINGO drop=2 icon=stomp x3]`
 
-**14** `[keyframe: low angle close-up of {obi} with soft floppy ears stomping one front paw on the ground, a tiny puff of dust, a big cheeky smile, blue sky behind]`
+**15** `[keyframe: same picture as the shot before]`
+`[motion: the farmer lifts one knee and stomps his boot down once, big and clear, and the puppy stomps one front paw once, then they both return to the same pose, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
+`[frames: 21]`
+`[insert: stomp]`
+
+**16** `[keyframe: low angle close-up of {obi} with soft floppy ears stomping one front paw on the ground, a tiny puff of dust, a big cheeky smile, blue sky behind]`
 `[motion: the puppy stomps his paw, a little puff of dust rises, and he looks proud of himself, ears staying floppy]`
 
-**15** `[keyframe: medium close-up of {farmer} facing the camera with one hand resting on top of his cap, silly playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
+
+**17** `[keyframe: medium close-up of {farmer} facing the camera with one hand resting on top of his cap, silly playful face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
 `[voice: call_pat @0.2]`
 `[lipsync: call_pat]`
 
-**16** `[keyframe: close-up of {farmer} facing the camera patting the top of his cap with one hand, big goofy smile, {obi} with soft floppy ears beside him copying]`
+
+**18** `[keyframe: close-up of {farmer} facing the camera patting the top of his cap with one hand, big goofy smile, {obi} with soft floppy ears beside him copying]`
 `[motion: the farmer pats the top of his head again and again facing the camera, big clear pats, smiling]`
 
-**17** `[keyframe: three fluffy yellow ducklings waddling in a row across the sunny farmyard]`
+
+**19** `[keyframe: three fluffy yellow ducklings waddling in a row across the sunny farmyard]`
 `[motion: the ducklings waddle one after another and flap their tiny wings]`
 
-**18** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, both patting the tops of their heads, the farmer with his hand and the puppy with one paw, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer and the puppy pat their heads together to the beat again and again, facing the camera, camera still]`
-`[frames: 113]`
+
+**20** `[keyframe: same picture as shot 03]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
 `[spell: BINGO drop=3 icon=pat x3]`
 
-**19** `[keyframe: close-up of {obi} with soft floppy ears patting the top of his own head with one paw, a silly cross-eyed grin, sunny farm behind]`
+**21** `[keyframe: same picture as the shot before]`
+`[motion: the farmer pats the top of his cap once with one hand and the puppy pats the top of his own head once with one paw, then they both return to the same pose, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
+`[frames: 21]`
+`[insert: pat]`
+
+**22** `[keyframe: close-up of {obi} with soft floppy ears patting the top of his own head with one paw, a silly cross-eyed grin, sunny farm behind]`
 `[motion: the puppy pats his head with his paw, goes a little cross-eyed and giggles, ears staying floppy]`
 
-**20** `[keyframe: medium close-up of {farmer} facing the camera bending his knees ready to jump, very excited face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
+
+**23** `[keyframe: medium close-up of {farmer} facing the camera bending his knees ready to jump, very excited face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
 `[voice: call_jump @0.2]`
 `[lipsync: call_jump]`
 
-**21** `[keyframe: full body shot of {farmer} facing the camera jumping up in the air with both arms raised, his boots off the ground, {obi} with soft floppy ears beside him copying]`
+
+**24** `[keyframe: full body shot of {farmer} facing the camera jumping up in the air with both arms raised, his boots off the ground, {obi} with soft floppy ears beside him copying]`
 `[motion: the farmer jumps up high with both arms up again and again facing the camera, big clear jumps]`
 
-**22** `[keyframe: a round pink pig and three fluffy yellow ducklings hopping up and down in the sunny farmyard, big smiles]`
+
+**25** `[keyframe: a round pink pig and three fluffy yellow ducklings hopping up and down in the sunny farmyard, big smiles]`
 `[motion: the pig and the ducklings hop up and down happily]`
 
-**23** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, both jumping up in the air with arms and front paws raised, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer and the puppy jump up and down together to the beat again and again, facing the camera, camera still]`
-`[frames: 113]`
+
+**26** `[keyframe: same picture as shot 03]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
 `[spell: BINGO drop=4 icon=jump x3]`
 
-**24** `[keyframe: close-up of {obi} with soft floppy ears springing up into the air with all four paws off the ground, a delighted open-mouth smile, blue sky behind]`
+**27** `[keyframe: same picture as the shot before]`
+`[motion: the farmer and the puppy both jump up once, big and clear, and land back in the same pose, camera still]`
+`[keyframe_of: 3]`
+`[end: same]`
+`[frames: 21]`
+`[insert: jump]`
+
+**28** `[keyframe: close-up of {obi} with soft floppy ears springing up into the air with all four paws off the ground, a delighted open-mouth smile, blue sky behind]`
 `[motion: the puppy bounces up into the air with a happy yip and lands softly, ears flapping softly]`
 
-**25** `[keyframe: medium close-up of {farmer} facing the camera with his hands cupped by his mouth, laughing, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
+
+**29** `[keyframe: medium close-up of {farmer} facing the camera with his hands cupped by his mouth, laughing, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
 `[motion: the farmer talks to the camera with big happy gestures, the puppy wags his tail]`
 `[voice: call_woof @0.2]`
 `[lipsync: call_woof]`
 
-**26** `[keyframe: close-up of {obi} with soft floppy ears barking happily at the camera with his mouth wide open]`
+
+**30** `[keyframe: close-up of {obi} with soft floppy ears barking happily at the camera with his mouth wide open]`
 `[motion: the puppy barks at the camera again and again, ears bouncing softly]`
 
-**27** `[keyframe: a chubby black and white cow, a round pink pig, a friendly brown horse and three yellow ducklings running happily toward the camera across the sunny farmyard]`
+
+**31** `[keyframe: a chubby black and white cow, a round pink pig, a friendly brown horse and three yellow ducklings running happily toward the camera across the sunny farmyard]`
 `[motion: the animals run happily toward the camera to join the fun]`
 
-**28** `[keyframe: {farmer} and {obi} side by side in the lower two thirds of the picture, full body, facing the camera, both with mouths wide open barking, the farmer with his hands cupped by his mouth, a chubby black and white cow, a round pink pig and a friendly brown horse standing in a row behind them also barking, big happy smiles, soft floppy ears, in front of the red barn on a bright sunny day, the whole top third of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer, the puppy and the animals bark together to the beat again and again, facing the camera, camera still]`
-`[frames: 113]`
+
+**32** `[keyframe: {farmer} standing and {obi} with soft floppy ears sitting up on a round hay bale beside him so his head is level with the farmer's chest, side by side facing the camera, medium-wide shot from the knees up, both big in the picture filling the lower three quarters, their heads a third of the way down, the farmer's hands held in front of his chest, big happy smiles, in front of the red barn on a bright sunny day, the top quarter of the picture is plain clear blue sky with nothing in it, a chubby black and white cow, a round pink pig and a friendly brown horse standing close behind them, big enough to see clearly]`
+`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[end: same]`
 `[spell: BINGO drop=5 icon=woof x3]`
 
-**29** `[keyframe: close-up of {obi} with soft floppy ears throwing his head back in a happy howl, eyes closed, sunny farm behind]`
+**33** `[keyframe: same picture as the shot before]`
+`[motion: the farmer cups his hands by his mouth and the puppy throws his head up, both barking once with mouths wide open, then they return to the same pose, camera still]`
+`[keyframe_of: 32]`
+`[end: same]`
+`[frames: 21]`
+`[insert: woof]`
+
+**34** `[keyframe: close-up of {obi} with soft floppy ears throwing his head back in a happy howl, eyes closed, sunny farm behind]`
 `[motion: the puppy throws his head back and howls happily, then grins at the camera, ears staying floppy]`
 
-**30** `[keyframe: {farmer}, {obi} with soft floppy ears and a chubby black and white cow, a round pink pig, a friendly brown horse and three yellow ducklings together in front of the red barn on a sunny day, looking at the camera]`
+
+**35** `[keyframe: {farmer}, {obi} with soft floppy ears and a chubby black and white cow, a round pink pig, a friendly brown horse and three yellow ducklings together in front of the red barn on a sunny day, looking at the camera]`
 `[motion: everyone smiles and waves at the camera, the puppy wags his tail and barks, slow camera pull back]`

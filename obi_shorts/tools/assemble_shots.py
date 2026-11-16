@@ -200,8 +200,13 @@ def main():
     name = os.path.splitext(os.path.basename(args.script))[0]
     folder = os.path.join(ROOT, "output", name)
     clips, missing = [], []
+    inserts = {no for no, items in parse_extras(args.script).items() if any(k == "insert" for k, _ in items)}
     for no, _, _ in parse_shots(args.script):
-        found = glob.glob(os.path.join(folder, f"{name}_clip_{no:02d}*"))
+        if no in inserts:
+            continue   # an action clip that beat_cut.py cuts into another shot, not a shot of its own
+        # a beat-cut version of a shot (made by beat_cut.py) wins over its plain clip
+        found = glob.glob(os.path.join(folder, f"{name}_beatcut_{no:02d}*")) or \
+            glob.glob(os.path.join(folder, f"{name}_clip_{no:02d}*"))
         if found:
             clips.append(max(found, key=os.path.getmtime))
         else:
@@ -239,7 +244,8 @@ def main():
     # Where each shot starts in the finished video, for its counting numbers and sound effects.
     extras = parse_extras(args.script)
     starts, t = {}, 0.0
-    for (no, _, _), dur in zip([s for s in parse_shots(args.script) if s[0] not in missing], durations):
+    for (no, _, _), dur in zip([s for s in parse_shots(args.script) if s[0] not in missing and s[0] not in inserts],
+                               durations):
         starts[no] = (t / speed, dur / speed)
         t += dur
     overlays, effects = [], []
