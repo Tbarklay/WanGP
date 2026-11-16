@@ -23,7 +23,8 @@ compilation (59%). Follow these rules when writing or rendering any Obi video.
 7. Keep the look consistent: Obi's ears stay soft and floppy, every character uses its reference picture from
    cast.json, and so does any vehicle or prop that appears in many shots (a bus, a truck, a sleigh): make its
    reference picture first, add it to cast.json with a "ref", and use {its_key} in every shot, so it doesn't
-   change shape from shot to shot, and plain areas are left where overlays go (sky at the top for [spell:], a wall corner for [count:]).
+   change shape from shot to shot, and plain areas are left where overlays go (sky at the top for [spell:], a wall corner for [count:]). Never shrink the characters to make room for an
+   overlay: kids must see the faces and the action clearly. Frame them big (knees up) and keep overlays small.
 8. Classic public-domain songs parents search for, or originals with the same pull. Titles: "Song Name! 🐶 hook |
    ... | Sing with Obi".
 

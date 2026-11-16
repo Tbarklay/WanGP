@@ -18,6 +18,8 @@ A `[title: Sing with Obi]` line under a shot shows those words as big colorful l
 A `[spell: BINGO drop=2 icon=stomp x3 @0.4-6.2]` line spells BINGO across the top in giant colored letters, 3 times
 between 0.4 and 6.2 s into the shot, the sung letter drawn bigger; the first 2 letters are shown as the action's
 picture (icons: clap, stomp, pat, jump, woof, wave, spin, or any emoji). Set the window from the sung words.
+The letters take the top quarter of the picture (size=0.7, the default; size=1 is bigger). Frame the characters
+big below them, knees up; don't zoom the shot out to make room.
 """
 import argparse
 import glob
@@ -131,11 +133,11 @@ def icon_image(icon, size):
     return img
 
 
-def spell_png(folder, word, drop, icon, lit):
+def spell_png(folder, word, drop, icon, lit, scale=0.7):
     """The word across the screen in giant colored letters; the first `drop` letters are replaced by the action's
     picture, and letter number `lit` (counting from 0) is drawn bigger, because it is the one being sung."""
     from PIL import Image, ImageDraw, ImageFont
-    path = os.path.join(folder, f"spell_{word}_{drop}_{icon}_{lit}.png")
+    path = os.path.join(folder, f"spell_{word}_{drop}_{icon}_{lit}_{scale}.png")
     if os.path.isfile(path):
         return path
     size, slot = 250, 330
@@ -162,6 +164,8 @@ def spell_png(folder, word, drop, icon, lit):
         if k != lit:   # the letters not being sung are a little faded, so the sung one stands out
             cell.putalpha(cell.getchannel("A").point(lambda a: int(a * 0.75)))
         img.alpha_composite(cell, (max(0, k * slot + (slot - cell.width) // 2), max(0, (360 - cell.height) // 2)))
+    # 0.7 (the default) keeps the letters in the top quarter of the picture, so the characters below can be big
+    img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
     img.save(path)
     return path
 
@@ -267,7 +271,8 @@ def main():
                 steps = len(word) * times
                 step = (b - a) / steps
                 for k in range(steps):
-                    png = spell_png(work, word, int(opts.get("drop", 0)), opts.get("icon", "clap"), k % len(word))
+                    png = spell_png(work, word, int(opts.get("drop", 0)), opts.get("icon", "clap"), k % len(word),
+                                    float(opts.get("size", 0.7)))
                     overlays.append((png, start + a + k * step, start + a + (k + 1) * step, "x=(W-w)/2:y=20", False))
             elif kind in ("sfx", "voice"):   # [lipsync:], [end:] and [frames:] are for build_shots.py only
                 effect, _, offset = value.partition("@")
