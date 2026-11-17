@@ -27,7 +27,7 @@
       "desc": "the small kind Korean grandmother with silver hair in a neat low bun, round wire glasses, a gentle wrinkled smile, a cream cable-knit cardigan over a dark floral blouse, a long navy skirt, white socks and black flat shoes"
     },
     "raft": {
-      "desc": "a tiny square wooden raft made of four rough planks lashed together with rope, only two meters wide"
+      "desc": "a tiny square wooden raft only two meters wide, made of four plain rough weathered gray-brown planks lashed together with thick tan rope, none of the planks glowing"
     },
     "panel": {
       "desc": "a floating translucent glowing blue holographic System window with glowing borders and abstract symbols, no readable text"
@@ -43,6 +43,26 @@
     "taegu": {
       "ref": "refs/taegu.png",
       "desc": "Bang Tae-gu, a huge hulking muscular Korean man in his late twenties with a black buzz cut, a thick neck, a cocky grin, a silver chain necklace, a black sleeveless tank top, gray jogger sweatpants and white sneakers"
+    },
+    "raft1": {
+      "ref": "refs/raft1.png",
+      "desc": "the tiny two-meter square raft of four weathered gray-brown planks lashed with thick tan rope, one of the planks smooth dark wood with a soft green glow"
+    },
+    "raft2": {
+      "ref": "refs/raft2.png",
+      "desc": "the three-meter square raft of weathered gray planks lashed with tan rope, one smooth dark plank glowing green, a short mast with a small patched cream sail, a wooden storage crate and a fishing rod in a rope holder"
+    },
+    "raft3": {
+      "ref": "refs/raft3.png",
+      "desc": "the four-meter square log-framed raft with raised edges, one plank glowing green, a small wooden roof shelter, two rain-catching barrels with cloth funnels, a small iron stove and a patched cream sail"
+    },
+    "raft4": {
+      "ref": "refs/raft4.png",
+      "desc": "the small twin-hull wooden catamaran with a flat plank deck, a rope railing, a little wooden cabin with a round window, a white sail, and one dark plank glowing green in the middle of the deck"
+    },
+    "raft5": {
+      "ref": "refs/raft5.png",
+      "desc": "the small armored sailing ship with dark wooden hulls reinforced with riveted steel plates, white sails with a faint purple shimmer, a crow's nest, two mounted deck crossbows, a small cabin, and one dark plank glowing green in the center of the deck"
     }
   }
 }

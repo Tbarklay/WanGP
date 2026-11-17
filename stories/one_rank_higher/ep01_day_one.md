@@ -9,7 +9,7 @@ The narration calls the hero "our MC", recap style; his name appears in System m
 
 ## Cold open
 
-**01** `[image: {yunjae} kneeling on {raft} in the middle of an endless dark ocean at sunset, holding up a glowing card that is cracking open with brilliant purple light, the light reflecting on the water]`
+**01** `[image: {yunjae} kneeling on {raft1} in the middle of an endless dark ocean at sunset, holding up a glowing card that is cracking open with brilliant purple light, the light reflecting on the water]`
 Day one. Four billion people are lost at sea. And our MC is holding something that shouldn't exist yet.
 
 **02** `[image: extreme close-up of a glowing playing-card-sized card in a hand, its green frame cracking apart and purple light bursting through the cracks]`
@@ -167,7 +167,7 @@ Refine. The rod glows green. Uncommon. Lighter, longer, and the line hums like a
 
 ## The green chest
 
-**49** `[image: {yunjae} on {raft} watching the horizon thoughtfully, the silver-ringed rod in his hands, late afternoon light]`
+**49** `[image: {yunjae} on {raft1} watching the horizon thoughtfully, the silver-ringed rod in his hands, late afternoon light]`
 Our MC realizes something the rest of zone chat hasn't yet. Everyone's ability is fixed. Iron Body will always be Iron Body. But his makes everything else better. The longer this goes on, the bigger that gap gets.
 
 **50** `[image: {yunjae} casting the new silver-ringed fishing rod into the ocean at golden late afternoon]`
@@ -219,10 +219,10 @@ The Wandering Healer is gone. The card has a new name now. Aeliss. Tide-Caller o
 
 ## Aeliss
 
-**65** `[image: a pillar of purple and aqua light rising from {raft} into the sky over the ocean at sunset]`
+**65** `[image: a pillar of purple and aqua light rising from {raft1} into the sky over the ocean at sunset]`
 He activates it. A column of purple light rises off the raft, so bright that rafts fifty kilometers away see it on the horizon.
 
-**66** `[image: {aeliss} standing on {raft} as purple light fades around her, silver hair floating, eyes closed, the sunset ocean behind her]`
+**66** `[image: {aeliss} standing on {raft1} as purple light fades around her, silver hair floating, eyes closed, the sunset ocean behind her]`
 When it fades, a woman is standing on his raft. Silver hair. Pointed ears. A staff with a pearl that glows like the sea.
 
 **67** `[image: {aeliss} opening her sea-green eyes and looking at the endless ocean, a sad knowing expression]`
@@ -245,7 +245,7 @@ And the sea answers. Fish rise around the raft by the hundreds. And deeper down,
 
 ## The first ranking
 
-**73** `[image: {yunjae} and {aeliss} sitting on {raft} at dusk eating grilled fish, quiet and calm, the sea golden around them]`
+**73** `[image: {yunjae} and {aeliss} sitting on {raft1} at dusk eating grilled fish, quiet and calm, the sea golden around them]`
 They eat grilled fish as the sun goes down. She doesn't talk about her world, and our MC doesn't push. But when he asks what she was, back home, she says, "The one who called the tides for my city." Then, quietly: "For the little that was left of it."
 
 **74** `[image: close-up of {aeliss}'s hand on her glowing coral staff, the pearl pulsing aqua, determined expression]`
@@ -257,7 +257,7 @@ At midnight, the first daily ranking appears. Not on a screen. Across the whole 
 **76** `[image: close-up of the top row of the giant leaderboard in the sky blazing gold, abstract glowing symbols, no readable text]`
 Number one in the world: Seo Yun-jae. Achievement: first Epic citizen summoned in any zone.
 
-**77** `[image: {yunjae} sitting on {raft} at night looking up at his name burning gold in the sky, {aeliss} beside him, stars everywhere]`
+**77** `[image: {yunjae} sitting on {raft1} at night looking up at his name burning gold in the sky, {aeliss} beside him, stars everywhere]`
 Our MC looks up at his own name in the sky. Four billion people are looking at it too.
 
 **78** `[image: dozens of small glowing chat windows exploding into the night sky like fireworks, abstract symbols, no readable text]`
@@ -288,7 +288,7 @@ Our MC reads it twice. It doesn't sound like congratulations. It sounds like a m
 **85** `[image: close-up of {panel} glowing softly in the night, abstract symbols, no readable text]`
 The System pops up one last time. "Tip: being first means everyone knows your name. Sleep with one eye open."
 
-**86** `[image: {yunjae} lying on {raft} at night looking up at the stars, thinking, {aeliss} sitting at the edge watching the dark sea]`
+**86** `[image: {yunjae} lying on {raft1} at night looking up at the stars, thinking, {aeliss} sitting at the edge watching the dark sea]`
 Our MC lies on four planks in the middle of an endless ocean, and thinks about a radio that still works, a fifteen-year-old who screamed his name, and a grandmother who reached out and caught nothing.
 
 **87** `[image: close-up of {yunjae}'s face in starlight, determined eyes]`

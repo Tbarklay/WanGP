@@ -115,6 +115,15 @@ How the tension plays on screen:
 6+. A refined chest gives a Wayfinder Map (around day 10-14); the dead island; the collapse escape; the first island
    in the zone. Days 14 and 21 events. **Day 28: the first World Battle** and Kaiser.
 
+## The raft, level by level
+The first refined green plank stays in every version, a piece of continuity viewers can spot. Cast keys:
+- `{raft}` the starter, four plain planks (episode 1 before the refine)
+- `{raft1}` the starter with the glowing green plank (episode 1 after the refine)
+- `{raft2}` 3x3 m, small mast and patched sail, crate, rod holder (episode 2)
+- `{raft3}` 4x4 m log frame, roof shelter, rain barrels, stove (episodes 4-5, the rain)
+- `{raft4}` twin-hull catamaran with a cabin (around episode 8)
+- `{raft5}` armored sailing ship (around episode 12, until the island)
+
 ## Art style (start of every image prompt)
 > Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting,
 > high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition
