@@ -95,7 +95,8 @@ def caption_chunks(text, max_chars=42):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", help="episode script (.md)")
-    parser.add_argument("--music", help="background music file, looped under the narration")
+    parser.add_argument("--music", help="background music file, looped under the narration (not used any more: "
+                                        "the episodes go out without music, see stories/CLAUDE.md)")
     parser.add_argument("--test", action="store_true", help="assemble the --test render")
     args = parser.parse_args()
 
