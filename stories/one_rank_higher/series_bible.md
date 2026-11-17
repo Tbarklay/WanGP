@@ -128,8 +128,8 @@ The first refined green plank stays in every version, a piece of continuity view
 version of the same level (`{raft}` for the starter, then `{raft2_plain}` ... `{raft5_plain}`), so viewers can compare at
 a glance how far ahead our MC is. Other survivors are usually one or two levels behind him: when he has the
 catamaran, the strongest rivals have the shelter raft and most of the zone is still on the starter. Only our MC's
-version ever has the glowing plank. (Plain sheets are made in Flow from the level sheets; until a plain reference
-exists, describe the other survivor's raft in words, "no glowing plank".)
+version ever has the glowing plank. All plain references exist (`refs/raft2_plain.png` ...
+`refs/raft5_plain.png`), cropped from the same view as our MC's versions so they match exactly.
 
 ## Art style (start of every image prompt)
 > Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting,

@@ -64,6 +64,22 @@
     "raft5": {
       "ref": "refs/raft5.png",
       "desc": "the small armored sailing ship with dark wooden hulls reinforced with riveted steel plates, white sails with a faint purple shimmer, a crow's nest, two mounted deck crossbows, a small cabin, and one dark plank glowing green in the center of the deck"
+    },
+    "raft2_plain": {
+      "ref": "refs/raft2_plain.png",
+      "desc": "a three-meter square raft of weathered gray planks lashed with tan rope, a short mast with a small patched cream sail, a wooden storage crate and a fishing rod in a rope holder, every deck plank plain with no glow"
+    },
+    "raft3_plain": {
+      "ref": "refs/raft3_plain.png",
+      "desc": "a four-meter square log-framed raft with raised edges, a small wooden roof shelter, two rain-catching barrels with cloth funnels, a small iron stove and a patched cream sail, every deck plank plain with no glow"
+    },
+    "raft4_plain": {
+      "ref": "refs/raft4_plain.png",
+      "desc": "a small twin-hull wooden catamaran with a flat plank deck, a rope railing, a little wooden cabin with a round window, a white sail, every deck plank plain with no glow"
+    },
+    "raft5_plain": {
+      "ref": "refs/raft5_plain.png",
+      "desc": "a small armored sailing ship with dark wooden hulls reinforced with riveted steel plates, white sails with a faint purple shimmer, a crow's nest, two mounted deck crossbows, a small cabin, every deck plank plain with no glow"
     }
   }
 }
