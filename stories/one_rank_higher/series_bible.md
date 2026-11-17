@@ -1,0 +1,84 @@
+# ONE RANK HIGHER: Series Bible
+
+**Long title for YouTube:** Everyone Was Thrown Into Another World to Survive on a Raft — But Only I Can Upgrade Everything
+
+**Logline:** At midnight, everyone on Earth aged 18 to 65 wakes up alone on a tiny raft in an endless ocean, with a
+System that talks. A quiet repairman gets an ability that can push anything one rank higher, and from the very first
+day, he's number one in the world.
+
+## Release plan
+- Episodes run **10-12 minutes** (about 1,600-1,800 narrated words, 70-90 illustrations).
+- **No background music.** Narration only (see stories/CLAUDE.md).
+- Recap style: the narration calls the hero "our MC"; his name appears in System messages and rankings.
+
+## The Trial (world rules)
+1. **The Summoning:** at midnight, everyone aged 18-65 vanishes from Earth. Everyone younger or older stays behind.
+2. **The Drift:** an endless ocean in another dimension. Everyone starts on an identical **2x2 raft**, with a
+   fishing rod, three spare planks and one day of water.
+3. **Zones:** 10,000 people per zone, each starting **50 km apart**. Meeting someone happens by chance: rafts
+   drifting into each other, smoke or islands on the horizon. When a zone is down to **1,000** survivors, **10 zones
+   merge** into a new zone of 10,000.
+4. **The System:** everyone gets one, and it talks. Each System has its own personality (our MC's is dry,
+   sarcastic and secretly protective). Daily login rewards, rankings, zone chat and world chat.
+5. **Abilities:** everyone starts with one random ability that matches their personality (the hoarder gets
+   Infinite Pocket, the gym bro Iron Body, the nurse Mend, the coward Vanish).
+6. **Drops:** chests from fishing, wreckage and events, and later from mining. Chest rarity follows the colour tiers.
+7. **Citizen cards:** summon people from **fallen worlds** (worlds that lost the Trial): humans, elves, dwarves,
+   beastkin and more. Once activated, a citizen works, builds, fights and levels up, and has a loyalty score.
+8. **Rarity tiers:** ⚪ White (Common), 🟢 Green (Uncommon), 🔵 Blue (Rare), 🟣 Purple (Epic),
+   🟡 Gold (Legendary), 🔴 Red (Apex).
+9. **Rankings:** daily, event and battle rankings, global. Rewards for the top places.
+10. **World Events:** on days 7, 14 and 21 (and every week after): endless rain, deep freeze, fog with blind
+    hunters, heat wave, sea monster attacks and more. Points for how well you prepared and how well you survived.
+11. **World Battle:** every 28 days, Earth's survivors fight another world's survivors. **If Earth loses, Earth
+    falls**, and its people become citizen cards in someone else's deck.
+12. **Hints:** 24 hours before each event or battle, the System gives a riddle with three layers: what's coming, a
+    hidden clue to surviving it, and a plausible wrong reading that splits the chat.
+13. **Island Cores:** nobody has land at the start. The first Cores are rewards for the top 100 of each zone in the
+    Day 28 World Battle (#1 Gold, #2-10 Purple, #11-30 Blue, #31-60 Green, #61-100 White). Throw a Core into the
+    water and an island rises there. Feed more Cores into it to make it bigger. Allies can **Neighbor**: plant
+    their islands next to yours and link them.
+14. **Dead islands:** a handful (3-5) per zone, left over from a fallen world, hidden and hard to find. A
+    **Wayfinder Map** from a purple-or-better fishing chest points to the nearest one. Claiming its Core makes the
+    island **collapse into the ocean**: you have to race back to your raft before it takes you down. The Core can
+    then start an island anywhere or upgrade the one you have.
+15. **Death and loot:** when someone dies, their killer gets their whole inventory: unused Cores, resources and
+    unactivated citizen cards. Their activated citizens go free. If they owned an island, it starts collapsing,
+    with its Core inside: get to it before it sinks.
+
+## Our MC: Seo Yun-jae, 24
+- **Before:** a repair technician in Seoul who fixed everyone's broken things and never got credit. Quiet,
+  patient, always sees how something could be better. Lives with his grandmother (72) and his little sister
+  Ha-eun (15), who were both left behind on Earth. Getting back to them is his reason to fight.
+- **Ability: [Refine] → [Ascend] → [Transcend]**
+  - **[Refine]** (levels 1-4): raises any item, card, chest or building one rank, with a small luck chance of
+    two. 3 uses a day. Each thing can only be refined once.
+  - **[Ascend]** (levels 5-9): a much higher chance of +2, more uses a day.
+  - **[Transcend]** (max level, late reveal): can push a Red Apex thing past Red, into a rank the System has no
+    colour for.
+  - Works on unopened chests: a refined chest rolls on a better loot table.
+- **Always #1 in the world ranking.**
+
+## Main cast
+- **Aeliss** (🟣 Epic citizen, from episode 1): an elf tide-caller from a fallen world of silver shores. Calls fish
+  and currents, senses what lies under the water. Calm, sad, quietly fierce. Her world fell on its 28th day.
+- **Kaiser** (#2 in the world): an ex-CEO who has never come second at anything. Ability **[Conquest]**: when he
+  kills someone, their activated citizens become his, loyal or not. That's why he wants our MC dead: one kill would
+  give him the strongest citizens in the Drift. Starts in a different zone; they first meet at the Day 28 World
+  Battle, and each merge brings his zone closer.
+
+## Season 1 outline
+1. **Day 1: The Raft** — the Summoning, the System, [Refine], a green card refined to purple (Aeliss), first ranking #1.
+2. **Planks and Upgrades** — raft upgrades, Aeliss calls fish and chests, zone chat learns he's different.
+3. **Raiders** — a raider crew finds him; first kill; the loot rule.
+4. **The Hint** — the first riddle; the zone argues; he finds the hidden clue.
+5. **Day 7: The Endless Rain** — rafts sink across the zone; he takes first place again; Kaiser's message.
+6+. A refined chest gives a Wayfinder Map (around day 10-14); the dead island; the collapse escape; the first island
+   in the zone. Days 14 and 21 events. **Day 28: the first World Battle** and Kaiser.
+
+## Art style (start of every image prompt)
+> Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting,
+> high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition
+
+System windows are drawn as glowing blue holographic panels with **no readable text**: the narration says what they
+say. Rarity is shown by colour glow: white, green, blue, purple, gold, red.

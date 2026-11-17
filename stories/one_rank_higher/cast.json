@@ -1,0 +1,36 @@
+{
+  "style": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
+  "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
+  "narrator": {
+    "speaker": "ryan",
+    "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs"
+  },
+  "characters": {
+    "yunjae": {
+      "ref": "refs/yunjae.png",
+      "desc": "Seo Yun-jae, a calm 24-year-old Korean man with short slightly messy black hair, dark brown eyes, a navy blue work jacket with a small orange wrench patch on the chest, a plain gray t-shirt, dark jeans and worn black sneakers"
+    },
+    "aeliss": {
+      "ref": "refs/aeliss.png",
+      "desc": "Aeliss, an elegant elf woman with long flowing silver-white hair, pointed ears, sea-green eyes, a flowing teal and white robe with silver seashell ornaments, holding a coral staff topped with a glowing aqua pearl"
+    },
+    "kaiser": {
+      "ref": "refs/kaiser.png",
+      "desc": "Kaiser, a tall sharp-featured man in his forties with slicked-back black hair streaked with gray, cold amber eyes, a white dress shirt with rolled-up sleeves, a loosened black tie and an expensive silver watch"
+    },
+    "haeun": {
+      "ref": "refs/haeun.png",
+      "desc": "Seo Ha-eun, a 15-year-old Korean girl with long black hair in a high ponytail, big brown eyes, wearing light blue pajamas with white stars"
+    },
+    "grandma": {
+      "ref": "refs/grandma.png",
+      "desc": "the small kind Korean grandmother with silver hair in a neat bun, gentle wrinkled smile, round glasses and a cream knitted cardigan"
+    },
+    "raft": {
+      "desc": "a tiny square wooden raft made of four rough planks lashed together with rope, only two meters wide"
+    },
+    "panel": {
+      "desc": "a floating translucent glowing blue holographic System window with glowing borders and abstract symbols, no readable text"
+    }
+  }
+}
