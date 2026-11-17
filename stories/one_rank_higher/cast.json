@@ -31,6 +31,10 @@
     },
     "panel": {
       "desc": "a floating translucent glowing blue holographic System window with glowing borders and abstract symbols, no readable text"
+    },
+    "knight": {
+      "ref": "refs/knight.png",
+      "desc": "Ostrel, the tall silent armored knight in polished steel-blue plate armor with purple-blue trim, a long dark navy cape and a closed helmet with a narrow glowing blue visor slit and no face visible, a long straight sword"
     }
   }
 }

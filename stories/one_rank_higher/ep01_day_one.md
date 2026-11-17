@@ -265,7 +265,7 @@ Zone chat explodes. Who is Seo Yun-jae? What's his ability? Where is he? That la
 
 ## Number two
 
-**79** `[image: a different raft far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, a tall armored blue knight kneeling beside him]`
+**79** `[image: a different raft far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, {knight} kneeling beside him with his sword point-down]`
 Somewhere in a different zone, a man is standing on his raft, looking up at the same sky.
 
 **80** `[image: close-up of the second row of the giant leaderboard glowing silver, abstract symbols, no readable text]`

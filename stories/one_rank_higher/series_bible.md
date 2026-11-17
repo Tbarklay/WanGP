@@ -67,6 +67,10 @@ day, he's number one in the world.
   give him the strongest citizens in the Drift. Starts in a different zone; they first meet at the Day 28 World
   Battle, and each merge brings his zone closer.
 
+- **Ostrel** (🔵 Blue citizen, Kaiser's first): a silent knight from a fallen kingdom, steel-blue armour, a helmet that
+  never comes off. Kaiser's right hand and bodyguard; at the Day 28 World Battle, he's the blade Kaiser sends at our
+  MC's back. Whether he wants to is a question for later.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into
