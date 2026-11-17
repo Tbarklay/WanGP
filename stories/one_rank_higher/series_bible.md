@@ -67,6 +67,32 @@ day, he's number one in the world.
   give him the strongest citizens in the Drift. Starts in a different zone; they first meet at the Day 28 World
   Battle, and each merge brings his zone closer.
 
+## The women of his island (slow-burn tension)
+Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
+YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into
+something more. Never explicit. Every new arrival shifts the balance between the others.
+
+- **Aeliss** (🟣 Epic → later refined higher; elf tide-caller, episode 1): the calm, sad one. The tension starts on a
+  2x2 raft where there's nowhere to look but each other. She keeps her distance because she has lost everything once,
+  and he is the first thing she's afraid to lose. Slowest burn, deepest bond.
+- **Torva Emberhand** (🔵 Blue refined to 🟡 Gold; dwarf master smith, around episode 8): blunt, loud, competitive,
+  and offended that a human's skill can "fix" her work. Constant teasing and challenges ("refine THIS"); she's the
+  one who flirts openly, and the others hate it.
+- **Rhea Ironfang** (🟢 Green refined to 🟣 Epic; wolf-kin warrior captain, around episode 12): fierce and
+  protective, tests him in sparring and won't follow a weak leader. Tension through rivalry: she pins him, he
+  doesn't back down, and something changes.
+- **Kaela of the Ember Dunes** (enemy at the Day 28 World Battle): a fire-beastkin fighter from the world that has
+  "never known water". Enemies to allies: she spares him once, he spares her once, and when her world falls she
+  appears as a card in his hand. The most dangerous tension: she should hate him.
+- **Celestine Varr** (🔴 Red Apex, a late-season pull): the last empress of a fallen human empire, proud and
+  certain he's beneath her. Her loyalty score starts low and is the hardest one in the series to earn.
+
+How the tension plays on screen:
+- The **loyalty score** has a hidden second bar the System calls "affection". The System comments on it, dryly.
+- Every new citizen rattles the others: who stands next to him, who sleeps closest on the raft, who he refines first.
+- Kaiser's Conquest makes it personal: if he kills our MC, these women become his. That gives every fight with Kaiser
+  higher stakes.
+
 ## Season 1 outline
 1. **Day 1: The Raft** — the Summoning, the System, [Refine], a green card refined to purple (Aeliss), first ranking #1.
 2. **Planks and Upgrades** — raft upgrades, Aeliss calls fish and chests, zone chat learns he's different.
