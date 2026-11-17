@@ -71,6 +71,10 @@ day, he's number one in the world.
   never comes off. Kaiser's right hand and bodyguard; at the Day 28 World Battle, he's the blade Kaiser sends at our
   MC's back. Whether he wants to is a question for later.
 
+- **Yoon Da-hye** (Earth survivor, ability **[Mend]**): an ER nurse who keeps her head while zone chat panics. Seen
+  for a moment in episode 1; later his first real ally and **Neighbor**, the one Earth human he trusts. Not a
+  citizen, so Kaiser's Conquest can't take her, which matters later.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into

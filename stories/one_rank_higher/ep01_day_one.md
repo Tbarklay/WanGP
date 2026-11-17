@@ -107,7 +107,7 @@ Then zone chat opens. Ten thousand panicking people, all typing at once.
 **30** `[image: a muscular man in a tank top standing on a raft in the ocean flexing, his skin glowing like metal, proud expression]`
 Abilities, it turns out, match your personality. A gym guy got Iron Body. He's posting pictures of himself flexing on a raft.
 
-**31** `[image: a woman in nurse scrubs on a raft, her hands glowing with soft green healing light, determined expression]`
+**31** `[image: {dahye} kneeling on a small raft in the ocean, her hands glowing with soft green healing light, determined expression]`
 A nurse got Mend. A guy who never threw anything away got Infinite Pocket.
 
 **32** `[image: a nervous young man on a raft turning half transparent, looking around fearfully]`

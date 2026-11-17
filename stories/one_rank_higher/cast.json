@@ -35,6 +35,10 @@
     "knight": {
       "ref": "refs/knight.png",
       "desc": "Ostrel, the tall silent armored knight in polished steel-blue plate armor with purple-blue trim, a long dark navy cape and a closed helmet with a narrow glowing blue visor slit and no face visible, a long straight sword"
+    },
+    "dahye": {
+      "ref": "refs/dahye.png",
+      "desc": "Yoon Da-hye, a calm capable Korean nurse in her late twenties with dark brown hair in a loose low ponytail and a small silver hair clip, brown eyes, teal hospital scrubs over a black long-sleeve shirt and white sneakers"
     }
   }
 }
