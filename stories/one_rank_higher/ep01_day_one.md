@@ -64,10 +64,10 @@ On Earth, the streets are suddenly full of empty cars, ringing phones, and kids 
 **17** `[image: {yunjae} lying on his back on {raft} in the middle of an endless calm turquoise ocean under a bright sky, waking up, no land anywhere]`
 Our MC wakes up on his back, staring at a sky that's too blue.
 
-**18** `[image: wide high aerial shot of a tiny raft alone in a vast empty ocean stretching to the horizon in every direction]`
+**18** `[image: wide high aerial shot of {raft} alone in a vast empty ocean stretching to the horizon in every direction]`
 He's on a raft. Two meters by two meters. Four planks and some rope. And in every direction, as far as he can see, there is nothing but water.
 
-**19** `[image: the contents of a small raft laid out: a simple wooden fishing rod, three spare wooden planks, a leather water flask]`
+**19** `[image: {raft} seen from above with its contents laid out on it: a simple wooden fishing rod, three spare wooden planks, a leather water flask]`
 His inventory: one fishing rod. Three spare planks. One flask of water.
 
 **20** `[image: {panel} appearing in front of {yunjae} on {raft}, blue light on his face, he squints at it]`
@@ -84,10 +84,10 @@ Our MC stares at it. Of all the things that could talk to him at the end of the 
 **23** `[image: a giant glowing map projection over the ocean showing thousands of tiny dots spread far apart, abstract, no readable text]`
 The System explains the rules. Everyone was split into zones of ten thousand people. And every raft in a zone starts fifty kilometers from the next one.
 
-**24** `[image: two tiny rafts far apart on a vast ocean at dusk, barely visible to each other on the horizon]`
+**24** `[image: two tiny rafts like {raft} far apart on a vast ocean at dusk, barely visible to each other on the horizon]`
 You can drift for days and never see another human. Or you can run into one by accident. The System says that like it's a good thing.
 
-**25** `[image: a frightened man on a raft paddling with his hands toward a distant speck on the horizon, tired and desperate]`
+**25** `[image: a frightened man on {raft} paddling with his hands toward a distant speck on the horizon, tired and desperate]`
 In the first hour, a lot of people try paddling with their hands toward anything on the horizon. Most of it turns out to be clouds.
 
 **26** `[image: a giant red hourglass of light hanging in the sky over the ocean, ominous]`
@@ -104,16 +104,16 @@ It doesn't say what a World Event is. Our MC notices that. He notices it doesn't
 **29** `[image: {yunjae} on {raft} with dozens of small glowing blue chat windows floating around him like fireflies, abstract scrolling symbols, no readable text]`
 Then zone chat opens. Ten thousand panicking people, all typing at once.
 
-**30** `[image: {taegu} standing on a raft in the ocean flexing both arms, his skin glowing like polished metal, proud grin]`
+**30** `[image: {taegu} standing on {raft} in the ocean flexing both arms, his skin glowing like polished metal, proud grin]`
 Abilities, it turns out, match your personality. A gym guy got Iron Body. He's posting pictures of himself flexing on a raft.
 
-**31** `[image: {dahye} kneeling on a small raft in the ocean, her hands glowing with soft green healing light, determined expression]`
+**31** `[image: {dahye} kneeling on {raft} in the ocean, her hands glowing with soft green healing light, determined expression]`
 A nurse got Mend. A guy who never threw anything away got Infinite Pocket.
 
-**32** `[image: a nervous young man on a raft turning half transparent, looking around fearfully]`
+**32** `[image: a nervous young man on {raft} turning half transparent, looking around fearfully]`
 And somebody who admits he's a coward got Vanish. Chat roasts him for an hour.
 
-**33** `[image: a smiling woman on a raft holding a frying pan with glowing orange light around it, a fish sizzling on it over nothing]`
+**33** `[image: a smiling woman on {raft} holding a frying pan with glowing orange light around it, a fish sizzling on it over nothing]`
 A woman who loved cooking got Hearth. She can cook a fish on a frying pan with no fire. For the first time all day, zone chat is jealous of something useful.
 
 **34** `[image: {yunjae} opening a glowing blue panel on his own wrist, curious expression, the ocean behind him]`
@@ -136,7 +136,7 @@ Our MC can't argue with that.
 **39** `[image: a small glowing white treasure chest appearing on {raft} with a soft burst of white light]`
 His first daily login reward drops onto the raft. A white chest. Common.
 
-**40** `[image: an open white chest on a raft holding a loaf of bread, a water flask and a small pouch of glowing fishing bait]`
+**40** `[image: an open white chest on {raft} holding a loaf of bread, a water flask and a small pouch of glowing fishing bait]`
 Bread, water, and a pouch of bait. Not exciting. But the System hints that the ocean has better things in it. You just have to pull them out.
 
 ## Fishing
@@ -147,7 +147,7 @@ So our MC fishes. The first hour, he catches a fish. The second hour, he catches
 **42** `[image: {yunjae} pulling hard on a bent fishing rod, a glowing white light under the water at the end of the line]`
 Third hour, the line goes heavy, and something white is glowing under the water.
 
-**43** `[image: a small white treasure chest dripping with seawater being pulled onto a raft]`
+**43** `[image: a small white treasure chest dripping with seawater being pulled onto {raft}]`
 A chest. White again. Inside: two planks and a coil of rope.
 
 **44** `[image: {yunjae} holding up a single plain wooden plank, examining it closely, thoughtful]`
@@ -156,10 +156,10 @@ And that's when our MC decides to test his ability. Not on anything important. O
 **45** `[image: a plain wooden plank glowing with soft green light, its wood grain turning smooth and strong, sparkles around it]`
 "Refine." The plank glows. The wood tightens, darkens, smooths out. White to green. Common plank to Sturdy Plank.
 
-**46** `[image: {yunjae} pressing his hand on a glowing green plank fitted into his raft, impressed expression]`
+**46** `[image: {yunjae} pressing his hand on a glowing green plank fitted into {raft1}, impressed expression]`
 He fits it into the raft and presses down. It's like stepping on concrete. One plank, and it's the strongest part of his raft.
 
-**47** `[image: {yunjae} sitting on the raft holding the fishing rod and looking at it thoughtfully, the sea glittering]`
+**47** `[image: {yunjae} sitting on {raft1} holding the fishing rod and looking at it thoughtfully, the sea glittering]`
 Two uses left today. He looks at his fishing rod. A better rod, better catches. Probably.
 
 **48** `[image: a simple wooden fishing rod glowing with green light and transforming into a sleek polished rod with silver rings]`
@@ -228,7 +228,7 @@ When it fades, a woman is standing on his raft. Silver hair. Pointed ears. A sta
 **67** `[image: {aeliss} opening her sea-green eyes and looking at the endless ocean, a sad knowing expression]`
 She opens her eyes. She looks at the ocean. And she isn't surprised. Not even a little.
 
-**68** `[image: {aeliss} turning to look at {yunjae}, calm and serious, the two of them on the tiny raft at sunset]`
+**68** `[image: {aeliss} turning to look at {yunjae}, calm and serious, the two of them on {raft1} at sunset]`
 "What day is it?" she asks. Our MC says it's the first day.
 
 **69** `[image: close-up of {aeliss}'s face, a single tear on her cheek, calm voice, sunset light]`
@@ -237,10 +237,10 @@ She closes her eyes. "Then you still have time. My world fell on its twenty-eigh
 **70** `[image: {yunjae} staring at {aeliss}, stunned, the meaning sinking in]`
 Fallen worlds. Citizens. Our MC is holding the survivor of a world that lost this exact game.
 
-**71** `[image: {aeliss} kneeling at the edge of the raft and touching the water with her staff, aqua light rippling outward across the ocean]`
+**71** `[image: {aeliss} kneeling at the edge of {raft1} and touching the water with her staff, aqua light rippling outward across the ocean]`
 Then she kneels and touches the water with her staff. Light ripples out across the waves.
 
-**72** `[image: a huge silver school of fish swirling up around the tiny raft in the clear turquoise water, glowing chests visible deeper below]`
+**72** `[image: a huge silver school of fish swirling up around {raft1} in the clear turquoise water, glowing chests visible deeper below]`
 And the sea answers. Fish rise around the raft by the hundreds. And deeper down, she says, there are chests. She can feel them.
 
 ## The first ranking
@@ -265,7 +265,7 @@ Zone chat explodes. Who is Seo Yun-jae? What's his ability? Where is he? That la
 
 ## Number two
 
-**79** `[image: a different raft far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, {knight} kneeling beside him with his sword point-down]`
+**79** `[image: a different raft like {raft} far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, {knight} kneeling beside him with his sword point-down]`
 Somewhere in a different zone, a man is standing on his raft, looking up at the same sky.
 
 **80** `[image: close-up of the second row of the giant leaderboard glowing silver, abstract symbols, no readable text]`
@@ -294,7 +294,7 @@ Our MC lies on four planks in the middle of an endless ocean, and thinks about a
 **87** `[image: close-up of {yunjae}'s face in starlight, determined eyes]`
 Twenty-seven days until whatever ended Aeliss's world. He's going to make every one of them count.
 
-**88** `[image: wide shot of the tiny raft glowing faintly purple alone in the vast dark ocean under a sky full of stars, dramatic]`
+**88** `[image: wide shot of {raft1} glowing faintly purple alone in the vast dark ocean under a sky full of stars, dramatic]`
 Day one is over. Our MC is number one in the world. Now he has to survive long enough to stay there.
 
 **89** `[image: title card style image of a glowing purple card and a hammer of blue light over a dark ocean, dramatic]`

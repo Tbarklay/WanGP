@@ -117,7 +117,7 @@ How the tension plays on screen:
 
 ## The raft, level by level
 The first refined green plank stays in every version, a piece of continuity viewers can spot. Cast keys:
-- `{raft}` the starter, four plain planks (episode 1 before the refine)
+- `{raft}` the starter, four plain planks: everyone's raft, and our MC's before the refine
 - `{raft1}` the starter with the glowing green plank (episode 1 after the refine)
 - `{raft2}` 3x3 m, small mast and patched sail, crate, rod holder (episode 2)
 - `{raft3}` 4x4 m log frame, roof shelter, rain barrels, stove (episodes 4-5, the rain)
