@@ -39,6 +39,10 @@
     "dahye": {
       "ref": "refs/dahye.png",
       "desc": "Yoon Da-hye, a calm capable Korean nurse in her late twenties with dark brown hair in a loose low ponytail and a small silver hair clip, brown eyes, teal hospital scrubs over a black long-sleeve shirt and white sneakers"
+    },
+    "taegu": {
+      "ref": "refs/taegu.png",
+      "desc": "Bang Tae-gu, a huge hulking muscular Korean man in his late twenties with a black buzz cut, a thick neck, a cocky grin, a silver chain necklace, a black sleeveless tank top, gray jogger sweatpants and white sneakers"
     }
   }
 }

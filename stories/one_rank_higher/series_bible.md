@@ -75,6 +75,11 @@ day, he's number one in the world.
   for a moment in episode 1; later his first real ally and **Neighbor**, the one Earth human he trusts. Not a
   citizen, so Kaiser's Conquest can't take her, which matters later.
 
+- **Bang Tae-gu** (Earth survivor, ability **[Iron Body]**): the gym guy flexing in zone chat in episode 1. By
+  episode 3 he's gathered a crew of rafts and become the zone's first raider boss, and he comes for our MC's raft
+  after the purple pillar of light gives its location away. His Iron Body makes him nearly impossible to hurt,
+  which forces our MC to win with his head.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into

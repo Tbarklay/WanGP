@@ -104,7 +104,7 @@ It doesn't say what a World Event is. Our MC notices that. He notices it doesn't
 **29** `[image: {yunjae} on {raft} with dozens of small glowing blue chat windows floating around him like fireflies, abstract scrolling symbols, no readable text]`
 Then zone chat opens. Ten thousand panicking people, all typing at once.
 
-**30** `[image: a muscular man in a tank top standing on a raft in the ocean flexing, his skin glowing like metal, proud expression]`
+**30** `[image: {taegu} standing on a raft in the ocean flexing both arms, his skin glowing like polished metal, proud grin]`
 Abilities, it turns out, match your personality. A gym guy got Iron Body. He's posting pictures of himself flexing on a raft.
 
 **31** `[image: {dahye} kneeling on a small raft in the ocean, her hands glowing with soft green healing light, determined expression]`
