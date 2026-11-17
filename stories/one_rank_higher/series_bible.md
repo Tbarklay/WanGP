@@ -124,6 +124,13 @@ The first refined green plank stays in every version, a piece of continuity view
 - `{raft4}` twin-hull catamaran with a cabin (around episode 8)
 - `{raft5}` armored sailing ship (around episode 12, until the island)
 
+**Everyone else sails the same models, without the green plank.** Every survivor's raft or boat uses the plain
+version of the same level (`{raft}` for the starter, then `{raft2_plain}` ... `{raft5_plain}`), so viewers can compare at
+a glance how far ahead our MC is. Other survivors are usually one or two levels behind him: when he has the
+catamaran, the strongest rivals have the shelter raft and most of the zone is still on the starter. Only our MC's
+version ever has the glowing plank. (Plain sheets are made in Flow from the level sheets; until a plain reference
+exists, describe the other survivor's raft in words, "no glowing plank".)
+
 ## Art style (start of every image prompt)
 > Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting,
 > high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition
