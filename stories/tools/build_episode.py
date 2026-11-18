@@ -28,7 +28,13 @@ RESOLUTION = "1280x720"
 MAX_REFS = 3                                 # more reference pictures than this blurs identities
 SEED = 2026
 
-BEAT = re.compile(r"^\*\*(\d+)\*\*\s*`\[image:\s*(.*?)\]`\s*\n(.+?)(?=\n\s*\n|\Z)", re.M | re.S)
+BEAT = re.compile(r"^\*\*(\d+)\*\*\s*`\[image:\s*(.*?)\]`[^\n]*\n(.+?)(?=\n\s*\n|\Z)", re.M | re.S)
+UI = re.compile(r"^\*\*(\d+)\*\*\s*`\[image:.*?\]`\s*`\[ui:\s*(.*?)\]`\s*$", re.M)
+
+
+def parse_ui(path):
+    """Beat number -> the [ui: ...] overlay spec on its image line (see ui_overlay.py)."""
+    return {int(n): spec.strip() for n, spec in UI.findall(open(path, encoding="utf-8").read())}
 KEY = re.compile(r"\{(\w+)\}")
 
 

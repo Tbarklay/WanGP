@@ -15,7 +15,8 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_episode import parse_beats, same_image, spoken
+from build_episode import parse_beats, parse_ui, same_image, spoken
+import ui_overlay
 
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
 PAUSE = 0.35            # silence after each narration line
@@ -118,6 +119,9 @@ def main():
     os.makedirs(final_dir, exist_ok=True)
 
     segments, captions, clock, missing, last_image = [], [], 0.0, [], None
+    ui_specs = parse_ui(args.script)
+    ui_dir = os.path.join(work, "ui")
+    os.makedirs(ui_dir, exist_ok=True)
     for i, (no, prompt, narration) in enumerate(beats):
         narration = spoken(narration)[1]
         image = last_image if same_image(prompt) else newest(rendered, f"{ep}_img_{no:02d}")
@@ -132,8 +136,16 @@ def main():
         # Uncompressed audio in the segments: AAC adds a little padding to every segment, which builds
         # up over an episode and puts the narration behind the pictures. It is compressed once at the end.
         segment = os.path.join(work, f"seg_{no:02d}.mkv")
-        run([tool("ffmpeg"), "-y", "-loop", "1", "-i", image, "-i", voice,
-             "-filter_complex", f"[0:v]{motion(MOVES[i % len(MOVES)], frames)}[v];"
+        # System, status and ranking windows: exact text drawn over the picture, revealed line by line
+        ui_inputs, ui_chain, video = [], "", "[v]"
+        if no in ui_specs:
+            steps = ui_overlay.render(ui_specs[no], ui_dir, f"{no:03d}")
+            for path in steps:
+                ui_inputs += ["-loop", "1", "-i", path]
+            ui_chain = ";" + ui_overlay.filter_chain(steps, length, 2, base="[v0]", out="[v]")
+            video = "[v0]"
+        run([tool("ffmpeg"), "-y", "-loop", "1", "-i", image, "-i", voice, *ui_inputs,
+             "-filter_complex", f"[0:v]{motion(MOVES[i % len(MOVES)], frames)}{video}{ui_chain};"
                                 f"[1:a]aresample=48000,apad=whole_dur={length:.3f}[a]",
              "-map", "[v]", "-map", "[a]", "-frames:v", str(frames), "-t", f"{length:.3f}",
              "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
