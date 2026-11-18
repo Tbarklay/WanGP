@@ -355,7 +355,7 @@ Our MC stares at her. When he finally asks what that was, she answers like it's 
 Then the System pops up with a number nobody wanted. "Zone report, night one. Survivors lost: two hundred and fourteen."
 
 **107** `[image: dark ocean at night with a few broken empty rafts drifting, scattered planks floating, no people, somber]`
-Two hundred and fourteen people in his zone didn't see the sun come up. Some fell asleep and rolled off. Some met whatever just met him.
+Two hundred and fourteen people in his zone didn't see the sun come up. Some fell asleep, rolled off, and couldn't find their way back to their raft in the pitch-black dark. Some met whatever just met him.
 
 **108** `[image: close-up of {yunjae}'s face at night, jaw tight, looking at the dark water]`
 Our MC doesn't sleep after that. He sits up and watches the water until the sky turns gray.
