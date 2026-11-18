@@ -15,7 +15,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_episode import parse_beats
+from build_episode import parse_beats, same_image, spoken
 
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
 PAUSE = 0.35            # silence after each narration line
@@ -109,9 +109,11 @@ def main():
     os.makedirs(work, exist_ok=True)
     os.makedirs(final_dir, exist_ok=True)
 
-    segments, captions, clock, missing = [], [], 0.0, []
-    for i, (no, _, narration) in enumerate(beats):
-        image = newest(rendered, f"{ep}_img_{no:02d}")
+    segments, captions, clock, missing, last_image = [], [], 0.0, [], None
+    for i, (no, prompt, narration) in enumerate(beats):
+        narration = spoken(narration)[1]
+        image = last_image if same_image(prompt) else newest(rendered, f"{ep}_img_{no:02d}")
+        last_image = image or last_image
         voice = voice_clip(rendered, f"{ep}_vo_{no:02d}")
         if image is None or voice is None:
             missing.append(no)

@@ -11,6 +11,9 @@ the series' cast.json. Writes stories/<series>/batches/<ep>.json; render it with
 --test keeps only the first 3 beats, to check the voice and the characters before a full night.
 --beats redoes only some beats (comma separated, ranges allowed) with new seeds, written to <ep>_redo.json;
 --only images or --only voices limits the batch to one kind of task.
+
+A beat whose narration starts with SYSTEM: is read in the System's voice (the "system" section of cast.json), and a
+beat with `[image: same]` keeps the previous beat's picture on screen instead of drawing a new one.
 """
 import argparse
 import json
@@ -80,11 +83,38 @@ def duration_cap(words):
 
 
 CLONE_MODEL = "qwen3_tts_base"               # reads any text in the voice of a reference clip
+DESIGN_MODEL = "qwen3_tts_voicedesign"       # makes a voice from a written description
+SYSTEM_PREFIX = "SYSTEM:"
+
+
+def spoken(narration):
+    """('system', words) for a line marked SYSTEM: in the script, else ('narrator', words)."""
+    if narration.startswith(SYSTEM_PREFIX):
+        return "system", narration[len(SYSTEM_PREFIX):].strip()
+    return "narrator", narration
+
+
+def same_image(image):
+    """[image: same] reuses the previous beat's picture (a System line over the same scene)."""
+    return image.strip().lower() == "same"
 
 
 def voice_task(cast, ep, no, narration, seed_offset=0):
+    who, narration = spoken(narration)
     words = len(narration.split())
-    narrator = cast["narrator"]
+    narrator = cast.get(who) or cast["narrator"]
+    if who == "system" and not narrator.get("voice"):
+        # No voice print chosen yet: describe the voice every time (it can vary a little between lines).
+        return {
+            "model_type": DESIGN_MODEL,
+            "prompt": narration,
+            "alt_prompt": narrator["description"] + ". Speaks only the given words, no laughing, no whispering.",
+            "model_mode": "english",
+            "duration_seconds": duration_cap(words),
+            "seed": SEED + seed_offset,
+            "temperature": 0.7,
+            "output_filename": f"{ep}_vo_{no:02d}",
+        }
     if narrator.get("voice"):
         # A designed voice: one chosen sample clip (and its words) is the voice print for every line, so the
         # narrator sounds exactly the same across the whole series.
@@ -147,14 +177,15 @@ def main():
         beats = [b for b in beats if b[0] in wanted]
         batch_name, seed_offset = ep + "_redo", 1000
     for _, image, _ in beats:
-        for key in KEY.findall(image):
+        for key in KEY.findall(image if not same_image(image) else ""):
             ref = cast["characters"].get(key, {}).get("ref")
             if ref and not os.path.isfile(os.path.join(series, ref)):
                 sys.exit(f"Missing reference image for {key}: {os.path.join(series, ref)}")
 
     # Voices first (fast), then plain scenes, then reference scenes: grouping avoids reloading models.
     voices = [] if args.only == "images" else [voice_task(cast, ep, no, nar, seed_offset) for no, _, nar in beats]
-    images = [] if args.only == "voices" else [image_task(cast, ep, no, img, seed_offset) for no, img, _ in beats]
+    images = [] if args.only == "voices" else [image_task(cast, ep, no, img, seed_offset) for no, img, _ in beats
+                                               if not same_image(img)]
     images.sort(key=lambda t: t["model_type"] != T2I_MODEL)
     tasks = voices + images
 

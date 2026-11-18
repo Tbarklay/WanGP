@@ -3,7 +3,8 @@
   "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
   "narrator": {
     "speaker": "ryan",
-    "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs"
+    "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs",
+    "description": "An American man about 30 with a vivid, cinematic storytelling voice: clear and engaging, able to turn dramatic or analytical as the story needs, steady pacing that picks up with a little energy in fight scenes"
   },
   "characters": {
     "yunjae": {
@@ -89,5 +90,8 @@
       "ref": "refs/jiho_vanish.png",
       "desc": "Noh Ji-ho using Vanish: the same skinny young man with messy brown hair, round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow at his edges and tiny blue sparkles"
     }
+  },
+  "system": {
+    "description": "An American woman about 30, the voice of an all-knowing game system: analytical and dryly sarcastic, beautiful and smooth with a slightly robotic, precise, synthetic polish, calm even pacing"
   }
 }

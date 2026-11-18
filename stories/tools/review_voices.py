@@ -29,6 +29,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_episode import duration_cap, parse_beats, voice_task
+from build_episode import spoken as line_words
 from clean_voices import RATE, load, save
 
 LAUGH = ("Laughter", "Giggle", "Chuckle, chortle", "Snicker", "Belly laugh", "Baby laughter")
@@ -225,12 +226,12 @@ def main():
 
     def review(todo):
         for no, _, text in todo:
-            cap = duration_cap(len(text.split()))
+            cap = duration_cap(len(line_words(text)[1].split()))
             for path in takes(folder, f"{ep}_vo_{no:02d}"):
                 if path in seen.get(no, set()):
                     continue
                 seen.setdefault(no, set()).add(path)
-                r = judge_take(judge, path, text, cap, work)
+                r = judge_take(judge, path, line_words(text)[1], cap, work)
                 print(f"  beat {no:02d} {os.path.basename(path)}: {r['why']}", flush=True)
                 if "trimmed" in r and (no not in best or (r["ok"], r["score"]) > (best[no][1]["ok"], best[no][1]["score"])):
                     best[no] = (path, r)
