@@ -59,6 +59,12 @@ day, he's number one in the world.
     colour for.
   - Works on unopened chests: a refined chest rolls on a better loot table.
 - **Always #1 in the world ranking.**
+- **A strategist.** He wins by thinking moves ahead: spotting what's valuable before anyone else, trading what he
+  doesn't need for what nobody understands yet, building a network of contacts, and outthinking enemies (episode 1:
+  he refines the rod first because it pays back every hour, trades rod parts for a citizen card, and saves the raft
+  from a sea monster with a decoy). Aeliss and his citizens supply the power; he supplies the plan.
+- **Noh Ji-ho** (Earth survivor, ability [Vanish]): the "coward" zone chat roasted. Trades our MC a common Cook card
+  on day 1 and becomes his first friend and informant, the one who messages him about anything unusual.
 
 ## Main cast
 - **Aeliss** (🟣 Epic citizen, from episode 1): an elf tide-caller from a fallen world of silver shores. Calls fish

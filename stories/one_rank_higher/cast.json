@@ -80,6 +80,9 @@
     "raft5_plain": {
       "ref": "refs/raft5_plain.png",
       "desc": "a small armored sailing ship with dark wooden hulls reinforced with riveted steel plates, white sails with a faint purple shimmer, a crow's nest, two mounted deck crossbows, a small cabin, every deck plank plain with no glow"
+    },
+    "jiho": {
+      "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with messy brown hair, round glasses, big anxious eyes and an oversized gray hoodie"
     }
   }
 }
