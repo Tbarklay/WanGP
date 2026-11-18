@@ -4,7 +4,9 @@
   "narrator": {
     "speaker": "ryan",
     "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs",
-    "description": "An American man about 30 with a vivid, cinematic storytelling voice: clear and engaging, able to turn dramatic or analytical as the story needs, steady pacing that picks up with a little energy in fight scenes"
+    "description": "An American man about 30 with a vivid, cinematic storytelling voice: clear and engaging, able to turn dramatic or analytical as the story needs, steady pacing that picks up with a little energy in fight scenes",
+    "voice": "refs/narrator.wav",
+    "voice_text": "At midnight, four billion people vanished from Earth. They woke up alone, on rafts, in an ocean that never ends. And one of them was about to become number one in the world."
   },
   "characters": {
     "yunjae": {
@@ -92,6 +94,8 @@
     }
   },
   "system": {
-    "description": "An American woman about 30, the voice of an all-knowing game system: analytical and dryly sarcastic, beautiful and smooth with a slightly robotic, precise, synthetic polish, calm even pacing"
+    "description": "An American woman about 30, the voice of an all-knowing game system: analytical and dryly sarcastic, beautiful and smooth with a slightly robotic, precise, synthetic polish, calm even pacing",
+    "voice": "refs/system.wav",
+    "voice_text": "Good morning, candidate. You have been summoned to the Drift. Survival odds are low. Please try not to die. It makes the paperwork worse."
   }
 }
