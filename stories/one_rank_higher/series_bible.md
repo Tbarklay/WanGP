@@ -7,7 +7,8 @@ System that talks. A quiet repairman gets an ability that can push anything one 
 day, he's number one in the world.
 
 ## Release plan
-- Episodes run **10-12 minutes** (about 1,600-1,800 narrated words, 70-90 illustrations).
+- **8 episodes per season**, each **20-30 minutes** (about 3,000-4,000 narrated words, 150-200 illustrations).
+- Each season is one 28-day cycle and ends on a World Battle.
 - **No background music.** Narration only (see stories/CLAUDE.md).
 - Recap style: the narration calls the hero "our MC"; his name appears in System messages and rankings.
 
@@ -106,14 +107,19 @@ How the tension plays on screen:
 - Kaiser's Conquest makes it personal: if he kills our MC, these women become his. That gives every fight with Kaiser
   higher stakes.
 
-## Season 1 outline
-1. **Day 1: The Raft** — the Summoning, the System, [Refine], a green card refined to purple (Aeliss), first ranking #1.
-2. **Planks and Upgrades** — raft upgrades, Aeliss calls fish and chests, zone chat learns he's different.
-3. **Raiders** — a raider crew finds him; first kill; the loot rule.
-4. **The Hint** — the first riddle; the zone argues; he finds the hidden clue.
-5. **Day 7: The Endless Rain** — rafts sink across the zone; he takes first place again; Kaiser's message.
-6+. A refined chest gives a Wayfinder Map (around day 10-14); the dead island; the collapse escape; the first island
-   in the zone. Days 14 and 21 events. **Day 28: the first World Battle** and Kaiser.
+## Season 1 outline (8 episodes, 20-30 minutes each)
+1. **The Raft** (days 1-2) — the Summoning, the System, [Refine], a green card refined to purple (Aeliss), #1 in the
+   world; the first night's sea monster; world chat and Kaiser's "company"; Aeliss's fallen world; the refined purple
+   chest, the first sailing raft (level 2), #1 again; Tae-gu's three rafts come for him.
+2. **Raiders** (days 2-6) — the fight with Tae-gu's crew; the first kill and the loot rule; the first riddle.
+3. **The Endless Rain** (day 7 and after) — the shelter raft (level 3) rides out the rain; a refined chest gives the
+   Wayfinder Map.
+4. **The Dead Island** (days 9-13) — Torva the dwarf smith; the ruins, the Core, the collapse escape; the first
+   island in the zone.
+5. **Neighbors** (day 14 and after) — the fog with blind hunters; Da-hye becomes his first Neighbor.
+6. **Teeth of the Sea** (days 17-21) — Rhea the wolf-kin warrior; the sea monster attack.
+7. **The Last Riddle** (days 22-27) — the World Battle hint; Earth meets face to face; alliances, grudges, Kaiser's plan.
+8. **World Battle** (day 28) — the fire world, Kaiser and Ostrel's move, Kaela, the Gold Core refined to Red, cliffhanger.
 
 ## The raft, level by level
 The first refined green plank stays in every version, a piece of continuity viewers can spot. Cast keys:
