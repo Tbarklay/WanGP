@@ -79,8 +79,28 @@ def duration_cap(words):
     return max(5, round(words * 0.7 + 3))
 
 
+CLONE_MODEL = "qwen3_tts_base"               # reads any text in the voice of a reference clip
+
+
 def voice_task(cast, ep, no, narration, seed_offset=0):
     words = len(narration.split())
+    narrator = cast["narrator"]
+    if narrator.get("voice"):
+        # A designed voice: one chosen sample clip (and its words) is the voice print for every line, so the
+        # narrator sounds exactly the same across the whole series.
+        series = os.path.dirname(cast["_path"])
+        return {
+            "model_type": CLONE_MODEL,
+            "prompt": narration,
+            "alt_prompt": narrator.get("voice_text", ""),
+            "audio_guide": os.path.join(series, narrator["voice"]).replace("\\", "/"),
+            "audio_prompt_type": "A",
+            "model_mode": "english",
+            "duration_seconds": duration_cap(words),
+            "seed": SEED + seed_offset,
+            "temperature": 0.7,
+            "output_filename": f"{ep}_vo_{no:02d}",
+        }
     return {
         "model_type": TTS_MODEL,
         "prompt": narration,
