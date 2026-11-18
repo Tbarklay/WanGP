@@ -81,12 +81,23 @@ day, he's number one in the world.
   after the purple pillar of light gives its location away. His Iron Body makes him nearly impossible to hurt,
   which forces our MC to win with his head.
 
+## Citizen status and affinity
+- Our MC can open a **status window** for every citizen: **Health, Strength, Agility, Mana** (more stats unlock
+  later), plus **Loyalty** (how bound they are to him; summoned citizens start around 60%) and **Affinity** (how
+  they feel about him personally; shown only for citizens of the opposite sex, starts near 5%).
+- On screen the windows are glowing coloured bars with no readable text; the narration reads the numbers.
+- Once a citizen's Affinity passes **80%**, the two of them can become intimate, always by her choice and
+  consensual, and only between adults. In the videos this stays **off-screen**: a fade to black or the narrator
+  moving on, never shown. It keeps the channel YouTube-safe.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into
 something more. Never explicit. Every new arrival shifts the balance between the others.
 
-- **Aeliss** (🟣 Epic → later refined higher; elf tide-caller, episode 1): the calm, sad one. The tension starts on a
+- **Aeliss** (🟣 Epic → later refined higher; elf tide-caller, episode 1): quiet and mysterious. Her first words
+  are "Hello, master." She answers anything he asks, honestly, but never says anything he didn't ask for, until
+  she starts to trust him (her first unasked words come at the end of day 2). The calm, sad one. The tension starts on a
   2x2 raft where there's nowhere to look but each other. She keeps her distance because she has lost everything once,
   and he is the first thing she's afraid to lose. Slowest burn, deepest bond.
 - **Torva Emberhand** (🔵 Blue refined to 🟡 Gold; dwarf master smith, around episode 8): blunt, loud, competitive,
