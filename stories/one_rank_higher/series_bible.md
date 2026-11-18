@@ -87,6 +87,15 @@ day, he's number one in the world.
   after the purple pillar of light gives its location away. His Iron Body makes him nearly impossible to hurt,
   which forces our MC to win with his head.
 
+## The world ranking (keep consistent)
+Shown as a top-10 board with each survivor's zone. There are about 400,000 zones (4 billion people / 10,000).
+- Our MC: **Seo Yun-jae (Zone 271,094)**, always #1. Bang Tae-gu, Noh Ji-ho and Yoon Da-hye are in the same zone.
+- **Kaiser (Zone 3,118)**, always #2, far from our MC until the zones merge.
+- The rest of the early top 10, from around the world (several match the channel's biggest audiences): Lena Hartmann
+  (Zone 88,402), Mateus Oliveira (Zone 207,465), Putri Wulandari (Zone 152,770), Arjun Mehta (Zone 61,837), Amira Haddad
+  (Zone 118,903), Kwame Mensah (Zone 340,216), Dilnoza Karimova (Zone 9,551), Sofia Reyes (Zone 395,028), Yuki Tanabe
+  (Zone 44,286, enters on day 2). Places 3-10 shift from day to day; some can become rivals or allies later.
+
 ## Citizen status and affinity
 - Our MC can open a **status window** for every citizen: **Health, Strength, Agility, Mana** (more stats unlock
   later), plus **Loyalty** (how bound they are to him; summoned citizens start around 60%) and **Affinity** (how

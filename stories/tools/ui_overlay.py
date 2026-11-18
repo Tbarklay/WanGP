@@ -70,7 +70,7 @@ def layout(kind, items):
 
 
 def row_height(row):
-    return {"name": 58, "sub": 44, "bar": 54, "rank": 60}.get(row[0], 50)
+    return {"name": 58, "sub": 44, "bar": 54, "rank": 52}.get(row[0], 50)
 
 
 def draw_row(draw, x, y, w, row):
@@ -96,9 +96,14 @@ def draw_row(draw, x, y, w, row):
     elif kind == "rank":
         m = re.match(r"#?(\d+)\.?\s+(.*)", value)
         place, name = (int(m.group(1)), m.group(2)) if m else (0, value)
+        z = re.match(r"(.*?)\s*(\([^)]*\))\s*$", name)
+        name, zone = (z.group(1), z.group(2)) if z else (name, "")
         color = PLACE.get(place, TEXT)
-        draw.text((x, y), f"#{place}" if place else "", font=font(44, True), fill=color)
-        draw.text((x + 120, y), name, font=font(44, place == 1), fill=color if place in PLACE else TEXT)
+        draw.text((x, y), f"#{place}" if place else "", font=font(38, True), fill=color)
+        nf = font(38, place == 1)
+        draw.text((x + 112, y), name, font=nf, fill=color if place in PLACE else TEXT)
+        if zone:
+            draw.text((x + 112 + draw.textlength(name, font=nf) + 16, y + 6), zone, font=font(30), fill=DIM)
     else:
         colored_words(draw, (x, y), value, font(38), TEXT)
 

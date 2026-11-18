@@ -314,7 +314,7 @@ Later, he asks the question that's been bothering him. What happens to her if he
 **94** `[image: night falls over the ocean, a giant glowing holographic leaderboard appearing across the entire starry sky, abstract glowing rows, no readable text]`
 At midnight, the first daily ranking appears. Not on a screen. Across the whole sky, for every survivor to see.
 
-**95** `[image: close-up of the top row of the giant leaderboard in the sky blazing gold, abstract glowing symbols, no readable text]` `[ui: ranking | Daily Ranking · Day 1 | 1 Seo Yun-jae | 2 Kaiser | 3 Lena Hartmann | 4 Arjun Mehta | 5 Sofia Reyes]`
+**95** `[image: close-up of the top row of the giant leaderboard in the sky blazing gold, abstract glowing symbols, no readable text]` `[ui: ranking | World Ranking · Day 1 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Lena Hartmann (Zone 88,402) | 4 Mateus Oliveira (Zone 207,465) | 5 Putri Wulandari (Zone 152,770) | 6 Arjun Mehta (Zone 61,837) | 7 Amira Haddad (Zone 118,903) | 8 Kwame Mensah (Zone 340,216) | 9 Dilnoza Karimova (Zone 9,551) | 10 Sofia Reyes (Zone 395,028)]`
 Number one in the world: Seo Yun-jae. Achievement: first Epic citizen summoned in any zone.
 
 **96** `[image: {yunjae} sitting on {raft1} at night looking up at his name burning gold in the sky, {aeliss} beside him, stars everywhere]`
@@ -562,7 +562,7 @@ By sunset, he isn't drifting anymore. Day two, and our MC is sailing.
 **170** `[image: the giant glowing leaderboard appearing across the night sky over the ocean again, abstract glowing rows, no readable text]`
 At midnight, the sky lights up again. The second daily ranking.
 
-**171** `[image: close-up of the top row of the leaderboard blazing gold, abstract symbols, no readable text]` `[ui: ranking | Daily Ranking · Day 2 | 1 Seo Yun-jae | 2 Kaiser | 3 Lena Hartmann | 4 Arjun Mehta | 5 Sofia Reyes]`
+**171** `[image: close-up of the top row of the leaderboard blazing gold, abstract symbols, no readable text]` `[ui: ranking | World Ranking · Day 2 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Mateus Oliveira (Zone 207,465) | 4 Lena Hartmann (Zone 88,402) | 5 Amira Haddad (Zone 118,903) | 6 Putri Wulandari (Zone 152,770) | 7 Yuki Tanabe (Zone 44,286) | 8 Arjun Mehta (Zone 61,837) | 9 Dilnoza Karimova (Zone 9,551) | 10 Kwame Mensah (Zone 340,216)]`
 Number one: Seo Yun-jae. Again. Achievements: first Epic chest. First sailing raft in any zone.
 
 **172** `[image: {kaiser} on {raft2_plain} at night, the patched sail behind him, {knight} standing guard, looking up at the leaderboard with narrowed eyes]`
