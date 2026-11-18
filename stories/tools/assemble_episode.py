@@ -98,11 +98,19 @@ def main():
     parser.add_argument("--music", help="background music file, looped under the narration (not used any more: "
                                         "the episodes go out without music, see stories/CLAUDE.md)")
     parser.add_argument("--test", action="store_true", help="assemble the --test render")
+    parser.add_argument("--beats", help="only these beats, e.g. 1-107, for a shorter cut from the same render")
+    parser.add_argument("--name", help="output name for a --beats cut, e.g. ep01_day1 (default: <ep>_cut)")
     args = parser.parse_args()
 
     series = os.path.dirname(args.script)
     ep = os.path.basename(args.script).split("_")[0] + ("_test" if args.test else "")
     beats = parse_beats(args.script)[:3] if args.test else parse_beats(args.script)
+    out_name = ep
+    if args.beats:
+        from build_episode import parse_beat_list
+        wanted = parse_beat_list(args.beats)
+        beats = [b for b in beats if b[0] in wanted]
+        out_name = args.name or ep + "_cut"
     rendered = os.path.join(series, "output", ep)
     work = os.path.join(series, "output", ep + "_segments")
     final_dir = os.path.join(series, "final")
@@ -148,13 +156,13 @@ def main():
     if not segments:
         sys.exit(f"Nothing to assemble in {rendered}")
 
-    listing = os.path.join(work, "segments.txt")
+    listing = os.path.join(work, f"segments_{out_name}.txt")
     with open(listing, "w", encoding="utf-8") as f:
         f.writelines(f"file '{os.path.abspath(s)}'\n" for s in segments)
-    joined = os.path.join(work, "joined.mkv")
+    joined = os.path.join(work, f"joined_{out_name}.mkv")
     run([tool("ffmpeg"), "-y", "-f", "concat", "-safe", "0", "-i", listing, "-c", "copy", joined])
 
-    out = os.path.join(final_dir, f"{ep}.mp4")
+    out = os.path.join(final_dir, f"{out_name}.mp4")
     if args.music:
         run([tool("ffmpeg"), "-y", "-i", joined, "-stream_loop", "-1", "-i", args.music,
              "-filter_complex", f"[1:a]volume={MUSIC_VOLUME},afade=t=out:st={max(clock - 3, 0):.2f}:d=3[m];"
@@ -164,10 +172,10 @@ def main():
         run([tool("ffmpeg"), "-y", "-i", joined, "-af", LOUDNESS, "-c:v", "copy",
              "-c:a", "aac", "-b:a", "192k", "-ar", "48000", out])
 
-    with open(os.path.join(final_dir, f"{ep}.srt"), "w", encoding="utf-8") as f:
+    with open(os.path.join(final_dir, f"{out_name}.srt"), "w", encoding="utf-8") as f:
         for n, (start, end, text) in enumerate(captions, 1):
             f.write(f"{n}\n{srt_time(start)} --> {srt_time(end)}\n{text}\n\n")
-    print(f"Wrote {out} ({clock / 60:.1f} minutes) and its captions {ep}.srt")
+    print(f"Wrote {out} ({clock / 60:.1f} minutes) and its captions {out_name}.srt")
 
 
 if __name__ == "__main__":
