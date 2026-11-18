@@ -84,6 +84,10 @@
     "jiho": {
       "ref": "refs/jiho.png",
       "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with messy brown hair, round thin-framed glasses, big anxious brown eyes, an oversized gray hoodie, a black backpack, loose dark gray sweatpants and white slip-on sneakers"
+    },
+    "jiho_vanish": {
+      "ref": "refs/jiho_vanish.png",
+      "desc": "Noh Ji-ho using Vanish: the same skinny young man with messy brown hair, round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow at his edges and tiny blue sparkles"
     }
   }
 }

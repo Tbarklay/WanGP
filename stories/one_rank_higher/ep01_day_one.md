@@ -105,7 +105,7 @@ Abilities, it turns out, match your personality. A gym guy got Iron Body. He's p
 **29** `[image: {dahye} kneeling on {raft} in the ocean, her hands glowing with soft green healing light, determined expression]`
 A nurse got Mend. A guy who never threw anything away got Infinite Pocket.
 
-**30** `[image: {jiho} on {raft} turning half transparent with a faint pale blue shimmer at his edges, looking around fearfully]`
+**30** `[image: {jiho_vanish} on {raft}, half see-through, looking around fearfully]`
 And somebody who admits he's a coward got Vanish. Chat roasts him for an hour.
 
 **31** `[image: {yunjae} opening a glowing blue panel on his own wrist, curious expression, the ocean behind him]`
