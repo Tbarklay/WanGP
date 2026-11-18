@@ -124,22 +124,22 @@ Our MC checks his own ability.
 "Refine. Raise the rank of any item by one. Rarely, by two. Each item can only be refined once. Three uses per day."
 
 **36** `[image: {yunjae} looking at the panel with a disappointed, deflated expression, the endless ocean behind him]`
-He reads it twice. He was hoping for something like Iron Body. Something that would make him stronger, faster, harder to kill. Instead, he got an ability that only improves what he already has.
+He reads it twice, hoping he missed something. He didn't. He was hoping for something like Iron Body. Something that would make him stronger, faster, harder to kill. What he got doesn't make him anything. It only makes his things better.
 
 **37** `[image: {yunjae} looking down at {raft} under him and the plain fishing rod in his hand, the empty ocean in every direction]`
-And right now, everything he has is four planks, a fishing rod and one flask of water.
+And right now, his things are four planks, a fishing rod and one flask of water.
 
 **38** `[image: {yunjae} sitting hunched on {raft}, arms around his knees, staring at the endless ocean with a worried, nervous expression]`
-For the first time since he woke up, our MC is scared. Everyone else got a way to fight. He got a way to make things a little better. How is he supposed to survive out here with that?
+That's when it really sinks in. Somewhere out there, people are turning their skin into iron. Our MC can make a plank a little nicer. Alone, in the middle of an ocean that never ends, he has no idea how he's supposed to survive with that.
 
 **39** `[image: {yunjae} frowning up at the floating {panel}, frustrated, one hand raised like asking a question]`
-So he asks the System. Why did he get stuck with a support ability, when other people got bodies made of iron?
+So he asks the System straight out. Why did he get stuck with a support ability?
 
 **40** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]`
-"Abilities aren't random," the System says. "They're tied to who you are. Your personality picked this one. Apparently you can't leave anything alone until it's better."
+"Abilities aren't handed out at random," the System replies. "Each one is shaped by the person who receives it. Your personality chose this one." A pause. "Apparently, you can't leave anything alone until it's better."
 
 **41** `[image: {yunjae} giving a small reluctant smile, looking at his hands]`
-Our MC can't argue with that. He just wishes his personality had picked something with a sword.
+Our MC wants to argue. He can't. Every broken radio, every cracked phone, every dead fridge he ever brought back to life says the System is right. He just wishes his personality had come with a sword.
 
 ## Login reward
 
