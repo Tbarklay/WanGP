@@ -123,395 +123,404 @@ Our MC checks his own ability.
 **35** `[image: close-up of a glowing blue panel with a single bright glowing hammer-and-star icon at its center, abstract, no readable text]`
 "Refine. Raise the rank of any item by one. Rarely, by two. Each item can only be refined once. Three uses per day."
 
-**36** `[image: {yunjae} looking at the panel with a flat unimpressed expression, the endless ocean behind him]`
-He reads it twice. A crafting skill. While other people got Iron Body and Infinite Pocket, he got a skill that sounds like sandpaper.
+**36** `[image: {yunjae} looking at the panel with a disappointed, deflated expression, the endless ocean behind him]`
+He reads it twice. He was hoping for something like Iron Body. Something that would make him stronger, faster, harder to kill. Instead, he got an ability that only improves what he already has.
 
-**37** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]`
-The System adds a note. "It matched your personality. Apparently you can't leave anything alone until it's better."
+**37** `[image: {yunjae} looking down at {raft} under him and the plain fishing rod in his hand, the empty ocean in every direction]`
+And right now, everything he has is four planks, a fishing rod and one flask of water.
 
-**38** `[image: {yunjae} giving a small reluctant smile, looking at his hands]`
-Our MC can't argue with that.
+**38** `[image: {yunjae} sitting hunched on {raft}, arms around his knees, staring at the endless ocean with a worried, nervous expression]`
+For the first time since he woke up, our MC is scared. Everyone else got a way to fight. He got a way to make things a little better. How is he supposed to survive out here with that?
+
+**39** `[image: {yunjae} frowning up at the floating {panel}, frustrated, one hand raised like asking a question]`
+So he asks the System. Why did he get stuck with a support ability, when other people got bodies made of iron?
+
+**40** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]`
+"Abilities aren't random," the System says. "They're tied to who you are. Your personality picked this one. Apparently you can't leave anything alone until it's better."
+
+**41** `[image: {yunjae} giving a small reluctant smile, looking at his hands]`
+Our MC can't argue with that. He just wishes his personality had picked something with a sword.
 
 ## Login reward
 
-**39** `[image: a small glowing white treasure chest appearing on {raft} with a soft burst of white light]`
+**42** `[image: a small glowing white treasure chest appearing on {raft} with a soft burst of white light]`
 His first daily login reward drops onto the raft. A white chest. Common.
 
-**40** `[image: an open white chest on {raft} holding a loaf of bread, a water flask and a small pouch of glowing fishing bait]`
+**43** `[image: an open white chest on {raft} holding a loaf of bread, a water flask and a small pouch of glowing fishing bait]`
 Bread, water, and a pouch of bait. Not exciting. But the System hints that the ocean has better things in it. You just have to pull them out.
 
 ## Fishing
 
-**41** `[image: {yunjae} sitting on the edge of {raft} casting a simple wooden fishing rod into calm turquoise water, a bright sky]`
+**44** `[image: {yunjae} sitting on the edge of {raft} casting a simple wooden fishing rod into calm turquoise water, a bright sky]`
 So our MC fishes. The first hour, he catches a fish. The second hour, he catches another fish.
 
-**42** `[image: {yunjae} pulling hard on a bent fishing rod, a glowing white light under the water at the end of the line]`
+**45** `[image: {yunjae} pulling hard on a bent fishing rod, a glowing white light under the water at the end of the line]`
 Third hour, the line goes heavy, and something white is glowing under the water.
 
-**43** `[image: a small white treasure chest dripping with seawater being pulled onto {raft}]`
+**46** `[image: a small white treasure chest dripping with seawater being pulled onto {raft}]`
 A chest. White again. Inside: two planks and a coil of rope.
 
-**44** `[image: {yunjae} holding up a single plain wooden plank, examining it closely, thoughtful]`
+**47** `[image: {yunjae} holding up a single plain wooden plank, examining it closely, thoughtful]`
 And that's when our MC decides to test his ability. Not on anything important. On a plank.
 
-**45** `[image: a plain wooden plank glowing with soft green light, its wood grain turning smooth and strong, sparkles around it]`
+**48** `[image: a plain wooden plank glowing with soft green light, its wood grain turning smooth and strong, sparkles around it]`
 "Refine." The plank glows. The wood tightens, darkens, smooths out. White to green. Common plank to Sturdy Plank.
 
-**46** `[image: {yunjae} pressing his hand on a glowing green plank fitted into {raft1}, impressed expression]`
+**49** `[image: {yunjae} pressing his hand on a glowing green plank fitted into {raft1}, impressed expression]`
 He fits it into the raft and presses down. It's like stepping on concrete. One plank, and it's the strongest part of his raft.
 
-**47** `[image: {yunjae} sitting on {raft1} holding the fishing rod and looking at it thoughtfully, the sea glittering]`
+**50** `[image: {yunjae} sitting on {raft1} holding the fishing rod and looking at it thoughtfully, the sea glittering]`
 Two uses left today. He looks at his fishing rod. A better rod, better catches. Probably.
 
-**48** `[image: a simple wooden fishing rod glowing with green light and transforming into a sleek polished rod with silver rings]`
+**51** `[image: a simple wooden fishing rod glowing with green light and transforming into a sleek polished rod with silver rings]`
 Refine. The rod glows green. Uncommon. Lighter, longer, and the line hums like a guitar string.
 
 ## The green chest
 
-**49** `[image: {yunjae} on {raft1} watching the horizon thoughtfully, the silver-ringed rod in his hands, late afternoon light]`
+**52** `[image: {yunjae} on {raft1} watching the horizon thoughtfully, the silver-ringed rod in his hands, late afternoon light]`
 Our MC realizes something the rest of zone chat hasn't yet. Everyone's ability is fixed. Iron Body will always be Iron Body. But his makes everything else better. The longer this goes on, the bigger that gap gets.
 
-**50** `[image: {yunjae} casting the new silver-ringed fishing rod into the ocean at golden late afternoon]`
+**53** `[image: {yunjae} casting the new silver-ringed fishing rod into the ocean at golden late afternoon]`
 He casts again. This time, it takes twenty minutes.
 
-**51** `[image: a glowing green treasure chest rising out of the water on the end of a fishing line, seawater streaming off it]`
+**54** `[image: a glowing green treasure chest rising out of the water on the end of a fishing line, seawater streaming off it]`
 A green chest. His first uncommon. Inside, something flat and glowing.
 
-**52** `[image: close-up of a hand holding a glowing card with a green frame, a silhouette of a robed figure on it, soft green glow, no readable text]`
+**55** `[image: close-up of a hand holding a glowing card with a green frame, a silhouette of a robed figure on it, soft green glow, no readable text]`
 A card. A green frame, and the shape of a person.
 
-**53** `[image: close-up of {panel} glowing beside a green card, abstract symbols, no readable text]`
+**56** `[image: close-up of {panel} glowing beside a green card, abstract symbols, no readable text]`
 The System explains. "Citizen card. Activate it to summon a citizen, a person who will live and work for you."
 
-**54** `[image: six glowing cards fanned out in a row, framed in white, green, blue, purple, gold and red light, dramatic dark background]`
+**57** `[image: six glowing cards fanned out in a row, framed in white, green, blue, purple, gold and red light, dramatic dark background]`
 Citizens come in six ranks. White, common. Green, uncommon. Blue, rare. Purple, epic. Gold, legendary. And red. Apex.
 
-**55** `[image: close-up of the green card, the silhouette of a robed healer holding a small lantern, soft green glow]`
+**58** `[image: close-up of the green card, the silhouette of a robed healer holding a small lantern, soft green glow]`
 This one is green. A Wandering Healer. A decent card for day one. Most people in the zone will be lucky to find a white.
 
-**56** `[image: {yunjae} asking the floating {panel} a question, curious expression]`
+**59** `[image: {yunjae} asking the floating {panel} a question, curious expression]`
 Our MC asks one question. "Where do citizens come from?"
 
-**57** `[image: close-up of {panel}, its glow dimming slightly, abstract symbols, no readable text]`
+**60** `[image: close-up of {panel}, its glow dimming slightly, abstract symbols, no readable text]`
 The System pauses for a second. "From fallen worlds."
 
-**58** `[image: {yunjae} looking down at the card in his hand, serious expression, the sun low behind him]`
+**61** `[image: {yunjae} looking down at the card in his hand, serious expression, the sun low behind him]`
 He doesn't ask what that means. He has a feeling he'll find out.
 
 ## Refine
 
-**59** `[image: {yunjae} holding the green card in one hand, his other hand hovering over it with faint blue light gathering, determined expression]`
+**62** `[image: {yunjae} holding the green card in one hand, his other hand hovering over it with faint blue light gathering, determined expression]`
 He has one use of Refine left today. And he has a card.
 
-**60** `[image: close-up of {yunjae}'s eyes reflecting green light, determined]`
+**63** `[image: close-up of {yunjae}'s eyes reflecting green light, determined]`
 Green to blue would be good. A rare citizen on day one. He takes a breath.
 
-**61** `[image: the green card glowing intensely and turning blue, blue light flooding out of it]`
+**64** `[image: the green card glowing intensely and turning blue, blue light flooding out of it]`
 "Refine." The green frame flickers, and turns blue. Rare. Exactly what he wanted.
 
-**62** `[image: the blue glowing card suddenly cracking down the middle, intense purple light bursting through the cracks, the ocean lit purple around it]`
+**65** `[image: the blue glowing card suddenly cracking down the middle, intense purple light bursting through the cracks, the ocean lit purple around it]`
 Then it doesn't stop. The blue frame cracks. And purple light pours out of it.
 
-**63** `[image: close-up of {panel} glowing purple at the edges, abstract symbols, no readable text]`
+**66** `[image: close-up of {panel} glowing purple at the edges, abstract symbols, no readable text]`
 "Luck triggered. Plus two ranks. Uncommon to Epic."
 
-**64** `[image: a brilliant purple card glowing in {yunjae}'s hands, the silhouette on it now an elegant figure with long hair and a staff, purple light on his amazed face]`
+**67** `[image: a brilliant purple card glowing in {yunjae}'s hands, the silhouette on it now an elegant figure with long hair and a staff, purple light on his amazed face]`
 The Wandering Healer is gone. The card has a new name now. Aeliss. Tide-Caller of the Silver Shore. Epic.
 
 ## Aeliss
 
-**65** `[image: a pillar of purple and aqua light rising from {raft1} into the sky over the ocean at sunset]`
+**68** `[image: a pillar of purple and aqua light rising from {raft1} into the sky over the ocean at sunset]`
 He activates it. A column of purple light rises off the raft, so bright that rafts fifty kilometers away see it on the horizon.
 
-**66** `[image: {aeliss} standing on {raft1} as purple light fades around her, silver hair floating, eyes closed, the sunset ocean behind her]`
+**69** `[image: {aeliss} standing on {raft1} as purple light fades around her, silver hair floating, eyes closed, the sunset ocean behind her]`
 When it fades, a woman is standing on his raft. Silver hair. Pointed ears. A staff with a pearl that glows like the sea.
 
-**67** `[image: {aeliss} opening her sea-green eyes and looking at the endless ocean, a sad knowing expression]`
+**70** `[image: {aeliss} opening her sea-green eyes and looking at the endless ocean, a sad knowing expression]`
 She opens her eyes. She looks at the ocean. And she isn't surprised. Not even a little.
 
-**68** `[image: {aeliss} turning to look at {yunjae}, calm and serious, the two of them on {raft1} at sunset]`
+**71** `[image: {aeliss} turning to look at {yunjae}, calm and serious, the two of them on {raft1} at sunset]`
 "What day is it?" she asks. Our MC says it's the first day.
 
-**69** `[image: close-up of {aeliss}'s face, a single tear on her cheek, calm voice, sunset light]`
+**72** `[image: close-up of {aeliss}'s face, a single tear on her cheek, calm voice, sunset light]`
 She closes her eyes. "Then you still have time. My world fell on its twenty-eighth day."
 
-**70** `[image: {yunjae} staring at {aeliss}, stunned, the meaning sinking in]`
+**73** `[image: {yunjae} staring at {aeliss}, stunned, the meaning sinking in]`
 Fallen worlds. Citizens. Our MC is holding the survivor of a world that lost this exact game.
 
-**71** `[image: {aeliss} kneeling at the edge of {raft1} and touching the water with her staff, aqua light rippling outward across the ocean]`
+**74** `[image: {aeliss} kneeling at the edge of {raft1} and touching the water with her staff, aqua light rippling outward across the ocean]`
 Then she kneels and touches the water with her staff. Light ripples out across the waves.
 
-**72** `[image: a huge silver school of fish swirling up around {raft1} in the clear turquoise water, glowing chests visible deeper below]`
+**75** `[image: a huge silver school of fish swirling up around {raft1} in the clear turquoise water, glowing chests visible deeper below]`
 And the sea answers. Fish rise around the raft by the hundreds. And deeper down, she says, there are chests. She can feel them.
 
 ## The first ranking
 
-**73** `[image: {yunjae} and {aeliss} sitting on {raft1} at dusk eating grilled fish, quiet and calm, the sea golden around them]`
+**76** `[image: {yunjae} and {aeliss} sitting on {raft1} at dusk eating grilled fish, quiet and calm, the sea golden around them]`
 They eat grilled fish as the sun goes down. She doesn't talk about her world, and our MC doesn't push. But when he asks what she was, back home, she says, "The one who called the tides for my city." Then, quietly: "For the little that was left of it."
 
-**74** `[image: close-up of {aeliss}'s hand on her glowing coral staff, the pearl pulsing aqua, determined expression]`
+**77** `[image: close-up of {aeliss}'s hand on her glowing coral staff, the pearl pulsing aqua, determined expression]`
 She tells him one more thing. If a summoner dies, their citizens go free. Free, and alone, on an ocean with no one. "So don't die," she says. "I've already lost one world."
 
-**75** `[image: night falls over the ocean, a giant glowing holographic leaderboard appearing across the entire starry sky, abstract glowing rows, no readable text]`
+**78** `[image: night falls over the ocean, a giant glowing holographic leaderboard appearing across the entire starry sky, abstract glowing rows, no readable text]`
 At midnight, the first daily ranking appears. Not on a screen. Across the whole sky, for every survivor to see.
 
-**76** `[image: close-up of the top row of the giant leaderboard in the sky blazing gold, abstract glowing symbols, no readable text]`
+**79** `[image: close-up of the top row of the giant leaderboard in the sky blazing gold, abstract glowing symbols, no readable text]`
 Number one in the world: Seo Yun-jae. Achievement: first Epic citizen summoned in any zone.
 
-**77** `[image: {yunjae} sitting on {raft1} at night looking up at his name burning gold in the sky, {aeliss} beside him, stars everywhere]`
+**80** `[image: {yunjae} sitting on {raft1} at night looking up at his name burning gold in the sky, {aeliss} beside him, stars everywhere]`
 Our MC looks up at his own name in the sky. Four billion people are looking at it too.
 
-**78** `[image: dozens of small glowing chat windows exploding into the night sky like fireworks, abstract symbols, no readable text]`
+**81** `[image: dozens of small glowing chat windows exploding into the night sky like fireworks, abstract symbols, no readable text]`
 Zone chat explodes. Who is Seo Yun-jae? What's his ability? Where is he? That last question makes him a little uneasy.
 
 ## Number two
 
-**79** `[image: a different raft like {raft} far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, {knight} kneeling beside him with his sword point-down]`
+**82** `[image: a different raft like {raft} far away on a dark ocean at night, {kaiser} standing on it looking up at the sky, {knight} kneeling beside him with his sword point-down]`
 Somewhere in a different zone, a man is standing on his raft, looking up at the same sky.
 
-**80** `[image: close-up of the second row of the giant leaderboard glowing silver, abstract symbols, no readable text]`
+**83** `[image: close-up of the second row of the giant leaderboard glowing silver, abstract symbols, no readable text]`
 Number two in the world: Kaiser.
 
-**81** `[image: close-up of {kaiser}'s face lit by the leaderboard glow, cold amber eyes, a thin smile forming]`
+**84** `[image: close-up of {kaiser}'s face lit by the leaderboard glow, cold amber eyes, a thin smile forming]`
 He used to run one of the biggest companies in the world. He has never come second at anything. And for the first time since the Summoning, he smiles.
 
-**82** `[image: {kaiser}'s hand glowing with a dark red aura, faint chains of red light curling around his fingers, ominous]`
+**85** `[image: {kaiser}'s hand glowing with a dark red aura, faint chains of red light curling around his fingers, ominous]`
 His ability is called Conquest. Nobody knows what it does yet. Our MC certainly doesn't.
 
-**83** `[image: close-up of a single glowing blue chat window floating in front of {yunjae} at night, abstract symbols, no readable text]`
+**86** `[image: close-up of a single glowing blue chat window floating in front of {yunjae} at night, abstract symbols, no readable text]`
 A private message pops up in front of our MC. From Kaiser. "Congratulations on first place, Seo Yun-jae. Enjoy it."
 
-**84** `[image: {yunjae} reading the message, his face serious in the blue light, {aeliss} watching him with concern]`
+**87** `[image: {yunjae} reading the message, his face serious in the blue light, {aeliss} watching him with concern]`
 Our MC reads it twice. It doesn't sound like congratulations. It sounds like a man writing down a name.
 
 ## End of day one
 
-**85** `[image: close-up of {panel} glowing softly in the night, abstract symbols, no readable text]`
+**88** `[image: close-up of {panel} glowing softly in the night, abstract symbols, no readable text]`
 The System pops up one last time. "Tip: being first means everyone knows your name. Sleep with one eye open."
 
-**86** `[image: {yunjae} lying on {raft1} at night looking up at the stars, thinking, {aeliss} sitting at the edge watching the dark sea]`
+**89** `[image: {yunjae} lying on {raft1} at night looking up at the stars, thinking, {aeliss} sitting at the edge watching the dark sea]`
 Our MC lies on four planks in the middle of an endless ocean, and thinks about a radio that still works, a fifteen-year-old who screamed his name, and a grandmother who reached out and caught nothing.
 
-**87** `[image: close-up of {yunjae}'s face in starlight, determined eyes]`
+**90** `[image: close-up of {yunjae}'s face in starlight, determined eyes]`
 Twenty-seven days until whatever ended Aeliss's world. He's going to make every one of them count.
 
 ## The first night
 
-**88** `[image: {raft1} at night on a black ocean under a sky full of stars, a huge dark fin cutting through the water toward it, ominous]`
+**91** `[image: {raft1} at night on a black ocean under a sky full of stars, a huge dark fin cutting through the water toward it, ominous]`
 He doesn't get much sleep. Around two in the morning, something bumps the raft from underneath.
 
-**89** `[image: close-up of {yunjae} jolting awake on {raft1} at night, gripping the edge, eyes wide, the dark water rippling]`
+**92** `[image: close-up of {yunjae} jolting awake on {raft1} at night, gripping the edge, eyes wide, the dark water rippling]`
 Then it bumps again. Harder. The raft tilts, and seawater washes over the edge.
 
-**90** `[image: a gigantic shark-like sea monster with glowing white eyes rising beside {raft1} in the moonlight, jaws open, terrifying scale]`
+**93** `[image: a gigantic shark-like sea monster with glowing white eyes rising beside {raft1} in the moonlight, jaws open, terrifying scale]`
 In the moonlight, a shape surfaces next to them. It's longer than a bus. And it's been circling the light.
 
-**91** `[image: {aeliss} standing at the edge of {raft1} at night, raising her coral staff, the aqua pearl blazing, the sea around her glowing]`
+**94** `[image: {aeliss} standing at the edge of {raft1} at night, raising her coral staff, the aqua pearl blazing, the sea around her glowing]`
 Aeliss is already standing. She lifts her staff, and the pearl blazes like a small moon.
 
-**92** `[image: a spear of glowing water erupting from the ocean and striking the giant sea monster, spray and moonlight everywhere, dramatic action]`
+**95** `[image: a spear of glowing water erupting from the ocean and striking the giant sea monster, spray and moonlight everywhere, dramatic action]`
 The sea itself rises up and strikes. A spear of water slams into the creature's side.
 
-**93** `[image: the giant sea monster diving away into the black water, a huge splash, {raft1} rocking in the waves]`
+**96** `[image: the giant sea monster diving away into the black water, a huge splash, {raft1} rocking in the waves]`
 It thrashes once, and dives. The ocean goes quiet again.
 
-**94** `[image: {aeliss} lowering her staff and breathing hard on {raft1} at night, {yunjae} staring at her in shock]`
+**97** `[image: {aeliss} lowering her staff and breathing hard on {raft1} at night, {yunjae} staring at her in shock]`
 Our MC stares at her. She just shrugs. "It wanted the light. Your raft was glowing. I asked it to leave."
 
-**95** `[image: close-up of {panel} glowing in the dark, abstract symbols, no readable text]`
+**98** `[image: close-up of {panel} glowing in the dark, abstract symbols, no readable text]`
 Then the System pops up with a number nobody wanted. "Zone report, night one. Survivors lost: two hundred and fourteen."
 
-**96** `[image: dark ocean at night with a few broken empty rafts drifting, scattered planks floating, no people, somber]`
+**99** `[image: dark ocean at night with a few broken empty rafts drifting, scattered planks floating, no people, somber]`
 Two hundred and fourteen people in his zone didn't see the sun come up. Some fell asleep and rolled off. Some met whatever just met him.
 
-**97** `[image: close-up of {yunjae}'s face at night, jaw tight, looking at the dark water]`
+**100** `[image: close-up of {yunjae}'s face at night, jaw tight, looking at the dark water]`
 Our MC doesn't sleep after that. He sits up and watches the water until the sky turns gray.
 
 ## Day two
 
-**98** `[image: sunrise over an endless calm ocean, golden light spreading across the water, {raft1} small in the frame]`
+**101** `[image: sunrise over an endless calm ocean, golden light spreading across the water, {raft1} small in the frame]`
 Day two. The sun comes up over an ocean that looks exactly like yesterday's, except now he knows what lives under it.
 
-**99** `[image: a small glowing white chest appearing on {raft1} in the morning light, a soft burst of white light]`
+**102** `[image: a small glowing white chest appearing on {raft1} in the morning light, a soft burst of white light]`
 His second login reward drops onto the raft. A white chest again. But this time, there's something better inside.
 
-**100** `[image: a rolled-up glowing parchment blueprint sketch of a mast and sail floating above an open white chest, abstract lines, no readable text]`
+**103** `[image: a rolled-up glowing parchment blueprint sketch of a mast and sail floating above an open white chest, abstract lines, no readable text]`
 A blueprint. Mast and Sail. With it, he can build a sail onto his raft. Which means he can stop drifting and start choosing where he goes.
 
-**101** `[image: {yunjae} sitting on {raft1} studying a glowing blueprint, {aeliss} looking over his shoulder curiously, morning light]`
+**104** `[image: {yunjae} sitting on {raft1} studying a glowing blueprint, {aeliss} looking over his shoulder curiously, morning light]`
 The catch: blueprints need materials. And a mast needs wood. His whole raft is made of exactly four planks of wood.
 
 ## Zone chat, day two
 
-**102** `[image: dozens of small glowing blue chat windows floating over the ocean at morning, abstract scrolling symbols, no readable text]`
+**105** `[image: dozens of small glowing blue chat windows floating over the ocean at morning, abstract scrolling symbols, no readable text]`
 Zone chat has worked that out too. And it's getting ugly.
 
-**103** `[image: a sheepish man on a tiny raft made of only three planks, a small campfire on the fourth plank, looking embarrassed]`
+**106** `[image: a sheepish man on a tiny raft made of only three planks, a small campfire on the fourth plank, looking embarrassed]`
 One guy took his raft apart for a campfire last night. He's now floating on three planks and asking if anyone has spare wood.
 
-**104** `[image: a man in a suit on {raft} holding up a glowing white card proudly, other rafts far away in the background]`
+**107** `[image: a man in a suit on {raft} holding up a glowing white card proudly, other rafts far away in the background]`
 Someone else is offering a white citizen card for twenty planks. Nobody can deliver twenty planks fifty kilometers away, but people argue about it anyway.
 
-**105** `[image: {taegu} standing on {raft} flexing, a pile of planks beside him, smug grin, the ocean behind him]`
+**108** `[image: {taegu} standing on {raft} flexing, a pile of planks beside him, smug grin, the ocean behind him]`
 And the gym guy with Iron Body is posting again. He's found other survivors. Somehow, they've all decided to give him their planks.
 
-**106** `[image: close-up of a glowing chat window with a silhouette avatar of a muscular man, abstract symbols, no readable text]`
+**109** `[image: close-up of a glowing chat window with a silhouette avatar of a muscular man, abstract symbols, no readable text]`
 His name is Bang Tae-gu. And he's very interested in the purple light everyone saw last night.
 
-**107** `[image: {yunjae} reading zone chat on {raft1} with a cautious, thoughtful expression, {aeliss} beside him]`
+**110** `[image: {yunjae} reading zone chat on {raft1} with a cautious, thoughtful expression, {aeliss} beside him]`
 Our MC says nothing in chat. Not a word. Everyone is asking who Seo Yun-jae is, and he would very much like them to keep asking.
 
-**108** `[image: a giant glowing globe of light floating over the ocean with thousands of tiny chat windows orbiting it, abstract, no readable text]`
+**111** `[image: a giant glowing globe of light floating over the ocean with thousands of tiny chat windows orbiting it, abstract, no readable text]`
 Zone chat is ten thousand people. But there's also world chat. Four billion people, and the System only lets each person post once an hour.
 
-**109** `[image: a woman with short blonde hair on a raft far away, a stocky bearded dwarf citizen with a hammer standing proudly beside her, surprised smile]`
+**112** `[image: a woman with short blonde hair on a raft far away, a stocky bearded dwarf citizen with a hammer standing proudly beside her, surprised smile]`
 The world's highlights scroll past. A woman in another zone summoned a blue dwarf. A man somewhere else caught a chest that turned out to be a mimic. He's posting from inside it.
 
-**110** `[image: {kaiser} standing on {raft} at dawn with {knight} behind him, speaking calmly with one hand raised like giving a speech, a confident leader]`
+**113** `[image: {kaiser} standing on {raft} at dawn with {knight} behind him, speaking calmly with one hand raised like giving a speech, a confident leader]`
 And then Kaiser posts. Not a picture. A speech.
 
-**111** `[image: close-up of a large glowing chat window with a golden border, a silhouette avatar of a man in a suit, abstract symbols, no readable text]`
+**114** `[image: close-up of a large glowing chat window with a golden border, a silhouette avatar of a man in a suit, abstract symbols, no readable text]`
 "Earth doesn't need four billion people panicking alone. It needs a company. Register your name, your zone and your ability with me, and when the time comes, you'll have a place."
 
-**112** `[image: thousands of tiny glowing chat windows lighting up across a dark world map, a wave of light spreading, abstract, no readable text]`
+**115** `[image: thousands of tiny glowing chat windows lighting up across a dark world map, a wave of light spreading, abstract, no readable text]`
 In one hour, two million people sign up. Frightened people want someone in charge. Kaiser has been in charge of things his whole life.
 
-**113** `[image: close-up of {yunjae} reading world chat with narrowed eyes, the blue glow on his face]`
+**116** `[image: close-up of {yunjae} reading world chat with narrowed eyes, the blue glow on his face]`
 Our MC reads the speech twice. It's a good speech. That's what bothers him. Kaiser isn't building a team. He's building a list.
 
 ## Calling the tide
 
-**114** `[image: {aeliss} kneeling at the edge of {raft1} with her staff in the water, eyes closed in concentration, aqua light spreading through the sea]`
+**117** `[image: {aeliss} kneeling at the edge of {raft1} with her staff in the water, eyes closed in concentration, aqua light spreading through the sea]`
 So instead of asking for wood, he asks Aeliss. She closes her eyes, puts her staff in the water, and listens.
 
-**115** `[image: driftwood logs, broken planks and a coil of rope floating toward {raft1} on a glowing current, morning sun]`
+**118** `[image: driftwood logs, broken planks and a coil of rope floating toward {raft1} on a glowing current, morning sun]`
 The current changes. Ten minutes later, driftwood starts arriving. Broken planks, a log, a tangle of rope, all floating straight to the raft like it was called. Because it was.
 
-**116** `[image: {yunjae} pulling driftwood planks onto {raft1}, sleeves rolled up, determined, {aeliss} smiling slightly]`
+**119** `[image: {yunjae} pulling driftwood planks onto {raft1}, sleeves rolled up, determined, {aeliss} smiling slightly]`
 Our MC hauls it in. He's starting to understand something. An Epic citizen isn't just strong. She changes the rules of the game around him.
 
-**117** `[image: {aeliss} suddenly looking down into the deep water with sharp focus, her pearl pulsing, an expression of surprise]`
+**120** `[image: {aeliss} suddenly looking down into the deep water with sharp focus, her pearl pulsing, an expression of surprise]`
 Then Aeliss stops. "There's something else," she says. "Deeper. Something that glows blue."
 
-**118** `[image: a wave of glowing water lifting a blue treasure chest out of the deep ocean toward the raft, light rays through the water, magical]`
+**121** `[image: a wave of glowing water lifting a blue treasure chest out of the deep ocean toward the raft, light rays through the water, magical]`
 She raises her staff, and a wave lifts it from the deep. A blue chest. Rare. On day two.
 
 ## The chest
 
-**119** `[image: a closed blue treasure chest sitting on {raft1}, softly glowing blue, seawater dripping off it]`
+**122** `[image: a closed blue treasure chest sitting on {raft1}, softly glowing blue, seawater dripping off it]`
 Most people would open it right away. Our MC looks at it for a long time.
 
-**120** `[image: close-up of {yunjae} thinking, one hand on his chin, looking at the blue chest, the ocean bright behind him]`
+**123** `[image: close-up of {yunjae} thinking, one hand on his chin, looking at the blue chest, the ocean bright behind him]`
 Because last night, he asked the System a question. Does Refine work on chests? And the answer was yes. A refined chest rolls on a better loot table.
 
-**121** `[image: {yunjae} placing his hand on the closed blue chest, blue light gathering under his palm, tense expression]`
+**124** `[image: {yunjae} placing his hand on the closed blue chest, blue light gathering under his palm, tense expression]`
 Three uses a day. Each thing only once. Blue to purple would be huge. But if he's going to spend it, it has to be on something worth it.
 
-**122** `[image: the blue chest glowing intensely and turning purple, purple light pouring through its seams, the ocean lit purple]`
+**125** `[image: the blue chest glowing intensely and turning purple, purple light pouring through its seams, the ocean lit purple]`
 "Refine." The blue chest shudders. Its edges darken, then glow. Purple. Epic.
 
-**123** `[image: an open purple chest on {raft1} with purple light streaming out, a glowing bundle of tools and a rolled blueprint inside]`
+**126** `[image: an open purple chest on {raft1} with purple light streaming out, a glowing bundle of tools and a rolled blueprint inside]`
 Inside: a Builder's Kit, with a full set of tools, nails and rope, and something even better. An Expansion Frame. Plug it into a raft, and the raft grows.
 
-**124** `[image: close-up of {panel} with a small glowing map icon and a question mark, abstract symbols, no readable text]`
+**127** `[image: close-up of {panel} with a small glowing map icon and a question mark, abstract symbols, no readable text]`
 The System adds a small note. "Purple chests can hold anything. Even maps to places nobody is supposed to find." Our MC remembers that.
 
 ## Lunch at sea
 
-**125** `[image: {yunjae} and {aeliss} sitting together on the half-built raft at noon, sharing grilled fish, the sail not yet raised, relaxed]`
+**128** `[image: {yunjae} and {aeliss} sitting together on the half-built raft at noon, sharing grilled fish, the sail not yet raised, relaxed]`
 At noon they stop to eat. The raft is half finished, and for a few minutes, nobody is in danger.
 
-**126** `[image: close-up of {aeliss} looking out at the sea with a distant expression, the midday sun on her silver hair]`
+**129** `[image: close-up of {aeliss} looking out at the sea with a distant expression, the midday sun on her silver hair]`
 Our MC finally asks her about her world. She's quiet for a long time. Then she tells him.
 
-**127** `[image: a beautiful elven city of white stone and seashell towers built along a silver beach, glowing tide pools, peaceful, fantasy]`
+**130** `[image: a beautiful elven city of white stone and seashell towers built along a silver beach, glowing tide pools, peaceful, fantasy]`
 Her city was called Lune, on a coast where the sand was silver. She called the tides there, every morning, the way her mother had before her.
 
-**128** `[image: elves on rafts and small boats scattered across a vast stormy ocean, frightened faces, another world's version of the Drift]`
+**131** `[image: elves on rafts and small boats scattered across a vast stormy ocean, frightened faces, another world's version of the Drift]`
 Then the Trial came for her people too. The same ocean. The same rafts. The same voice in the sky.
 
-**129** `[image: a dark battlefield under a blood red sky, elven warriors falling back before a wall of shadowy enemies, smoke and ruin]`
+**132** `[image: a dark battlefield under a blood red sky, elven warriors falling back before a wall of shadowy enemies, smoke and ruin]`
 They did well, at first. They survived the storms. They built islands. And on the twenty-eighth day, they were sent to fight another world.
 
-**130** `[image: close-up of {aeliss} with her eyes closed, a single tear, the bright sea behind her blurred]`
+**133** `[image: close-up of {aeliss} with her eyes closed, a single tear, the bright sea behind her blurred]`
 "We lost," she says simply. "And then I was a card. Waiting in the dark. Until someone pulled me out of the sea."
 
-**131** `[image: {yunjae} looking at {aeliss} with quiet sympathy, the two of them sitting close on the raft, gentle moment]`
+**134** `[image: {yunjae} looking at {aeliss} with quiet sympathy, the two of them sitting close on the raft, gentle moment]`
 Our MC doesn't say he's sorry. He has a feeling she's heard enough of that. He just says, "Then we don't lose." And she looks at him like she's deciding whether to believe it.
 
 ## The repairman
 
-**132** `[image: a small cluttered repair shop in Seoul, shelves of old radios and phones, a young boy watching an older man fix a radio at a workbench]`
+**135** `[image: a small cluttered repair shop in Seoul, shelves of old radios and phones, a young boy watching an older man fix a radio at a workbench]`
 She asks about him, then. And he tells her about a repair shop in Seoul, and a father who could fix anything.
 
-**133** `[image: an old worn metal toolbox sitting on an empty workbench in a dim repair shop, dust in the light, melancholy]`
+**136** `[image: an old worn metal toolbox sitting on an empty workbench in a dim repair shop, dust in the light, melancholy]`
 His parents died when he was nineteen. He kept the toolbox, dropped out of school, and started fixing things to pay the rent.
 
-**134** `[image: {yunjae} as a tired young man at a workbench late at night, {haeun} as a little girl asleep on a chair behind him, warm lamp light]`
+**137** `[image: {yunjae} as a tired young man at a workbench late at night, {haeun} as a little girl asleep on a chair behind him, warm lamp light]`
 Phones, fridges, washing machines. Every night for five years. So his sister could stay in school, and his grandmother could keep her apartment.
 
-**135** `[image: close-up of {yunjae}'s hands, calloused and scarred, holding a hammer on the raft, the sea behind]`
+**138** `[image: close-up of {yunjae}'s hands, calloused and scarred, holding a hammer on the raft, the sea behind]`
 "Nobody ever noticed," he says. "That's how you know you fixed it right. Nobody notices."
 
-**136** `[image: close-up of {aeliss} looking at {yunjae} with a soft surprised expression, the sun behind her]`
+**139** `[image: close-up of {aeliss} looking at {yunjae} with a soft surprised expression, the sun behind her]`
 Aeliss looks at him for a moment. "Everyone in your world is going to notice now," she says. Then she goes back to holding the sail.
 
 ## Building
 
-**137** `[image: {yunjae} and {aeliss} working together on the raft, hammering planks into a bigger frame, tools spread out, bright midday sun]`
+**140** `[image: {yunjae} and {aeliss} working together on the raft, hammering planks into a bigger frame, tools spread out, bright midday sun]`
 So they build. Our MC has spent his whole life fixing things. This is the first time it's ever felt like this.
 
-**138** `[image: close-up of {yunjae}'s hands hammering a nail into a plank with practiced skill, sawdust and sunlight]`
+**141** `[image: close-up of {yunjae}'s hands hammering a nail into a plank with practiced skill, sawdust and sunlight]`
 The frame clicks into place. The four planks become nine. The raft grows from two meters across to three.
 
-**139** `[image: {yunjae} raising a wooden mast on the raft, {aeliss} holding a cream-colored sail ready, the sea glittering]`
+**142** `[image: {yunjae} raising a wooden mast on the raft, {aeliss} holding a cream-colored sail ready, the sea glittering]`
 Then the mast goes up. Aeliss pulls the sail tight. It's patched and uneven, and our MC thinks it's the most beautiful thing he's ever seen.
 
-**140** `[image: {yunjae} holding a plain leather water flask, blue light gathering around it]`
+**143** `[image: {yunjae} holding a plain leather water flask, blue light gathering around it]`
 He spends his second Refine on something boring and important: the water flask. White to green.
 
-**141** `[image: a leather water flask glowing green, a small stream of clean water trickling from it endlessly, sparkles]`
+**144** `[image: a leather water flask glowing green, a small stream of clean water trickling from it endlessly, sparkles]`
 Spring Flask. It refills itself, slowly, forever. While the rest of the zone is starting to ration water, our MC just solved it.
 
-**142** `[image: {yunjae} placing a wooden storage crate on the raft, a fishing rod resting in a rope holder beside it, satisfied expression]`
+**145** `[image: {yunjae} placing a wooden storage crate on the raft, a fishing rod resting in a rope holder beside it, satisfied expression]`
 A storage crate. A rope holder for the rod. And in the middle of the deck, still glowing green, the first plank he ever refined.
 
-**143** `[image: wide shot of {raft2} sailing on the turquoise ocean at golden hour, its patched cream sail full of wind, {yunjae} and {aeliss} on deck]`
+**146** `[image: wide shot of {raft2} sailing on the turquoise ocean at golden hour, its patched cream sail full of wind, {yunjae} and {aeliss} on deck]`
 By sunset, he isn't drifting anymore. Day two, and our MC is sailing.
 
 ## The second ranking
 
-**144** `[image: the giant glowing leaderboard appearing across the night sky over the ocean again, abstract glowing rows, no readable text]`
+**147** `[image: the giant glowing leaderboard appearing across the night sky over the ocean again, abstract glowing rows, no readable text]`
 At midnight, the sky lights up again. The second daily ranking.
 
-**145** `[image: close-up of the top row of the leaderboard blazing gold, abstract symbols, no readable text]`
+**148** `[image: close-up of the top row of the leaderboard blazing gold, abstract symbols, no readable text]`
 Number one: Seo Yun-jae. Again. Achievements: first Epic chest. First sailing raft in any zone.
 
-**146** `[image: {kaiser} on {raft2_plain} at night, the patched sail behind him, {knight} standing guard, looking up at the leaderboard with narrowed eyes]`
+**149** `[image: {kaiser} on {raft2_plain} at night, the patched sail behind him, {knight} standing guard, looking up at the leaderboard with narrowed eyes]`
 Number two: Kaiser. He's built a sail too. Same raft, same patched sail. Just one day behind.
 
-**147** `[image: close-up of {kaiser}'s face lit from above by the leaderboard glow, a cold calculating look]`
+**150** `[image: close-up of {kaiser}'s face lit from above by the leaderboard glow, a cold calculating look]`
 He doesn't send a message this time. He just studies the gap between first and second, like a business he plans to take over.
 
-**148** `[image: {yunjae} and {aeliss} on {raft2} at night looking up at the leaderboard, the sail dark against the stars]`
+**151** `[image: {yunjae} and {aeliss} on {raft2} at night looking up at the leaderboard, the sail dark against the stars]`
 On his raft, our MC looks at his name, and then at Aeliss. "Is it always going to be like this?" he asks. "Everyone watching?"
 
-**149** `[image: close-up of {aeliss} at night, a small sad smile, silver hair lifted by the wind]`
+**152** `[image: close-up of {aeliss} at night, a small sad smile, silver hair lifted by the wind]`
 "In my world," she says, "the one at the top of that list was the first one they came for."
 
 ## Three rafts
 
-**150** `[image: close-up of {aeliss}'s eyes snapping open in the dark, her pearl flaring, alarmed]`
+**153** `[image: close-up of {aeliss}'s eyes snapping open in the dark, her pearl flaring, alarmed]`
 An hour later, Aeliss sits up. Her pearl is glowing. She's staring at the dark horizon.
 
-**151** `[image: three small torches on rafts far away on the dark ocean horizon at night, moving together, ominous]`
+**154** `[image: three small torches on rafts far away on the dark ocean horizon at night, moving together, ominous]`
 Three lights. Far off. Moving together, straight toward them.
 
-**152** `[image: {taegu} standing at the front of a plain raft at night, holding a torch, a grin on his face, two other rafts with silhouetted men behind him]`
+**155** `[image: {taegu} standing at the front of a plain raft at night, holding a torch, a grin on his face, two other rafts with silhouetted men behind him]`
 On the lead raft, a huge man is grinning. He followed the purple light. He's brought friends. And he's very curious what a raft that glows is carrying.
 
-**153** `[image: {yunjae} standing up on {raft2} at night, gripping the mast, facing the distant torches, determined, {aeliss} raising her staff beside him]`
+**156** `[image: {yunjae} standing up on {raft2} at night, gripping the mast, facing the distant torches, determined, {aeliss} raising her staff beside him]`
 Our MC stands up. Day two isn't over yet. And he still has one Refine left.
 
-**154** `[image: title card style image of three torches on a dark ocean and a glowing green plank, dramatic]`
+**157** `[image: title card style image of three torches on a dark ocean and a glowing green plank, dramatic]`
 Next time on One Rank Higher: Raiders.
