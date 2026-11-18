@@ -105,7 +105,7 @@ Abilities, it turns out, match your personality. A gym guy got Iron Body. He's p
 **29** `[image: {dahye} kneeling on {raft} in the ocean, her hands glowing with soft green healing light, determined expression]`
 A nurse got Mend. A guy who never threw anything away got Infinite Pocket.
 
-**30** `[image: {jiho} on {raft} turning half transparent, looking around fearfully]`
+**30** `[image: {jiho} on {raft} turning half transparent with a faint pale blue shimmer at his edges, looking around fearfully]`
 And somebody who admits he's a coward got Vanish. Chat roasts him for an hour.
 
 **31** `[image: {yunjae} opening a glowing blue panel on his own wrist, curious expression, the ocean behind him]`
@@ -169,7 +169,7 @@ World chat explodes. Hundreds of offers in seconds. Fish. Bread. Water. A pair o
 **49** `[image: {yunjae} calmly scrolling past the flood of offers with a flat expression, the ocean behind him]`
 He turns every one of them down. He already has fish, bread and water. He isn't looking for more of what everyone has. He's looking for the thing nobody knows the value of yet.
 
-**50** `[image: close-up of a single private chat window glowing softly in front of {yunjae}, a small silhouette avatar of a skinny young man with glasses, abstract symbols, no readable text]`
+**50** `[image: {jiho} sitting alone on {raft}, typing nervously into a small glowing chat window, abstract symbols, no readable text]`
 Then a private message arrives. It's from the guy with Vanish, the one zone chat spent an hour roasting. His name is Noh Ji-ho. "Would you take a common citizen card?"
 
 **51** `[image: close-up of {yunjae}'s face, eyebrows raised in sharp curiosity, blue chat light on his face]`

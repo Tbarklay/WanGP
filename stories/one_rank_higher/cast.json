@@ -82,7 +82,8 @@
       "desc": "a small armored sailing ship with dark wooden hulls reinforced with riveted steel plates, white sails with a faint purple shimmer, a crow's nest, two mounted deck crossbows, a small cabin, every deck plank plain with no glow"
     },
     "jiho": {
-      "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with messy brown hair, round glasses, big anxious eyes and an oversized gray hoodie"
+      "ref": "refs/jiho.png",
+      "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with messy brown hair, round thin-framed glasses, big anxious brown eyes, an oversized gray hoodie, a black backpack, loose dark gray sweatpants and white slip-on sneakers"
     }
   }
 }
