@@ -5,8 +5,8 @@ No background music.
 Each beat is one illustration, shown while its narration plays. `{yunjae}` and the other names in braces are filled in
 with the matching description from `cast.json`, so every image draws the characters the same way.
 The narration calls the hero "our MC" or Yun-jae, recap style. Lines starting SYSTEM: are read in the System's own voice;
-`[image: same]` keeps the previous picture on screen for them. `[ui: ...]` after an image draws that System window,
-status window or ranking board as exact text over the picture (see stories/tools/ui_overlay.py).
+`[image: same]` keeps the previous picture on screen for them. `[ui: ...]` after an image draws a status window or ranking board
+as exact text over the picture (see stories/tools/ui_overlay.py).
 
 ---
 
@@ -44,7 +44,7 @@ Then the clock hits midnight.
 **10** `[image: a giant glowing blue holographic panel appearing in the night sky above the Seoul skyline, everyone on the streets looking up, abstract symbols, no readable text]`
 Every screen on Earth goes blue. Every phone, every TV, and the sky itself. One message, in every language at once.
 
-**11** `[image: close-up of a floating glowing blue holographic panel in a dark room, abstract symbols, no readable text]` `[ui: system | GLOBAL NOTICE | The Trial begins. | All candidates aged 18 to 65 will now be transferred.]`
+**11** `[image: close-up of a floating glowing blue holographic panel in a dark room, abstract symbols, no readable text]`
 SYSTEM: The Trial begins. All candidates aged eighteen to sixty-five will now be transferred.
 
 **12** `[image: {yunjae} standing up in the apartment, his body starting to glow with blue light and dissolve into particles, shock on his face]`
@@ -76,7 +76,7 @@ His inventory: one fishing rod. Three spare planks. One flask of water.
 **20** `[image: {panel} appearing in front of {yunjae} on {raft}, blue light on his face, he squints at it]`
 Then a blue window pops up in front of his face. And it talks.
 
-**21** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]` `[ui: system | SYSTEM | Good morning, candidate. | You've been summoned to the Drift. | Please try not to die. It makes the paperwork worse.]`
+**21** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]`
 SYSTEM: Good morning, candidate. You've been summoned to the Drift. Please try not to die. It makes the paperwork worse.
 
 **22** `[image: {yunjae} staring at {panel} with a deadpan, unimpressed expression]`
@@ -90,7 +90,7 @@ The System explains the rules. Everyone was split into zones of ten thousand peo
 **24** `[image: a giant red hourglass of light hanging in the sky over the ocean, ominous]`
 When a zone drops to one thousand survivors, ten zones merge into one. Nobody needs the math explained. Nine out of ten people won't make it.
 
-**25** `[image: close-up of {panel} with a glowing gift-box icon and a list of abstract symbols, no readable text]` `[ui: system | SYSTEM | Daily rewards: every day | Rankings: every day | World Event: every 7 days]`
+**25** `[image: close-up of {panel} with a glowing gift-box icon and a list of abstract symbols, no readable text]`
 Every day, the System hands out rewards. Every day, it ranks everyone. And every seven days, something called a World Event will come.
 
 **26** `[image: close-up of {yunjae}'s face lit by the blue panel, eyes narrowed in thought]`
@@ -113,7 +113,7 @@ And somebody who admits he's a coward got Vanish. Chat roasts him for an hour.
 **31** `[image: {yunjae} opening a glowing blue panel on his own wrist, curious expression, the ocean behind him]`
 Then he checks his own.
 
-**32** `[image: close-up of a glowing blue panel with a single bright glowing hammer-and-star icon at its center, abstract, no readable text]` `[ui: system | [Refine] · Ability | Raise the rank of any item by one. Rarely, by two. | Each item can only be refined once. | Uses per day: 3]`
+**32** `[image: close-up of a glowing blue panel with a single bright glowing hammer-and-star icon at its center, abstract, no readable text]`
 SYSTEM: Refine. Raise the rank of any item by one. Rarely, by two. Each item can only be refined once. Three uses per day.
 
 **33** `[image: {yunjae} looking at the panel with a disappointed, deflated expression, the endless ocean behind him]`
@@ -128,10 +128,10 @@ That's when it really sinks in. Somewhere out there, people are turning their sk
 **36** `[image: {yunjae} frowning up at the floating {panel}, frustrated, one hand raised like asking a question]`
 So he asks the System straight out. Why did he get stuck with a support ability?
 
-**37** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]` `[ui: system | SYSTEM | Abilities aren't handed out at random. | Each one is shaped by the person who receives it. | Your personality chose this one.]`
+**37** `[image: close-up of {panel} glowing brightly, abstract symbols, no readable text]`
 SYSTEM: Abilities aren't handed out at random. Each one is shaped by the person who receives it. Your personality chose this one.
 
-**38** `[image: same]` `[ui: system | SYSTEM | Apparently, you can't leave anything alone until it's better.]`
+**38** `[image: same]`
 SYSTEM: Apparently, you can't leave anything alone until it's better.
 
 **39** `[image: {yunjae} giving a small reluctant smile, looking at his hands]`
@@ -157,7 +157,7 @@ The very next cast, the line goes heavy, and something white is glowing under th
 **45** `[image: an open white chest on {raft} holding two wooden planks, a coil of rope, a length of polished bamboo and a spool of waxed fishing line]`
 A white chest. Inside: two planks, a coil of rope, and a little bundle the System calls rod parts. A length of polished bamboo, and a spool of waxed line.
 
-**46** `[image: close-up of {panel} next to a bamboo rod section and a spool of fishing line, abstract symbols, no readable text]` `[ui: system | Item · Rod Parts · COMMON | Polished bamboo and waxed line | Upgrades a basic rod to UNCOMMON. | No ability needed.]`
+**46** `[image: close-up of {panel} next to a bamboo rod section and a spool of fishing line, abstract symbols, no readable text]`
 With these, the System says, anyone can upgrade a basic rod to Uncommon the old-fashioned way. No ability needed.
 
 **47** `[image: {yunjae} holding the bamboo and the spool of line, a slow thoughtful smile, the ocean glittering behind him]`
@@ -165,7 +165,7 @@ His rod is already Uncommon. He doesn't need them. And that's exactly what makes
 
 ## The trade
 
-**48** `[image: {yunjae} on {raft} typing into a glowing blue chat window, calm and focused, abstract symbols, no readable text]` `[ui: system | World Chat · Seo Yun-jae | Have rod upgrade parts. Bamboo and waxed line. | Looking for something I don't have.]`
+**48** `[image: {yunjae} on {raft} typing into a glowing blue chat window, calm and focused, abstract symbols, no readable text]`
 So he does something nobody else has thought of yet. He spends his one world chat post for the hour. "Have rod upgrade parts. Bamboo and waxed line. Looking for something I don't have."
 
 **49** `[image: hundreds of glowing blue chat windows exploding into the sky like fireworks over the ocean, abstract symbols, no readable text]`
@@ -174,7 +174,7 @@ World chat explodes. Hundreds of offers in seconds. Fish. Bread. Water. A pair o
 **50** `[image: {yunjae} calmly scrolling past the flood of offers with a flat expression, the ocean behind him]`
 He turns every one of them down. He already has fish, bread and water. He isn't looking for more of what everyone has. He's looking for the thing nobody knows the value of yet.
 
-**51** `[image: {jiho} sitting alone on {raft}, typing nervously into a small glowing chat window, abstract symbols, no readable text]` `[ui: system | Private message · Noh Ji-ho | Would you take a COMMON citizen card?]`
+**51** `[image: {jiho} sitting alone on {raft}, typing nervously into a small glowing chat window, abstract symbols, no readable text]`
 Then a private message arrives. It's from the guy with Vanish, the one zone chat spent an hour roasting. His name is Noh Ji-ho. "Would you take a common citizen card?"
 
 **52** `[image: close-up of {yunjae}'s face, eyebrows raised in sharp curiosity, blue chat light on his face]`
@@ -183,7 +183,7 @@ A citizen card. Yun-jae has never heard of one. That alone makes it worth more t
 **53** `[image: {jiho} sitting alone on {raft} holding a glowing white card, looking down at a single small fish beside him, worried]`
 So why trade it away? Ji-ho's answer is honest. "It's a cook. I can barely catch enough to feed myself. I can't feed a second mouth."
 
-**54** `[image: a glowing blue trade window floating over the ocean, a bamboo rod section and a spool of line dissolving into light on one side, a white glowing card appearing on the other, abstract, no readable text]` `[ui: system | Trade | You give: Rod Parts | You receive: Citizen Card · Cook · COMMON | Trade complete.]`
+**54** `[image: a glowing blue trade window floating over the ocean, a bamboo rod section and a spool of line dissolving into light on one side, a white glowing card appearing on the other, abstract, no readable text]`
 The System opens a trade window between them. The bamboo and the line dissolve from his hands into light, and a white card appears in their place. Distance doesn't matter. The System delivers.
 
 **55** `[image: six glowing cards fanned out in a row, framed in white, green, blue, purple, gold and red light, dramatic dark background]`
@@ -192,7 +192,7 @@ Then the System explains. A citizen card summons a person to live and work for y
 **56** `[image: close-up of {panel}, its glow dimming slightly, abstract symbols, no readable text]`
 He asks where citizens come from. The System pauses for a second.
 
-**57** `[image: same]` `[ui: system | SYSTEM | From fallen worlds.]`
+**57** `[image: same]`
 SYSTEM: From fallen worlds.
 
 **58** `[image: same]`
@@ -244,7 +244,7 @@ The white Cook could become a green one. Useful. But the green Healer could beco
 **72** `[image: the blue glowing card suddenly cracking down the middle, intense purple light bursting through the cracks, the ocean lit purple around it]`
 Then it doesn't stop. The blue frame cracks. And purple light pours out of it.
 
-**73** `[image: close-up of {panel} glowing purple at the edges, abstract symbols, no readable text]` `[ui: system | [Refine] · Luck triggered! | +2 ranks | UNCOMMON → EPIC]`
+**73** `[image: close-up of {panel} glowing purple at the edges, abstract symbols, no readable text]`
 SYSTEM: Luck triggered. Plus two ranks. Uncommon to Epic.
 
 **74** `[image: a brilliant purple card glowing in {yunjae}'s hands, the silhouette on it now an elegant figure with long hair and a staff, purple light on his amazed face]`
@@ -284,7 +284,7 @@ And the last one is a soft pink bar he's never heard of. Affinity: five percent.
 **84** `[image: close-up of {panel} glowing beside the status window, abstract symbols, no readable text]`
 The System explains, in its usual dry way.
 
-**85** `[image: same]` `[ui: system | SYSTEM · Affinity | Affinity is how a citizen feels about you, personally. | Shown only for citizens of the opposite sex. | What it unlocks at higher levels is between the two of you.]`
+**85** `[image: same]`
 SYSTEM: Affinity is how a citizen feels about you, personally. It only shows for citizens of the opposite sex. And what it unlocks at higher levels is between the two of you.
 
 **86** `[image: {yunjae} coughing and looking away with a red face, {aeliss} beside him calm and expressionless, sunset light]`
@@ -337,7 +337,7 @@ He used to run one of the biggest companies in the world. He has never come seco
 **101** `[image: {kaiser}'s hand glowing with a dark red aura, faint chains of red light curling around his fingers, ominous]`
 His ability is called Conquest. Nobody knows what it does yet. Yun-jae certainly doesn't.
 
-**102** `[image: close-up of a single glowing blue chat window floating in front of {yunjae} at night, abstract symbols, no readable text]` `[ui: system | Private message · Kaiser | Congratulations on first place, Seo Yun-jae. | Enjoy it.]`
+**102** `[image: close-up of a single glowing blue chat window floating in front of {yunjae} at night, abstract symbols, no readable text]`
 A private message pops up in front of our MC. From Kaiser. "Congratulations on first place, Seo Yun-jae. Enjoy it."
 
 **103** `[image: {yunjae} reading the message, his face serious in the blue light, {aeliss} watching him with concern]`
@@ -348,7 +348,7 @@ Yun-jae reads it twice. It doesn't sound like congratulations. It sounds like a 
 **104** `[image: close-up of {panel} glowing softly in the night, abstract symbols, no readable text]`
 The System pops up one last time.
 
-**105** `[image: same]` `[ui: system | SYSTEM · Tip | Being first means everyone knows your name. | Sleep with one eye open.]`
+**105** `[image: same]`
 SYSTEM: Tip: being first means everyone knows your name. Sleep with one eye open.
 
 **106** `[image: {yunjae} lying on {raft1} at night looking up at the stars, thinking, {aeliss} sitting at the edge watching the dark sea]`
@@ -395,7 +395,7 @@ Aeliss looks at him for a long moment. She doesn't say anything. But when he ope
 **119** `[image: close-up of {panel} glowing in the dark, abstract symbols, no readable text]`
 Then the System pops up with a number nobody wanted.
 
-**120** `[image: same]` `[ui: system | Zone Report · Night 1 | Survivors lost: 214 | Survivors remaining: 9,786]`
+**120** `[image: same]`
 SYSTEM: Zone report, night one. Survivors lost: two hundred and fourteen.
 
 **121** `[image: dark ocean at night with a few broken empty rafts drifting, scattered planks floating, no people, somber]`
@@ -490,7 +490,7 @@ Inside: a Builder's Kit, with a full set of tools, nails and rope, and something
 **148** `[image: close-up of {panel} with a small glowing map icon and a question mark, abstract symbols, no readable text]`
 The System adds a small note.
 
-**149** `[image: same]` `[ui: system | SYSTEM · Note | Purple chests can hold anything. | Even maps to places nobody is supposed to find.]`
+**149** `[image: same]`
 SYSTEM: Purple chests can hold anything. Even maps to places nobody is supposed to find.
 
 **150** `[image: same]`
