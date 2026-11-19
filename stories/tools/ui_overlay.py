@@ -16,6 +16,11 @@ import os
 import re
 
 W = 1920
+SCALE = 1.5   # windows are drawn this much bigger than the base layout, so the text reads on a phone
+
+
+def u(n):
+    return int(round(n * SCALE))
 RARITY = {"COMMON": (225, 225, 225), "UNCOMMON": (90, 220, 110), "RARE": (70, 150, 255), "EPIC": (190, 100, 255),
           "LEGENDARY": (255, 200, 60), "APEX": (255, 70, 70)}
 BAR_COLORS = {"HP": (230, 70, 80), "STR": (240, 150, 50), "AGI": (90, 210, 120), "MANA": (70, 160, 255),
@@ -31,7 +36,7 @@ def font(size, bold=False):
              ["segoeui.ttf", "arial.ttf", "DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"])
     for name in names:
         try:
-            return ImageFont.truetype(name, size)
+            return ImageFont.truetype(name, u(size))
         except OSError:
             continue
     return ImageFont.load_default()
@@ -54,9 +59,9 @@ def colored_words(draw, xy, text, fnt, base):
 
 
 def frame(draw, w, h, title):
-    draw.rounded_rectangle((6, 6, w - 6, h - 6), radius=22, fill=(8, 22, 48, 215), outline=CYAN + (255,), width=4)
-    draw.rounded_rectangle((16, 16, w - 16, 74), radius=14, fill=(20, 70, 120, 230))
-    draw.text((36, 22), title, font=font(36, True), fill=CYAN)
+    draw.rounded_rectangle((u(6), u(6), w - u(6), h - u(6)), radius=u(22), fill=(8, 22, 48, 225), outline=CYAN + (255,), width=u(4))
+    draw.rounded_rectangle((u(16), u(16), w - u(16), u(74)), radius=u(14), fill=(20, 70, 120, 235))
+    draw.text((u(36), u(22)), title, font=font(36, True), fill=CYAN)
 
 
 def layout(kind, items):
@@ -70,7 +75,7 @@ def layout(kind, items):
 
 
 def row_height(row):
-    return {"name": 58, "sub": 44, "bar": 54, "rank": 52}.get(row[0], 50)
+    return u({"name": 58, "sub": 44, "bar": 54, "rank": 52}.get(row[0], 50))
 
 
 def draw_row(draw, x, y, w, row):
@@ -78,21 +83,21 @@ def draw_row(draw, x, y, w, row):
     if kind == "name":
         draw.text((x, y), value, font=font(46, True), fill=TEXT)
     elif kind == "sub":
-        colored_words(draw, (x, y + 4), value, font(32), DIM)
+        colored_words(draw, (x, y + u(4)), value, font(32), DIM)
     elif kind == "bar":
         m = re.match(r"(.+?)\s+(\d+)\s*(?:/\s*(\d+)|(%))\s*$", value)
         if not m:
-            colored_words(draw, (x, y + 6), value, font(34), TEXT)
+            colored_words(draw, (x, y + u(6)), value, font(34), TEXT)
             return
         label, num, top, pct = m.group(1), int(m.group(2)), m.group(3), m.group(4)
         frac = num / 100 if pct else num / max(int(top), 1)
         color = BAR_COLORS.get(label.upper(), CYAN)
-        draw.text((x, y + 6), label, font=font(32, True), fill=TEXT)
-        bx, bw = x + 190, w - 190 - 190
-        draw.rounded_rectangle((bx, y + 12, bx + bw, y + 40), radius=10, fill=(30, 45, 70, 255))
+        draw.text((x, y + u(6)), label, font=font(32, True), fill=TEXT)
+        bx, bw = x + u(190), w - u(190) - u(190)
+        draw.rounded_rectangle((bx, y + u(12), bx + bw, y + u(40)), radius=u(10), fill=(30, 45, 70, 255))
         if frac > 0:
-            draw.rounded_rectangle((bx, y + 12, bx + max(14, int(bw * min(frac, 1))), y + 40), radius=10, fill=color + (255,))
-        draw.text((bx + bw + 20, y + 6), f"{num}%" if pct else f"{num}/{top}", font=font(32), fill=TEXT)
+            draw.rounded_rectangle((bx, y + u(12), bx + max(u(14), int(bw * min(frac, 1))), y + u(40)), radius=u(10), fill=color + (255,))
+        draw.text((bx + bw + u(20), y + u(6)), f"{num}%" if pct else f"{num}/{top}", font=font(32), fill=TEXT)
     elif kind == "rank":
         m = re.match(r"#?(\d+)\.?\s+(.*)", value)
         place, name = (int(m.group(1)), m.group(2)) if m else (0, value)
@@ -101,9 +106,9 @@ def draw_row(draw, x, y, w, row):
         color = PLACE.get(place, TEXT)
         draw.text((x, y), f"#{place}" if place else "", font=font(38, True), fill=color)
         nf = font(38, place == 1)
-        draw.text((x + 112, y), name, font=nf, fill=color if place in PLACE else TEXT)
+        draw.text((x + u(112), y), name, font=nf, fill=color if place in PLACE else TEXT)
         if zone:
-            draw.text((x + 112 + draw.textlength(name, font=nf) + 16, y + 6), zone, font=font(30), fill=DIM)
+            draw.text((x + u(112) + draw.textlength(name, font=nf) + u(16), y + u(6)), zone, font=font(30), fill=DIM)
     else:
         colored_words(draw, (x, y), value, font(38), TEXT)
 
@@ -134,17 +139,17 @@ def render(spec, folder, tag):
     from PIL import Image, ImageDraw
     kind, items = parse(spec)
     title, rows = layout(kind, items)
-    width = 1100 if kind != "status" else 980
-    rows = wrap(kind, rows, width - 90)
-    height = 96 + sum(row_height(r) for r in rows) + 28
+    width = u(1100 if kind != "status" else 980)
+    rows = wrap(kind, rows, width - u(90))
+    height = u(96) + sum(row_height(r) for r in rows) + u(28)
     paths = []
     for step in range(1, len(rows) + 1):
         img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
         frame(draw, width, height, title)
-        y = 96
+        y = u(96)
         for row in rows[:step]:
-            draw_row(draw, 44, y, width - 88, row)
+            draw_row(draw, u(44), y, width - u(88), row)
             y += row_height(row)
         path = os.path.join(folder, f"ui_{tag}_{step:02d}.png")
         img.save(path)
