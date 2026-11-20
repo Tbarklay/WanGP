@@ -114,7 +114,7 @@
     },
     "monster": {
       "ref": "refs/monster.png",
-      "desc": "the gigantic shark-like sea monster longer than a bus, dark blue-gray armored scales, a pale gray-white belly, a tall jagged dorsal fin, rows of huge jagged white teeth, small glowing white eyes and faint scars on its snout, no legs, no wings"
+      "desc": "the gigantic shark-like sea monster longer than a bus, always IN the water: most of its body hidden under the surface, only its head, jaws, dorsal fin or back breaking through the waves with water pouring off it, dark blue-gray armored scales, a pale belly, rows of huge jagged white teeth, small glowing white eyes and faint scars on its snout, no legs, no wings"
     }
   },
   "system": {
