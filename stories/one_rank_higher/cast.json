@@ -1,6 +1,6 @@
 {
-  "style": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen",
-  "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
+  "style": "Detailed modern anime illustration, like a key frame from a high-budget anime series, clean precise line art, detailed cel shading with soft gradients, natural cinematic lighting, realistic ocean and sky colors, detailed expressive faces and eyes, finely rendered hair, detailed clothing folds and fabric textures, detailed backgrounds, 16:9 widescreen",
+  "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face, glowing outlines, neon rim light, glowing edges around characters, overexposed bloom, excessive sparkles",
   "narrator": {
     "speaker": "ryan",
     "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs",
@@ -123,5 +123,5 @@
     "voice_text": "Good morning, candidate. You have been summoned to the Drift. Survival odds are low. Please try not to die. It makes the paperwork worse."
   },
   "style_v1": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
-  "style_from_ep3": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting, a soft rim light on the characters only, natural ocean and sky colors, rich but balanced colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen"
+  "style_v2_glow": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen"
 }
