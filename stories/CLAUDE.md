@@ -16,3 +16,6 @@
   compilation, assemble episode 1 with `--compilation first` and every later episode with `--compilation next` (drops
   the cold open and the "Next time" ending), then join them, so one episode flows straight into the next. No recaps of
   earlier episodes inside an episode.
+- **Review copies** (the small file uploaded to GitHub): `ffmpeg -i final/<ep>.mp4 -vf scale=1280:-2 -c:v libx264 -preset slow
+  -crf 26 -g 60 -movflags +faststart -c:a aac -b:a 128k final/<ep>_review.mp4`. The `-g 60 -movflags +faststart` part
+  keeps it from freezing when streamed in a browser.

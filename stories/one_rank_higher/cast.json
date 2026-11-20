@@ -122,5 +122,6 @@
     "voice": "refs/system.wav",
     "voice_text": "Good morning, candidate. You have been summoned to the Drift. Survival odds are low. Please try not to die. It makes the paperwork worse."
   },
-  "style_v1": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition"
+  "style_v1": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
+  "style_from_ep3": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting, a soft rim light on the characters only, natural ocean and sky colors, rich but balanced colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen"
 }

@@ -29,7 +29,7 @@ The torches come in slow and steady. Someone on those rafts has been paddling fo
 **05** `[image: {taegu} standing at the front of a plain raft like {raft} at night, holding a torch high, grinning, his muscles glowing faintly like polished metal]`
 On the lead raft stands Bang Tae-gu. The gym guy from zone chat. Iron Body.
 
-**06** `[image: {pyo} on a plain raft at night holding a kitchen knife and a torch, grinning nastily, the black ocean behind him]`
+**06** `[image: {pyo} at night, a thin wiry man with a shaved head and a thin mustache in a torn black tank top, much smaller and skinnier than a bodybuilder, holding a kitchen knife and a torch on a plain raft, grinning nastily]`
 On the second raft, a wiry man with a shaved head and a kitchen knife. His name is Pyo.
 
 **07** `[image: {gil} on a plain raft at night with a coil of rope and a metal hook over his shoulder, a torch in his other hand, nervous grin]`
@@ -134,10 +134,10 @@ And here's the thing nobody tells you about having a body made of iron. Iron doe
 **38** `[image: {taegu} at night clawing his way back onto the edge of {gil}'s raft, gasping, Gil pulling him by the arm with both hands, terrified]`
 He sinks like an anchor. Only Gil's rope saves him. The kid drags him onto his raft, coughing up seawater, and they paddle into the dark without looking back.
 
-**39** `[image: {taegu} lying on {gil}'s raft at night, soaking wet and coughing, staring up at the stars with murderous eyes, {gil} paddling frantically behind him]`
+**39** `[image: {taegu} lying on his back on {gil}'s plain raft at night, soaking wet and coughing, staring up at the stars with angry dark brown eyes, no glowing eyes, {gil} paddling frantically behind him]`
 On Gil's raft, Tae-gu lies on his back, coughing up the ocean. For the first time since the Summoning, Iron Body didn't protect him. It nearly killed him.
 
-**40** `[image: close-up of {taegu}'s face at night, wet, furious, eyes burning, teeth clenched]`
+**40** `[image: close-up of {taegu}'s face at night, soaking wet, furious, teeth clenched, normal dark brown eyes with no glow, moonlight on his face]`
 He doesn't feel lucky. He feels humiliated. Somewhere in that darkness is a man who beat him without ever showing his face. And Tae-gu has never been good at letting things go.
 
 **41** `[image: the black ocean at night, calm again, a few floating splinters and a dying torch drifting on the water, somber]`
@@ -213,7 +213,7 @@ She doesn't ask for anything. She writes: "You never post. I think that's smart.
 **63** `[image: {yunjae} reading the message with a thoughtful, slightly surprised look, his thumb hovering over the reply, the sea behind him]`
 Yun-jae reads it three times. In two days, everyone who's messaged him wanted something from him. She's the first person who offered.
 
-**64** `[image: close-up of a glowing friend request icon in a blue window, abstract, no readable text]`
+**64** `[image: {yunjae} on {raft2} in afternoon light tapping a small glowing blue window in the air with one finger, a faint smile, abstract symbols, no readable text, no logos]`
 He adds her as a friend. Two contacts now. One who can't be seen, and one who can't stop helping people. He has a feeling he'll need both.
 
 **65** `[image: close-up of a glowing private chat window floating in front of {yunjae} at dusk, abstract symbols, no readable text]`
@@ -300,10 +300,10 @@ Noh Ji-ho. The guy with Vanish. On day one, he couldn't feed a cook. Today, Yun-
 **90** `[image: close-up of {jiho} with wide eyes behind his round glasses, typing fast into a glowing chat window, abstract symbols, no readable text]`
 Ji-ho doesn't believe it at first. Then he writes back. "Why?" And Yun-jae answers honestly. "Because a man who can catch his own fish is a man who can keep his eyes open for me."
 
-**91** `[image: a glowing blue trade window floating over the ocean, a white fisherman card dissolving into light, abstract, no readable text]`
+**91** `[image: {yunjae} on {raft2} at sunset holding out a white citizen card that dissolves into streams of blue light flying off across the ocean, abstract, no windows, no fish]`
 The card disappears into the trade window. And two hours later, Ji-ho sends something back. Not an item. Information.
 
-**92** `[image: {jiho_vanish} on a plain raft at dusk, half see-through, watching a group of distant rafts lashed together, nervous]`
+**92** `[image: {jiho_vanish} at dusk, his whole body faded and half see-through with a pale blue shimmer, crouching on a plain raft like {raft} and watching a group of distant rafts lashed together, nervous]`
 Ji-ho has been drifting near Tae-gu's side of the zone. With Vanish, nobody sees him watching. And what he's seen isn't good.
 
 **93** `[image: six plain rafts like {raft} lashed together into a ragged floating platform at dusk, a dozen rough men on them, torches being lit, {taegu} standing in the middle shouting, ominous]`
@@ -425,7 +425,7 @@ SYSTEM: I have no hands, yet I will knock on every roof. I have no feet, yet I w
 **129** `[image: same]`
 SYSTEM: Tomorrow I will not stop to breathe. And all that lies low will drink until it drowns.
 
-**130** `[image: dozens of glowing chat windows flickering frantically over the dark ocean, abstract, no readable text]`
+**130** `[image: survivors on plain rafts at night staring up in fear at a huge glowing blue window across the starry sky, some pointing, some hugging their knees, abstract symbols, no readable text]`
 Zone chat goes into a frenzy. Within minutes, there's a winning theory. "Fill every path." "Drink until it drowns." It's a tsunami. A giant wave is coming.
 
 **131** `[image: comic montage of survivors on rafts at night arguing in glowing chat windows, one pointing at the sky, one holding up a bucket, one hiding under a plank, abstract symbols, no readable text]`
@@ -451,13 +451,13 @@ So the people tying themselves to their rafts are doing exactly the wrong thing.
 
 ## The shop
 
-**138** `[image: close-up of {panel} glowing with a new golden border at night, a small glowing coin icon, abstract symbols, no readable text]`
+**138** `[image: close-up of {yunjae}'s face at night lit warm gold from below by a glowing golden window, surprised and curious, the dark ocean behind him]`
 Then the "something new" arrives. A second window, with a golden border.
 
 **139** `[image: same]`
 SYSTEM: The Shop is now open. Buy supplies with gold coins. Sell what you don't need. Prices are fair. Mostly.
 
-**140** `[image: a glowing blue holographic shop window floating over the night ocean, rows of small glowing item icons like rope, planks, bread, water and nails, abstract, no readable text]`
+**140** `[image: a pile of shiny gold coins on a wooden raft deck at night next to a single plank, a coil of rope and a loaf of bread, each glowing faintly, the dark ocean behind]`
 Suddenly those useless coins mean something. A plank costs two gold. A coil of rope, five. A loaf of bread, three. For the first time since the Summoning, everything in the Drift has a price.
 
 **141** `[image: survivors on plain rafts at night holding up fish and planks to glowing shop windows, the items dissolving into coins of light, abstract, no readable text]`
@@ -466,7 +466,7 @@ And it works both ways. Anything you don't need, you can sell. Within minutes, h
 **142** `[image: a separate glowing shop window with a ticking hourglass icon and four item icons: a folded tarp, a wooden barrel, a pot of black pitch and a tin bucket, abstract, no readable text]`
 But Yun-jae is looking at the corner of the shop. A small section with a ticking hourglass. Limited time items. Waterproof tarps. Rain barrels. Pitch sealant. Tin buckets. Available until the World Event begins.
 
-**143** `[image: dozens of glowing chat windows at night, people laughing and ignoring the limited items, abstract symbols, no readable text]`
+**143** `[image: survivors on plain rafts at night happily buying coils of rope that appear in bursts of golden light, laughing, ignoring a small glowing hourglass window, abstract, no readable text]`
 Zone chat barely notices them. Everyone's busy buying rope to tie themselves down for the wave. Tarps and buckets? For a tsunami?
 
 **144** `[image: close-up of {yunjae} at night looking from the shop window to the sky riddle and back, eyes narrowing, curious]`
@@ -510,7 +510,7 @@ On the World Ranking for day six, he's still number one. Kaiser is still number 
 
 ## Rain or raiders
 
-**157** `[image: {yunjae} at the bow of {raft2} at night gathering {aeliss} and {hobb} close, speaking urgently, his hand pointing at the raft, determined]`
+**157** `[image: {yunjae} at the bow of {raft2} at night speaking urgently to {aeliss}, his hand pointing at the raft, both serious and determined, the sail dark above them]`
 He wakes Hobb. He tells Aeliss. They have twenty-four hours to turn a raft into a shelter that can survive a day of endless rain.
 
 **158** `[image: close-up of {aeliss} at night suddenly turning her head toward the dark horizon, her pearl flaring, alarmed]`
