@@ -131,7 +131,7 @@ The monster rams Tae-gu's raft next. It tips him into the sea.
 **37** `[image: underwater at night, {taegu} sinking like a stone, his metal-shining body pulling him down, bubbles streaming up, panicked eyes]`
 And here's the thing nobody tells you about having a body made of iron. Iron doesn't float.
 
-**38** `[image: {taegu} at night clawing his way back onto the edge of {gil}'s raft, gasping, Gil pulling him by the arm with both hands, terrified]`
+**38** `[image: {taegu} at night half out of the black water, his chest and arms sprawled over the edge of {gil}'s plain raft and his legs still underwater, soaking wet, coughing up seawater with his mouth wide open and his face twisted in pain, eyes squeezed shut, a rope with a metal hook wrapped around his arm, {gil} leaning back hard and hauling on the rope with both hands, terrified, no smiling]`
 He sinks like an anchor. Only Gil's rope saves him. The kid drags him onto his raft, coughing up seawater, and they paddle into the dark without looking back.
 
 **39** `[image: {taegu} lying on his back on {gil}'s plain raft at night, soaking wet and coughing, staring up at the stars with angry dark brown eyes, no glowing eyes, {gil} paddling frantically behind him]`
