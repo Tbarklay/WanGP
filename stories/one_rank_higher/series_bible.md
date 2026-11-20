@@ -113,6 +113,25 @@ Shown as a top-10 board with each survivor's zone. There are about 400,000 zones
 - **Pyo**: Tae-gu's knife man, killed by the sea monster in episode 2; our MC inherited his inventory (the loot rule).
 - After episode 2, our MC holds an unactivated green **Carpenter** card, saved for building the shelter raft.
 
+## The crew: how his raft (and later island) runs
+- **Dorran Shieldwall** (male tank, 🔵 Blue shield-bearer card refined to 🟣 Epic; arrives in **episode 3**, summoned
+  to hold the raft against Tae-gu's night raid in the rain): a huge, calm, scarred veteran from a fallen kingdom, tower
+  shield and short axe, few words, endless patience. **Defence**: nothing gets past him onto the raft. **Foreman**: in
+  charge of all the common workers. No affinity bar (male); his loyalty is the steadiest in the crew.
+- **Madam Hesper** (🟢 Green head maid, arrives around **episode 5**): a sharp, elegant old lady with a cane and spotless
+  apron who runs **all cooking, cleaning and sorting of food and supplies**. Hobb stays head cook but now answers to her,
+  which is a running joke (she's the only person who can make him stop talking).
+- **The workers**: common (white) citizen cards with no talent, saved up and summoned **one per new fishing pole**.
+  Every time our MC gets another rod, a new worker mans it. Background characters, no names, one shared look (a simple
+  worker sheet), so the crew visibly grows from episode to episode.
+- **The daily routine** (a recurring end-of-day beat, short montage):
+  1. the workers fish all day under Dorran's watch;
+  2. at sunset Dorran collects the catch: **fish and food go to Madam Hesper** to cook, store and sort;
+  3. **supplies and chests go to our MC**, who goes through them and decides what to refine. That's where the next
+     upgrade, card or surprise comes from.
+- Combat: Dorran (tank) and Aeliss (mage) from episode 3; Rhea (front-line warrior) joins in episode 6 and leads the
+  refined soldier squad (if used); Torva backs them up with gear.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into
