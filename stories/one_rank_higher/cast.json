@@ -103,7 +103,8 @@
       "desc": "Hobb, a short round cheerful older man with a bushy gray beard, rosy cheeks, a bald head with a gray fringe of hair, small round spectacles, a white apron over a brown vest and a cream shirt with rolled-up sleeves, dark brown trousers and worn brown leather boots, holding a wooden ladle"
     },
     "monster": {
-      "desc": "the gigantic shark-like sea monster longer than a bus, dark blue-gray scaly hide, rows of jagged teeth and glowing white eyes"
+      "ref": "refs/monster.png",
+      "desc": "the gigantic shark-like sea monster longer than a bus, dark blue-gray armored scales, a pale gray-white belly, a tall jagged dorsal fin, rows of huge jagged white teeth, small glowing white eyes and faint scars on its snout, no legs, no wings"
     }
   },
   "system": {

@@ -12,7 +12,7 @@ pop-up: her voice carries them.
 
 ## Cold open
 
-**01** `[image: night ocean, a raider raft lit by burning torches exploding upward as a gigantic sea monster with glowing white eyes bursts out of the water beneath it, planks and spray flying, dramatic]`
+**01** `[image: night ocean, a raider raft lit by burning torches exploding upward as {monster} bursts out of the water beneath it, planks and spray flying, dramatic]`
 Three rafts came to rob our MC tonight. Only two of them are going home.
 
 **02** `[image: {yunjae} kneeling in the dark on {raft2}, the glowing green plank covered with a cloth, watching the distant explosion of water with a calm, cold face, {aeliss} beside him with her staff raised]`
@@ -55,7 +55,7 @@ Most people would panic. Yun-jae does what he's done his whole life when somethi
 **13** `[image: a diagram-like view of three small torch-lit rafts on dark water from above, glowing torches, abstract, no text]`
 Three men he can't fight. Three rafts made of four planks and some rope. And three torches, burning bright in the middle of the night.
 
-**14** `[image: flashback, the gigantic sea monster with glowing white eyes circling a faintly glowing raft at night, moonlight on the water]`
+**14** `[image: flashback, {monster} circling a faintly glowing raft at night, moonlight on the water]`
 Last night, something longer than a bus circled his raft for an hour. It wasn't hunting him. It was hunting the light.
 
 **15** `[image: close-up of {yunjae}'s face at night, a slow cold realization, a faint smile]`
@@ -116,16 +116,16 @@ Under the water, something enormous turns toward the brightest light on the ocea
 **32** `[image: {taegu} at night suddenly looking down at the water, his grin fading, the torch shaking in his hand]`
 Tae-gu feels it first. The water under his raft rises, just a little. Like the whole ocean took a breath.
 
-**33** `[image: the gigantic sea monster bursting up out of the water beneath {pyo}'s raft at night, jaws wide open, the raft and torch flying into the air, huge splash, terrifying]`
+**33** `[image: {monster} bursting up out of the water beneath {pyo}'s raft at night, jaws wide open, the raft and torch flying into the air, huge splash, terrifying]`
 Then Pyo's raft explodes upward.
 
-**34** `[image: the gigantic sea monster crashing back into the black water at night with broken planks raining down, a torch spinning through the air, dramatic, no clear people]`
+**34** `[image: {monster} crashing back into the black water at night with broken planks raining down, a torch spinning through the air, dramatic, no clear people]`
 The monster comes down on it with its whole weight. Planks, rope and a burning torch go flying. And then the water closes, and there's nothing left but splinters.
 
 **35** `[image: {gil} at night screaming and paddling his raft away as fast as he can with both hands, his torch thrown into the sea behind him]`
 Gil throws his torch as far as he can and paddles for his life. Smart kid.
 
-**36** `[image: {taegu} at night knocked off his feet as the sea monster rams his raft, clinging to the planks with both hands, water crashing over him]`
+**36** `[image: {taegu} at night knocked off his feet as {monster} rams his raft, clinging to the planks with both hands, water crashing over him]`
 The monster rams Tae-gu's raft next. It tips him into the sea.
 
 **37** `[image: underwater at night, {taegu} sinking like a stone, his metal-shining body pulling him down, bubbles streaming up, panicked eyes]`
