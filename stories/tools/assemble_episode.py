@@ -15,7 +15,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_episode import parse_beats, parse_ui, same_image, spoken
+from build_episode import parse_beats, parse_ui, same_image, section_beats, spoken
 import ui_overlay
 
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
@@ -100,6 +100,9 @@ def main():
                                         "the episodes go out without music, see stories/CLAUDE.md)")
     parser.add_argument("--test", action="store_true", help="assemble the --test render")
     parser.add_argument("--beats", help="only these beats, e.g. 1-107, for a shorter cut from the same render")
+    parser.add_argument("--compilation", choices=["first", "next"],
+                        help="a version for joining episodes into one long video: drops the 'Next time on...' ending; "
+                             "'next' also drops the cold open, so episode 2 follows episode 1 smoothly")
     parser.add_argument("--name", help="output name for a --beats cut, e.g. ep01_day1 (default: <ep>_cut)")
     args = parser.parse_args()
 
@@ -107,6 +110,12 @@ def main():
     ep = os.path.basename(args.script).split("_")[0] + ("_test" if args.test else "")
     beats = parse_beats(args.script)[:3] if args.test else parse_beats(args.script)
     out_name = ep
+    if args.compilation:
+        drop = {b[0] for b in beats if b[2].startswith("Next time on")}
+        if args.compilation == "next":
+            drop |= section_beats(args.script, "Cold open")
+        beats = [b for b in beats if b[0] not in drop]
+        out_name = args.name or ep + "_comp"
     if args.beats:
         from build_episode import parse_beat_list
         wanted = parse_beat_list(args.beats)

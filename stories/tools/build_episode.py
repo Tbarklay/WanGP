@@ -32,6 +32,13 @@ BEAT = re.compile(r"^\*\*(\d+)\*\*\s*`\[image:\s*(.*?)\]`[^\n]*\n(.+?)(?=\n\s*\n
 UI = re.compile(r"^\*\*(\d+)\*\*\s*`\[image:.*?\]`\s*`\[ui:\s*(.*?)\]`\s*$", re.M)
 
 
+def section_beats(path, title):
+    """Beat numbers under a '## <title>' heading (for example the cold open)."""
+    text = open(path, encoding="utf-8").read()
+    m = re.search(r"^## " + re.escape(title) + r"\s*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    return {int(n) for n in re.findall(r"^\*\*(\d+)\*\*", m.group(1), re.M)} if m else set()
+
+
 def parse_ui(path):
     """Beat number -> the [ui: ...] overlay spec on its image line (see ui_overlay.py)."""
     return {int(n): spec.strip() for n, spec in UI.findall(open(path, encoding="utf-8").read())}

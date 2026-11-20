@@ -12,3 +12,7 @@
   windows** get text on screen, drawn exactly by the assembler: `[ui: ranking | ...]` and `[ui: status | ...]` after a
   beat's image tag (format in stories/tools/ui_overlay.py). **No pop-ups for the System's spoken lines**: her voice
   carries them. Keep the numbers consistent with the narration and earlier episodes.
+- **Episodes and compilations:** each episode has a `## Cold open` and ends on a "Next time on..." beat. For a long
+  compilation, assemble episode 1 with `--compilation first` and every later episode with `--compilation next` (drops
+  the cold open and the "Next time" ending), then join them, so one episode flows straight into the next. No recaps of
+  earlier episodes inside an episode.

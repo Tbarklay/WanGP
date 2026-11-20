@@ -99,7 +99,8 @@
       "desc": "Gil, a lanky young raider with long greasy hair tied back, a stained yellow raincoat and a coil of rope with a metal hook over his shoulder"
     },
     "hobb": {
-      "desc": "Hobb, a short round cheerful older man with a bushy gray beard, rosy cheeks, a bald head with a gray fringe, small round spectacles, a white apron over a brown vest and rolled-up sleeves, holding a wooden ladle"
+      "ref": "refs/hobb.png",
+      "desc": "Hobb, a short round cheerful older man with a bushy gray beard, rosy cheeks, a bald head with a gray fringe of hair, small round spectacles, a white apron over a brown vest and a cream shirt with rolled-up sleeves, dark brown trousers and worn brown leather boots, holding a wooden ladle"
     },
     "monster": {
       "desc": "the gigantic shark-like sea monster longer than a bus, dark blue-gray scaly hide, rows of jagged teeth and glowing white eyes"
