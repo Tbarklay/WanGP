@@ -58,7 +58,10 @@ def image_task(cast, ep, no, image, seed_offset=0):
     unknown = [k for k in keys if k not in cast["characters"]]
     if unknown:
         sys.exit(f"Beat {no}: unknown character {unknown}, add it to cast.json")
-    pictured = [k for k in keys if cast["characters"][k].get("ref")][:MAX_REFS]
+    # people first: props such as rafts (marked "prop": true) only get a reference picture if a slot is left over;
+    # otherwise they are described in words
+    with_ref = [k for k in keys if cast["characters"][k].get("ref")]
+    pictured = sorted(with_ref, key=lambda k: bool(cast["characters"][k].get("prop")))[:MAX_REFS]
 
     def describe(match):
         key = match.group(1)
