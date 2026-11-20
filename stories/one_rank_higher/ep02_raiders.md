@@ -152,7 +152,7 @@ Then a window opens in front of Yun-jae.
 SYSTEM: Hostile candidate eliminated as a result of your actions. Under the rules of the Trial, their inventory now belongs to you.
 
 **44** `[image: glowing blue lights streaming across the dark water from the place where the raft was destroyed into {yunjae}'s open hands on {raft2}, magical]`
-Light streams across the water and into his hands. Six planks. A coil of rope. Two days of water. A kitchen knife.
+Light streams across the water and into his hands. Six planks. A coil of rope. Two days of water. A kitchen knife. Eleven gold coins.
 
 **45** `[image: close-up of two glowing citizen cards in {yunjae}'s hands at night, one with a white frame and a fisherman silhouette, one with a green frame and a carpenter silhouette with a hammer, no readable text]`
 And two citizen cards Pyo never activated. A white Fisherman. And a green Carpenter.
@@ -186,303 +186,347 @@ Later, when he opens her status window, her mana is lower from tonight. But her 
 **54** `[image: sunrise over a calm endless ocean, golden light, {raft2} small in the frame with its patched sail up]`
 Day three. The sun comes up on a quiet ocean, like nothing happened.
 
-**55** `[image: dozens of small glowing blue chat windows floating over the morning ocean, abstract scrolling symbols, no readable text]`
+**55** `[image: a small leather pouch of shiny gold coins appearing on the deck of {raft2} with a soft golden glow, morning light]`
+His reward for staying number one arrives with the sunrise: a pouch of gold coins. Every chest in the Drift has been dropping a few. Nobody knows what they're for. Most people use them as fishing weights. Yun-jae keeps every single one.
+
+**56** `[image: dozens of small glowing blue chat windows floating over the morning ocean, abstract scrolling symbols, no readable text]`
 Zone chat doesn't think nothing happened.
 
-**56** `[image: {taegu} on a plain raft like {raft} in morning light, soaking wet, furious, shouting into a glowing chat window, abstract symbols, no readable text]`
+**57** `[image: {taegu} on a plain raft like {raft} in morning light, soaking wet, furious, shouting into a glowing chat window, abstract symbols, no readable text]`
 Tae-gu is posting. Furious. He says Seo Yun-jae set a monster on them. He says Pyo is dead because of him. He says he's going to find that raft and sink it.
 
-**57** `[image: close-up of {dahye} on a plain raft like {raft} reading a glowing chat window with a worried frown, morning light]`
+**58** `[image: close-up of {dahye} on a plain raft like {raft} reading a glowing chat window with a worried frown, morning light]`
 The nurse with Mend posts back. Her name is Yoon Da-hye. "You paddled for hours in the dark to rob him. What did you think would happen?"
 
-**58** `[image: dozens of small glowing chat windows splitting into two colors over the ocean, abstract, no readable text]`
+**59** `[image: dozens of small glowing chat windows splitting into two colors over the ocean, abstract, no readable text]`
 The zone splits in two. Half of them think Yun-jae is a murderer. The other half think he's the smartest person in the Drift. Nobody is sure which is scarier.
 
-**59** `[image: {yunjae} sitting on {raft2} in morning light reading zone chat quietly, a mug of water in his hand, calm but serious]`
+**60** `[image: {yunjae} sitting on {raft2} in morning light reading zone chat quietly, a mug of water in his hand, calm but serious]`
 Yun-jae reads it all. He doesn't post a single word. Arguing with ten thousand scared people has never fixed anything.
 
-**60** `[image: close-up of a single glowing private chat window opening in front of {yunjae} in morning light, abstract symbols, no readable text]`
+**61** `[image: close-up of a single glowing private chat window opening in front of {yunjae} in morning light, abstract symbols, no readable text]`
 That afternoon, one private message arrives. From Yoon Da-hye. The nurse.
 
-**61** `[image: {dahye} on a plain raft like {raft} typing into a glowing chat window, calm and serious, her hands faintly glowing green, abstract symbols, no readable text]`
+**62** `[image: {dahye} on a plain raft like {raft} typing into a glowing chat window, calm and serious, her hands faintly glowing green, abstract symbols, no readable text]`
 She doesn't ask for anything. She writes: "You never post. I think that's smart. People who post get found. But if you ever need something said out loud, I'll say it for you."
 
-**62** `[image: {yunjae} reading the message with a thoughtful, slightly surprised look, his thumb hovering over the reply, the sea behind him]`
+**63** `[image: {yunjae} reading the message with a thoughtful, slightly surprised look, his thumb hovering over the reply, the sea behind him]`
 Yun-jae reads it three times. In two days, everyone who's messaged him wanted something from him. She's the first person who offered.
 
-**63** `[image: close-up of a glowing friend request icon in a blue window, abstract, no readable text]`
+**64** `[image: close-up of a glowing friend request icon in a blue window, abstract, no readable text]`
 He adds her as a friend. Two contacts now. One who can't be seen, and one who can't stop helping people. He has a feeling he'll need both.
 
-**64** `[image: close-up of a glowing private chat window floating in front of {yunjae} at dusk, abstract symbols, no readable text]`
+**65** `[image: close-up of a glowing private chat window floating in front of {yunjae} at dusk, abstract symbols, no readable text]`
 That evening, a third message comes in, from someone he never expected. Gil. The kid with the hook.
 
-**65** `[image: {gil} sitting alone at the edge of a plain raft at dusk, hunched, typing into a glowing chat window, scared, the other raiders' rafts blurred behind him]`
+**66** `[image: {gil} sitting alone at the edge of a plain raft at dusk, hunched, typing into a glowing chat window, scared, the other raiders' rafts blurred behind him]`
 "I pulled Tae-gu out of the water," he writes. "He hasn't said thank you. He just keeps talking about you. I don't want to die for him. If I ever need somewhere to go, can I come to you?"
 
-**66** `[image: close-up of {yunjae} reading the message at dusk, cautious and thoughtful, not answering yet]`
+**67** `[image: close-up of {yunjae} reading the message at dusk, cautious and thoughtful, not answering yet]`
 Yun-jae doesn't answer. Not yet. A kid who switches sides once can switch sides twice. But he doesn't block him, either. In the Drift, every door you leave open is a door you might need later.
 
 ## The Cook
 
-**67** `[image: close-up of a hand holding a glowing white citizen card with a plump cook silhouette holding a ladle, soft white glow, the morning sea behind]`
+**68** `[image: close-up of a hand holding a glowing white citizen card with a plump cook silhouette holding a ladle, soft white glow, the morning sea behind]`
 Instead, he takes out the card he traded for on day one. The Cook. Common.
 
-**68** `[image: {aeliss} kneeling at the edge of {raft2} in morning light, her staff in the water, a big silver school of fish circling the raft]`
+**69** `[image: {aeliss} kneeling at the edge of {raft2} in morning light, her staff in the water, a big silver school of fish circling the raft]`
 On day one, he couldn't afford another mouth. Now Aeliss calls more fish every morning than the two of them can eat. That changes the math.
 
-**69** `[image: {yunjae} holding the white cook card with blue light gathering under his palm, focused, morning sun]`
+**70** `[image: {yunjae} holding the white cook card with blue light gathering under his palm, focused, morning sun]`
 Three fresh Refines. He spends the first one on the card.
 
-**70** `[image: the white cook card glowing and its frame turning green, sparkles, the morning sea behind]`
+**71** `[image: the white cook card glowing and its frame turning green, sparkles, the morning sea behind]`
 "Refine." The white frame turns green. Uncommon. No luck this time. He'll take it.
 
-**71** `[image: a soft pillar of green light rising from {raft2} in the morning, {aeliss} watching it]`
+**72** `[image: a soft pillar of green light rising from {raft2} in the morning, {aeliss} watching it]`
 He activates it. Green light rises off the raft. Much smaller than Aeliss's pillar. Much less likely to bring anybody paddling.
 
-**72** `[image: {hobb} standing on {raft2} as green light fades around him, blinking in surprise, holding a wooden ladle, the morning ocean behind him]`
+**73** `[image: {hobb} standing on {raft2} as green light fades around him, blinking in surprise, holding a wooden ladle, the morning ocean behind him]`
 When it fades, a short, round, bearded man is standing on the raft, holding a ladle. He looks at the ocean. He looks at Yun-jae. He looks at Aeliss.
 
-**73** `[image: {hobb} grinning widely and talking with big hand gestures on {raft2}, {yunjae} looking slightly overwhelmed, {aeliss} expressionless behind]`
+**74** `[image: {hobb} grinning widely and talking with big hand gestures on {raft2}, {yunjae} looking slightly overwhelmed, {aeliss} expressionless behind]`
 Then he talks. And talks. "Name's Hobb, lad! Cook, forty years, two kitchens and a war! Is that a fish? Is that an elf? Where's the kitchen? Don't tell me there's no kitchen."
 
-**74** `[image: {yunjae} raising his hand toward {hobb}, a glowing blue status window opening beside him, abstract glowing bars, no readable text]` `[ui: status | Hobb | Hearth Cook · UNCOMMON | HP 85/100 | STR 38/100 | AGI 18/100 | MANA 24/100 | Loyalty 64%]`
+**75** `[image: {yunjae} raising his hand toward {hobb}, a glowing blue status window opening beside him, abstract glowing bars, no readable text]` `[ui: status | Hobb | Hearth Cook · UNCOMMON | HP 85/100 | STR 38/100 | AGI 18/100 | MANA 24/100 | Loyalty 64%]`
 His status window says Hearth Cook. Uncommon. No affinity bar. And a loyalty of sixty-four, which, the System notes, is unusually high for someone who just met you.
 
-**75** `[image: same]`
+**76** `[image: same]`
 SYSTEM: Some citizens are simply glad to be alive again. Feed them, and they stay that way.
 
-**76** `[image: {hobb} cooking fish on a small iron pan over a little fire in a clay pot on {raft2}, steam and a delicious golden glow rising from the food, happy]`
+**77** `[image: {hobb} cooking fish on a small iron pan over a little fire in a clay pot on {raft2}, steam and a delicious golden glow rising from the food, happy]`
 Within an hour, Hobb has turned a clay pot into a stove and three fish into the best meal Yun-jae has eaten since Seoul.
 
-**77** `[image: close-up of a steaming bowl of fish stew glowing with faint golden light, sparkles, delicious]`
+**78** `[image: close-up of a steaming bowl of fish stew glowing with faint golden light, sparkles, delicious]`
 And it's not just good. Hobb's food glows. Eat it, and for a few hours, you're a little stronger, a little faster, a little warmer.
 
-**78** `[image: {aeliss} eating from a bowl on {raft2} with a tiny surprised look, {hobb} watching her proudly, {yunjae} smiling]`
+**79** `[image: {aeliss} eating from a bowl on {raft2} with a tiny surprised look, {hobb} watching her proudly, {yunjae} smiling]`
 Even Aeliss stops after the first bite, and looks down at the bowl like it surprised her. Hobb takes that as the highest compliment of his life.
 
-**79** `[image: {hobb} pointing his ladle at {aeliss} and chatting cheerfully while she sits silently, {yunjae} trying not to laugh]`
+**80** `[image: {hobb} pointing his ladle at {aeliss} and chatting cheerfully while she sits silently, {yunjae} trying not to laugh]`
 Hobb talks to Aeliss all afternoon. Aeliss says four words back, total. Hobb decides they're best friends.
 
-**80** `[image: {hobb} sitting at the edge of {raft2} at sunset with his ladle across his knees, looking at the sea, his cheerful face gone quiet]`
+**81** `[image: {hobb} sitting at the edge of {raft2} at sunset with his ladle across his knees, looking at the sea, his cheerful face gone quiet]`
 At sunset, Hobb finally goes quiet. Yun-jae sits down next to him and asks the question he asks every citizen. Where are you from?
 
-**81** `[image: a cozy fantasy harbor town at dusk with warm lantern-lit inns, cobblestone streets and fishing boats, peaceful, nostalgic]`
+**82** `[image: a cozy fantasy harbor town at dusk with warm lantern-lit inns, cobblestone streets and fishing boats, peaceful, nostalgic]`
 "Little harbor town called Brindle," Hobb says. "Best inn on the coast. Mine." He smiles. "We held out a long time, lad. Fifty-six days."
 
-**82** `[image: close-up of {yunjae} at sunset, surprised, thinking hard]`
+**83** `[image: close-up of {yunjae} at sunset, surprised, thinking hard]`
 Fifty-six. Aeliss's world fell on day twenty-eight. Hobb's lasted twice as long. So the worlds don't all fall at the first battle. Some of them win one. Maybe two.
 
-**83** `[image: close-up of {hobb} at sunset with a sad smile, rubbing his gray beard]`
+**84** `[image: close-up of {hobb} at sunset with a sad smile, rubbing his gray beard]`
 "What happened on day fifty-six?" Yun-jae asks. Hobb pats his shoulder and stands up. "Ask me when you've won one, lad. Then it'll be useful." Then he goes back to his stove, humming.
 
-**84** `[image: {aeliss} glancing at {hobb} with a flicker of curiosity at dusk, the first real expression on her face all day]`
+**85** `[image: {aeliss} glancing at {hobb} with a flicker of curiosity at dusk, the first real expression on her face all day]`
 Aeliss watches him go. It's the first time all day she's looked interested in anything he said.
 
 ## The Carpenter
 
-**85** `[image: close-up of a glowing green citizen card with a carpenter silhouette holding a hammer, in {yunjae}'s hand, afternoon light]`
+**86** `[image: close-up of a glowing green citizen card with a carpenter silhouette holding a hammer, in {yunjae}'s hand, afternoon light]`
 That leaves the Carpenter card from Pyo. Green. Uncommon.
 
-**86** `[image: {yunjae} looking at the green card thoughtfully, then sliding it carefully into an inner pocket of his jacket, afternoon light]`
+**87** `[image: {yunjae} looking at the green card thoughtfully, then sliding it carefully into an inner pocket of his jacket, afternoon light]`
 Yun-jae doesn't activate it. Not yet. A carpenter is a builder. And something is telling him he's going to need to build something big, very soon. He wants to refine it first, on a day he can afford the gamble.
 
-**87** `[image: {yunjae} holding a white fisherman card, typing into a glowing private chat window, afternoon light, abstract symbols, no readable text]`
+**88** `[image: {yunjae} holding a white fisherman card, typing into a glowing private chat window, afternoon light, abstract symbols, no readable text]`
 The white Fisherman card, he doesn't need at all. Aeliss already out-fishes any fisherman alive. So he opens a private chat with the one person he knows will want it.
 
 ## The informant
 
-**88** `[image: {jiho} on a plain raft like {raft} reading a private message in surprise, a single small fish beside him, afternoon light]`
+**89** `[image: {jiho} on a plain raft like {raft} reading a private message in surprise, a single small fish beside him, afternoon light]`
 Noh Ji-ho. The guy with Vanish. On day one, he couldn't feed a cook. Today, Yun-jae offers him a fisherman. For nothing.
 
-**89** `[image: close-up of {jiho} with wide eyes behind his round glasses, typing fast into a glowing chat window, abstract symbols, no readable text]`
+**90** `[image: close-up of {jiho} with wide eyes behind his round glasses, typing fast into a glowing chat window, abstract symbols, no readable text]`
 Ji-ho doesn't believe it at first. Then he writes back. "Why?" And Yun-jae answers honestly. "Because a man who can catch his own fish is a man who can keep his eyes open for me."
 
-**90** `[image: a glowing blue trade window floating over the ocean, a white fisherman card dissolving into light, abstract, no readable text]`
+**91** `[image: a glowing blue trade window floating over the ocean, a white fisherman card dissolving into light, abstract, no readable text]`
 The card disappears into the trade window. And two hours later, Ji-ho sends something back. Not an item. Information.
 
-**91** `[image: {jiho_vanish} on a plain raft at dusk, half see-through, watching a group of distant rafts lashed together, nervous]`
+**92** `[image: {jiho_vanish} on a plain raft at dusk, half see-through, watching a group of distant rafts lashed together, nervous]`
 Ji-ho has been drifting near Tae-gu's side of the zone. With Vanish, nobody sees him watching. And what he's seen isn't good.
 
-**92** `[image: six plain rafts like {raft} lashed together into a ragged floating platform at dusk, a dozen rough men on them, torches being lit, {taegu} standing in the middle shouting, ominous]`
+**93** `[image: six plain rafts like {raft} lashed together into a ragged floating platform at dusk, a dozen rough men on them, torches being lit, {taegu} standing in the middle shouting, ominous]`
 Tae-gu isn't running. He's recruiting. Six rafts now, lashed together. A dozen men. All of them angry. All of them hungry. And all of them have heard about the raft with the sail.
 
-**93** `[image: close-up of a glowing private chat window floating in front of {yunjae} at dusk, abstract symbols, no readable text]`
+**94** `[image: close-up of a glowing private chat window floating in front of {yunjae} at dusk, abstract symbols, no readable text]`
 Ji-ho's last message says: "He keeps saying the same thing. Next time, no torches."
 
-**94** `[image: close-up of {yunjae} at dusk, reading the message, serious, the sun setting behind him]`
+**95** `[image: close-up of {yunjae} at dusk, reading the message, serious, the sun setting behind him]`
 Yun-jae reads that twice. Tae-gu learned something too. Next time, the monster won't save him.
 
 ## Building, again
 
-**95** `[image: {yunjae} sawing a plank on {raft2} with tools from the builder's kit spread around him, {hobb} holding the other end, morning light]`
+**96** `[image: {yunjae} sawing a plank on {raft2} with tools from the builder's kit spread around him, {hobb} holding the other end, morning light]`
 Day four. Yun-jae does what he always does when he's worried. He works.
 
-**96** `[image: {yunjae} and {hobb} hammering planks along the edge of {raft2} to raise its sides, {aeliss} watching the horizon, bright morning]`
+**97** `[image: {yunjae} and {hobb} hammering planks along the edge of {raft2} to raise its sides, {aeliss} watching the horizon, bright morning]`
 Pyo's six planks become a raised edge around the raft. Waist high. Hard to climb. Hard to board.
 
-**97** `[image: close-up of a plain kitchen knife glowing with green light on the deck, turning sleek and sharp, sparkles]`
+**98** `[image: close-up of a plain kitchen knife glowing with green light on the deck, turning sleek and sharp, sparkles]`
 He refines the kitchen knife. White to green. Keen Knife. It's the first thing he's owned that could count as a weapon. He hopes he never has to use it.
 
-**98** `[image: {yunjae} tying a net made of rope beneath the edge of {raft2}, leaning over the water, focused, afternoon light]`
+**99** `[image: {yunjae} tying a net made of rope beneath the edge of {raft2}, leaning over the water, focused, afternoon light]`
 And under the raft, out of sight, he strings Pyo's rope into a net. It catches fish while they sail. It also catches anything that tries to swim up underneath.
 
-**99** `[image: {hobb} setting up a small proper stove made from a clay pot and stones on {raft2}, a pot bubbling, proud, {yunjae} smiling]`
+**100** `[image: {hobb} setting up a small proper stove made from a clay pot and stones on {raft2}, a pot bubbling, proud, {yunjae} smiling]`
 Hobb gets a real stove. Mostly so he'll stop asking.
 
-**100** `[image: {hobb} proudly presenting a steaming bowl to {aeliss} on {raft2}, {aeliss} taking it with a perfectly blank face, {yunjae} laughing in the background]`
+**101** `[image: {hobb} proudly presenting a steaming bowl to {aeliss} on {raft2}, {aeliss} taking it with a perfectly blank face, {yunjae} laughing in the background]`
 He celebrates by cooking Aeliss a special fish stew, and asking her opinion. She eats all of it, hands back the bowl, and says, "Acceptable." Hobb tells that story for the rest of the week.
 
-**101** `[image: close-up of a rope fishing net glowing with soft green light under the raft, fish sparkling inside it, the water clear and turquoise]`
+**102** `[image: close-up of a rope fishing net glowing with soft green light under the raft, fish sparkling inside it, the water clear and turquoise]`
 The last Refine of day four goes on the net. White to green. Tide Net. It fills itself while they sail.
 
-**102** `[image: {hobb} cooking at his stove on {raft2} with a pile of fresh fish beside him, {yunjae} counting supplies, bright day]`
+**103** `[image: {hobb} cooking at his stove on {raft2} with a pile of fresh fish beside him, {yunjae} counting supplies, bright day]`
 By day five, they have more food than they can eat, water that never runs out, and a cook who makes both glow. On an ocean where most people are counting their last crackers, the raft with the sail has become the richest place in the zone.
 
-**103** `[image: close-up of {yunjae} looking over his full raft with a worried frown, the sea glittering behind him]`
+**104** `[image: close-up of {yunjae} looking over his full raft with a worried frown, the sea glittering behind him]`
 Which, Yun-jae knows, is exactly what makes it a target.
 
 ## The drifter
 
-**104** `[image: a single plain raft like {raft} drifting toward {raft2} in hot afternoon sun, a thin exhausted man lying on it waving one weak hand, the ocean glaring]`
+**105** `[image: a single plain raft like {raft} drifting toward {raft2} in hot afternoon sun, a thin exhausted man lying on it waving one weak hand, the ocean glaring]`
 That afternoon, a raft drifts toward them in the heat. One man on it, thin and sunburned, waving weakly. "Water," he croaks. "Please. Two days without water."
 
-**105** `[image: {hobb} reaching for a water flask with a worried face, {yunjae} raising a hand to stop him, studying the stranger carefully]`
+**106** `[image: {hobb} reaching for a water flask with a worried face, {yunjae} raising a hand to stop him, studying the stranger carefully]`
 Hobb is already reaching for the flask. Yun-jae stops him, gently. Not because he won't help. Because something about this man is bothering him.
 
-**106** `[image: close-up of thick neat rope lashings on the stranger's plain raft, tied with strong practiced knots, sunlight]`
+**107** `[image: close-up of thick neat rope lashings on the stranger's plain raft, tied with strong practiced knots, sunlight]`
 He looks at the stranger's raft. The planks are lashed with thick, fresh rope, tied with the same tight knots he saw on Tae-gu's rafts. A starving drifter with two days of thirst doesn't have new rope.
 
-**107** `[image: close-up of the stranger's eyes flicking past {yunjae} to look at the supplies on the raft, sly, counting]`
+**108** `[image: close-up of the stranger's eyes flicking past {yunjae} to look at the supplies on the raft, sly, counting]`
 And the man's eyes aren't on the water flask. They're on everything else. The stove. The crates. The sail. Counting.
 
-**108** `[image: {yunjae} handing a cup of water and a wrapped fish across to the thin stranger with a friendly face, both rafts side by side in the sun]`
+**109** `[image: {yunjae} handing a cup of water and a wrapped fish across to the thin stranger with a friendly face, both rafts side by side in the sun]`
 Yun-jae smiles, and gives him water anyway. And a fish. And, very casually, mentions that they're sailing south-east tomorrow, toward the warmer water.
 
-**109** `[image: the stranger's raft drifting away to the west in the afternoon sun, the man paddling much faster than a starving man should, small in the distance]`
+**110** `[image: the stranger's raft drifting away to the west in the afternoon sun, the man paddling much faster than a starving man should, small in the distance]`
 The man thanks him and drifts away. West. Straight toward where Ji-ho said Tae-gu's rafts are waiting. Paddling a lot faster than a man who hasn't had water in two days.
 
-**110** `[image: {yunjae} at the tiller of {raft2} quietly turning the sail to head north-west, {aeliss} watching him, the afternoon sun low]`
+**111** `[image: {yunjae} at the tiller of {raft2} quietly turning the sail to head north-west, {aeliss} watching him, the afternoon sun low]`
 The next morning, Yun-jae sails north-west. Hobb asks why. "Because a spy is only useful," he says, "if you tell him something."
 
-**111** `[image: {aeliss} looking at {yunjae} with the faintest hint of a smile, wind in her silver hair, the sea bright behind her]`
+**112** `[image: {aeliss} looking at {yunjae} with the faintest hint of a smile, wind in her silver hair, the sea bright behind her]`
 Aeliss doesn't say anything. But for a second, the corner of her mouth moves. It might be the first time he's seen her almost smile.
 
 ## Day five
 
-**112** `[image: close-up of {panel} glowing in bright daylight over the ocean, abstract symbols, no readable text]`
+**113** `[image: close-up of {panel} glowing in bright daylight over the ocean, abstract symbols, no readable text]`
 Day five. Around noon, the System sends a message to everyone in the Drift at once.
 
-**113** `[image: same]`
-SYSTEM: Attention, candidates. The first World Event begins in forty-eight hours. A hint will be delivered in twenty-four.
+**114** `[image: same]`
+SYSTEM: Attention, candidates. The first World Event begins in forty-eight hours. A hint will be delivered in twenty-four. Along with something new.
 
-**114** `[image: hundreds of glowing blue chat windows exploding into the sky over the ocean, abstract symbols, no readable text]`
+**115** `[image: hundreds of glowing blue chat windows exploding into the sky over the ocean, abstract symbols, no readable text]`
 Zone chat loses its mind. Nobody knows what a World Event is. Everybody has a theory. A war. A flood. Dragons.
 
-**115** `[image: {kaiser} standing on {raft2_plain} in daylight with {knight} behind him, speaking calmly into a glowing chat window, one hand raised, confident]`
+**116** `[image: {kaiser} standing on {raft2_plain} in daylight with {knight} behind him, speaking calmly into a glowing chat window, one hand raised, confident]`
 In world chat, Kaiser posts again. His company now has twenty million members. He says they'll share whatever they learn about the event. Anyone who registers gets the information first.
 
-**116** `[image: close-up of {yunjae} reading world chat with narrowed eyes, the blue glow on his face, the sea behind him]`
+**117** `[image: close-up of {yunjae} reading world chat with narrowed eyes, the blue glow on his face, the sea behind him]`
 Yun-jae notices what that really means. Twenty million people, all reporting to one man. Kaiser doesn't need to explore the Drift. Everyone else is exploring it for him.
 
-**117** `[image: {kaiser} on {raft2_plain} at night reading many floating glowing chat reports at once, calm, organized like a CEO at his desk, {knight} standing guard]`
+**118** `[image: {kaiser} on {raft2_plain} at night reading many floating glowing chat reports at once, calm, organized like a CEO at his desk, {knight} standing guard]`
 And on a raft in zone three thousand one hundred and eighteen, Kaiser is reading reports. Hundreds of them. One catches his eye. A zone where a man made a sea monster eat a raider.
 
-**118** `[image: close-up of {kaiser}'s face lit blue by a chat window, a thin interested smile, cold hazel eyes]`
+**119** `[image: close-up of {kaiser}'s face lit blue by a chat window, a thin interested smile, cold hazel eyes]`
 The zone number is two hundred and seventy-one thousand and ninety-four. The same zone as the name at the top of the World Ranking.
 
-**119** `[image: {kaiser} turning slightly to speak to {knight} behind him at night, {knight} standing silent with his sword point-down, ominous]`
+**120** `[image: {kaiser} turning slightly to speak to {knight} behind him at night, {knight} standing silent with his sword point-down, ominous]`
 Kaiser doesn't post about it. He just says one thing to the silent knight behind him. "Find out what's on that raft. Everything."
 
-**120** `[image: {knight} lowering his helmeted head in a slow bow at night, the blue visor slit glowing faintly]`
+**121** `[image: {knight} lowering his helmeted head in a slow bow at night, the blue visor slit glowing faintly]`
 The knight bows his head. Kaiser has never needed to see something himself. He has twenty million people to see it for him.
 
-**121** `[image: {aeliss} standing at the bow of {raft2} looking at the sky with a distant, worried expression, wind in her silver hair]`
+**122** `[image: {aeliss} standing at the bow of {raft2} looking at the sky with a distant, worried expression, wind in her silver hair]`
 That night, he asks Aeliss what her world's first event was. She's quiet for a long time. "Fire," she says finally. "Ours was fire. We didn't understand the hint until it was too late."
 
-**122** `[image: {yunjae} and {aeliss} sitting side by side on night watch on {raft2}, the stars bright above, {hobb} asleep and snoring by the stove, peaceful]`
+**123** `[image: {yunjae} and {aeliss} sitting side by side on night watch on {raft2}, the stars bright above, {hobb} asleep and snoring by the stove, peaceful]`
 They take the night watch together. Hobb snores by the stove. The ocean is quiet. For once, nobody is hunting anybody.
 
-**123** `[image: {aeliss} asleep leaning against {yunjae}'s shoulder on night watch, her silver hair spilling over his jacket, {yunjae} sitting very still and surprised, stars above]`
+**124** `[image: {aeliss} asleep leaning against {yunjae}'s shoulder on night watch, her silver hair spilling over his jacket, {yunjae} sitting very still and surprised, stars above]`
 Some time after two, Aeliss falls asleep. And without meaning to, she ends up leaning against his shoulder.
 
-**124** `[image: close-up of {yunjae} at night sitting stiffly, carefully not moving, a faint embarrassed flush, stars reflected in his eyes]`
+**125** `[image: close-up of {yunjae} at night sitting stiffly, carefully not moving, a faint embarrassed flush, stars reflected in his eyes]`
 Yun-jae doesn't move for three hours. He tells himself it's so she can rest.
 
-**125** `[image: close-up of a glowing pink status bar ticking up slightly in a blue window at dawn, abstract, no readable text]`
+**126** `[image: close-up of a glowing pink status bar ticking up slightly in a blue window at dawn, abstract, no readable text]`
 At dawn she wakes up, sees where she is, and moves away without a word. But later, he notices the little pink bar in her status window has moved again.
 
 ## The riddle
 
-**126** `[image: night sky over the ocean on day six, a huge glowing blue window appearing across the stars, abstract symbols, no readable text]`
+**127** `[image: night sky over the ocean on day six, a huge glowing blue window appearing across the stars, abstract symbols, no readable text]`
 Day six. At midnight, the hint arrives. Not in a private window. Across the entire sky.
 
-**127** `[image: same]`
+**128** `[image: same]`
 SYSTEM: I have no hands, yet I will knock on every roof. I have no feet, yet I will fill every path.
 
-**128** `[image: same]`
+**129** `[image: same]`
 SYSTEM: Tomorrow I will not stop to breathe. And all that lies low will drink until it drowns.
 
-**129** `[image: dozens of glowing chat windows flickering frantically over the dark ocean, abstract, no readable text]`
+**130** `[image: dozens of glowing chat windows flickering frantically over the dark ocean, abstract, no readable text]`
 Zone chat goes into a frenzy. Within minutes, there's a winning theory. "Fill every path." "Drink until it drowns." It's a tsunami. A giant wave is coming.
 
-**130** `[image: comic montage of survivors on rafts at night arguing in glowing chat windows, one pointing at the sky, one holding up a bucket, one hiding under a plank, abstract symbols, no readable text]`
+**131** `[image: comic montage of survivors on rafts at night arguing in glowing chat windows, one pointing at the sky, one holding up a bucket, one hiding under a plank, abstract symbols, no readable text]`
 The other theories are less popular. One man is sure it's a giant hand that will knock on everyone's raft. Someone else thinks it's ghosts. One survivor just posts, "Whatever it is, I'm not ready," and everybody agrees.
 
-**131** `[image: survivors on plain rafts at night tying themselves to their rafts with rope, frightened, a few stacking supplies in the middle, dim moonlight]`
+**132** `[image: survivors on plain rafts at night tying themselves to their rafts with rope, frightened, a few stacking supplies in the middle, dim moonlight]`
 People start tying themselves to their rafts. Stacking everything in the middle. Bracing for one huge wave.
 
-**132** `[image: {yunjae} sitting on {raft2} at night with the sky glowing blue above him, mouthing the words of the riddle to himself, thoughtful]`
+**133** `[image: {yunjae} sitting on {raft2} at night with the sky glowing blue above him, mouthing the words of the riddle to himself, thoughtful]`
 Yun-jae reads the riddle again. Slowly. Like a broken machine that's trying to tell him what's wrong with it.
 
-**133** `[image: close-up of {yunjae}'s face at night, eyes sharp, piecing it together]`
+**134** `[image: close-up of {yunjae}'s face at night, eyes sharp, piecing it together]`
 Knock on every roof. A wave doesn't knock on roofs. Something that falls does. Fill every path, not all at once, but slowly. And it won't stop to breathe.
 
-**134** `[image: rain drops falling on a calm ocean at night in close-up, each drop making a ring, moody]`
+**135** `[image: rain drops falling on a calm ocean at night in close-up, each drop making a ring, moody]`
 It's not a wave. It's rain. Rain that doesn't stop.
 
-**135** `[image: close-up of {yunjae} at night tapping the raised edge of his raft, thinking, eyes narrowed]`
+**136** `[image: close-up of {yunjae} at night tapping the raised edge of his raft, thinking, eyes narrowed]`
 And the last line is the clue. "All that lies low will drink until it drowns." A raft is the lowest thing in the world. Fill it with water, and it doesn't matter how tightly you're tied to it.
 
-**136** `[image: {yunjae} standing up on {raft2} at night, looking at his raft, the sail, the raised edges, calculating, determined]`
+**137** `[image: {yunjae} standing up on {raft2} at night, looking at his raft, the sail, the raised edges, calculating, determined]`
 So the people tying themselves to their rafts are doing exactly the wrong thing. You don't need to hold on. You need to stay high. A roof. Drainage. Something to catch the water before it catches you.
 
-**137** `[image: {yunjae} at night looking at the chat windows full of people tying themselves to rafts, hesitating, his fingers over a glowing window, conflicted]`
+## The shop
+
+**138** `[image: close-up of {panel} glowing with a new golden border at night, a small glowing coin icon, abstract symbols, no readable text]`
+Then the "something new" arrives. A second window, with a golden border.
+
+**139** `[image: same]`
+SYSTEM: The Shop is now open. Buy supplies with gold coins. Sell what you don't need. Prices are fair. Mostly.
+
+**140** `[image: a glowing blue holographic shop window floating over the night ocean, rows of small glowing item icons like rope, planks, bread, water and nails, abstract, no readable text]`
+Suddenly those useless coins mean something. A plank costs two gold. A coil of rope, five. A loaf of bread, three. For the first time since the Summoning, everything in the Drift has a price.
+
+**141** `[image: survivors on plain rafts at night holding up fish and planks to glowing shop windows, the items dissolving into coins of light, abstract, no readable text]`
+And it works both ways. Anything you don't need, you can sell. Within minutes, half the zone is selling spare fish for coins, and the other half is realizing they spent four days using gold as fishing weights.
+
+**142** `[image: a separate glowing shop window with a ticking hourglass icon and four item icons: a folded tarp, a wooden barrel, a pot of black pitch and a tin bucket, abstract, no readable text]`
+But Yun-jae is looking at the corner of the shop. A small section with a ticking hourglass. Limited time items. Waterproof tarps. Rain barrels. Pitch sealant. Tin buckets. Available until the World Event begins.
+
+**143** `[image: dozens of glowing chat windows at night, people laughing and ignoring the limited items, abstract symbols, no readable text]`
+Zone chat barely notices them. Everyone's busy buying rope to tie themselves down for the wave. Tarps and buckets? For a tsunami?
+
+**144** `[image: close-up of {yunjae} at night looking from the shop window to the sky riddle and back, a slow sharp smile spreading across his face]`
+Yun-jae looks at the limited items. Then up at the riddle in the sky. Then back. Tarps for roofs. Barrels for rain. Pitch to seal leaks. Buckets to bail. It's the same message, written twice. The shop is the second hint. And it's selling the answer.
+
+**145** `[image: {yunjae} at night sitting very still, thinking hard, the shop window and the riddle both glowing in front of him]`
+And it tells him something else. When the event starts, that section closes. After that, the only tarps and buckets in the Drift will be the ones people already have.
+
+**146** `[image: {yunjae} at night selling a big pile of fish into a glowing shop window, the fish dissolving into a stream of gold coins, {aeliss} calmly calling more fish at the raft's edge]`
+So he starts selling. Fish, mostly. The Tide Net and Aeliss bring in more every day than the three of them could ever eat. Thirty fish. Fifty. The coins pile up.
+
+**147** `[image: a folded waterproof tarp and a pot of black pitch appearing on the deck of {raft2} at night in a burst of golden light]`
+He buys one tarp and one pot of sealant from the limited section. Enough for his own raft. Nothing more.
+
+**148** `[image: a big pile of plain planks, coils of rope, boxes of nails and bolts of cloth appearing on {raft2} at night in a golden shimmer, the raft sitting lower in the water]`
+Then he spends everything else on the boring part of the shop. Planks. Nails. Rope. Cloth. Cheap, ordinary materials nobody is in a hurry to buy.
+
+**149** `[image: {hobb} staring wide-eyed at the huge pile of materials on {raft2} at night, holding his ladle, {yunjae} calmly stacking boxes of nails]`
+Hobb stares at the pile. "Lad. That's a lot of nails." "It's not nails, Hobb," Yun-jae says. "It's buckets. And roof patches. And rain catchers. Dozens of them."
+
+**150** `[image: close-up of {yunjae} at night with a calm, calculating look, the stacked materials behind him, the blue riddle in the sky]`
+Because in two days, when the rain hasn't stopped and the limited shop is gone, people won't be asking how much a bucket costs. They'll be asking what he wants for one. And some of them will have things he can't buy anywhere else.
+
+**151** `[image: {yunjae} at night looking at the chat windows full of people tying themselves to rafts, hesitating, his fingers over a glowing window, conflicted]`
 And then he has a choice to make. Ten thousand people in his zone are about to prepare for the wrong disaster. He could tell them.
 
-**138** `[image: close-up of {yunjae} at night thinking, half his face lit blue, serious]`
+**152** `[image: close-up of {yunjae} at night thinking, half his face lit blue, serious]`
 But if Seo Yun-jae posts the answer, every raider in the zone learns two things: that he's clever, and that he's the one to follow, or to rob. Kindness, out here, has a price.
 
-**139** `[image: {yunjae} typing a private message at night, a small determined smile, abstract symbols, no readable text]`
+**153** `[image: {yunjae} typing a private message at night, a small determined smile, abstract symbols, no readable text]`
 So he does both. He sends the answer privately to the one person who offered to say things out loud for him.
 
-**140** `[image: {dahye} on a plain raft at night reading a message, then typing fast into zone chat, glowing windows multiplying around her, abstract symbols, no readable text]`
+**154** `[image: {dahye} on a plain raft at night reading a message, then typing fast into zone chat, glowing windows multiplying around her, abstract symbols, no readable text]`
 Ten minutes later, Yoon Da-hye posts in zone chat. "It's not a wave. It's rain that won't stop. Get your raft higher, build a roof, and catch the water before it catches you."
 
-**141** `[image: survivors on plain rafts at night untying themselves and starting to stack planks into crude roofs, a few looking up at the sky, hopeful]`
+**155** `[image: survivors on plain rafts at night untying themselves and starting to stack planks into crude roofs, a few looking up at the sky, hopeful]`
 Some people laugh at her. Some don't. Here and there across the dark, survivors start untying their ropes and building roofs instead.
 
-**142** `[image: close-up of {yunjae} at night watching the chat with a quiet, satisfied look, the blue sky glow on his face]`
-Yun-jae will never know exactly how many of them she saved. But he knows nobody will come looking for him because of it. Being careful and being kind, at the same time.
+**156** `[image: close-up of {yunjae} at night watching the chat with a quiet, satisfied look, the blue sky glow on his face]`
+Yun-jae will never know exactly how many of them she saved. But he knows nobody will come looking for him because of it. And by the time most people believe her, they've already spent their gold on rope. They can build a roof from their own planks. What they won't have is anything to catch the water, or keep it out. Being careful, being kind, and being ready to trade, all at the same time.
 
-**143** `[image: close-up of the green carpenter card glowing in {yunjae}'s hand at night, his eyes reflecting the green light]`
+**157** `[image: close-up of the green carpenter card glowing in {yunjae}'s hand at night, his eyes reflecting the green light]`
 He takes the Carpenter card out of his pocket. He knew he was saving it for something big.
 
-**144** `[image: the giant glowing leaderboard across the night sky over the ocean, its top row blazing gold, abstract glowing rows, no readable text]` `[ui: ranking | World Ranking · Day 6 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Mateus Oliveira (Zone 207,465) | 4 Amira Haddad (Zone 118,903) | 5 Lena Hartmann (Zone 88,402) | 6 Yuki Tanabe (Zone 44,286) | 7 Putri Wulandari (Zone 152,770) | 8 Arjun Mehta (Zone 61,837) | 9 Kwame Mensah (Zone 340,216) | 10 Dilnoza Karimova (Zone 9,551)]`
+**158** `[image: the giant glowing leaderboard across the night sky over the ocean, its top row blazing gold, abstract glowing rows, no readable text]` `[ui: ranking | World Ranking · Day 6 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Mateus Oliveira (Zone 207,465) | 4 Amira Haddad (Zone 118,903) | 5 Lena Hartmann (Zone 88,402) | 6 Yuki Tanabe (Zone 44,286) | 7 Putri Wulandari (Zone 152,770) | 8 Arjun Mehta (Zone 61,837) | 9 Kwame Mensah (Zone 340,216) | 10 Dilnoza Karimova (Zone 9,551)]`
 On the World Ranking for day six, he's still number one. Kaiser is still number two. But the gap is smaller than it was. Twenty million people sending you their discoveries will do that.
 
 ## Rain or raiders
 
-**145** `[image: {yunjae} at the bow of {raft2} at night gathering {aeliss} and {hobb} close, speaking urgently, his hand pointing at the raft, determined]`
+**159** `[image: {yunjae} at the bow of {raft2} at night gathering {aeliss} and {hobb} close, speaking urgently, his hand pointing at the raft, determined]`
 He wakes Hobb. He tells Aeliss. They have twenty-four hours to turn a raft into a shelter that can survive a day of endless rain.
 
-**146** `[image: close-up of {aeliss} at night suddenly turning her head toward the dark horizon, her pearl flaring, alarmed]`
+**160** `[image: close-up of {aeliss} at night suddenly turning her head toward the dark horizon, her pearl flaring, alarmed]`
 That's when Aeliss turns her head. Her pearl flares. She's staring at the dark horizon. And this time, there are no torches.
 
-**147** `[image: the black ocean at night, a dark ragged mass of six rafts lashed together barely visible against the stars, no lights at all, silhouettes of many men, very ominous]`
+**161** `[image: the black ocean at night, a dark ragged mass of six rafts lashed together barely visible against the stars, no lights at all, silhouettes of many men, very ominous]`
 Just a shape. Low and wide and dark. Six rafts, lashed together. A dozen men. No light at all.
 
-**148** `[image: close-up of {yunjae} at night, the shape reflected in his eyes, the blue riddle still glowing in the sky above, determined and grim]`
+**162** `[image: close-up of {yunjae} at night, the shape reflected in his eyes, the blue riddle still glowing in the sky above, determined and grim]`
 Tae-gu is back. The rain is coming. And for the first time since he woke up on this ocean, Yun-jae has two problems, and only one day to solve both.
 
-**149** `[image: title card style image of a dark storm sky over the ocean, a single glowing green plank on a raft, rain beginning to fall, dramatic]`
+**163** `[image: title card style image of a dark storm sky over the ocean, a single glowing green plank on a raft, rain beginning to fall, dramatic]`
 Next time on One Rank Higher: The Endless Rain.

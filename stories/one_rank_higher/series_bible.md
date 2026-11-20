@@ -47,6 +47,19 @@ day, he's number one in the world.
     unactivated citizen cards. Their activated citizens go free. If they owned an island, it starts collapsing,
     with its Core inside: get to it before it sinks.
 
+## Gold and the Shop
+- **Gold coins** drop from chests and come with ranking rewards from day 1. Nobody knows what they're for at first.
+- **The Shop** opens 24 hours before the first World Event (midnight, day 6), at the same moment as the hint, and
+  stays open after that. Buy basic supplies (planks, rope, nails, cloth, bread, water...) with gold, and sell
+  anything you don't need for gold. It gives every item in the Drift a price.
+- **Limited time section:** before every World Event the shop sells a few special items that are **always tied to
+  the coming event** (nobody is told this; the first time, almost nobody notices). The section closes the moment the
+  event starts. Day 7 (endless rain): waterproof tarps, rain barrels, pitch sealant, tin buckets.
+- **Our MC's edge:** he reads the limited section as a second hint. He buys what he needs for himself, then spends
+  everything else on cheap basic materials to make the event's essentials in bulk (buckets, roof patches, rain
+  catchers; for a cold event, blankets) and trades them after the section closes, when people are desperate. That
+  gets him materials at a better rate and rare items people would never part with otherwise.
+
 ## Our MC: Seo Yun-jae, 24
 - **Before:** a repair technician in Seoul who fixed everyone's broken things and never got credit. Quiet,
   patient, always sees how something could be better. Lives with his grandmother (72) and his little sister
