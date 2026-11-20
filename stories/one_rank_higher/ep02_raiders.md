@@ -469,64 +469,58 @@ But Yun-jae is looking at the corner of the shop. A small section with a ticking
 **143** `[image: dozens of glowing chat windows at night, people laughing and ignoring the limited items, abstract symbols, no readable text]`
 Zone chat barely notices them. Everyone's busy buying rope to tie themselves down for the wave. Tarps and buckets? For a tsunami?
 
-**144** `[image: close-up of {yunjae} at night looking from the shop window to the sky riddle and back, a slow sharp smile spreading across his face]`
-Yun-jae looks at the limited items. Then up at the riddle in the sky. Then back. Tarps for roofs. Barrels for rain. Pitch to seal leaks. Buckets to bail. It's the same message, written twice. The shop is the second hint. And it's selling the answer.
+**144** `[image: close-up of {yunjae} at night looking from the shop window to the sky riddle and back, eyes narrowing, curious]`
+Yun-jae looks at the limited items. Then up at the riddle in the sky. Then back. Tarps for roofs. Barrels for rain. Pitch to seal leaks. Buckets to bail. It lines up a little too well with the answer he just worked out.
 
 **145** `[image: {yunjae} at night sitting very still, thinking hard, the shop window and the riddle both glowing in front of him]`
-And it tells him something else. When the event starts, that section closes. After that, the only tarps and buckets in the Drift will be the ones people already have.
+Is the shop a second hint? Or is it just a shop, and he's seeing patterns because he wants to? He doesn't know yet. And a careful man doesn't bet everything on a guess.
 
-**146** `[image: {yunjae} at night selling a big pile of fish into a glowing shop window, the fish dissolving into a stream of gold coins, {aeliss} calmly calling more fish at the raft's edge]`
-So he starts selling. Fish, mostly. The Tide Net and Aeliss bring in more every day than the three of them could ever eat. Thirty fish. Fifty. The coins pile up.
+**146** `[image: {yunjae} at night selling a small pile of fish into a glowing shop window, the fish dissolving into a stream of gold coins, {aeliss} calmly calling more fish at the raft's edge]`
+So he does the safe thing. He sells some of the extra fish the Tide Net and Aeliss bring in, enough for what he needs.
 
 **147** `[image: a folded waterproof tarp and a pot of black pitch appearing on the deck of {raft2} at night in a burst of golden light]`
-He buys one tarp and one pot of sealant from the limited section. Enough for his own raft. Nothing more.
+One tarp. One pot of sealant. For his own raft. Nothing more.
 
-**148** `[image: a big pile of plain planks, coils of rope, boxes of nails and bolts of cloth appearing on {raft2} at night in a golden shimmer, the raft sitting lower in the water]`
-Then he spends everything else on the boring part of the shop. Planks. Nails. Rope. Cloth. Cheap, ordinary materials nobody is in a hurry to buy.
+**148** `[image: close-up of {yunjae} at night with a thoughtful look, glancing back at the ticking hourglass in the shop window]`
+But he takes a long look at that little hourglass before he closes the shop. If the limited section matches the event this time, it won't be a coincidence. And next time, he'll be ready for it.
 
-**149** `[image: {hobb} staring wide-eyed at the huge pile of materials on {raft2} at night, holding his ladle, {yunjae} calmly stacking boxes of nails]`
-Hobb stares at the pile. "Lad. That's a lot of nails." "It's not nails, Hobb," Yun-jae says. "It's buckets. And roof patches. And rain catchers. Dozens of them."
-
-**150** `[image: close-up of {yunjae} at night with a calm, calculating look, the stacked materials behind him, the blue riddle in the sky]`
-Because in two days, when the rain hasn't stopped and the limited shop is gone, people won't be asking how much a bucket costs. They'll be asking what he wants for one. And some of them will have things he can't buy anywhere else.
-
-**151** `[image: {yunjae} at night looking at the chat windows full of people tying themselves to rafts, hesitating, his fingers over a glowing window, conflicted]`
+**149** `[image: {yunjae} at night looking at the chat windows full of people tying themselves to rafts, hesitating, his fingers over a glowing window, conflicted]`
 And then he has a choice to make. Ten thousand people in his zone are about to prepare for the wrong disaster. He could tell them.
 
-**152** `[image: close-up of {yunjae} at night thinking, half his face lit blue, serious]`
+**150** `[image: close-up of {yunjae} at night thinking, half his face lit blue, serious]`
 But if Seo Yun-jae posts the answer, every raider in the zone learns two things: that he's clever, and that he's the one to follow, or to rob. Kindness, out here, has a price.
 
-**153** `[image: {yunjae} typing a private message at night, a small determined smile, abstract symbols, no readable text]`
+**151** `[image: {yunjae} typing a private message at night, a small determined smile, abstract symbols, no readable text]`
 So he does both. He sends the answer privately to the one person who offered to say things out loud for him.
 
-**154** `[image: {dahye} on a plain raft at night reading a message, then typing fast into zone chat, glowing windows multiplying around her, abstract symbols, no readable text]`
+**152** `[image: {dahye} on a plain raft at night reading a message, then typing fast into zone chat, glowing windows multiplying around her, abstract symbols, no readable text]`
 Ten minutes later, Yoon Da-hye posts in zone chat. "It's not a wave. It's rain that won't stop. Get your raft higher, build a roof, and catch the water before it catches you."
 
-**155** `[image: survivors on plain rafts at night untying themselves and starting to stack planks into crude roofs, a few looking up at the sky, hopeful]`
+**153** `[image: survivors on plain rafts at night untying themselves and starting to stack planks into crude roofs, a few looking up at the sky, hopeful]`
 Some people laugh at her. Some don't. Here and there across the dark, survivors start untying their ropes and building roofs instead.
 
-**156** `[image: close-up of {yunjae} at night watching the chat with a quiet, satisfied look, the blue sky glow on his face]`
-Yun-jae will never know exactly how many of them she saved. But he knows nobody will come looking for him because of it. And by the time most people believe her, they've already spent their gold on rope. They can build a roof from their own planks. What they won't have is anything to catch the water, or keep it out. Being careful, being kind, and being ready to trade, all at the same time.
+**154** `[image: close-up of {yunjae} at night watching the chat with a quiet, satisfied look, the blue sky glow on his face]`
+Yun-jae will never know exactly how many of them she saved. But he knows nobody will come looking for him because of it. Being careful and being kind, at the same time.
 
-**157** `[image: close-up of the green carpenter card glowing in {yunjae}'s hand at night, his eyes reflecting the green light]`
+**155** `[image: close-up of the green carpenter card glowing in {yunjae}'s hand at night, his eyes reflecting the green light]`
 He takes the Carpenter card out of his pocket. He knew he was saving it for something big.
 
-**158** `[image: the giant glowing leaderboard across the night sky over the ocean, its top row blazing gold, abstract glowing rows, no readable text]` `[ui: ranking | World Ranking · Day 6 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Mateus Oliveira (Zone 207,465) | 4 Amira Haddad (Zone 118,903) | 5 Lena Hartmann (Zone 88,402) | 6 Yuki Tanabe (Zone 44,286) | 7 Putri Wulandari (Zone 152,770) | 8 Arjun Mehta (Zone 61,837) | 9 Kwame Mensah (Zone 340,216) | 10 Dilnoza Karimova (Zone 9,551)]`
+**156** `[image: the giant glowing leaderboard across the night sky over the ocean, its top row blazing gold, abstract glowing rows, no readable text]` `[ui: ranking | World Ranking · Day 6 · Top 10 | 1 Seo Yun-jae (Zone 271,094) | 2 Kaiser (Zone 3,118) | 3 Mateus Oliveira (Zone 207,465) | 4 Amira Haddad (Zone 118,903) | 5 Lena Hartmann (Zone 88,402) | 6 Yuki Tanabe (Zone 44,286) | 7 Putri Wulandari (Zone 152,770) | 8 Arjun Mehta (Zone 61,837) | 9 Kwame Mensah (Zone 340,216) | 10 Dilnoza Karimova (Zone 9,551)]`
 On the World Ranking for day six, he's still number one. Kaiser is still number two. But the gap is smaller than it was. Twenty million people sending you their discoveries will do that.
 
 ## Rain or raiders
 
-**159** `[image: {yunjae} at the bow of {raft2} at night gathering {aeliss} and {hobb} close, speaking urgently, his hand pointing at the raft, determined]`
+**157** `[image: {yunjae} at the bow of {raft2} at night gathering {aeliss} and {hobb} close, speaking urgently, his hand pointing at the raft, determined]`
 He wakes Hobb. He tells Aeliss. They have twenty-four hours to turn a raft into a shelter that can survive a day of endless rain.
 
-**160** `[image: close-up of {aeliss} at night suddenly turning her head toward the dark horizon, her pearl flaring, alarmed]`
+**158** `[image: close-up of {aeliss} at night suddenly turning her head toward the dark horizon, her pearl flaring, alarmed]`
 That's when Aeliss turns her head. Her pearl flares. She's staring at the dark horizon. And this time, there are no torches.
 
-**161** `[image: the black ocean at night, a dark ragged mass of six rafts lashed together barely visible against the stars, no lights at all, silhouettes of many men, very ominous]`
+**159** `[image: the black ocean at night, a dark ragged mass of six rafts lashed together barely visible against the stars, no lights at all, silhouettes of many men, very ominous]`
 Just a shape. Low and wide and dark. Six rafts, lashed together. A dozen men. No light at all.
 
-**162** `[image: close-up of {yunjae} at night, the shape reflected in his eyes, the blue riddle still glowing in the sky above, determined and grim]`
+**160** `[image: close-up of {yunjae} at night, the shape reflected in his eyes, the blue riddle still glowing in the sky above, determined and grim]`
 Tae-gu is back. The rain is coming. And for the first time since he woke up on this ocean, Yun-jae has two problems, and only one day to solve both.
 
-**163** `[image: title card style image of a dark storm sky over the ocean, a single glowing green plank on a raft, rain beginning to fall, dramatic]`
+**161** `[image: title card style image of a dark storm sky over the ocean, a single glowing green plank on a raft, rain beginning to fall, dramatic]`
 Next time on One Rank Higher: The Endless Rain.

@@ -55,10 +55,15 @@ day, he's number one in the world.
 - **Limited time section:** before every World Event the shop sells a few special items that are **always tied to
   the coming event** (nobody is told this; the first time, almost nobody notices). The section closes the moment the
   event starts. Day 7 (endless rain): waterproof tarps, rain barrels, pitch sealant, tin buckets.
-- **Our MC's edge:** he reads the limited section as a second hint. He buys what he needs for himself, then spends
-  everything else on cheap basic materials to make the event's essentials in bulk (buckets, roof patches, rain
-  catchers; for a cold event, blankets) and trades them after the section closes, when people are desperate. That
-  gets him materials at a better rate and rare items people would never part with otherwise.
+- **Our MC's edge, built over two events:**
+  - **First event (day 7, rain):** he notices the limited items line up with the riddle but isn't sure it's more than
+    a coincidence. He only buys what he needs for himself (one tarp, one pot of sealant) and files the idea away.
+  - **After the rain** proves the items matched the event exactly, he's convinced.
+  - **From the second event on (day 14):** between the riddle and the limited section he has a good idea what's coming.
+    He buys what he needs, then spends everything else on cheap basic materials to make that event's essentials in
+    bulk (for a cold event, a heater for himself and materials for hundreds of blankets) and trades them after the
+    section closes, when people are desperate, for materials at a better rate and rare items nobody would part with
+    otherwise.
 
 ## Our MC: Seo Yun-jae, 24
 - **Before:** a repair technician in Seoul who fixed everyone's broken things and never got credit. Quiet,
