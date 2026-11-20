@@ -105,6 +105,14 @@ Shown as a top-10 board with each survivor's zone. There are about 400,000 zones
   consensual, and only between adults. In the videos this stays **off-screen**: a fade to black or the narrator
   moving on, never shown. It keeps the channel YouTube-safe.
 
+- **Hobb** (🟢 Uncommon citizen, white Cook refined to green, episode 2): a round, bearded, endlessly talkative cook
+  from Brindle, a harbor town whose world lasted 56 days. His food glows and gives short buffs. Comic relief opposite
+  silent Aeliss; knows something about day 56 he'll only share "once you've won one". Male, so no affinity bar.
+- **Gil** (Earth survivor, a hook-and-rope raider): Tae-gu's youngest raider. Saved Tae-gu from drowning, got no
+  thanks, and privately asked our MC for a way out (episode 2). Possible defector.
+- **Pyo**: Tae-gu's knife man, killed by the sea monster in episode 2; our MC inherited his inventory (the loot rule).
+- After episode 2, our MC holds an unactivated green **Carpenter** card, saved for building the shelter raft.
+
 ## The women of his island (slow-burn tension)
 Our MC collects strong women citizens over the series, and each one has her own kind of tension with him. Keep it
 YouTube-safe: charged banter, close calls, jealousy, glances that last a beat too long, loyalty turning into
