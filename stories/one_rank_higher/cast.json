@@ -1,5 +1,5 @@
 {
-  "style": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
+  "style": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen",
   "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face",
   "narrator": {
     "speaker": "ryan",
@@ -109,5 +109,6 @@
     "description": "An American woman about 30, the voice of an all-knowing game system: analytical and dryly sarcastic, beautiful and smooth with a slightly robotic, precise, synthetic polish, calm even pacing",
     "voice": "refs/system.wav",
     "voice_text": "Good morning, candidate. You have been summoned to the Drift. Survival odds are low. Please try not to die. It makes the paperwork worse."
-  }
+  },
+  "style_v1": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition"
 }

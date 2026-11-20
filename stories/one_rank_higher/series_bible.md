@@ -172,8 +172,12 @@ version ever has the glowing plank. All plain references exist (`refs/raft2_plai
 `refs/raft5_plain.png`), cropped from the same view as our MC's versions so they match exactly.
 
 ## Art style (start of every image prompt)
-> Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting,
-> high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition
+From episode 2 on, the series uses the richer look of the episode 1 thumbnails (cast.json "style"):
+> High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim
+> light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed
+> backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen
 
-System windows are drawn as glowing blue holographic panels with **no readable text**: the narration says what they
-say. Rarity is shown by colour glow: white, green, blue, purple, gold, red.
+Episode 1 was made in the flatter webtoon style ("style_v1" in cast.json). The character reference sheets are being
+redrawn in the new style with the same designs; the old sheets stay in refs/sheets/ as *_v1.
+System windows are drawn as glowing blue holographic panels with **no readable text**. Rarity is shown by colour glow:
+white, green, blue, purple, gold, red. (EPIC is purple: keep cards the right colour.)
