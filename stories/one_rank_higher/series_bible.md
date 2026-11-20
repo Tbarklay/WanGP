@@ -209,10 +209,11 @@ version ever has the glowing plank. All plain references exist (`refs/raft2_plai
 `refs/raft5_plain.png`), cropped from the same view as our MC's versions so they match exactly.
 
 ## Art style (start of every image prompt)
-From episode 2 on (cast.json "style"): a detailed modern anime look with natural lighting, NO glowing outlines:
-> Detailed modern anime illustration, like a key frame from a high-budget anime series, clean precise line art,
-> detailed cel shading with soft gradients, natural cinematic lighting, realistic ocean and sky colors, detailed
-> expressive faces and eyes, finely rendered hair, detailed clothing folds and fabric textures, detailed backgrounds
+From episode 2 on (cast.json "style"), the look of the "USELESS?" episode 1 thumbnail:
+> Premium shonen anime key art, like a top manhwa cover illustration: bold confident ink linework with fine hatching in
+> the shadows, high-contrast dramatic cel shading, sharp intense detailed eyes, layered spiky hair with strong
+> highlights, detailed faces and clothing, vivid saturated colors, painterly detailed background, natural cinematic lighting
+The character sheets are redrawn in Flow with that thumbnail attached as the style and face reference.
 The negative prompt rules out glowing outlines, neon rim light and bloom. Only the story's own magic glows (Aeliss's
 pearl and water magic, refined items and the green plank, citizen cards, System windows), and only when the prompt asks.
 Episode 1 used the flatter webtoon style ("style_v1"); a glowing variant was tried and dropped ("style_v2_glow").
