@@ -101,7 +101,8 @@
     },
     "jiho_vanish": {
       "ref": "refs/jiho_vanish.png",
-      "desc": "Noh Ji-ho using Vanish: the same skinny young man with messy brown hair, round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow at his edges and tiny blue sparkles"
+      "desc": "Noh Ji-ho using Vanish: the same skinny young man with messy brown hair, round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow along his edges and tiny drifting blue sparkles around him",
+      "glow": true
     },
     "pyo": {
       "desc": "Pyo, a wiry raider in his thirties with a shaved head, a thin mustache, a torn black tank top, cargo shorts and a kitchen knife"

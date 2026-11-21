@@ -70,7 +70,11 @@ def image_task(cast, ep, no, image, seed_offset=0):
 
     scene = KEY.sub(describe, image)
     task = {
-        "negative_prompt": cast["negative"],
+        # a character whose look is a glow (cast entry "glow": true, e.g. Ji-ho's Vanish) keeps it: the no-glow terms
+        # are dropped from the negative prompt for that shot only
+        "negative_prompt": (", ".join(t for t in cast["negative"].split(", ")
+                                      if not any(w in t for w in ("glow", "rim light", "sparkle", "bloom")))
+                            if any(cast["characters"][k].get("glow") for k in keys) else cast["negative"]),
         "resolution": RESOLUTION,
         "seed": SEED + no + seed_offset,
         "output_filename": f"{ep}_img_{no:02d}",
