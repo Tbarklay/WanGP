@@ -24,6 +24,9 @@ if sys.platform == 'darwin' and hasattr(torch.backends, 'mps') and torch.backend
 import torch.nn.functional as F
 from mmgp import cuda_graphs
 
+from shared.kernels.token_mean import token_mean
+from shared.kernels import split_kv as _split_kv
+
 from .sageattention_patch import patch_sageattention
 from .sage1_core import fp16_v, scale_output
 try:  # the fused norm + RoPE + quantization kernels (fused_qk_layouts)
@@ -377,7 +380,9 @@ def _fp8_pv_settings(arch):
 # Staged quantization: a caller that computes q, k and v one after another quantizes each as soon as it is ready, so that at most one
 # of them exists in 16 bits. Same kernels and values as sageattn (NHD layout, head_dim 64 or 128): INT8 q/k and FP8 v on sm89 and
 # sm120; INT8 q/k per block and fp16 v with its Triton path (sm86, and masked attentions on every architecture: v keeps 16 bits),
-# v scaled by powers of two with scale_v (shared.sage1_core.fp16_v).
+# v scaled by powers of two with scale_v (shared.sage1_core.fp16_v). Heads of 65 to 127 channels are padded to 128 with zeros, as
+# sageattn pads them (settings["padded_dim"]): q, k and v when they are quantized, the output in a buffer of its own; the softmax
+# scale stays that of the real head_dim.
 _PER_BLOCK_SETTINGS = {"qk_quant_gran": "per_block", "block_m": 128, "launch": None, "scale_v": False}
 _LOW_SHARED_SETTINGS = {"qk_quant_gran": "per_block", "block_m": _LOW_SHARED_MASKED_BLOCK_M, "launch": (4, 3), "scale_v": False}
 # head_dim 256 (no CUDA kernel): the same Triton kernel on every architecture, launches that fit 99 KiB of shared memory
@@ -392,6 +397,11 @@ def staged_settings(device, masked=False, scale_v=False, head_dim=128):
     blocks where shared memory is short), None where sageattn uses other kernels. A block recorded for a CUDA graph gets the Triton path
     when the CUDA kernels cannot be captured (cuda_kernels_capturable), as head_dim 256 always does. scale_v: v scaled by powers of two
     on the Triton path."""
+    if 64 < head_dim < 128:
+        settings = staged_settings(device, masked, scale_v)
+        return None if settings is None else {**settings, "padded_dim": 128}
+    if head_dim not in (64, 128, 256):
+        return None
     if head_dim == 256:
         settings = _MASKED_HEAD256_SETTINGS if masked else _HEAD256_SETTINGS
     elif masked:
@@ -401,6 +411,14 @@ def staged_settings(device, masked=False, scale_v=False, head_dim=128):
     else:
         return _fp8_pv_settings(arch) if SM89_ENABLED and arch in ("sm89", "sm120") else None
     return {**settings, "scale_v": True} if scale_v else settings
+
+
+def program_rows(settings, head_dim):
+    """Query rows of one head that a program of these settings' attention kernel covers, from the kernels' sources: the INT8 QK / FP8
+    PV CUDA kernels of sm89 and sm120 launch a grid of ceil(queries / CTA_Q) x heads x batch programs with CTA_Q = 128
+    (csrc/qattn/*_attn*.cu); the Triton kernel a grid of ceil(queries / BLOCK_M) x heads x batch, BLOCK_M being settings["block_m"]
+    (triton/attn_qk_int8_per_block.py). Read by shared.attention.launch_waves."""
+    return settings["block_m"] if settings["qk_quant_gran"] == "per_block" else 128
 
 
 def fused_qk_layouts(settings, head_dim):
@@ -415,6 +433,13 @@ def fused_qk_layouts(settings, head_dim):
     if settings["qk_quant_gran"] == "per_block":
         return {"q": (_qk_layouts.LAYOUT_PER_BLOCK, settings["block_m"], 1.0 / head_dim ** 0.5 * 1.44269504, 0.0), "k": (_qk_layouts.LAYOUT_PER_BLOCK, 64, 1.0, 0.0)}
     return None
+
+
+def _pad_dim(x_list, settings):
+    """Replaces the tensor of x_list by a copy padded with zeros to settings["padded_dim"] channels, when the settings pad its heads."""
+    padded = settings.get("padded_dim")
+    if padded is not None and x_list[0].shape[-1] != padded:
+        x_list[0] = F.pad(x_list[0], (0, padded - x_list[0].shape[-1]))
 
 
 def _quant_per_block(x, x_int8, block, sm_scale):
@@ -432,6 +457,7 @@ def _quant_per_block(x, x_int8, block, sm_scale):
 def staged_quantize_v(v_list, settings):
     """FP8 v (transposed, padded, scaled per channel) with its scale and mean, or on the Triton path fp16 v with its scales (fp16_v) and
     None; v is released."""
+    _pad_dim(v_list, settings)
     if settings["qk_quant_gran"] == "per_block":
         v = v_list[0]
         v_list.clear()
@@ -444,17 +470,20 @@ def staged_quantize_v(v_list, settings):
 @torch.compiler.disable
 def staged_quantize_k(k_list, settings):
     """INT8 k minus its mean over the tokens, with its scales; k is released (the per thread and per block paths subtract the mean in
-    place)."""
+    place). settings["k_mean"] (batch or 1, heads, head_dim) FP32, when present, is the mean subtracted instead (that of a cached prefix
+    whose keys are attended in a separate pass: shared.attention_kit)."""
+    _pad_dim(k_list, settings)
     k = k_list[0]
     k_list.clear()
     _maybe_set_device(k.device)
     b, kv_len, heads, head_dim = k.shape
-    km = k.mean(dim=1, keepdim=True)
+    km = settings.get("k_mean")
+    km = token_mean(k, 1) if km is None else km.to(k.dtype).expand(b, -1, -1).unsqueeze(1)
     k_int8 = torch.empty(k.shape, dtype=torch.int8, device=k.device)
     blocks = (kv_len + 63) // 64
     if settings["qk_quant_gran"] == "per_warp":
         k_scale = torch.empty((b, heads, blocks), dtype=torch.float32, device=k.device)
-        _fused.quant_per_block_int8_fuse_sub_mean_cuda(k, km.squeeze(1), k_int8, k_scale, 64, 0)
+        _fused.quant_per_block_int8_fuse_sub_mean_cuda(k, km.squeeze(1).contiguous(), k_int8, k_scale, 64, 0)
         return k_int8, k_scale
     k.sub_(km)
     if settings["qk_quant_gran"] == "per_block":
@@ -470,7 +499,11 @@ def staged_quantize_k(k_list, settings):
 def staged_quantize_q(q, settings):
     """INT8 q with its scales; q is not released (staged_attention can write the output into it)."""
     _maybe_set_device(q.device)
-    b, qo_len, heads, head_dim = q.shape
+    head_dim = q.shape[-1]
+    q_list = [q]
+    _pad_dim(q_list, settings)  # a padded copy: q itself stays for the output
+    q = q_list.pop()
+    b, qo_len, heads, _ = q.shape
     q_int8 = torch.empty(q.shape, dtype=torch.int8, device=q.device)
     if settings["qk_quant_gran"] == "per_block":  # the softmax scale, in base 2, goes into q's scales
         return q_int8, _quant_per_block(q, q_int8, settings["block_m"], 1.0 / head_dim ** 0.5 * 1.44269504)
@@ -482,18 +515,26 @@ def staged_quantize_q(q, settings):
         q_scale = torch.empty((b, heads, warps * 8), dtype=torch.float32, device=q.device)
         quant_query_per_thread_int8_kernel[(warps * 8, heads, b)](
             q, q_int8, q_scale, qo_len, q.stride(0), q.stride(2), q.stride(1), q_int8.stride(0), q_int8.stride(2), q_int8.stride(1),
-            q_scale.stride(0), q_scale.stride(1), C=head_dim, BLK=32)
+            q_scale.stride(0), q_scale.stride(1), C=q.shape[-1], BLK=32)
     return q_int8, q_scale
 
 
 @torch.compiler.disable
-def staged_attention(out, quantized_list, settings, attn_mask=None):
+def staged_attention(out, quantized_list, settings, attn_mask=None, return_lse=False):
     """Attention of the staged [(q_int8, q_scale), (k_int8, k_scale), (v, v_scale, v_mean)], written into out and returned. out has
     q's shape with a contiguous last dimension: q itself, or a slice of heads of a larger output. attn_mask (per block settings
-    only): SageAttention's mask layout (batch, heads, q, k), broadcastable."""
+    only): SageAttention's mask layout (batch, heads, q, k), broadcastable. return_lse: (out, lse), lse (batch, heads, tokens) FP32 the
+    base-2 log-sum-exp of each query's scores without the keys' smoothing mean (attentions merged by it must share that mean)."""
     (q_int8, q_scale), (k_int8, k_scale), (v, v_scale, v_mean) = quantized_list
     quantized_list.clear()
     _maybe_set_device(out.device)
+    head_dim = out.shape[-1]
+    if q_int8.shape[-1] != head_dim:  # padded heads: the kernels write the padded output, of which out takes the real channels
+        padded = out.new_empty((*out.shape[:-1], q_int8.shape[-1]))
+        result = staged_attention(padded, [(q_int8, q_scale), (k_int8, k_scale), (v, v_scale, v_mean)], {**settings, "softmax_dim": head_dim}, attn_mask, return_lse)
+        del q_int8, k_int8, v, padded
+        out.copy_((result[0] if return_lse else result)[..., :head_dim])
+        return (out, result[1]) if return_lse else out
     if settings["qk_quant_gran"] == "per_block":  # attn_qk_int8_per_block.forward's launch, with out as its output
         b, qo_len, heads, head_dim = q_int8.shape
         kv_len = k_int8.shape[1]
@@ -501,25 +542,110 @@ def staged_attention(out, quantized_list, settings, attn_mask=None):
             attn_mask = attn_mask.expand(b, heads, qo_len, kv_len)
         mask = ((attn_mask,), attn_mask.stride()) if attn_mask is not None else ((None,), (0, 0, 0, 0)) if _TRITON_MASK_ARGUMENT else ((), ())
         num_warps, num_stages = settings["launch"] or ((4, 3) if head_dim == 64 else (8, 4))
-        lse = torch.empty([0], dtype=torch.float32, device="cpu")
-        attn_qk_int8_per_block._attn_fwd[((qo_len + settings["block_m"] - 1) // settings["block_m"], heads, b)](
-            q_int8, k_int8, v, q_scale, k_scale, out, *mask[0], lse,
-            q_int8.stride(0), q_int8.stride(2), q_int8.stride(1), k_int8.stride(0), k_int8.stride(2), k_int8.stride(1),
-            v.stride(0), v.stride(2), v.stride(1), out.stride(0), out.stride(2), out.stride(1), *mask[1],
-            qo_len, kv_len, heads, heads // k_int8.shape[2], BLOCK_M=settings["block_m"], BLOCK_N=64, HEAD_DIM=head_dim, STAGE=1,
-            RETURN_LSE=False, num_warps=num_warps, num_stages=num_stages)
-        return out if v_scale is None else scale_output(out, v_scale, 2)
-    inputs = (q_int8, k_int8, v, out, q_scale, k_scale, v_scale)
-    options = (0, 0, 3 if settings["qk_quant_gran"] == "per_thread" else 2, out.size(-1) ** -0.5, 0)
+        lse = torch.empty((b, heads, qo_len), dtype=torch.float32, device=out.device) if return_lse else torch.empty([0], dtype=torch.float32, device="cpu")
+
+        def launch(target, q_int8, k_int8, v, q_scale, k_scale):
+            attn_qk_int8_per_block._attn_fwd[((qo_len + settings["block_m"] - 1) // settings["block_m"], heads, b)](
+                q_int8, k_int8, v, q_scale, k_scale, target, *mask[0], lse,
+                q_int8.stride(0), q_int8.stride(2), q_int8.stride(1), k_int8.stride(0), k_int8.stride(2), k_int8.stride(1),
+                v.stride(0), v.stride(2), v.stride(1), target.stride(0), target.stride(2), target.stride(1), *mask[1],
+                qo_len, kv_len, heads, heads // k_int8.shape[2], BLOCK_M=settings["block_m"], BLOCK_N=64, HEAD_DIM=head_dim, STAGE=1,
+                RETURN_LSE=return_lse, num_warps=num_warps, num_stages=num_stages)
+        # its keys split in ranges attended in one launch where that is faster for this shape (fewer, part-empty waves)
+        if return_lse or attn_mask is not None or not _split_kv.attention_triton(out, q_int8, k_int8, v, q_scale, k_scale, settings["block_m"], settings["launch"], launch):
+            launch(out, q_int8, k_int8, v, q_scale, k_scale)
+        out = out if v_scale is None else scale_output(out, v_scale, 2)
+        return (out, lse) if return_lse else out
+    gran, sm_scale = 3 if settings["qk_quant_gran"] == "per_thread" else 2, settings.get("softmax_dim", head_dim) ** -0.5
+    if (not return_lse and attn_mask is None and settings["pv_accum_dtype"] == "fp32+fp16" and _split_kv.available()
+            and _split_kv.attention(out, q_int8, k_int8, v, q_scale, k_scale, v_scale, gran, sm_scale)):
+        return out  # its keys split in ranges attended in one launch, where that is faster for this shape (fewer, part-empty waves)
+    inputs = (q_int8, k_int8, v, out, q_scale, k_scale, v_scale) + ((v_mean,) if settings["pv_accum_dtype"] == "fp32" and settings["smooth_v"] else ())
+    lse = _cuda_kernel(settings)(*inputs, 0, 0, gran, sm_scale, int(return_lse))
+    return (out, lse) if return_lse else out
+
+
+def _cuda_kernel(settings):
     if settings["pv_accum_dtype"] == "fp32+fp16":
-        _qattn_sm89.qk_int8_sv_f8_accum_f16_fuse_v_scale_attn_inst_buf(*inputs, *options)
-    elif settings["pv_accum_dtype"] == "fp32+fp32":
-        _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_attn_inst_buf(*inputs, *options)
-    elif settings["smooth_v"]:
-        _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_fuse_v_mean_attn(*inputs, v_mean, *options)
-    else:
-        _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_attn(*inputs, *options)
-    return out
+        return _qattn_sm89.qk_int8_sv_f8_accum_f16_fuse_v_scale_attn_inst_buf
+    if settings["pv_accum_dtype"] == "fp32+fp32":
+        return _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_attn_inst_buf
+    if settings["smooth_v"]:
+        return _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_fuse_v_mean_attn
+    return _qattn_sm89.qk_int8_sv_f8_accum_f32_fuse_v_scale_attn
+
+
+_TRITON_LSE_ARGUMENT = "RETURN_LSE" in attn_qk_int8_per_block._attn_fwd.arg_names
+_lse_kernels = {}
+
+
+def _returns_lse(kernel):
+    """Whether a SageAttention CUDA kernel of this build takes return_lse: its operator schema, or a pybind signature naming it."""
+    found = _lse_kernels.get(kernel)
+    if found is None:
+        schema = getattr(getattr(kernel, "default", None), "_schema", None)
+        found = _lse_kernels[kernel] = any(argument.name == "return_lse" for argument in schema.arguments) if schema is not None else "return_lse" in (kernel.__doc__ or "")
+    return found
+
+
+# A cached prefix (shared.attention_kit.cache_prefix) kept in these settings' layout: k as staged_quantize_k makes it with the prefix's
+# own mean (prefix_mean), which the keys attended with it subtract too; v in FP8 as staged_quantize_v makes it (CUDA kernels), else
+# stored by the kit and quantized again for each attention (16-bit v of the Triton path). Its keys are attended in a pass of their own,
+# merged with the others by log-sum-exp.
+def prefix_supported(settings, device, dtype):
+    """Whether this SageAttention build's kernels for the prefix's layout (prefix_settings) return the log-sum-exp (otherwise the kit
+    keeps the prefix in q8 and joins it to the keys)."""
+    if "padded_dim" in settings:  # a prefix of padded heads stays in q8
+        return False
+    settings = prefix_settings(settings, device, False)
+    return _TRITON_LSE_ARGUMENT if settings["qk_quant_gran"] == "per_block" else _returns_lse(_cuda_kernel(settings))
+
+
+def prefix_settings(settings, device, scale_v):
+    """The settings with which a cached prefix is kept and every attention with it runs: these, or the Triton per-block path that blocks
+    recorded for CUDA graphs use where the CUDA kernels cannot be captured (staged_settings), so that eager and recorded steps keep
+    the prefix's layout."""
+    if settings["qk_quant_gran"] == "per_block" or cuda_kernels_capturable(device):
+        return settings
+    return {**_PER_BLOCK_SETTINGS, "scale_v": True} if scale_v else _PER_BLOCK_SETTINGS
+
+
+def prefix_fp8_v(settings):
+    return settings["qk_quant_gran"] != "per_block"
+
+
+def prefix_mean(k):
+    """The key mean of a cached prefix k (batch, tokens, heads, head_dim) as settings["k_mean"] takes it: (batch, heads, head_dim) FP32,
+    rounded to k's dtype so that the 16-bit and the fused FP32 quantizations subtract the same values."""
+    return token_mean(k, 1)[:, 0].float()
+
+
+def prefix_mean_heads(mean, heads):
+    return mean[:, heads.start:heads.stop]
+
+
+def prefix_quantize_k(k_list, settings, mean):
+    """A prefix's k (released) quantized with mean, as staged_quantize_k makes it: (k_int8, k_scale)."""
+    return staged_quantize_k(k_list, {**settings, "k_mean": mean})
+
+
+def prefix_k(k_int8, k_scale, heads, batch):
+    """The (k_int8, k_scale) of staged_attention for the heads of a cached prefix (k_int8 (batch, tokens, heads, head_dim), k_scale
+    (batch, heads, scales)) and batch items (one prefix item serves them all)."""
+    k_int8, k_scale = k_int8[:, :, heads.start:heads.stop], k_scale[:, heads.start:heads.stop]
+    if k_int8.shape[0] != batch:
+        k_int8, k_scale = k_int8.expand(batch, -1, -1, -1), k_scale.expand(batch, -1, -1)
+    return k_int8.contiguous(), k_scale.contiguous()
+
+
+def prefix_v(v, v_scale, v_mean, heads, batch):
+    """The (v, v_scale, v_mean) of staged_attention for the heads of a cached prefix's FP8 v (batch, head_dim, heads, padded tokens)."""
+    v, v_scale = v[:, :, heads.start:heads.stop], v_scale[:, heads.start:heads.stop]
+    v_mean = None if v_mean is None else v_mean[:, heads.start:heads.stop]
+    if v.shape[0] != batch:
+        v, v_scale = v.expand(batch, -1, -1, -1), v_scale.expand(batch, -1, -1)
+        v_mean = None if v_mean is None else v_mean.expand(batch, -1, -1)
+    return v.contiguous(), v_scale.contiguous(), None if v_mean is None else v_mean.contiguous()
 
 @torch.compiler.disable
 def sageattn_qk_int8_pv_fp16_triton(
@@ -640,7 +766,7 @@ def sageattn_qk_int8_pv_fp16_triton(
     seq_dim = 1 if tensor_layout == "NHD" else 2
 
     if smooth_k:
-        km = k.mean(dim=seq_dim, keepdim=True)
+        km = token_mean(k, seq_dim)
         if return_lse:
             if tensor_layout == "NHD":
                 lse_correction = torch.matmul(q.transpose(1, 2), km.transpose(1, 2).transpose(2, 3)).squeeze(-1).to(torch.float32)
@@ -792,7 +918,7 @@ def sageattn_varlen(
         v = v.to(torch.float16)
 
     if smooth_k:
-        km = k.mean(dim=0, keepdim=True) # ! km is calculated on the all the batches. Calculate over each individual sequence requires dedicated kernel.
+        km = token_mean(k, 0) # ! km is calculated on the all the batches. Calculate over each individual sequence requires dedicated kernel.
         k = k - km
 
     if sm_scale is None:
@@ -944,7 +1070,7 @@ def sageattn_qk_int8_pv_fp16_cuda(
     seq_dim = 1 if _tensor_layout == 0 else 2
 
     if smooth_k:
-        km = k.mean(dim=seq_dim, keepdim=True)
+        km = token_mean(k, seq_dim)
         if return_lse:
             if tensor_layout == "NHD":
                 lse_correction = torch.matmul(q.transpose(1, 2), km.transpose(1, 2).transpose(2, 3)).squeeze(-1).to(torch.float32)
@@ -1152,7 +1278,7 @@ def sageattn_qk_int8_pv_fp8_cuda(
     # del v
 
     if smooth_k:
-        km = k.mean(dim=seq_dim, keepdim=True)
+        km = token_mean(k, seq_dim)
         if return_lse:
             if tensor_layout == "NHD":
                 lse_correction = torch.matmul(q.transpose(1, 2), km.transpose(1, 2).transpose(2, 3)).squeeze(-1).to(torch.float32)
@@ -1336,7 +1462,7 @@ def sageattn_qk_int8_pv_fp8_window_cuda(
     v_fp8, v_scale, vm = per_channel_fp8(v_list, tensor_layout=tensor_layout, smooth_v=smooth_v)
 
     if smooth_k:
-        km = k.mean(dim=seq_dim, keepdim=True)
+        km = token_mean(k, seq_dim)
         if return_lse:
             if tensor_layout == "NHD":
                 lse_correction = torch.matmul(q.transpose(1, 2), km.transpose(1, 2).transpose(2, 3)).squeeze(-1).to(torch.float32)
@@ -1512,7 +1638,7 @@ def sageattn_qk_int8_pv_fp8_cuda_sm90(
     v_fp8, v_scale, _ = per_channel_fp8(v_list, tensor_layout=tensor_layout, smooth_v=False)
 
     if smooth_k:
-        km = k.mean(dim=seq_dim, keepdim=True)
+        km = token_mean(k, seq_dim)
         if return_lse:
             if tensor_layout == "NHD":
                 lse_correction = torch.matmul(q.transpose(1, 2), km.transpose(1, 2).transpose(2, 3)).squeeze(-1).to(torch.float32)

@@ -1,5 +1,6 @@
 # Copyright 2024-2025 The Alibaba Wan Team Authors. All rights reserved.
 # Modifications Copyright (c) 2025-2026 DeepBeepMeep - part of WanGP, WanGP Community License 2.0 (see LICENSE.txt)
+import functools
 import sys
 from contextlib import contextmanager, nullcontext
 
@@ -271,7 +272,10 @@ def sdpa_wrapper(
     return o
 
 
-def get_attention_modes():
+@functools.lru_cache(maxsize=None)
+def _attention_modes():
+    # Installed packages do not change while the server runs; the package
+    # version lookups below read dist-info files on every call otherwise.
     ret = ["sdpa", "auto"]
     if flash_attn != None:
         ret.append("flash")
@@ -286,13 +290,20 @@ def get_attention_modes():
 
     if sageattn3 != None: # and version("sageattention").startswith("3") :
         ret.append("sage3")
-        
-    return ret
+
+    return tuple(ret)
+
+def get_attention_modes():
+    return list(_attention_modes())
 
 def get_supported_attention_modes():
+    return list(_supported_attention_modes())
+
+@functools.lru_cache(maxsize=None)
+def _supported_attention_modes():
     # MPS compatibility: only SDPA is supported on Apple Silicon
     if _is_mps:
-        return ["sdpa", "auto"]
+        return ("sdpa", "auto")
     ret = get_attention_modes()
     major, minor = torch.cuda.get_device_capability()
     if  major < 10 or not triton_installed:
@@ -309,7 +320,7 @@ def get_supported_attention_modes():
         if "sage" in ret:
             ret.remove("sage")
 
-    return ret
+    return tuple(ret)
 
 
 def get_override_attention_modes():
@@ -422,6 +433,56 @@ __all__ = [
     'attention',
 ]
 
+_WAVE_KEYS = 8192  # keys of the probe's launches: long enough for the attention kernel to outweigh what surrounds it
+
+
+def launch_waves(device, head_dim, force_attention=None, masked=False):
+    """shared.kernels.launch_waves.LaunchWaves of the attention kernel that the staged functions (sage_staged) or pay_attention would
+    run on this device, with this force_attention and head_dim (a mask when masked): the query rows of one head that one of its
+    programs covers (.rows), how many programs the device runs at once and what a part-filled last wave costs. Probed once per
+    kernel and GPU (a second or two, kept under ~/.triton/autotune) by launching the attention over scratch tensors: the rows per
+    program come from the staged core where the kernel's source gives them (its program_rows), else from the probe. None for the
+    block-sparse attentions, and where the probe cannot run now or found no waves."""
+    from shared.kernels import launch_waves as waves
+    attn = force_attention or offload.shared_state["_attention"]
+    if attn in ("sparge", "chipmunk", "veda", "vsa"):
+        return None
+    staged = sage_staged(device, head_dim, force_attention, masked)
+    rows = None
+
+    def scratch(length, width):  # only while probing (no generator may be made during CUDA graph recording); no FP32 copy of the whole: a block repeated
+        generator = torch.Generator(device=device).manual_seed(length)
+        return torch.randn((1, 1024, 1, width), generator=generator, device=device).to(torch.bfloat16).repeat(1, -(-length // 1024), 1, 1)[:, :length]
+
+    if staged is not None:
+        core, settings = staged
+        width = settings.get("padded_dim") or head_dim
+        rows = core.program_rows(settings, head_dim) if hasattr(core, "program_rows") else None
+        identity = f"{core.__name__.rsplit('.', 1)[-1]} {' '.join(f'{key}={settings[key]}' for key in sorted(settings) if key != 'padded_dim')} d{width}"
+
+        def prepare(most):
+            q = scratch(most, width)
+            staged_k, staged_v = core.staged_quantize_k([scratch(_WAVE_KEYS, width)], settings), core.staged_quantize_v([scratch(_WAVE_KEYS, width)], settings)
+
+            def stage(length):
+                query = q[:, :length]
+                staged_q = core.staged_quantize_q(query, settings)
+                return lambda: core.staged_attention(query, [staged_q, staged_k, staged_v], settings)
+            return stage
+    else:
+        attn = get_default_attention_mode() if attn in ("auto", "sol", "vdn") else "sage2" if attn == "radial" else attn
+        width, identity = head_dim, f"{attn} d{head_dim}"
+
+        def prepare(most):
+            q, k, v = scratch(most, width), scratch(_WAVE_KEYS, width), scratch(_WAVE_KEYS, width)
+            return lambda length: lambda: pay_attention([q[:, :length], k, v], force_attention=attn)
+
+    model = waves.get(identity, device, f"Attention ({identity})", prepare, rows)
+    if model is not None:
+        model.keys = _WAVE_KEYS  # the probe's programs attend this many keys: a wave of a launch over other keys lasts in proportion
+    return model
+
+
 def get_cu_seqlens(batch_size, lens, max_len):
     # MPS compatibility: use dynamic device detection
     _cu_device = "mps" if _is_mps else "cuda"
@@ -437,6 +498,13 @@ def get_cu_seqlens(batch_size, lens, max_len):
     return cu_seqlens
 
 @torch.compiler.disable()
+def _sage_rows_head_dim(q, softmax_scale):
+    # the SageAttention (1) rows path (sage1_core.attention) for q's head_dim: those its kernels run, with the default softmax scale (as
+    # before: with another scale they keep sageattn_varlen), and the others it pads with zeros (padded_head_dim), with any scale
+    head_dim = q.shape[-1]
+    return sage1_core.padded_head_dim(head_dim, q.device) is not None and (softmax_scale is None or head_dim not in sage1_core.head_dims(q.device))
+
+
 def pay_attention(
     qkv_list,
     dropout_p=0.,
@@ -470,8 +538,8 @@ def pay_attention(
             support_reason = sageattn_attention_mask_support_reason(qkv_list, attention_mask, tensor_layout="NHD")
         if requested_attn == "sage2" and support_reason is None and sageattn2 != None and q_lens == None and k_lens == None:
             force_attention = "sage2"
-        elif (requested_attn == "sage" and sage1_core is not None and q_lens == None and k_lens == None and softmax_scale is None
-              and qkv_list[0].shape[-1] in sage1_core.head_dims(qkv_list[0].device) and sage1_core.masks_supported(qkv_list[0].device)):
+        elif (requested_attn == "sage" and sage1_core is not None and q_lens == None and k_lens == None and _sage_rows_head_dim(qkv_list[0], softmax_scale)
+              and sage1_core.masks_supported(qkv_list[0].device)):
             force_attention = "sage"  # the Turing kernel takes the mask (sage_rows below)
         else:
             force_attention = "sdpa"
@@ -490,7 +558,7 @@ def pay_attention(
     qkv_list.clear()
     out_dtype = q.dtype
     # SageAttention on every batch item with all its tokens: its kernels without its device sync (CUDA graphs can record them)
-    sage_rows = attn == "sage" and q_lens == None and k_lens == None and not causal and softmax_scale is None and q.shape[-1] in sage1_core.head_dims(q.device)
+    sage_rows = attn == "sage" and q_lens == None and k_lens == None and not causal and _sage_rows_head_dim(q, softmax_scale)
     if q.dtype == torch.bfloat16 and not bfloat16_supported and not sage_rows:  # sage1_core converts what its kernels need
         q = q.to(torch.float16)
         k = k.to(torch.float16)
@@ -558,7 +626,7 @@ def pay_attention(
             'Flash attention 3 is not available, use flash attention 2 instead.'
         )
 
-    if attn == "sage" and not sage_rows and q.shape[-1] > 128:  # sageattn_varlen stops at 128, and 256 needs compute capability 8.0
+    if attn == "sage" and not sage_rows and q.shape[-1] not in (64, 128):  # sageattn_varlen runs 64 and 128 only (sage_rows pads the others)
         if not _HEAD_DIM_SDPA_WARNED:
             tqdm.write(f"[WAN2GP] SageAttention does not support this attention (head_dim {q.shape[-1]}): it will use SDPA.")
             _HEAD_DIM_SDPA_WARNED = True
@@ -593,7 +661,7 @@ def pay_attention(
         qkv_list = [t.reshape(-1, *t.shape[2:]).view(t.shape) for t in (q, k, v)]  # batch items one after another (copies only otherwise)
         del q, k, v
         x = sage1_core.attention(qkv_list, recycle_q, offload.shared_state.get("_sage_v_scaling", False),
-                                 None if attention_mask is None else sage_attention_mask(attention_mask, out_dtype))
+                                 None if attention_mask is None else sage_attention_mask(attention_mask, out_dtype), softmax_scale)
     elif attn=="sage":
         x = sageattn_varlen_wrapper(
             q=q,

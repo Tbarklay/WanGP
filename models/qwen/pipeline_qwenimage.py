@@ -13,7 +13,7 @@
 # limitations under the License.
 # Modifications Copyright (c) 2025-2026 DeepBeepMeep - part of WanGP, WanGP Community License 2.0 (see LICENSE.txt)
 from shared.utils.phase_progress import text_encoding_prompts, text_encoding_progress
-from mmgp import offload
+from mmgp import offload, runtime
 import inspect
 from typing import Any, Callable, Dict, List, Optional, Union
 
@@ -242,7 +242,7 @@ class QwenImagePipeline(): #DiffusionPipeline
             ).to(device)
 
             with text_encoding_progress(self.text_encoder.model.language_model.layers, prompt_count=len(prompt)):
-                outputs = self.text_encoder(input_ids=model_inputs.input_ids, attention_mask=model_inputs.attention_mask, pixel_values=model_inputs.pixel_values, image_grid_thw=model_inputs.image_grid_thw, output_hidden_states=True)
+                outputs = self.text_encoder.model(input_ids=model_inputs.input_ids, attention_mask=model_inputs.attention_mask, pixel_values=model_inputs.pixel_values, image_grid_thw=model_inputs.image_grid_thw, output_hidden_states=True)
             hidden_states = outputs.hidden_states[-1]
             split_hidden_states = self._extract_masked_hidden(hidden_states, model_inputs.attention_mask)
             split_hidden_states = [e[drop_idx:] for e in split_hidden_states]
@@ -258,7 +258,7 @@ class QwenImagePipeline(): #DiffusionPipeline
                     return_tensors="pt",
                 ).to(device)
                 with text_encoding_progress(self.text_encoder.model.language_model.layers, prompt_count=len(prompts)):
-                    hidden_states = self.text_encoder(input_ids=txt_tokens.input_ids, attention_mask=txt_tokens.attention_mask, output_hidden_states=True).hidden_states[-1]
+                    hidden_states = self.text_encoder.model(input_ids=txt_tokens.input_ids, attention_mask=txt_tokens.attention_mask, output_hidden_states=True).hidden_states[-1]
                 split_hidden_states = self._extract_masked_hidden(hidden_states, txt_tokens.attention_mask)
                 split_hidden_states = [e[drop_idx:] for e in split_hidden_states]
                 attn_mask_list = [torch.ones(e.size(0), dtype=torch.long, device=e.device) for e in split_hidden_states]
@@ -924,7 +924,7 @@ class QwenImagePipeline(): #DiffusionPipeline
                 if image_latents is not None:
                     latent_model_input = torch.cat([latent_model_input, image_latents], dim=1)
                 do_true_cfg = true_cfg_scale > 1
-                if do_true_cfg and joint_pass:
+                if do_true_cfg and joint_pass and runtime.joint_pass_useful(self.transformer, latent_model_input.shape[1] + prompt_embeds.shape[1], self.transformer.inner_dim):
                     noise_pred, neg_noise_pred = self.transformer(
                         hidden_states=latent_model_input,
                         timestep=timestep / 1000,

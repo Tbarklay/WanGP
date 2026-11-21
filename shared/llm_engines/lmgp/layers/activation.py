@@ -16,23 +16,25 @@ except ImportError:
 
 
 if triton is not None:
-    @triton.jit(do_not_specialize=("TOTAL",), do_not_specialize_on_alignment=("TOTAL",))
-    def _silu_mul_kernel(x, out, COLUMNS: tl.constexpr, TOTAL, BLOCK: tl.constexpr):
-        index = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
-        source = index // COLUMNS * (2 * COLUMNS) + index % COLUMNS
-        gate = tl.load(x + source, index < TOTAL, other=0).to(tl.float32)
-        value = tl.load(x + source + COLUMNS, index < TOTAL, other=0).to(tl.float32)
+    @triton.jit(do_not_specialize=("ROWS",), do_not_specialize_on_alignment=("ROWS",))
+    def _silu_mul_kernel(x, out, ROWS, COLUMNS, R: tl.constexpr, BLOCK: tl.constexpr):
+        # tiles of R rows x BLOCK columns, the FFN width at runtime: one compile for every model's width
+        rows = tl.program_id(0).to(tl.int64) * R + tl.arange(0, R)
+        columns = tl.program_id(1) * BLOCK + tl.arange(0, BLOCK)
+        valid = (rows < ROWS)[:, None] & (columns < COLUMNS)[None, :]
+        source = rows[:, None] * (2 * COLUMNS) + columns[None, :]
+        gate = tl.load(x + source, valid, other=0).to(tl.float32)
+        value = tl.load(x + source + COLUMNS, valid, other=0).to(tl.float32)
         # Preserve the rounding between the existing SiLU and multiply ops.
         activated = tl.div_rn(gate, 1.0 + libdevice.exp(-gate)).to(out.dtype.element_ty).to(tl.float32)
-        tl.store(out + index, activated * value, index < TOTAL)
+        tl.store(out + rows[:, None] * COLUMNS + columns[None, :], activated * value, valid)
 
 
 class SiluAndMul(nn.Module):
 
     def __init__(self, use_triton: bool = True):
         super().__init__()
-        self.use_triton = use_triton
-        self.use_bf16_bits = False  # set by models for BF16 on GPUs that run Triton without BF16 conversions (shared.kernels.bf16_bits)
+        self.use_triton = use_triton  # the LM features' Triton switch; silu_mul picks the kernel the GPU and dtype run
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x, y = x.chunk(2, -1)
@@ -41,8 +43,6 @@ class SiluAndMul(nn.Module):
     def forward_list(self, x_list: list[torch.Tensor]) -> torch.Tensor:
         x = x_list[0]
         x_list.clear()
-        if self.use_bf16_bits and x.dtype == torch.bfloat16:
-            return bf16_bits.silu_mul(x)
         return silu_mul(x, self.use_triton)
 
 
@@ -50,8 +50,13 @@ def silu_mul(x, use_triton=True):
     if use_triton and x.is_cuda and triton is not None and triton_dtype_supported(x.device, x.dtype):
         x = x.contiguous()
         output = torch.empty((*x.shape[:-1], x.shape[-1] // 2), device=x.device, dtype=x.dtype)
-        _silu_mul_kernel[(triton.cdiv(output.numel(), 256),)](x, output, output.shape[-1], output.numel(), 256)
+        columns = output.shape[-1]
+        rows = output.numel() // columns
+        block = min(256, triton.next_power_of_2(columns))  # 256 elements per program as before: decode rows keep their parallelism
+        _silu_mul_kernel[(triton.cdiv(rows, 256 // block), triton.cdiv(columns, block))](x, output, rows, columns, 256 // block, block)
         return output
+    if use_triton and triton is not None and bf16_bits.applies(x):  # Turing: the same kernel reading BF16 as bits
+        return bf16_bits.silu_mul(x)
     gate, value = x.chunk(2, -1)
     F.silu(gate, inplace=True).mul_(value)
     return gate.contiguous()
