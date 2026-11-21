@@ -209,12 +209,13 @@ version ever has the glowing plank. All plain references exist (`refs/raft2_plai
 `refs/raft5_plain.png`), cropped from the same view as our MC's versions so they match exactly.
 
 ## Art style (start of every image prompt)
-From episode 2 on, the series uses the richer look of the episode 1 thumbnails (cast.json "style"):
-> High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim
-> light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed
-> backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen
-
-Episode 1 was made in the flatter webtoon style ("style_v1" in cast.json). The character reference sheets are being
-redrawn in the new style with the same designs; the old sheets stay in refs/sheets/ as *_v1.
+From episode 2 on (cast.json "style"), the look of the "USELESS?" episode 1 thumbnail:
+> Premium shonen anime key art, like a top manhwa cover illustration: bold confident ink linework with fine hatching in
+> the shadows, high-contrast dramatic cel shading, sharp intense detailed eyes, layered spiky hair with strong
+> highlights, detailed faces and clothing, vivid saturated colors, painterly detailed background, natural cinematic lighting
+The character sheets are redrawn in Flow with that thumbnail attached as the style and face reference.
+The negative prompt rules out glowing outlines, neon rim light and bloom. Only the story's own magic glows (Aeliss's
+pearl and water magic, refined items and the green plank, citizen cards, System windows), and only when the prompt asks.
+Episode 1 used the flatter webtoon style ("style_v1"); a glowing variant was tried and dropped ("style_v2_glow").
 System windows are drawn as glowing blue holographic panels with **no readable text**. Rarity is shown by colour glow:
 white, green, blue, purple, gold, red. (EPIC is purple: keep cards the right colour.)

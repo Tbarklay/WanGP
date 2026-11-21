@@ -1,6 +1,6 @@
 {
-  "style": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen",
-  "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face, land, shore, beach, coast, island, rocks, trees, forest, jungle, plants, flowers, grass, buildings, houses, street, town, shop interior, room, ship, sailing ship, boat, rowboat, canoe, bus, car, laptop, computer, smartphone",
+  "style": "Premium shonen anime key art, like a top manhwa cover illustration: bold confident ink linework with fine hatching in the shadows, high-contrast dramatic cel shading, sharp intense detailed eyes, layered spiky hair with strong highlights, detailed faces and clothing, vivid saturated colors, painterly detailed background, natural cinematic lighting, 16:9 widescreen",
+  "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face, glowing outlines, neon rim light, glowing edges around characters, overexposed bloom, excessive sparkles, land, shore, beach, coast, island, rocks, trees, forest, jungle, plants, flowers, grass, buildings, houses, street, town, shop interior, room, ship, sailing ship, boat, rowboat, canoe, bus, car, laptop, computer, smartphone",
   "narrator": {
     "speaker": "ryan",
     "instruction": "clear, confident storytelling narrator for a manhwa recap channel, steady lively pace, speaks only the given words, no laughing, no whispering, no sighs",
@@ -115,7 +115,7 @@
     },
     "monster": {
       "ref": "refs/monster.png",
-      "desc": "the gigantic shark-like sea monster about twenty meters long, dark blue-gray armored scales, a pale gray-white belly, a tall jagged dorsal fin, rows of huge jagged white teeth, small glowing white eyes and faint scars on its snout, no legs, no wings",
+      "desc": "the gigantic shark-like sea monster about twenty meters long, always IN the water: most of its body hidden under the surface, only its head, jaws, dorsal fin or back breaking through the waves with water pouring off it, dark blue-gray armored scales, a pale belly, rows of huge jagged white teeth, small glowing white eyes and faint scars on its snout, no legs, no wings",
       "creature": true
     },
     "raft2_covered": {
@@ -130,6 +130,8 @@
     "voice_text": "Good morning, candidate. You have been summoned to the Drift. Survival odds are low. Please try not to die. It makes the paperwork worse."
   },
   "style_v1": "Korean webtoon style digital illustration, sharp clean line art, cel shading, dramatic cinematic lighting, high contrast, vivid saturated colors, detailed background, 16:9 widescreen composition",
-  "style_scene": "High-detail anime key visual background art, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, detailed environment with atmospheric depth, dynamic composition, 16:9 widescreen",
+  "style_v2_glow": "High-detail anime key visual, painterly cel shading with soft gradients, dramatic cinematic lighting with glowing rim light and magical light effects, rich saturated colors, sharp expressive eyes, finely detailed hair strands, detailed backgrounds with atmospheric depth, dynamic composition, 16:9 widescreen",
+  "style_v3_plain": "Detailed modern anime illustration, like a key frame from a high-budget anime series, clean precise line art, detailed cel shading with soft gradients, natural cinematic lighting, realistic ocean and sky colors, detailed expressive faces and eyes, finely rendered hair, detailed clothing folds and fabric textures, detailed backgrounds, 16:9 widescreen",
+  "style_scene": "Premium shonen anime key art background, like a top manhwa cover illustration: bold confident ink linework with fine hatching in the shadows, high-contrast dramatic cel shading, vivid saturated colors, painterly detailed environment, natural cinematic lighting, 16:9 widescreen",
   "setting": "Setting: the whole world is one endless open ocean with no land anywhere: no shore, no islands, no trees, no buildings, no ships or boats; people live alone on small flat wooden rafts on the sea. Each named character appears only once"
 }
