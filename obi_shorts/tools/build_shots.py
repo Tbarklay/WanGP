@@ -357,6 +357,10 @@ def main():
                         prompt=f"{motion}, the character talks with clear mouth movements matching the speech. "
                                f"{cast['style']}")
             task.pop("video_length", None)   # InfiniteTalk follows the length of the audio
+            # InfiniteTalk refuses image_start ("You must provide at least one Reference Image"): the start picture
+            # goes in as a reference image that starts the shot (video "KI", image "T")
+            task["image_refs"] = task.pop("image_start")
+            task.update(image_prompt_type="T", video_prompt_type="KI")
             # "V" in audio_prompt_type: InfiniteTalk lip-syncs to the separated vocal, so a sung line cut from the
             # song (music and all) works as well as a clean spoken one
         tasks.append(task)

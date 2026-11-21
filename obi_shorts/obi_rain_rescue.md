@@ -65,8 +65,8 @@ Old MacDonald had a farm, E-I-E-I-O
 
 ## Shots
 
-**01** `[keyframe: wide shot of a green farm with a big red barn under a sky turning dark gray, heavy rain clouds rolling in over the hills, the first raindrops falling on the puddles]`
-`[motion: dark clouds roll quickly across the sky, the wind bends the grass, the first raindrops splash into the puddles]`
+**01** `[keyframe: wide shot of a green farm with a big red barn under a sky turning dark gray, heavy rain clouds rolling in over the hills, the first raindrops falling on the puddles, no animals, no people]`
+`[motion: dark clouds roll slowly across the sky, the grass sways in the wind, raindrops splash into the puddles, the barn stays still, static camera]`
 
 **02** `[keyframe: {farmer} pulling open the big red barn doors in the rain, holding his cap on with one hand, {obi} standing beside him looking up at the clouds]`
 `[motion: the farmer heaves the doors open and waves his arm toward the fields, the puppy's ears perk up and he races off into the rain]`
@@ -83,16 +83,16 @@ Old MacDonald had a farm, E-I-E-I-O
 **06** `[keyframe: {obi} running through the rain toward the open red barn with three ducklings riding on his back, {farmer} waiting at the door]`
 `[motion: the puppy dashes through the puddles with the ducklings bouncing on his back, the farmer cheers at the door]`
 
-**07** `[keyframe: a chubby black and white cartoon cow standing in a rainy meadow with a tiny leaf held over its head like an umbrella, {obi} looking up at it]`
+**07** `[keyframe: a big chubby adult black and white dairy cow with hooves, small horns, a pink snout and an udder, many times bigger than the puppy, standing in a rainy meadow with a tiny leaf held over its head like an umbrella, {obi} looking up at it]`
 `[motion: rain pours down, the cow holds the tiny leaf proudly, the puppy tilts his head in confusion]`
 
-**08** `[keyframe: close-up of the black and white cow with big eyelashes and a soaked face, rain dripping off its nose]`
+**08** `[keyframe: close-up of the big black and white dairy cow with a pink snout, small horns, big eyelashes and a soaked face, rain dripping off its nose]`
 `[motion: the cow blinks at the rain and lets out a long sad moo, water dripping from its ears]`
 
-**09** `[keyframe: {obi} gently nudging the back legs of the black and white cow with his head in the rain]`
+**09** `[keyframe: {obi} gently nudging the hooved back legs of the big black and white dairy cow, which is many times bigger than him, with his head in the rain]`
 `[motion: the puppy pushes with all his might, paws slipping in the mud, until the cow finally starts walking]`
 
-**10** `[keyframe: the black and white cow trotting into the dry barn through the open doors, {obi} running beside it, {farmer} holding the door]`
+**10** `[keyframe: the big black and white dairy cow, many times bigger than the puppy, trotting into the dry barn through the open doors, {obi} running beside it, {farmer} holding the door]`
 `[motion: the cow hurries inside and shakes the rain off like a dog, splashing the farmer, who laughs]`
 
 **11** `[keyframe: a round pink cartoon pig lying happily in a big mud puddle in the pouring rain, smiling with its eyes closed]`
@@ -122,8 +122,8 @@ Old MacDonald had a farm, E-I-E-I-O
 **19** `[keyframe: a group of brown hens and a mother hen huddled under a small wooden cart in the rain, {obi} peeking under it]`
 `[motion: the hens fluff their feathers and huddle closer, the puppy lowers his head to look at them]`
 
-**20** `[keyframe: close-up of the brown hens with puffed-up feathers looking out from under the cart]`
-`[motion: the hens cluck and flap their wings nervously at the falling rain]`
+**20** `[keyframe: side view in profile of two plump round brown hens with small red combs and yellow beaks sitting side by side on the mud under a small wooden cart, smooth round feathered bodies with their wings folded flat along their sides, nothing in front of their chests, heavy rain pouring down from dark gray storm clouds behind them, muddy farmyard]`
+`[motion: the hens blink and turn their heads to watch the rain, their feathers ruffle a little, their wings stay folded, rain drips off the cart, static camera]`
 
 **21** `[keyframe: {obi} pushing the small wooden cart toward the barn with the hens riding on top of it, rain falling around them]`
 `[motion: the puppy pushes the little cart across the yard, the hens balance on top like passengers]`
@@ -172,3 +172,29 @@ Old MacDonald had a farm, E-I-E-I-O
 
 **36** `[keyframe: everyone in front of the red barn under the rainbow: {farmer}, {obi} and all the farm animals looking at the camera]`
 `[motion: everyone waves goodbye, the puppy wags his tail and barks, slow camera pull back]`
+
+## Ending shots added (pass 3)
+
+The ending (1:55-3:02) is 67 seconds. With only shots 31-36 it had about 30 seconds of real motion and was padded with
+still frames. These shots fill it so every shot is a full clip. Ending order: 31, 32, 37, 38, 39, 40, 33, 41, 42, 34, 35, 43, 36.
+
+**37** `[keyframe: inside the cozy barn, a big chubby black and white dairy cow with small horns and a pink snout and a brown horse with a golden mane standing side by side on all four legs, munching hay from a wooden manger, warm lantern light, rain streaming down the barn window behind them]`
+`[motion: the cow and the horse slowly chew the hay and swish their tails, rain trickles down the window, static camera]`
+
+**38** `[keyframe: inside the cozy barn, three plump brown hens with small red combs and yellow beaks sitting in a round straw nest on a low wooden shelf, wings folded tight against their bodies, warm lantern light, rain on the window behind them]`
+`[motion: the hens sit still in the straw nest and blink sleepily, only their heads move a little, their wings stay folded against their bodies, no flapping, static camera]`
+
+**39** `[keyframe: inside the cozy barn, three fluffy yellow ducklings with orange beaks floating in a shallow wooden water trough, warm lantern light, straw on the floor, heavy rain pouring down outside the open barn door, dark gray stormy sky outside]`
+`[motion: the ducklings paddle in slow little circles in the trough, tiny ripples spread across the water, static camera]`
+
+**40** `[keyframe: inside the cozy barn, {farmer} hanging a glowing lantern on a wooden post, {obi} sitting on all four paws in the straw beside him looking up, rain on the window behind them]`
+`[motion: the farmer hangs the lantern and it swings gently, warm light spreads over the straw, the puppy wags his tail, static camera]`
+
+**41** `[keyframe: close-up of {obi} curled up fast asleep in the warm golden straw of the barn with his eyes closed and his mouth closed, three fluffy yellow ducklings asleep snuggled against his side, soft lantern light, rain streaming down a dark barn window behind them]`
+`[motion: the puppy sleeps peacefully and breathes slowly, his eyes stay closed, his soft floppy ears stay lying flat on his head, the ducklings blink and nestle closer, static camera]`
+
+**42** `[keyframe: wide shot of the big red barn and the green hills as the storm clouds part, golden sunlight breaking through the gray clouds, the last raindrops glistening on the wet grass and puddles]`
+`[motion: the gray clouds drift apart, sunbeams sweep across the hills, the puddles sparkle, slow gentle camera push in]`
+
+**43** `[keyframe: {obi} bounding happily through a sunny puddle in a green meadow under a bright rainbow, big splash, side view, the red barn far in the background]`
+`[motion: the puppy trots happily through the shallow puddle from left to right, small splashes at his paws, his soft floppy ears hang down and bounce gently, he stays the same size in the middle of the frame, static camera]`

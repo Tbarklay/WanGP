@@ -92,9 +92,10 @@ And Bingo was his name-o
 
 
 **03** `[keyframe: {farmer} standing and {obi} with soft floppy ears sitting up on a round hay bale beside him so his head is level with the farmer's chest, side by side facing the camera, medium-wide shot from the knees up, both big in the picture filling the lower three quarters, their heads a third of the way down, the farmer's hands held in front of his chest, big happy smiles, in front of the red barn on a bright sunny day, the top quarter of the picture is plain clear blue sky with nothing in it]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[end: same]`
-`[spell: BINGO drop=0 icon=clap x3]`
+`[spell: BINGO drop=0 icon=clap x1 @0.14-2.64]`
+`[spell: BINGO drop=0 icon=clap x1 @2.64-5.0]`
 
 **04** `[keyframe: close-up of {obi} with soft floppy ears and a big proud happy smile, sunny farm behind]`
 `[motion: the puppy wags his tail and does a happy little spin, ears staying floppy]`
@@ -115,10 +116,11 @@ And Bingo was his name-o
 
 
 **08** `[keyframe: same picture as shot 03]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[keyframe_of: 3]`
 `[end: same]`
-`[spell: BINGO drop=1 icon=clap x3]`
+`[spell: BINGO drop=1 icon=clap x1 @0.14-2.64]`
+`[spell: BINGO drop=1 icon=clap x1 @2.64-5.0]`
 
 **09** `[keyframe: same picture as the shot before]`
 `[motion: the farmer claps his hands together once, big and clear, and the puppy claps his front paws together once, then they both return to the same pose, camera still]`
@@ -146,10 +148,11 @@ And Bingo was his name-o
 
 
 **14** `[keyframe: same picture as shot 03]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[keyframe_of: 3]`
 `[end: same]`
-`[spell: BINGO drop=2 icon=stomp x3]`
+`[spell: BINGO drop=2 icon=stomp x1 @0.14-2.64]`
+`[spell: BINGO drop=2 icon=stomp x1 @2.64-5.0]`
 
 **15** `[keyframe: same picture as the shot before]`
 `[motion: the farmer lifts one knee and stomps his boot down once, big and clear, and the puppy stomps one front paw once, then they both return to the same pose, camera still]`
@@ -177,10 +180,11 @@ And Bingo was his name-o
 
 
 **20** `[keyframe: same picture as shot 03]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[keyframe_of: 3]`
 `[end: same]`
-`[spell: BINGO drop=3 icon=pat x3]`
+`[spell: BINGO drop=3 icon=pat x1 @0.14-2.64]`
+`[spell: BINGO drop=3 icon=pat x1 @2.64-5.0]`
 
 **21** `[keyframe: same picture as the shot before]`
 `[motion: the farmer pats the top of his cap once with one hand and the puppy pats the top of his own head once with one paw, then they both return to the same pose, camera still]`
@@ -189,8 +193,8 @@ And Bingo was his name-o
 `[frames: 21]`
 `[insert: pat]`
 
-**22** `[keyframe: close-up of {obi} with soft floppy ears patting the top of his own head with one paw, a silly cross-eyed grin, sunny farm behind]`
-`[motion: the puppy pats his head with his paw, goes a little cross-eyed and giggles, ears staying floppy]`
+**22** `[keyframe: close-up of {obi} with soft floppy ears alone, sitting up on his hind legs, raising his own front paw and resting it on top of his own head, a silly cross-eyed grin, only the puppy in the picture, no people, no human hands, no arms, sunny farm behind]`
+`[motion: the puppy sitting alone pats the top of his own head with his own front paw, goes a little cross-eyed and giggles, ears staying floppy, no hands come into the picture, static camera]`
 
 
 **23** `[keyframe: medium close-up of {farmer} facing the camera bending his knees ready to jump, very excited face, mouth open mid-word, red barn behind, {obi} with soft floppy ears beside him]`
@@ -208,13 +212,14 @@ And Bingo was his name-o
 
 
 **26** `[keyframe: same picture as shot 03]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[keyframe_of: 3]`
 `[end: same]`
-`[spell: BINGO drop=4 icon=jump x3]`
+`[spell: BINGO drop=4 icon=jump x1 @0.14-2.64]`
+`[spell: BINGO drop=4 icon=jump x1 @2.64-5.0]`
 
 **27** `[keyframe: same picture as the shot before]`
-`[motion: the farmer and the puppy both jump up once, big and clear, and land back in the same pose, camera still]`
+`[motion: the farmer does one small happy bounce, bending his knees and springing up on his toes with both arms thrown up, his feet only just leaving the ground and his head staying low, while the puppy stays sitting on the hay bale wagging his tail with his soft floppy ears hanging down, then the farmer lands back in the same pose, camera still]`
 `[keyframe_of: 3]`
 `[end: same]`
 `[frames: 21]`
@@ -239,12 +244,13 @@ And Bingo was his name-o
 
 
 **32** `[keyframe: {farmer} standing and {obi} with soft floppy ears sitting up on a round hay bale beside him so his head is level with the farmer's chest, side by side facing the camera, medium-wide shot from the knees up, both big in the picture filling the lower three quarters, their heads a third of the way down, the farmer's hands held in front of his chest, big happy smiles, in front of the red barn on a bright sunny day, the top quarter of the picture is plain clear blue sky with nothing in it, a chubby black and white cow, a round pink pig and a friendly brown horse standing close behind them, big enough to see clearly]`
-`[motion: the farmer and the puppy sway and bob happily to the beat facing the camera, singing along, staying in place, ending exactly in the same pose they started in, camera still]`
+`[motion: the farmer nods his head gently to the beat and smiles at the camera, the puppy sits still on the hay bale wagging his tail with his soft floppy ears hanging down, both staying in place, ending exactly in the same pose they started in, camera still]`
 `[end: same]`
-`[spell: BINGO drop=5 icon=woof x3]`
+`[spell: BINGO drop=5 icon=woof x1 @0.14-2.64]`
+`[spell: BINGO drop=5 icon=woof x1 @2.64-5.0]`
 
 **33** `[keyframe: same picture as the shot before]`
-`[motion: the farmer cups his hands by his mouth and the puppy throws his head up, both barking once with mouths wide open, then they return to the same pose, camera still]`
+`[motion: the puppy lifts his head and barks once with his mouth wide open, his soft floppy ears hanging down, and the farmer cups his hands by his mouth and calls out once, the cow, the pig and the horse stay calm with their mouths closed, then they return to the same pose, camera still]`
 `[keyframe_of: 32]`
 `[end: same]`
 `[frames: 21]`

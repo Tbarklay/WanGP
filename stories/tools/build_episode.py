@@ -75,13 +75,16 @@ def image_task(cast, ep, no, image, seed_offset=0):
         "seed": SEED + no + seed_offset,
         "output_filename": f"{ep}_img_{no:02d}",
     }
+    # a scene without people gets the style line without eyes and hair, or the model paints a face into it
+    people = [k for k in keys if not (cast["characters"][k].get("prop") or cast["characters"][k].get("creature"))]
+    style = cast["style"] if people else cast.get("style_scene", cast["style"])
     if not pictured:
-        task.update(model_type=T2I_MODEL, prompt=f"{cast['style']}. {scene}.")
+        task.update(model_type=T2I_MODEL, prompt=f"{style}. {scene}. {cast.get('setting', '')}".rstrip())
         return task
     series = os.path.dirname(cast["_path"])
     task.update(
         model_type=EDIT_MODEL,
-        prompt=f"{cast['style']}. {scene}. Draw a brand new scene: keep each referenced character's face, hair, "
+        prompt=f"{style}. {scene}. {cast.get('setting', '') + '. ' if cast.get('setting') else ''}Draw a brand new scene: keep each referenced character's face, hair, "
                "outfit and colors exactly as in their picture. Each character appears exactly once, in a natural "
                "pose that fits the action and the camera angle, not standing stiffly facing the viewer. Do not copy "
                "the plain backgrounds or poses of the reference pictures.",

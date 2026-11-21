@@ -58,17 +58,17 @@ if "!ENV_TYPE!"=="venv" (
 
 
 set "SONG=%~1"
-if "!SONG!"=="" set "SONG=old_macdonald"
+if "!SONG!"=="" set "SONG=all"
 
-echo [*] Building the batch for !SONG!...
-python kids_videos\build_batch.py !SONG!
+echo [*] Building the video batch for !SONG! from the approved keyframes...
+python kids_videos\build_batch.py !SONG! videos
 if !errorlevel! neq 0 (
     pause
     exit /b 1
 )
 
 echo [*] Rendering overnight, you can go to sleep...
-python wgp.py --process kids_videos\batches\!SONG!.json --output-dir kids_videos\output
+python wgp.py --process "kids_videos\batches\!SONG!_videos.json" --output-dir kids_videos\output
 
 echo [*] Merging the finished videos...
 python kids_videos\merge.py !SONG!

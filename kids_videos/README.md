@@ -16,11 +16,14 @@ and opens the folder so you can check that both characters look right.
 
 ## Before bed
 
-1. The reference images are already in `kids_videos/refs` (`farmer_and_dog.jpg`, `dog.jpg`).
-2. Double-click `kids_videos/render_overnight.bat`
-   (or from the WanGP folder: `kids_videos\render_overnight.bat old_macdonald`).
+1. Put one reference image per song in `kids_videos/refs`:
+   `farmer_and_dog.jpg` (already there), `five_little_ducks.jpg`, `itsy_bitsy_spider.jpg`,
+   `twinkle_twinkle.jpg`, `alphabet_song.jpg`. A song without its image is made from the text only.
+2. Double-click `kids_videos/render_overnight.bat` to render all five songs
+   (or one song from the WanGP folder: `kids_videos\render_overnight.bat old_macdonald`).
 
-It builds the batch, renders the 3 song takes and every clip, then merges the finished videos into `kids_videos/final`.
+It builds the batch, renders the 3 song takes of every song, then all the 16:9 clips, then all the 9:16 clips,
+and merges the finished videos into `kids_videos/final`.
 
 ## In the morning
 

@@ -34,6 +34,7 @@ from clean_voices import RATE, load, save
 
 LAUGH = ("Laughter", "Giggle", "Chuckle, chortle", "Snicker", "Belly laugh", "Baby laughter")
 LAUGH_MAX = 0.12          # any laughter class above this anywhere in the trimmed take fails it
+GASP_MARGIN = 0.12        # over a breathy voice print's own score (see main)
 GASP_MAX = 0.42           # gasps and whispering above this fail it (normal breaths score about 0.2)
 LOW_WORD = 0.3            # a script word heard with less confidence than this counts as garbled
 MAX_LOW = 1               # unclear words allowed per take (names are often heard with low confidence)
@@ -61,7 +62,7 @@ def words_of(text):
     """Normalized words, with digits spelled out ("1,072" -> one thousand seventy two) and "and" dropped."""
     out = []
     for raw in re.split(r"[\s\-]+", text.lower()):
-        raw = raw.strip(".,!?;:\"'()[]…")
+        raw = raw.strip(".,!?;:\"'()[]…$")   # Whisper writes spoken amounts as "$588"
         if re.fullmatch(r"\d[\d,]*", raw):
             out += spell(int(raw.replace(",", "")))
         else:
@@ -157,7 +158,7 @@ def trim(samples, words, used):
     return piece.astype(np.int16)
 
 
-def judge_take(judge, path, script, cap, work):
+def judge_take(judge, path, script, cap, work, gasp_max=GASP_MAX):
     samples = load(path)
     if len(samples) / RATE >= cap - 0.3:
         return {"ok": False, "why": "ran into its length limit", "score": -9}
@@ -184,7 +185,7 @@ def judge_take(judge, path, script, cap, work):
         why.append(f"only {min(cover, cover2):.0%} of the script heard")
     if laugh > LAUGH_MAX:
         why.append(f"laughing ({laugh:.2f})")
-    if gasp > GASP_MAX:
+    if gasp > gasp_max:
         why.append(f"gasp or whisper ({gasp:.2f})")
     if len(low) > MAX_LOW:
         why.append(f"unclear words {low}")
@@ -198,8 +199,10 @@ def judge_take(judge, path, script, cap, work):
 
 
 def takes(folder, stem):
+    # the stem must not run on into more digits: beat 10 is not beat 100-109
     return [f for f in glob.glob(os.path.join(folder, stem + "*.wav"))
-            if not f.endswith("_clean.wav") and "_pick" not in os.path.basename(f)]
+            if not os.path.basename(f)[len(stem):len(stem) + 1].isdigit()
+            and not f.endswith("_clean.wav") and "_pick" not in os.path.basename(f)]
 
 
 def main():
@@ -217,12 +220,21 @@ def main():
     work = os.path.join(series, "output", ep + "_review")
     os.makedirs(work, exist_ok=True)
     cast = json.load(open(os.path.join(series, "cast.json"), encoding="utf-8"))
+    cast["_path"] = os.path.join(series, "cast.json")
     beats = parse_beats(args.script)[:3] if args.test else parse_beats(args.script)
     if args.beats:
         wanted = {int(b) for b in args.beats.split(",")}
         beats = [b for b in beats if b[0] in wanted]
     judge = Judge()
     seen, best = {}, {}
+    # Some designed voices are breathy by nature: their own voice print already scores above GASP_MAX. The limit for
+    # each voice is then its voice print's score plus a margin, so only a real gasp or whisper fails a take.
+    gasp_max = {}
+    for role in ("narrator", "system"):
+        ref = (cast.get(role) or {}).get("voice")
+        ref = ref and os.path.join(series, ref)
+        gasp_max[role] = max(GASP_MAX, judge.sounds(load(ref))[1] + GASP_MARGIN) if ref and os.path.isfile(ref) else GASP_MAX
+        print(f"gasp/whisper limit for the {role}: {gasp_max[role]:.2f}", flush=True)
 
     def review(todo):
         for no, _, text in todo:
@@ -231,7 +243,8 @@ def main():
                 if path in seen.get(no, set()):
                     continue
                 seen.setdefault(no, set()).add(path)
-                r = judge_take(judge, path, line_words(text)[1], cap, work)
+                role, words = line_words(text)
+                r = judge_take(judge, path, words, cap, work, gasp_max[role])
                 print(f"  beat {no:02d} {os.path.basename(path)}: {r['why']}", flush=True)
                 if "trimmed" in r and (no not in best or (r["ok"], r["score"]) > (best[no][1]["ok"], best[no][1]["score"])):
                     best[no] = (path, r)

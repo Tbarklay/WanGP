@@ -173,3 +173,26 @@ Old MacDonald had a farm, E-I-E-I-O
 
 **36** `[keyframe: everyone in front of the red barn at golden sunset: {farmer}, {obi} and all the farm animals looking at the camera]`
 `[motion: everyone waves goodbye, the puppy wags his tail and barks, slow camera pull back]`
+
+## Ending shots added
+
+The song's last part (after the dog verse) is about 42 seconds, so the barn party gets these shots too, each about
+5 seconds. Ending order: 34, 37, 38, 39, 35, 40, 41, 42, 36.
+
+**37** `[keyframe: inside a barn decorated with colorful balloons and bunting, a big chubby black and white dairy cow with small horns and a pink snout swaying happily on its four legs with a flower garland around its neck, warm golden light]`
+`[motion: the cow sways side to side to the music and swishes its tail, the balloons bob gently, static camera]`
+
+**38** `[keyframe: inside a barn decorated with balloons, a round pink pig with a curly tail spinning happily on its four hooves in the golden straw, a party hat on its head]`
+`[motion: the pig turns in a slow happy circle on its four hooves, its curly tail wiggles, straw flutters, static camera]`
+
+**39** `[keyframe: five tiny fluffy yellow chicks hopping on top of a golden hay bale inside a barn decorated with balloons and bunting, warm light]`
+`[motion: the chicks hop up and down on the hay bale in time with the music, little pieces of straw bounce, static camera]`
+
+**40** `[keyframe: inside a barn decorated with balloons, a fluffy white sheep with a gray face and a white goat with little curved horns standing side by side on their four legs, nodding along to the music, warm light]`
+`[motion: the sheep and the goat bob their heads together in time with the music, their tails wag, static camera]`
+
+**41** `[keyframe: {obi}, a normal four-legged puppy with floppy ears and all four paws on the ground, jumping happily through a shower of colorful confetti in the middle of the barn party]`
+`[motion: the puppy hops happily as the confetti falls around him, his floppy ears bounce, static camera]`
+
+**42** `[keyframe: wide shot of the red barn at golden sunset with balloons tied to the doors and warm light glowing from inside, green hills and a pink and orange sky]`
+`[motion: the balloons sway gently in the evening breeze, the sky glows, slow gentle camera push in toward the barn]`

@@ -20,7 +20,7 @@ from songs import SONGS
 OUTPUT_DIR = "kids_videos/output"
 FINAL_DIR = "kids_videos/final"
 MIN_SPEED, MAX_SPEED = 0.8, 1.25   # outside this range, hold the last frame or cut instead
-FPS = 30
+FPS = 32                           # matches the RIFE-smoothed clips, no dropped frames
 
 
 def tool(name):
@@ -53,7 +53,8 @@ def merge(slug, take):
     song_len = duration(audio)
     os.makedirs(FINAL_DIR, exist_ok=True)
 
-    for fmt, size in (("long", "832:480"), ("short", "480:832")):
+    # Enhanced clips are 1664x960 / 960x1664: fill the 1080p frame and trim the small overhang.
+    for fmt, size in (("long", "1920:1080"), ("short", "1080:1920")):
         clips = []
         for no in range(1, len(song["shots"]) + 1):
             clip = newest(f"{slug}_{fmt}_{no:02d}.*") or newest(f"{slug}_{fmt}_{no:02d}_*")
@@ -70,8 +71,8 @@ def merge(slug, take):
         inputs, chains = [], []
         for i, clip in enumerate(clips):
             inputs += ["-i", clip]
-            chains.append(f"[{i}:v]scale={size}:force_original_aspect_ratio=decrease,"
-                          f"pad={size}:(ow-iw)/2:(oh-ih)/2,setsar=1,fps={FPS}[v{i}]")
+            chains.append(f"[{i}:v]scale={size}:force_original_aspect_ratio=increase:flags=lanczos,"
+                          f"crop={size},setsar=1,fps={FPS}[v{i}]")
         concat = "".join(f"[v{i}]" for i in range(len(clips)))
         chains.append(f"{concat}concat=n={len(clips)}:v=1:a=0[cat]")
         # Fit the clips to the song, then hold the last frame if they still run short.
@@ -81,7 +82,7 @@ def merge(slug, take):
         cmd = [tool("ffmpeg"), "-y", *inputs, "-i", audio,
                "-filter_complex", ";".join(chains),
                "-map", "[out]", "-map", f"{len(clips)}:a",
-               "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+               "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
                "-c:a", "aac", "-b:a", "192k", "-t", f"{song_len:.2f}", out_path]
         print(f"[{slug}] {fmt}: {len(clips)} clips ({clips_len:.0f}s) fitted to song ({song_len:.0f}s), speed x{speed:.2f}")
         subprocess.run(cmd, check=True, capture_output=True)
@@ -89,11 +90,15 @@ def merge(slug, take):
 
 
 def main():
-    if len(sys.argv) not in (2, 3) or (sys.argv[1] != "all" and sys.argv[1] not in SONGS):
+    slugs = None
+    if len(sys.argv) in (2, 3):
+        slugs = list(SONGS) if sys.argv[1] == "all" else sys.argv[1].split("+")
+    if not slugs or not all(slug in SONGS for slug in slugs):
         print(f"Usage: python kids_videos/merge.py <{'|'.join(SONGS)}|all> [song take a/b/c]")
+        print("       several songs: old_macdonald+five_little_ducks")
         sys.exit(1)
     take = sys.argv[2] if len(sys.argv) == 3 else "a"
-    for slug in (SONGS if sys.argv[1] == "all" else [sys.argv[1]]):
+    for slug in slugs:
         merge(slug, take)
 
 

@@ -48,7 +48,9 @@ def duration(path):
 
 
 def newest(folder, stem):
-    files = [f for f in glob.glob(os.path.join(folder, stem + "*")) if not f.endswith((".json", "_clean.wav"))]
+    # the stem must not run on into more digits: beat 10 is not beat 100-109
+    files = [f for f in glob.glob(os.path.join(folder, stem + "*")) if not f.endswith((".json", "_clean.wav"))
+             and not os.path.basename(f)[len(stem):len(stem) + 1].isdigit()]
     return max(files, key=os.path.getmtime) if files else None
 
 

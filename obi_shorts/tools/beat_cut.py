@@ -73,15 +73,21 @@ def main():
     chains = [f"[0:v]{common},split={max(n_idle, 1)}" + "".join(f"[i{k}]" for k in range(max(n_idle, 1))),
               f"[1:v]{common},split={max(n_action, 1)}" + "".join(f"[a{k}]" for k in range(max(n_action, 1)))]
     labels, ki, ka = [], 0, 0
+
+    def exact(start, end):
+        # every piece gets exactly its share of 30 fps frames (rounding used to drop about a frame per action, so
+        # later actions drifted early: a third of a second by the end of a round with ten actions)
+        n = round(end * 30) - round(start * 30)
+        return f"tpad=stop_mode=clone:stop=4,trim=end_frame={n},setpts=PTS-STARTPTS"
     for k, (start, end, kind) in enumerate(pieces):
         if kind == "idle":
             # the idle loop keeps running in real time underneath, so its motion carries on across the actions
-            chains.append(f"[i{ki}]trim=start={start:.3f}:end={end:.3f},setpts=PTS-STARTPTS[s{k}]")
+            chains.append(f"[i{ki}]trim=start={start:.3f}:end={end:.3f},setpts=PTS-STARTPTS,{exact(start, end)}[s{k}]")
             ki += 1
         else:
             stretch = (end - start) / action_len
             chains.append(f"[a{ka}]setpts={stretch:.4f}*(PTS-STARTPTS),fps=30,trim=end={end - start:.3f},"
-                          f"setpts=PTS-STARTPTS[s{k}]")
+                          f"setpts=PTS-STARTPTS,{exact(start, end)}[s{k}]")
             ka += 1
         labels.append(f"[s{k}]")
     for k in range(ki, max(n_idle, 1)):

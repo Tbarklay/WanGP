@@ -11,8 +11,8 @@
       "desc": "the friendly elderly farmer with a short white beard, gray hair, a dark gray cap, a red and brown plaid flannel shirt, muddy blue denim overalls and brown work boots"
     },
     "truck": {
-      "ref": null,
-      "desc": "an old red farm pickup truck with wooden side rails"
+      "ref": "refs/farm_truck.png",
+      "desc": "the old rounded red 1950s farm pickup truck with a chrome grille, round headlights, a two-seat cab and a wooden-railed open cargo bed with a drop-down tailgate"
     },
     "mama_monkey": {
       "ref": "refs/mama_monkey.png",
@@ -41,6 +41,18 @@
     "m5": {
       "ref": null,
       "desc": "little monkey number 5 in bright blue pajamas with a big white number 5 printed on the front of the pajama top"
+    },
+    "bus": {
+      "ref": "refs/farm_bus.png",
+      "desc": "the short retro yellow minibus with a flat front, black grille, round chrome headlights, rounded-rectangle side windows, a red stripe and two axles"
+    },
+    "mama_duck": {
+      "ref": null,
+      "desc": "a plump white mother duck with an orange beak and orange feet"
+    },
+    "ducklings": {
+      "ref": null,
+      "desc": "three fluffy yellow ducklings with tiny orange beaks"
     }
   }
 }
