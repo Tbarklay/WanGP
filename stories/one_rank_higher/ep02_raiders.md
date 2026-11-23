@@ -67,7 +67,7 @@ He leans over to Aeliss and whispers. "That thing from last night. Is it still c
 **17** `[image: {yunjae} quickly pulling the patched sail cloth down over the glowing green plank on {raft2} at night, the raft going dark]`
 "Then put out our light." He pulls the sail cloth down over the glowing green plank. Aeliss closes her hand around her pearl. Their raft goes dark.
 
-**18** `[image: the three raider rafts at night, their torches now the only lights on the entire black ocean, glowing like beacons]`
+**18** `[image: three small plain wooden rafts like {raft} far away on the black ocean at night, each with one burning torch and a dark silhouette of a man, the torches the only lights on the whole sea, glowing like beacons, seen from a distance]`
 Now there are only three lights on the whole ocean. And all of them belong to the men who came to rob him.
 
 ## The deal
@@ -107,7 +107,7 @@ Aeliss touches her staff to the water, and a quiet current carries the plank awa
 
 ## Teeth in the dark
 
-**30** `[image: the bait plank bumping gently against the side of {pyo}'s torch-lit raft at night, {pyo} looking down at it, puzzled]`
+**30** `[image: the bait plank bumping gently against the side of a torch-lit raft at night, {pyo} kneeling and looking down at it, puzzled, his smooth bald head shining in the torchlight]`
 The plank bumps against Pyo's raft. He looks down at it. Fish. A pouch. "That's it? That's what made the light?"
 
 **31** `[image: the dark water beneath the torch-lit rafts at night, a huge shadow rising from the deep toward the light, a ring of bubbles]`
@@ -227,7 +227,7 @@ Yun-jae doesn't answer. Not yet. A kid who switches sides once can switch sides 
 
 ## The Cook
 
-**68** `[image: close-up of a hand holding a glowing white citizen card with a plump cook silhouette holding a ladle, soft white glow, the morning sea behind]`
+**68** `[image: close-up of a hand holding a plain glowing white playing card with a simple silhouette of a plump cook holding a ladle, a fantasy card with an ornate border, no chip, no credit card details, the morning sea behind]`
 Instead, he takes out the card he traded for on day one. The Cook. Common.
 
 **69** `[image: {aeliss} kneeling at the edge of {raft2} in morning light, her staff in the water, a big silver school of fish circling the raft]`
@@ -289,7 +289,7 @@ That leaves the Carpenter card from Pyo. Green. Uncommon.
 **87** `[image: {yunjae} looking at the green card thoughtfully, then sliding it carefully into an inner pocket of his jacket, afternoon light]`
 Yun-jae doesn't activate it. Not yet. A carpenter is a builder. And something is telling him he's going to need to build something big, very soon. He wants to refine it first, on a day he can afford the gamble.
 
-**88** `[image: {yunjae} holding a white fisherman card, typing into a glowing private chat window, afternoon light, abstract symbols, no readable text]`
+**88** `[image: {yunjae} sitting on {raft2} holding a white fisherman card in one hand, the other hand touching a small floating glowing blue window in the air, afternoon light, abstract symbols, no keyboard, no laptop, no readable text]`
 The white Fisherman card, he doesn't need at all. Aeliss already out-fishes any fisherman alive. So he opens a private chat with the one person he knows will want it.
 
 ## The informant
@@ -297,7 +297,7 @@ The white Fisherman card, he doesn't need at all. Aeliss already out-fishes any 
 **89** `[image: {jiho} on a plain raft like {raft} reading a private message in surprise, a single small fish beside him, afternoon light]`
 Noh Ji-ho. The guy with Vanish. On day one, he couldn't feed a cook. Today, Yun-jae offers him a fisherman. For nothing.
 
-**90** `[image: close-up of {jiho} with wide eyes behind his round glasses, typing fast into a glowing chat window, abstract symbols, no readable text]`
+**90** `[image: close-up of {jiho} with wide eyes behind his round glasses, tapping a small floating glowing blue window in the air with one finger, abstract symbols, no keyboard, no laptop, no readable text]`
 Ji-ho doesn't believe it at first. Then he writes back. "Why?" And Yun-jae answers honestly. "Because a man who can catch his own fish is a man who can keep his eyes open for me."
 
 **91** `[image: {yunjae} on {raft2} at sunset holding out a white citizen card that dissolves into streams of blue light flying off across the ocean, abstract, no windows, no fish]`
@@ -451,7 +451,7 @@ So the people tying themselves to their rafts are doing exactly the wrong thing.
 
 ## The shop
 
-**138** `[image: close-up of {yunjae}'s face at night lit warm gold from below by a glowing golden window, surprised and curious, the dark ocean behind him]`
+**138** `[image: close-up of {yunjae}'s face at night, his face lit warm gold by a floating golden window in front of him, surprised and curious, the dark ocean behind him, no light on his clothes]`
 Then the "something new" arrives. A second window, with a golden border.
 
 **139** `[image: same]`
