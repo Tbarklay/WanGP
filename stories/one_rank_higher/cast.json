@@ -1,5 +1,5 @@
 {
-  "style": "Premium shonen anime key art, like a top manhwa cover illustration: bold confident ink linework with fine hatching in the shadows, high-contrast dramatic cel shading, sharp intense detailed eyes, layered spiky hair with strong highlights, detailed faces and clothing, vivid saturated colors, painterly detailed background, natural cinematic lighting, 16:9 widescreen",
+  "style": "Premium shonen anime key art, like a top manhwa cover illustration: bold confident ink linework with fine hatching in the shadows, high-contrast dramatic cel shading, sharp intense detailed eyes, finely detailed hair drawn exactly as each character's design describes, detailed faces and clothing, vivid saturated colors, painterly detailed background, natural cinematic lighting, 16:9 widescreen",
   "negative": "text, letters, words, readable writing, speech bubble, caption, watermark, logo, signature, character sheet, multiple views, duplicate character, twins, two identical people, clone, stiff standing pose, blurry, low quality, deformed hands, extra fingers, extra limbs, distorted face, glowing outlines, neon rim light, glowing edges around characters, overexposed bloom, excessive sparkles, land, shore, beach, coast, island, rocks, trees, forest, jungle, plants, flowers, grass, buildings, houses, street, town, shop interior, room, ship, sailing ship, boat, rowboat, canoe, bus, car, laptop, computer, smartphone",
   "narrator": {
     "speaker": "ryan",
@@ -15,11 +15,11 @@
     },
     "aeliss": {
       "ref": "refs/aeliss.png",
-      "desc": "Aeliss, an elegant elf woman with long flowing silver-white hair, long pointed ears, sea-green eyes and a calm sad expression, a flowing teal robe with silver seashell clasps at the shoulders and a seashell belt over a white underdress, long open sleeves, barefoot, holding a branching coral staff topped with a glowing aqua pearl"
+      "desc": "Aeliss, an elegant elf woman with long, smooth, straight, sleek silver-white hair that falls flat past her waist, no spikes, no messy strands, long pointed ears, sea-green eyes and a calm sad expression, a flowing teal robe with silver seashell clasps at the shoulders and a seashell belt over a white underdress, long open sleeves, barefoot, holding a branching coral staff topped with a glowing aqua pearl"
     },
     "kaiser": {
       "ref": "refs/kaiser.png",
-      "desc": "Kaiser, a tall broad-shouldered man around forty with slicked-back black hair going gray at the sides, sharp hazel eyes, a smug confident half-smile, a white dress shirt with rolled-up sleeves, a loose black tie, a brown leather belt, charcoal dress trousers, polished black shoes and a silver watch"
+      "desc": "Kaiser, a tall broad-shouldered man around forty with neatly slicked-back smooth black hair going gray at the sides, sharp hazel eyes, a smug confident half-smile, a white dress shirt with rolled-up sleeves, a loose black tie, a brown leather belt, charcoal dress trousers, polished black shoes and a silver watch"
     },
     "haeun": {
       "ref": "refs/haeun.png",
@@ -44,7 +44,7 @@
     },
     "dahye": {
       "ref": "refs/dahye.png",
-      "desc": "Yoon Da-hye, a calm capable Korean nurse in her late twenties with dark brown hair in a loose low ponytail, side-swept bangs and a small silver hair clip, brown eyes, teal hospital scrubs with a small blank ID badge over a black long-sleeve shirt and white sneakers"
+      "desc": "Yoon Da-hye, a calm capable Korean nurse in her late twenties with smooth dark brown hair in a loose low ponytail, side-swept bangs and a small silver hair clip, brown eyes, teal hospital scrubs with a small blank ID badge over a black long-sleeve shirt and white sneakers"
     },
     "taegu": {
       "ref": "refs/taegu.png",
@@ -97,11 +97,11 @@
     },
     "jiho": {
       "ref": "refs/jiho.png",
-      "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with messy brown hair, round thin-framed glasses, big anxious brown eyes, an oversized gray hoodie, a black backpack, loose dark gray sweatpants and white slip-on sneakers"
+      "desc": "Noh Ji-ho, a skinny nervous Korean man in his early twenties with soft, fluffy, messy brown hair (not spiky), round thin-framed glasses, big anxious brown eyes, an oversized gray hoodie, a black backpack, loose dark gray sweatpants and white slip-on sneakers"
     },
     "jiho_vanish": {
       "ref": "refs/jiho_vanish.png",
-      "desc": "Noh Ji-ho using Vanish: the same skinny young man with messy brown hair, round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow along his edges and tiny drifting blue sparkles around him",
+      "desc": "Noh Ji-ho using Vanish: the same skinny young man with soft, fluffy, messy brown hair (not spiky), round glasses, oversized gray hoodie, black backpack, dark gray sweatpants and white slip-ons, but faded and half see-through, with a soft pale blue glow along his edges and tiny drifting blue sparkles around him",
       "glow": true
     },
     "pyo": {
