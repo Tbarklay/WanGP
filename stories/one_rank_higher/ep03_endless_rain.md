@@ -15,7 +15,7 @@ a blue Shield-bearer card refined to purple). Their sheets go in `refs/fennick.p
 
 ## Cold open
 
-**01** `[image: night, torrential rain lashing a dark ocean lit by a flash of lightning, {dorran} braced at the raised edge of {raft3}, his huge tower shield slammed against the rail, rain streaming off his armor, a shadowy raider's hand gripping the edge, dramatic]`
+**01** `[image: night, torrential rain lashing a dark ocean lit by a flash of lightning, {dorran} braced at the raised edge of {raft3}, his huge steel shield slammed against the rail, rain streaming off his armor, a shadowy raider's hand gripping the edge, dramatic]`
 It has been raining for eleven hours. It will rain for thirteen more. And tonight, twelve men want this raft more than they want to live.
 
 **02** `[image: close-up of {yunjae} at night under a dripping wooden roof, soaked hair, calm cold eyes lit by lightning, heavy rain falling behind him]`
@@ -82,7 +82,7 @@ By dawn, someone has already found him one.
 **21** `[image: {jiho} on a plain raft like {raft} at dawn, holding up a glowing blue citizen card with a shield silhouette on it, nervous and excited]`
 Ji-ho. "Remember you told me to message you first if I found anything weird? I pulled this out of a chest last night. Blue. A Shield-bearer. I don't know what to do with it."
 
-**22** `[image: close-up of a glowing blue citizen card with the silhouette of a warrior holding a huge tower shield, held in a thin nervous hand, dawn light]`
+**22** `[image: close-up of a glowing blue citizen card with the silhouette of a warrior holding a huge steel shield, held in a thin nervous hand, dawn light]`
 A blue card. Rare. A soldier, built for exactly one job: standing in front of other people.
 
 ## The trade
@@ -207,7 +207,7 @@ Blue. Then purple. Rare becomes Epic.
 **60** `[image: a tall pillar of purple light rising from {raft3} in the morning, shaking the water around the raft, a huge armored silhouette forming inside it, {aeliss} shielding her eyes]`
 He activates it. The light comes up purple and heavy, and the whole raft dips under the weight of what's standing in it.
 
-**61** `[image: {dorran} standing tall on {raft3} in the morning after the light fades, his huge tower shield planted on the deck, looking calmly at the open ocean, massive and still]`
+**61** `[image: {dorran} standing tall on {raft3} in the morning after the light fades, his huge steel shield planted on the deck, looking calmly at the open ocean, massive and still]`
 The man who steps out of it is huge. Gray beard. A scar across his nose. Armor dented by a hundred battles. A tower shield nearly as tall as he is.
 
 **62** `[image: {dorran} looking slowly around the open ocean in the morning, then down at {yunjae}, calm and serious, no fear on his face]`
@@ -216,7 +216,7 @@ He looks at the ocean. Then at the sky. Then at Yun-jae. And he asks one questio
 **63** `[image: {yunjae} standing in front of {dorran} on {raft3} in the morning, gesturing at the raised edges of the raft, Dorran listening]`
 Yun-jae tells him there's no wall. Just a raft, a storm, and a dozen men coming in the dark. Dorran nods once. "Then I'm the wall."
 
-**64** `[image: {raft3} seen from high above in the morning, small in the lower part of the frame on the gray open sea, a huge steel tower shield lying on the deck, a large soft glowing purple light hovering in the empty air above it, wide shot, no people visible]` `[ui: status | Dorran Shieldwall | The Last Wall of Harrowmark · EPIC | HP 98/100 | STR 74/100 | AGI 20/100 | MANA 12/100 | Loyalty 72%]`
+**64** `[image: {raft3} seen from high above in the morning, small in the lower part of the frame on the gray open sea, a huge steel steel shield lying on the deck, a large soft glowing purple light hovering in the empty air above it, wide shot, no people visible]` `[ui: status | Dorran Shieldwall | The Last Wall of Harrowmark · EPIC | HP 98/100 | STR 74/100 | AGI 20/100 | MANA 12/100 | Loyalty 72%]`
 Dorran Shieldwall. The Last Wall of Harrowmark. Epic. Health ninety-eight. Strength seventy-four. Agility twenty. Mana twelve. Loyalty seventy-two percent, the highest any citizen has ever started at.
 
 **65** `[image: close-up of {dorran} in the morning, his scarred face calm and tired, rain clouds behind him]`
@@ -272,7 +272,7 @@ Hobb's stove stays lit. His soup glows. Eat it, and the cold stays out of your b
 **81** `[image: {fennick} under the roof of {raft3} checking the seams of the roof with his fingers, rain drumming on the fabric above, satisfied]`
 Fennick walks the roof every hour, checking seams that don't need checking. Every one holds. He doesn't smile. But he walks a little taller each time.
 
-**82** `[image: {dorran} standing at the low stern of {raft3} in pouring rain, his tower shield planted, motionless, rain running off his armor, staring into the gray]`
+**82** `[image: {dorran} standing at the low stern of {raft3} in pouring rain, his steel shield planted, motionless, rain running off his armor, staring into the gray]`
 And Dorran stands at the stern. In the rain. He doesn't eat. He doesn't sit. He just stands there. Hour after hour.
 
 ## Under the roof
@@ -321,16 +321,16 @@ All that lies low will drink until it drowns. Tae-gu didn't come here because he
 **96** `[image: {yunjae} under the roof of {raft3} at night giving quick quiet orders, {dorran} and {aeliss} listening, rain behind them, lit by the stove]`
 Yun-jae gives three orders. Dorran, the stern. Aeliss, the water. Hobb and Fennick, under the roof, and don't come out. And then he covers the green plank with his jacket.
 
-**97** `[image: {dorran} at night at the low stern of {raft3} in pouring rain, raising his huge tower shield and planting his feet, calm, lightning behind him]`
+**97** `[image: {dorran} at night at the low stern of {raft3} in pouring rain, raising his huge steel shield and planting his feet, calm, lightning behind him]`
 Dorran doesn't move from the stern. He's been standing there since noon. He can stand there until morning.
 
 **98** `[image: the dark platform of six plain rafts crashing into the back of {raft3} at night in pouring rain, lit by lightning, soaked men leaping across with clubs and knives, chaos]`
 They hit the stern at full speed. Six rafts, a dozen men, all at once, exactly where Dorran said they would.
 
-**99** `[image: {dorran} at night slamming his huge tower shield into two soaked raiders trying to climb onto {raft3}, knocking them back into the water, rain flying, lightning]`
+**99** `[image: {dorran} at night slamming his huge steel shield into two soaked raiders trying to climb onto {raft3}, knocking them back into the water, rain flying, lightning]`
 The first two men over the edge meet a wall of steel. They go back the way they came. Into the sea.
 
-**100** `[image: {dorran} at night braced at the stern of {raft3}, his tower shield up, clubs and knives hammering against it, not moving an inch, rain pouring, sparks]`
+**100** `[image: {dorran} at night braced at the stern of {raft3}, his steel shield up, clubs and knives hammering against it, not moving an inch, rain pouring, sparks]`
 The next three hit the shield together. Clubs. A knife. A hook. Dorran doesn't step back. He doesn't even grunt. It's like hitting a door.
 
 **101** `[image: soaked raiders at night trying to climb the high raised side edges of {raft3} and slipping off the wet wood, rain pouring, lightning]`
@@ -363,7 +363,7 @@ Six rafts. Spinning away from each other in the dark. Each one low, heavy, and h
 **110** `[image: {taegu} at night with iron-gray metallic skin leaping from a tilting plain raft toward the stern of {raft3}, arms outstretched, furious, rain, lightning]`
 And Tae-gu, standing on the middle raft as it tips under his iron weight, does the only thing he can. He jumps. Straight for the stern.
 
-**111** `[image: {dorran} at night swinging his huge tower shield to meet {taegu} in mid-air at the stern of {raft3}, a massive impact, rain exploding off the steel, lightning]`
+**111** `[image: {dorran} at night swinging his huge steel shield to meet {taegu} in mid-air at the stern of {raft3}, a massive impact, rain exploding off the steel, lightning]`
 Straight at the wall.
 
 **112** `[image: {taegu} at night with iron-gray skin falling backward into the dark stormy sea with a huge splash, arms flailing, lit by lightning]`
@@ -378,7 +378,7 @@ For the second time in a week, Bang Tae-gu sinks like a stone. His men forget th
 **115** `[image: {taegu} at night being hauled half-drowned onto a small sinking plain raft by his soaked men, coughing up water, his skin back to normal, rain pouring]`
 They drag him up coughing, his skin back to flesh, more water than man. He looks across the gap at the warm, dry raft. And at the giant standing at its stern.
 
-**116** `[image: {dorran} at night at the stern of {raft3}, his tower shield lowered, looking calmly down at the beaten raiders in the water, rain running off him, lightning]`
+**116** `[image: {dorran} at night at the stern of {raft3}, his steel shield lowered, looking calmly down at the beaten raiders in the water, rain running off him, lightning]`
 Dorran hasn't moved. He's not even breathing hard.
 
 **117** `[image: close-up of {yunjae} at night at the edge of the roof, rain pouring between him and the dark sea, his face calm and cold]`
