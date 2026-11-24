@@ -130,6 +130,14 @@ Shown as a top-10 board with each survivor's zone. There are about 400,000 zones
   thanks, and privately asked our MC for a way out (episode 2). Possible defector.
 - **Pyo**: Tae-gu's knife man, killed by the sea monster in episode 2; our MC inherited his inventory (the loot rule).
 - After episode 2, our MC holds an unactivated green **Carpenter** card, saved for building the shelter raft.
+- **Fennick** (🔵 Rare Shipwright of Corrow Bay, the Carpenter card refined in episode 3): wiry, red-brown beard,
+  pencil behind his ear, answers in hammer strokes. Builds the level 3 shelter raft. Male, no affinity bar.
+- **After episode 3** (day 8): crew is Aeliss (loyalty 71%, affinity 14%), Hobb, Fennick (loyalty ~64%) and Dorran
+  (loyalty 72%). Refined items: Everseal (green sealant), Stormcloth (green tarp roof). Tae-gu beaten in the rain and
+  spared; Gil cut the platform's ropes and drifted off alone (sent "Thanks"). Ji-ho traded the Shield-bearer card for
+  30 fish, 3 jugs and a stew. Da-hye's post saved about 40 people near her. Kaiser's company bought tarps and lost
+  nobody. Lune is Aeliss's world; the Wayfinder Map's edges are in Lune tide script; the dead island is 31 km
+  north-east. Hobb seemed to recognise the map. Day 8 ranking: Lena Hartmann 3rd, Sofia Reyes enters at 8th.
 
 ## The crew: how his raft (and later island) runs
 - **Dorran Shieldwall** (male tank, 🔵 Blue shield-bearer card refined to 🟣 Epic; arrives in **episode 3**, summoned

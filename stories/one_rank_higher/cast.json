@@ -123,6 +123,14 @@
       "ref": "refs/raft2_plain.png",
       "prop": true,
       "desc": "the three-meter square raft of weathered gray planks lashed with tan rope, a short mast with a small patched cream sail, a wooden storage crate and a fishing rod in a rope holder, a dark brown cloth draped flat over the middle of the deck, the whole raft dark with no glow anywhere"
+    },
+    "fennick": {
+      "ref": "refs/fennick.png",
+      "desc": "Fennick, a wiry weathered shipwright in his forties with a sun-browned face, a short red-brown beard, shaggy shoulder-length red-brown hair tied back with a strip of cloth, a pencil behind one ear, a worn leather tool apron full of chisels and mallets over a rolled-sleeve linen shirt, patched canvas trousers and bare feet"
+    },
+    "dorran": {
+      "ref": "refs/dorran.png",
+      "desc": "Dorran Shieldwall, a huge broad-shouldered calm warrior in his fifties, weathered tan skin, short close-cropped iron-gray hair and a short gray beard, a pale scar running across his nose and cheek, steady gray eyes, dented dark steel plate armor over a faded crimson tabard, a huge rectangular steel tower shield nearly as tall as he is with a worn plain crest, a short broad axe at his belt"
     }
   },
   "system": {
